@@ -1,0 +1,39 @@
+baseURL = ""
+title = "Kutty"
+
+disableKinds = ["taxonomy", "taxonomyTerm"]
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+disableHugoGeneratorInject = true
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsOptions = "noclasses=true"
+
+[params]
+  author = "kutty"
+  ogimage = "/images/og.png"
+  sitename = "kutty"
+  twitter = "https://twitter.com/kutty"
+  instagram = "https://www.instagram.com/kutty/"
+  linkedin = "https://www.linkedin.com/company/kutty/"
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false

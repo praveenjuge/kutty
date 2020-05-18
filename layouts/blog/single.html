@@ -1,0 +1,7 @@
+{{ define "main" }}
+  <article class="container" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+    <h1 itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
+    <p itemprop="description">{{ .Description }}</p>
+    {{ .Content }}
+  </article>
+{{end}}
