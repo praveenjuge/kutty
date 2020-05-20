@@ -1,5 +1,5 @@
 [build]
-  command = "hugo --minify"
+  command = "npm i && hugo --minify"
   publish = "public"
 
 [build.environment]

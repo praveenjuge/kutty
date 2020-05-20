@@ -2,14 +2,12 @@
 <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }}
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet" />
   </head>
-
   <body>
     {{ partial "header" . }}
-    <main>
+    <main class="container mx-auto my-5">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "footer" . }} {{ partial "js" . }} {{ partial "analytics" . }}
+    <!-- {{ partial "footer" . }} {{ partial "js" . }} {{ partial "analytics" . }} -->
   </body>
 </html>

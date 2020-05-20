@@ -15,12 +15,9 @@ pygmentsCodefencesGuessSyntax = true
 pygmentsOptions = "noclasses=true"
 
 [params]
-  author = "kutty"
+  author = "Kutty"
   ogimage = "/images/og.png"
-  sitename = "kutty"
-  twitter = "https://twitter.com/kutty"
-  instagram = "https://www.instagram.com/kutty/"
-  linkedin = "https://www.linkedin.com/company/kutty/"
+  sitename = "Kutty"
 
 [markup]
   defaultMarkdownHandler = "goldmark"

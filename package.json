@@ -1,0 +1,27 @@
+{
+  "name": "kutty",
+  "version": "0.0.1",
+  "description": "kutty",
+  "main": "",
+  "author": "praveenjuge",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praveenjuge/kutty.git"
+  },
+  "bugs": {
+    "url": "https://github.com/praveenjuge/kutty/issues"
+  },
+  "homepage": "https://github.com/praveenjuge/kutty#readme",
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.8.0",
+    "postcss": "^7.0.30",
+    "postcss-cli": "^7.1.1",
+    "postcss-import": "^12.0.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
