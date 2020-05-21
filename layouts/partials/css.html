@@ -1,11 +1,11 @@
 {{ if eq (getenv "HUGO_ENV") "production" }}
 
-  {{ $style := resources.Get "css/main.scss" | postCSS (dict "config" "./assets/css/postcss.config.js") | toCSS | minify }} 
+  {{ $style := resources.Get "css/build.css" | minify }} 
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 {{ else }}
 
-  {{ $style := resources.Get "css/main.scss" | postCSS (dict "config" "./assets/css/postcss.config.js") | toCSS }}
+  {{ $style := resources.Get "css/build.css" }} 
   <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 {{ end }}

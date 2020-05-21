@@ -16,8 +16,8 @@ pygmentsOptions = "noclasses=true"
 
 [params]
   author = "Kutty"
-  ogimage = "/images/og.png"
   sitename = "Kutty"
+  ogimage = "/images/og.png"
 
 [markup]
   defaultMarkdownHandler = "goldmark"
