@@ -12,6 +12,9 @@
     "UI",
     "components"
   ],
+  "files": [
+    "src"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/praveenjuge/kutty.git"
@@ -24,7 +27,7 @@
     "development": "cross-env NODE_ENV=development postcss main.css -o assets/css/build.css",
     "production": "cross-env NODE_ENV=production postcss main.css -o assets/css/build.css"
   },
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^9.8.0",
     "cross-env": "^7.0.2",
     "postcss-cli": "^7.1.1",
