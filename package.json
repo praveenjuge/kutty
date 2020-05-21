@@ -5,7 +5,13 @@
   "main": "",
   "author": "praveenjuge",
   "license": "MIT",
-  "homepage": "https://github.com/praveenjuge/kutty#readme",
+  "homepage": "https://kutty.netlify.app/",
+  "keywords": [
+    "kutty",
+    "tailwind",
+    "UI",
+    "components"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/praveenjuge/kutty.git"
