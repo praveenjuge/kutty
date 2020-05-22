@@ -1,0 +1,14 @@
+<!-- To display the component -->
+<div class="p-4 border-gray-200 border-solid border-4 rounded-t mb-0">
+  {{ .Inner }}
+</div>
+
+<!-- To display the code -->
+<div class="bg-gray-200 rounded-b mb-2 outline-none relative">
+  <!-- <div class="absolute" style="top: 2px; right: 5px;">
+    <button>Copy</button>
+  </div> -->
+  <div class="p-2">
+    {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+  </div>
+</div>

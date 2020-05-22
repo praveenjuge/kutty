@@ -747,6 +747,7 @@ video {
   padding-right: 0.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  white-space: pre-wrap;
 }
 
 .markdown pre {
@@ -755,6 +756,8 @@ video {
   background-color: #edf2f7;
   background-color: rgba(237, 242, 247, var(--bg-opacity));
   padding: 1rem;
+  display: inline-block;
+  -webkit-overflow-scrolling: touch;
 }
 
 .markdown pre code {

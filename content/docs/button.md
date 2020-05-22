@@ -3,13 +3,54 @@ title: Button
 weight: 3
 ---
 
+## Colors
+
+{{< code html >}}
+
+<button class="bg-purple-700 hover:bg-purple-900 focus:bg-purple-900 border-purple-700 hover:border-purple-900 focus:border-purple-900 text-white select-none text-center align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer py-2 px-5 text-lg" role="button" type="button">Documentation</button>
+
+{{< /code >}}
+
+## Outline
+
 Coming Soon
 
-<div>
-  <button class="btn btn-blue">Button</button>
-  <button class="btn btn-gray">Button</button>
-</div>
+## Pill
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Coming Soon
+
+## Square
+
+Coming Soon
+
+## Loading
+
+Coming Soon
+
+## Disabled
+
+Coming Soon
+
+## Block
+
+Coming Soon
+
+## Size
+
+Coming Soon
+
+## Icons
+
+Coming Soon
+
+## Button with Icon
+
+Coming Soon
+
+## List
+
+Coming Soon
+
+## Social
+
+Coming Soon

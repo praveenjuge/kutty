@@ -59,11 +59,11 @@
 }
 
 .markdown code {
-  @apply font-mono text-sm bg-gray-200 inline rounded px-1 py-4;
+  @apply font-mono text-sm bg-gray-200 inline rounded px-1 py-4 whitespace-pre-wrap;
 }
 
 .markdown pre {
-  @apply rounded bg-gray-200 p-4;
+  @apply rounded bg-gray-200 p-4 inline-block scrolling-touch;
 }
 
 .markdown pre code {
