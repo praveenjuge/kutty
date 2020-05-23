@@ -18,7 +18,7 @@
   @apply font-semibold;
 }
 
-.markdown a {
+.markdown a:not(.btn) {
   @apply text-purple-800 font-semibold;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .markdown pre {
-  @apply rounded bg-gray-200 p-4 inline-block scrolling-touch;
+  @apply rounded bg-gray-200 p-4 inline-block scrolling-touch w-full !important;
 }
 
 .markdown pre code {

@@ -23,8 +23,8 @@ Coming Soon
 
 ## Components
 
+- [x] Buttons
 - [ ] Alerts
-- [ ] Buttons
 - [ ] Badge
 - [ ] Breadcrumb
 - [ ] Card

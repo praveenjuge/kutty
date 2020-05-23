@@ -8,7 +8,7 @@
   <!-- <div class="absolute" style="top: 2px; right: 5px;">
     <button>Copy</button>
   </div> -->
-  <div class="p-2">
+  <div>
     {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
   </div>
 </div>
