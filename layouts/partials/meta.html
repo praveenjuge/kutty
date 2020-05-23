@@ -66,7 +66,7 @@
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
 
 <!-- Sitemap & RSS Feed Links -->
-<link rel="sitemap" type="application/xml" title="Sitemap" href="{{ .Site.BaseURL }}/sitemap.xml">
+<link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}'>
 {{ with .OutputFormats.Get "RSS" }}
   <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
