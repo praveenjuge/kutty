@@ -1,4 +1,4 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
-@import "src/kutty.css";
+@import "./kutty.css";
 @import "tailwindcss/utilities";
