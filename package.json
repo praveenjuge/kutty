@@ -1,8 +1,8 @@
 {
   "name": "kutty",
-  "version": "0.0.1",
+  "version": "0.0.11",
   "description": "kutty",
-  "main": "",
+  "main": "kutty.css",
   "author": "praveenjuge",
   "license": "MIT",
   "homepage": "https://kutty.netlify.app",
@@ -13,7 +13,8 @@
     "components"
   ],
   "files": [
-    "src"
+    "src",
+    "kutty.css"
   ],
   "repository": {
     "type": "git",
