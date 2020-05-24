@@ -6,7 +6,7 @@
 <!-- To display the code -->
 <div class="bg-gray-200 rounded-b mb-2 outline-none relative">
   <!-- <div class="absolute" style="top: 2px; right: 5px;">
-    <button>Copy</button>
+    <button class="btn btn-link btn-sm">Copy</button>
   </div> -->
   <div>
     {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}

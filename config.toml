@@ -4,17 +4,16 @@ title = "Kutty"
 disableKinds = ["taxonomy", "taxonomyTerm"]
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-
 enableEmoji = true
 enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
-disableHugoGeneratorInject = true
 
 [params]
-  author = "Kutty"
+  author = "Praveen Juge"
   sitename = "Kutty"
   ogimage = "/images/og.png"
+  description = "Kutty is a set of accessible and reusable components for building web applications."
 
 [markup]
   defaultMarkdownHandler = "goldmark"

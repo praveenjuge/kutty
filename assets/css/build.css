@@ -653,6 +653,7 @@ video {
   color: #553c9a;
   color: rgba(85, 60, 154, var(--text-opacity));
   font-weight: 600;
+  text-decoration: underline;
 }
 
 .markdown strong a {
@@ -679,7 +680,7 @@ video {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
   padding-bottom: 0.5rem;
 }
 
@@ -867,11 +868,11 @@ video {
 
 .btn-secondary {
   --bg-opacity: 1;
-  background-color: #4a5568;
-  background-color: rgba(74, 85, 104, var(--bg-opacity));
+  background-color: #718096;
+  background-color: rgba(113, 128, 150, var(--bg-opacity));
   --border-opacity: 1;
-  border-color: #4a5568;
-  border-color: rgba(74, 85, 104, var(--border-opacity));
+  border-color: #718096;
+  border-color: rgba(113, 128, 150, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
@@ -880,17 +881,11 @@ video {
 .btn-secondary:hover,
 .btn-secondary:focus {
   --bg-opacity: 1;
-  background-color: #1a202c;
-  background-color: rgba(26, 32, 44, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #1a202c;
-  background-color: rgba(26, 32, 44, var(--bg-opacity));
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
   --border-opacity: 1;
-  border-color: #1a202c;
-  border-color: rgba(26, 32, 44, var(--border-opacity));
-  --border-opacity: 1;
-  border-color: #1a202c;
-  border-color: rgba(26, 32, 44, var(--border-opacity));
+  border-color: #2d3748;
+  border-color: rgba(45, 55, 72, var(--border-opacity));
 }
 
 .btn-success {
@@ -910,12 +905,6 @@ video {
   --bg-opacity: 1;
   background-color: #22543d;
   background-color: rgba(34, 84, 61, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #22543d;
-  background-color: rgba(34, 84, 61, var(--bg-opacity));
-  --border-opacity: 1;
-  border-color: #22543d;
-  border-color: rgba(34, 84, 61, var(--border-opacity));
   --border-opacity: 1;
   border-color: #22543d;
   border-color: rgba(34, 84, 61, var(--border-opacity));
@@ -938,12 +927,6 @@ video {
   --bg-opacity: 1;
   background-color: #742a2a;
   background-color: rgba(116, 42, 42, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #742a2a;
-  background-color: rgba(116, 42, 42, var(--bg-opacity));
-  --border-opacity: 1;
-  border-color: #742a2a;
-  border-color: rgba(116, 42, 42, var(--border-opacity));
   --border-opacity: 1;
   border-color: #742a2a;
   border-color: rgba(116, 42, 42, var(--border-opacity));
@@ -951,11 +934,11 @@ video {
 
 .btn-warning {
   --bg-opacity: 1;
-  background-color: #b7791f;
-  background-color: rgba(183, 121, 31, var(--bg-opacity));
+  background-color: #d69e2e;
+  background-color: rgba(214, 158, 46, var(--bg-opacity));
   --border-opacity: 1;
-  border-color: #b7791f;
-  border-color: rgba(183, 121, 31, var(--border-opacity));
+  border-color: #d69e2e;
+  border-color: rgba(214, 158, 46, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
@@ -964,17 +947,11 @@ video {
 .btn-warning:hover,
 .btn-warning:focus {
   --bg-opacity: 1;
-  background-color: #744210;
-  background-color: rgba(116, 66, 16, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #744210;
-  background-color: rgba(116, 66, 16, var(--bg-opacity));
+  background-color: #975a16;
+  background-color: rgba(151, 90, 22, var(--bg-opacity));
   --border-opacity: 1;
-  border-color: #744210;
-  border-color: rgba(116, 66, 16, var(--border-opacity));
-  --border-opacity: 1;
-  border-color: #744210;
-  border-color: rgba(116, 66, 16, var(--border-opacity));
+  border-color: #975a16;
+  border-color: rgba(151, 90, 22, var(--border-opacity));
 }
 
 .btn-light {
@@ -994,12 +971,6 @@ video {
   --bg-opacity: 1;
   background-color: #cbd5e0;
   background-color: rgba(203, 213, 224, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #cbd5e0;
-  background-color: rgba(203, 213, 224, var(--bg-opacity));
-  --border-opacity: 1;
-  border-color: #cbd5e0;
-  border-color: rgba(203, 213, 224, var(--border-opacity));
   --border-opacity: 1;
   border-color: #cbd5e0;
   border-color: rgba(203, 213, 224, var(--border-opacity));
@@ -1022,12 +993,6 @@ video {
   --bg-opacity: 1;
   background-color: #4a5568;
   background-color: rgba(74, 85, 104, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #4a5568;
-  background-color: rgba(74, 85, 104, var(--bg-opacity));
-  --border-opacity: 1;
-  border-color: #4a5568;
-  border-color: rgba(74, 85, 104, var(--border-opacity));
   --border-opacity: 1;
   border-color: #4a5568;
   border-color: rgba(74, 85, 104, var(--border-opacity));
@@ -1046,12 +1011,6 @@ video {
   --bg-opacity: 1;
   background-color: #e2e8f0;
   background-color: rgba(226, 232, 240, var(--bg-opacity));
-  --bg-opacity: 1;
-  background-color: #e2e8f0;
-  background-color: rgba(226, 232, 240, var(--bg-opacity));
-  --border-opacity: 1;
-  border-color: #e2e8f0;
-  border-color: rgba(226, 232, 240, var(--border-opacity));
   --border-opacity: 1;
   border-color: #e2e8f0;
   border-color: rgba(226, 232, 240, var(--border-opacity));
@@ -1069,38 +1028,38 @@ video {
 
 .btn-outline-primary:hover,
 .btn-outline-primary:focus {
+  --bg-opacity: 1;
+  background-color: #44337a;
+  background-color: rgba(68, 51, 122, var(--bg-opacity));
   --border-opacity: 1;
   border-color: #44337a;
   border-color: rgba(68, 51, 122, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
-  --bg-opacity: 1;
-  background-color: #44337a;
-  background-color: rgba(68, 51, 122, var(--bg-opacity));
 }
 
 .btn-outline-secondary {
   --border-opacity: 1;
-  border-color: #4a5568;
-  border-color: rgba(74, 85, 104, var(--border-opacity));
+  border-color: #718096;
+  border-color: rgba(113, 128, 150, var(--border-opacity));
   --text-opacity: 1;
-  color: #4a5568;
-  color: rgba(74, 85, 104, var(--text-opacity));
+  color: #718096;
+  color: rgba(113, 128, 150, var(--text-opacity));
   background-color: transparent;
 }
 
 .btn-outline-secondary:hover,
 .btn-outline-secondary:focus {
+  --bg-opacity: 1;
+  background-color: #2d3748;
+  background-color: rgba(45, 55, 72, var(--bg-opacity));
   --border-opacity: 1;
-  border-color: #1a202c;
-  border-color: rgba(26, 32, 44, var(--border-opacity));
+  border-color: #2d3748;
+  border-color: rgba(45, 55, 72, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
-  --bg-opacity: 1;
-  background-color: #1a202c;
-  background-color: rgba(26, 32, 44, var(--bg-opacity));
 }
 
 .btn-outline-success {
@@ -1115,15 +1074,15 @@ video {
 
 .btn-outline-success:hover,
 .btn-outline-success:focus {
+  --bg-opacity: 1;
+  background-color: #22543d;
+  background-color: rgba(34, 84, 61, var(--bg-opacity));
   --border-opacity: 1;
   border-color: #22543d;
   border-color: rgba(34, 84, 61, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
-  --bg-opacity: 1;
-  background-color: #22543d;
-  background-color: rgba(34, 84, 61, var(--bg-opacity));
 }
 
 .btn-outline-danger {
@@ -1151,25 +1110,25 @@ video {
 
 .btn-outline-warning {
   --border-opacity: 1;
-  border-color: #b7791f;
-  border-color: rgba(183, 121, 31, var(--border-opacity));
+  border-color: #d69e2e;
+  border-color: rgba(214, 158, 46, var(--border-opacity));
   --text-opacity: 1;
-  color: #b7791f;
-  color: rgba(183, 121, 31, var(--text-opacity));
+  color: #d69e2e;
+  color: rgba(214, 158, 46, var(--text-opacity));
   background-color: transparent;
 }
 
 .btn-outline-warning:hover,
 .btn-outline-warning:focus {
   --border-opacity: 1;
-  border-color: #744210;
-  border-color: rgba(116, 66, 16, var(--border-opacity));
+  border-color: #975a16;
+  border-color: rgba(151, 90, 22, var(--border-opacity));
   --text-opacity: 1;
   color: #fff;
   color: rgba(255, 255, 255, var(--text-opacity));
   --bg-opacity: 1;
-  background-color: #744210;
-  background-color: rgba(116, 66, 16, var(--bg-opacity));
+  background-color: #975a16;
+  background-color: rgba(151, 90, 22, var(--bg-opacity));
 }
 
 .btn-outline-light {

@@ -19,7 +19,7 @@
 }
 
 .markdown a:not(.btn) {
-  @apply text-purple-800 font-semibold;
+  @apply text-purple-800 font-semibold underline;
 }
 
 .markdown strong a {
@@ -35,7 +35,7 @@
 }
 
 .markdown h2 {
-  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-6 pb-2;
+  @apply leading-tight border-b text-2xl font-semibold mb-4 mt-8 pb-2;
 }
 
 .markdown h3 {

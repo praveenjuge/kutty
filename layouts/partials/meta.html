@@ -1,152 +1,159 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
 <!-- Title of the page -->
-<title itemprop="name">{{ .Title }}</title>
-<meta property="og:title" content="{{ .Title }}">
-<meta name="twitter:title" content="{{ .Title }}">
-<meta itemprop="name" content="{{ .Title }}" />
-<meta name="application-name" content="{{ .Title }}" />
+<title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
+<meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+<meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
 <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
 
 <!-- Description of the page -->
-<meta name="description" content="{{ .Params.description }}">
-<meta itemprop="description" content="{{ .Params.description }}"/>
-<meta property="og:description" content="{{ .Params.description }}">
-<meta name="twitter:description" content="{{ .Params.description }}">
+{{ with .Params.description }}
+  <meta name="description" content="{{ . }}" />
+  <meta itemprop="description" content="{{ . }}" />
+  <meta property="og:description" content="{{ . }}" />
+  <meta name="twitter:description" content="{{ . }}" />
+{{ else }}
+  <meta name="description" content="{{ .Site.Params.description }}" />
+  <meta itemprop="description" content="{{ .Site.Params.description }}" />
+  <meta property="og:description" content="{{ .Site.Params.description }}" />
+  <meta name="twitter:description" content="{{ .Site.Params.description }}" />
+{{ end }}
 
 <!-- Link of the page -->
-<link rel="canonical" href="{{ .Permalink }}" itemprop="url">
+<link rel="canonical" href="{{ .Permalink }}" itemprop="url" />
 <meta property="url" content="{{ .Permalink }}" />
-<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:url" content="{{ .Permalink }}" />
 <meta name="url" content="{{ .Permalink }}" />
-<meta name="twitter:url" content="{{ .Permalink }}">
+<meta name="twitter:url" content="{{ .Permalink }}" />
 
 <!-- Styles of the Page -->
 {{ partial "css" . }}
 
 <!-- Image of the page -->
-{{ if eq .Section "blog" }}
-{{ with .Resources.GetMatch "cover" }}
-  <meta itemprop="image" content="{{ .Permalink | absURL }}">
-  <meta name="twitter:image" content="{{ .Permalink | absURL }}" />
-  <meta name="twitter:image:src" content="{{ .Permalink | absURL }}" />
-  <meta property="og:image" content="{{ .Permalink | absURL }}" />
-  <meta property="og:image:width" content="{{ .Width }}" />
-  <meta property="og:image:height" content="{{ .Height }}" />
-  <meta property="og:image:type" content="{{ .MediaType }}" />
-{{ end }}
-{{ else }}
-  <meta itemprop="image" content="{{ .Params.image | absURL }}">
-  <meta name="twitter:image:src" content="{{ .Params.image | absURL }}" />
-  <meta property="og:image" content="{{ .Params.image | absURL }}" />
-  <meta name="twitter:image" content="{{ .Params.image | absURL }}" />
-{{ end }}
+<meta itemprop="image" content="{{ .Params.image | absURL }}" />
+<meta name="twitter:image:src" content="{{ .Params.image | absURL }}" />
+<meta property="og:image" content="{{ .Params.image | absURL }}" />
+<meta name="twitter:image" content="{{ .Params.image | absURL }}" />
 
 <!-- Author Name -->
-{{ with .Params.authors }}
-{{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-  <meta property="article:author" content="{{ .Title }}">
-  <meta name="author" content="{{ .Title }}">
-  <link rel="author" href="{{ .Permalink }}">
-{{ end }}
+{{ with .Params.authors }} 
+  {{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+  <meta property="article:author" content="{{ .Title }}" />
+  <meta name="author" content="{{ .Title }}" />
+  <link rel="author" href="{{ .Permalink }}" />
+  {{ end }} 
 {{ else }}
-  <meta property="article:author" content="{{ .Site.Params.author }}">
+  <meta property="article:author" content="{{ .Site.Params.author }}" />
   <meta property="og:article:author" content="{{ .Site.Params.author }}" />
-  <meta name="author" content="{{ .Site.Params.author }}">
+  <meta name="author" content="{{ .Site.Params.author }}" />
 {{ end }}
 
 <!-- Language -->
-<meta property="og:locale" content="{{ .Language.Lang }}">
-<meta name="language" content="{{ .Language.LanguageName }}">
+<meta property="og:locale" content="{{ .Language.Lang }}" />
+<meta name="language" content="{{ .Language.LanguageName }}" />
 
 <!-- Date of the page -->
-<meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"/>
+<meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"/> 
 <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}" />
 
 <!-- Sitemap & RSS Feed Links -->
-<link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}'>
+<link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
 {{ with .OutputFormats.Get "RSS" }}
   <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
-{{ end }}
+{{ end }} 
 {{ range .AllTranslations }}
-<link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}">
+  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}" />
 {{ end }}
 
 <!-- Static Meta -->
-<meta name="keywords" content="">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="">
-<meta name="twitter:creator" content="">
-<meta name="robots" content="index,follow">
-<meta name="googlebot" content="index,follow">
-<meta name="google" content="notranslate">
-<meta name="theme-color" content="#FFFFFF">
-<meta name="imagemode" content="force">
-<meta name="wap-font-scale" content="no">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="keywords" content="" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="" />
+<meta name="twitter:creator" content="" />
+<meta name="robots" content="index,follow" />
+<meta name="googlebot" content="index,follow" />
+<meta name="google" content="notranslate" />
+<meta name="theme-color" content="#FFFFFF" />
+<meta name="imagemode" content="force" />
+<meta name="wap-font-scale" content="no" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
 <!-- Article Specific Tags -->
-{{ if eq .Section "blog" }}
+{{ if eq .Section "docs" }}
 
-  <meta property="og:type" content="article" />
-  <meta property="article:section" content="" />
-  {{ with .Params.tags }}
-    <meta name="news_keywords" content="{{ delimit . ", " }}" />
-    <meta property="article:section" content="{{ delimit . ", " }}" />
-  {{ end }}
+<meta property="og:type" content="article" />
+<meta property="article:section" content="" />
+{{ with .Params.tags }}
+  <meta name="news_keywords" content="{{ delimit . ", " }}" /> <meta property="article:section" content="{{ delimit . ", " }}" /> 
+{{ end }}
 
-  <script type="application/ld+json">
-    { "@context": "http://schema.org", 
-     "@type": "Article",
-     "mainEntityOfPage": {
-       "@type": "WebPage",
-       "@id": "{{ .Permalink }}"
-     },
-     "headline": "{{ .Title }}",
-     "image": "{{ .Params.image | absURL }}",
-     "keywords": "{{ .Params.tags }}", 
-     "wordcount": "{{ .Content | countwords }}",
-     "url": "{{ .Permalink }}",
-     "datePublished": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-     "dateCreated": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-     "dateModified": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-     "description": "{{ .Params.description }}",
-     "author": {
-      "@type": "Person",{{ with .Params.authors }}{{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-      "name": "{{ .Title }}",
-      "url": "{{ .Permalink }}"{{ end }}{{ end }}
-     },
-     "publisher": {
-        "@type": "Organization",
-        "name": "",
-        "logo": {
-          "@type": "ImageObject",
-          "url": ""
-        }
+<script type="application/ld+json">
+  { "@context": "http://schema.org",
+   "@type": "Article",
+   "mainEntityOfPage": {
+     "@type": "WebPage",
+     "@id": "{{ .Permalink }}"
+   },
+   "headline": "{{ .Title }}",
+   "image": "{{ .Params.image | absURL }}",
+   "keywords": "{{ .Params.tags }}",
+   "wordcount": "{{ .Content | countwords }}",
+   "url": "{{ .Permalink }}",
+   "datePublished": "{{ .Date.Format "2006-01-02" | safeHTML }}",
+   "dateCreated": "{{ .Date.Format "2006-01-02" | safeHTML }}",
+   "dateModified": "{{ .Date.Format "2006-01-02" | safeHTML }}",
+   "description": "{{ .Params.description }}",
+   "author": {
+    "@type": "Person",{{ with .Params.authors }}{{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
+    "name": "{{ .Title }}",
+    "url": "{{ .Permalink }}"{{ end }}{{ end }}
+   },
+   "publisher": {
+      "@type": "Organization",
+      "name": "",
+      "logo": {
+        "@type": "ImageObject",
+        "url": ""
       }
-     }
-  </script>
+    }
+   }
+</script>
 
 {{ else }}
 
-  <meta property="og:type" content="website" />
-  <script type="application/ld+json">
-    { 
-      "@context": "http://schema.org", 
-      "@type": "WebSite", 
-      "url": "{{ .Permalink }}", 
-      "name": "{{ .Title }}",
-       "author": {
-          "@type": "Person",
-          "name": "{{ .Params.author }}"
-        },
-      "description": "{{ .Params.description }}",
-      "publisher": ""
-    }
-  </script>
-  
+<meta property="og:type" content="website" />
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "url": "{{ .Permalink }}",
+    "name": "{{ .Title }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ .Params.author }}"
+    },
+    "description": "{{ .Params.description }}",
+    "publisher": ""
+  }
+</script>
+
 {{ end }}
+
+<!-- Favicons -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/favicon-152-precomposed.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/favicon-144-precomposed.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/favicon-120-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/favicon-114-precomposed.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon-180-precomposed.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/favicon-72-precomposed.png" />
+<link rel="apple-touch-icon" href="/favicons/favicon-57.png" />
+<link rel="icon" href="/favicons/favicon-32.png" sizes="32x32" />
+<link rel="icon" sizes="192x192" href="/favicons/favicon-192.png" />

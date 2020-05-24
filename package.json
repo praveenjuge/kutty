@@ -1,7 +1,7 @@
 {
   "name": "kutty",
   "version": "0.0.12",
-  "description": "kutty",
+  "description": "Kutty is a set of accessible and reusable components for building web applications.",
   "main": "kutty.css",
   "author": "praveenjuge",
   "license": "MIT",
@@ -10,11 +10,8 @@
     "kutty",
     "tailwind",
     "UI",
+    "css",
     "components"
-  ],
-  "files": [
-    "src",
-    "kutty.css"
   ],
   "repository": {
     "type": "git",
@@ -23,6 +20,10 @@
   "bugs": {
     "url": "https://github.com/praveenjuge/kutty/issues"
   },
+  "files": [
+    "src",
+    "kutty.css"
+  ],
   "scripts": {
     "start": "cross-env NODE_ENV=development postcss main.css -o assets/css/build.css --watch",
     "development": "cross-env NODE_ENV=development postcss main.css -o assets/css/build.css",
