@@ -5,15 +5,31 @@ Kutty is a set of accessible and reusable components for building web applicatio
 ## Installation
 
 ```sh
-Coming Soon
+npm i kutty --save
 ```
 
 Tailwind CSS is not available in this package, you have to import it yourself.
 
 ## Usage
 
-```sh
-Coming Soon
+For importing the whole package:
+
+```css
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* Add Kutty here */
+@import "kutty";
+@import "tailwindcss/utilities";
+```
+
+For importing any single component:
+
+```css
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+/* Add Kutty here */
+@import "kutty/src/button.css";
+@import "tailwindcss/utilities";
 ```
 
 ## Components
