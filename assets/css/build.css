@@ -1016,6 +1016,152 @@ video {
   border-color: rgba(226, 232, 240, var(--border-opacity));
 }
 
+.btn-light-primary {
+  --bg-opacity: 1;
+  background-color: #e9d8fd;
+  background-color: rgba(233, 216, 253, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #e9d8fd;
+  border-color: rgba(233, 216, 253, var(--border-opacity));
+  --text-opacity: 1;
+  color: #6b46c1;
+  color: rgba(107, 70, 193, var(--text-opacity));
+}
+
+.btn-light-primary:hover,
+.btn-light-primary:focus {
+  --bg-opacity: 1;
+  background-color: #d6bcfa;
+  background-color: rgba(214, 188, 250, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #d6bcfa;
+  border-color: rgba(214, 188, 250, var(--border-opacity));
+  --text-opacity: 1;
+  color: #44337a;
+  color: rgba(68, 51, 122, var(--text-opacity));
+}
+
+.btn-light-secondary {
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #edf2f7;
+  border-color: rgba(237, 242, 247, var(--border-opacity));
+  --text-opacity: 1;
+  color: #4a5568;
+  color: rgba(74, 85, 104, var(--text-opacity));
+}
+
+.btn-light-secondary:hover,
+.btn-light-secondary:focus {
+  --bg-opacity: 1;
+  background-color: #e2e8f0;
+  background-color: rgba(226, 232, 240, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #e2e8f0;
+  border-color: rgba(226, 232, 240, var(--border-opacity));
+  --text-opacity: 1;
+  color: #1a202c;
+  color: rgba(26, 32, 44, var(--text-opacity));
+}
+
+.btn-light-success {
+  --bg-opacity: 1;
+  background-color: #c6f6d5;
+  background-color: rgba(198, 246, 213, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #c6f6d5;
+  border-color: rgba(198, 246, 213, var(--border-opacity));
+  --text-opacity: 1;
+  color: #276749;
+  color: rgba(39, 103, 73, var(--text-opacity));
+}
+
+.btn-light-success:hover,
+.btn-light-success:focus {
+  --bg-opacity: 1;
+  background-color: #9ae6b4;
+  background-color: rgba(154, 230, 180, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #9ae6b4;
+  border-color: rgba(154, 230, 180, var(--border-opacity));
+  --text-opacity: 1;
+  color: #22543d;
+  color: rgba(34, 84, 61, var(--text-opacity));
+}
+
+.btn-light-danger {
+  --bg-opacity: 1;
+  background-color: #fed7d7;
+  background-color: rgba(254, 215, 215, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #fed7d7;
+  border-color: rgba(254, 215, 215, var(--border-opacity));
+  --text-opacity: 1;
+  color: #c53030;
+  color: rgba(197, 48, 48, var(--text-opacity));
+}
+
+.btn-light-danger:hover,
+.btn-light-danger:focus {
+  --bg-opacity: 1;
+  background-color: #feb2b2;
+  background-color: rgba(254, 178, 178, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #feb2b2;
+  border-color: rgba(254, 178, 178, var(--border-opacity));
+  --text-opacity: 1;
+  color: #742a2a;
+  color: rgba(116, 42, 42, var(--text-opacity));
+}
+
+.btn-light-warning {
+  --bg-opacity: 1;
+  background-color: #fefcbf;
+  background-color: rgba(254, 252, 191, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #fefcbf;
+  border-color: rgba(254, 252, 191, var(--border-opacity));
+  --text-opacity: 1;
+  color: #975a16;
+  color: rgba(151, 90, 22, var(--text-opacity));
+}
+
+.btn-light-warning:hover,
+.btn-light-warning:focus {
+  --bg-opacity: 1;
+  background-color: #faf089;
+  background-color: rgba(250, 240, 137, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #faf089;
+  border-color: rgba(250, 240, 137, var(--border-opacity));
+  --text-opacity: 1;
+  color: #744210;
+  color: rgba(116, 66, 16, var(--text-opacity));
+}
+
+.btn-light-link {
+  background-color: transparent;
+  border-color: transparent;
+  --text-opacity: 1;
+  color: #e9d8fd;
+  color: rgba(233, 216, 253, var(--text-opacity));
+}
+
+.btn-light-link:hover,
+.btn-light-link:focus {
+  --bg-opacity: 1;
+  background-color: #edf2f7;
+  background-color: rgba(237, 242, 247, var(--bg-opacity));
+  --border-opacity: 1;
+  border-color: #edf2f7;
+  border-color: rgba(237, 242, 247, var(--border-opacity));
+  --text-opacity: 1;
+  color: #6b46c1;
+  color: rgba(107, 70, 193, var(--text-opacity));
+}
+
 .btn-outline-primary {
   --border-opacity: 1;
   border-color: #6b46c1;

@@ -24,6 +24,17 @@ weight: 3
 <button class="btn btn-link">Button</button>
 {{< /code >}}
 
+## Light Colors
+
+{{< code html >}}
+<button class="btn btn-light-primary">Button</button>
+<button class="btn btn-light-secondary">Button</button>
+<button class="btn btn-light-success">Button</button>
+<button class="btn btn-light-danger">Button</button>
+<button class="btn btn-light-warning">Button</button>
+<button class="btn btn-light-link">Button</button>
+{{< /code >}}
+
 ## Outline
 
 {{< code html >}}
