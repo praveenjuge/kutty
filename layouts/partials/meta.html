@@ -73,14 +73,12 @@
 <!-- Static Meta -->
 <meta name="keywords" content="" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:site" content="" />
-<meta name="twitter:creator" content="" />
+<meta name="twitter:site" content="{{ .Site.Params.sitename }}" />
+<meta name="twitter:creator" content="@praveenjuge" />
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
-<meta name="google" content="notranslate" />
-<meta name="theme-color" content="#FFFFFF" />
+<meta name="theme-color" content="#6b46c1" />
 <meta name="imagemode" content="force" />
-<meta name="wap-font-scale" content="no" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
@@ -90,7 +88,8 @@
 <meta property="og:type" content="article" />
 <meta property="article:section" content="" />
 {{ with .Params.tags }}
-  <meta name="news_keywords" content="{{ delimit . ", " }}" /> <meta property="article:section" content="{{ delimit . ", " }}" /> 
+  <meta name="news_keywords" content="{{ delimit . ", " }}" /> 
+  <meta property="article:section" content="{{ delimit . ", " }}" /> 
 {{ end }}
 
 <script type="application/ld+json">
@@ -139,7 +138,7 @@
       "name": "{{ .Params.author }}"
     },
     "description": "{{ .Params.description }}",
-    "publisher": ""
+    "publisher": "{{ .Site.Params.sitename }}"
   }
 </script>
 

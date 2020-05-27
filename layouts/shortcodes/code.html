@@ -8,7 +8,5 @@
   <!-- <div class="absolute" style="top: 2px; right: 5px;">
     <button class="btn btn-link btn-sm">Copy</button>
   </div> -->
-  <div>
-    {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
-  </div>
+  {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
 </div>
