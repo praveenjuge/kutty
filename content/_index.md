@@ -9,5 +9,5 @@ title: "Prebuilt Tailwind Components"
     components.
   </p>
   <a href="/docs/" rel="prefetch" class="btn btn-primary btn-lg">Documentation</a>
-  <a href="https://github.com/praveenjuge/kutty" class="btn btn-light btn-lg" target="_blank">GitHub</a>
+  <a href="https://github.com/praveenjuge/kutty" class="btn btn-light btn-lg" target="_blank" rel="noopener noreferrer">GitHub</a>
 </div>

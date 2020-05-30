@@ -648,7 +648,7 @@ video {
   font-weight: 600;
 }
 
-.markdown a:not(.btn, .avatar-text) {
+.markdown a:not(.btn):not(.avatar-text) {
   --text-opacity: 1;
   color: #553c9a;
   color: rgba(85, 60, 154, var(--text-opacity));
@@ -863,6 +863,8 @@ video {
 .btn:active {
   --transform-scale-x: .95;
   --transform-scale-y: .95;
+  box-shadow: none;
+  outline: 0;
 }
 
 .btn-primary {

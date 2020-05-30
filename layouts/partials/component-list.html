@@ -1,8 +1,14 @@
+{{ $current := . }}
 <div class="py-5 sticky top-0">
-  <h5 class="mb-3 lg:mb-2 text-gray-500 uppercase tracking-wide font-bold text-sm lg:text-xs">Components</h5>
+  <h5 class="mb-3 lg:mb-2 text-gray-700 uppercase tracking-wide font-bold text-sm lg:text-xs">Components</h5>
   <ul>
     {{ range where .Site.Pages.ByWeight "Section" "docs" }}
-    <li class="mb-3 lg:mb-1"><a class="px-2 -mx-2 py-1 text-gray-700 hover:text-gray-900" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a></li>
+
+    <li class="mb-1">
+      <a class="-mx-2 btn btn-sm {{if eq .Permalink $current.Permalink }} btn-light {{ else }} btn-link {{ end }}" href="{{ .Permalink | absLangURL }}">
+        {{ .Title }}
+      </a>
+    </li>
     {{ end }}
   </ul>
 </div>

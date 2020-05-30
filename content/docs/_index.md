@@ -9,7 +9,7 @@ weight: 1
 npm i kutty --save
 ```
 
-Tailwind CSS is not available in this package. Learn how to install tailwind [here](https://tailwindcss.com/docs/installation/).
+Tailwind CSS is not available in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
 ## Usage
 

@@ -7,7 +7,7 @@
 }
 
 .btn:active {
-  @apply scale-95;
+  @apply scale-95 shadow-none outline-none;
 }
 
 .btn-primary {
