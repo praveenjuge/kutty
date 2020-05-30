@@ -8,7 +8,7 @@ weight: 3
 {{< code html >}}
 
 <div class="space-x-2 flex">
-  <div class="avatar"><img src="/placeholder.jpg"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar"><span class="avatar-initial">PJ</span></div>
   <div class="avatar avatar-icon"><i data-feather="user"></i></div>
 </div>
@@ -19,11 +19,11 @@ weight: 3
 {{< code html >}}
 
 <div class="space-x-2 flex">
-  <div class="avatar avatar-xs"><img src="/placeholder.jpg"></div>
-  <div class="avatar avatar-sm"><img src="/placeholder.jpg"></div>
-  <div class="avatar"><img src="/placeholder.jpg"></div>
-  <div class="avatar avatar-lg"><img src="/placeholder.jpg"></div>
-  <div class="avatar avatar-xl"><img src="/placeholder.jpg"></div>
+  <div class="avatar avatar-xs"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar avatar-sm"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar avatar-lg"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar avatar-xl"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar avatar-xs"><span class="avatar-initial">PJ</span></div>
   <div class="avatar avatar-sm"><span class="avatar-initial">PJ</span></div>
   <div class="avatar"><span class="avatar-initial">PJ</span></div>
@@ -37,8 +37,8 @@ weight: 3
 {{< code html >}}
 
 <div class="space-x-2 flex">
-  <div class="avatar avatar-online"><img src="/placeholder.jpg"></div>
-  <div class="avatar avatar-focused"><img src="/placeholder.jpg"></div>
+  <div class="avatar avatar-online"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar avatar-focused"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar avatar-offline"><span class="avatar-initial">PJ</span></div>
   <div class="avatar avatar-busy avatar-icon"><i data-feather="user"></i></div>
 
@@ -50,10 +50,10 @@ weight: 3
 {{< code html >}}
 
 <div class="avatar-stacked -space-x-5">
-  <div class="avatar"><img src="/placeholder.jpg"></div>
-  <div class="avatar"><img src="/placeholder.jpg"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar"><span class="avatar-initial">PJ</span></div>
-  <div class="avatar"><img src="/placeholder.jpg"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar"><span class="avatar-initial">PJ</span></div>
 </div>
 {{< /code >}}
@@ -63,7 +63,7 @@ weight: 3
 {{< code html >}}
 
 <div class="avatar-text">
-  <div class="avatar"><img src="/placeholder.jpg"></div>
+  <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <p>Praveen Juge</p>
 </div>
 {{< /code >}}
