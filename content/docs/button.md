@@ -1,7 +1,9 @@
 ---
 title: Button
-weight: 3
+weight: 4
 ---
+
+## Basic
 
 {{< code html >}}
 <a href="#" class="btn btn-primary" role="button">Link</a>

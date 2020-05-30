@@ -34,8 +34,9 @@ For importing any single component:
 
 ## Components
 
+- [x] Alerts
+- [x] Avatars
 - [x] Buttons
-- [ ] Alerts
 - [ ] Badge
 - [ ] Breadcrumb
 - [ ] Card

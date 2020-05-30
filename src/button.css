@@ -1,5 +1,13 @@
 .btn {
-  @apply select-none text-center align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-4 text-base rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer;
+  @apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-4 text-base rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100;
+}
+
+.btn:focus {
+  @apply shadow-outline outline-none;
+}
+
+.btn:active {
+  @apply scale-95;
 }
 
 .btn-primary {
@@ -129,7 +137,7 @@
 }
 
 .btn-outline-primary {
-  @apply border-purple-700 text-purple-700 bg-transparent;
+  @apply text-purple-700 border-current bg-transparent;
 }
 
 .btn-outline-primary:hover,
@@ -138,7 +146,7 @@
 }
 
 .btn-outline-secondary {
-  @apply border-gray-600 text-gray-600 bg-transparent;
+  @apply text-gray-600 border-current bg-transparent;
 }
 
 .btn-outline-secondary:hover,
@@ -147,7 +155,7 @@
 }
 
 .btn-outline-success {
-  @apply border-green-700 text-green-700 bg-transparent;
+  @apply text-green-700 border-current bg-transparent;
 }
 
 .btn-outline-success:hover,
@@ -156,7 +164,7 @@
 }
 
 .btn-outline-danger {
-  @apply border-red-700 text-red-700 bg-transparent;
+  @apply text-red-700 border-current bg-transparent;
 }
 
 .btn-outline-danger:hover,
@@ -165,7 +173,7 @@
 }
 
 .btn-outline-warning {
-  @apply border-yellow-600 text-yellow-600 bg-transparent;
+  @apply text-yellow-600 border-current bg-transparent;
 }
 
 .btn-outline-warning:hover,
@@ -174,7 +182,7 @@
 }
 
 .btn-outline-light {
-  @apply border-gray-200 text-gray-200 bg-transparent;
+  @apply text-gray-200 border-current bg-transparent;
 }
 
 .btn-outline-light:hover,
@@ -183,7 +191,7 @@
 }
 
 .btn-outline-dark {
-  @apply border-gray-900 text-gray-900 bg-transparent;
+  @apply text-gray-900 border-current bg-transparent;
 }
 
 .btn-outline-dark:hover,
