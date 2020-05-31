@@ -1,5 +1,11 @@
 .alert {
-  @apply font-medium relative overflow-hidden border-2 border-solid text-base rounded-md align-middle duration-150 ease-in flex items-start py-2 pl-4 pr-8;
+  @apply font-medium relative overflow-hidden border-2 border-solid text-base rounded-md align-middle duration-150 ease-in flex items-start py-2 pl-4 pr-4;
+}
+
+.alert-closable,
+.alert-closable.alert-lg,
+.alert-closable.alert-sm {
+  @apply pr-12 !important;
 }
 
 .alert-close {
@@ -11,15 +17,15 @@
 }
 
 .alert-sm {
-  @apply py-1 pl-2 pr-10 text-sm !important;
+  @apply py-1 pl-2 pr-2 text-sm !important;
 }
 
 .alert-lg {
-  @apply py-5 pl-5 pr-12 text-lg !important;
+  @apply py-5 pl-5 pr-5 text-lg !important;
 }
 
 .alert-description {
-  @apply flex text-sm font-normal pr-8;
+  @apply flex text-sm font-normal;
 }
 
 .alert svg {

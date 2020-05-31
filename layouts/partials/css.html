@@ -1,11 +1,7 @@
-{{ if eq (getenv "HUGO_ENV") "production" }}
+{{ if eq (getenv "HUGO_ENV") "production" }} {{ $style := resources.Get "css/build.css" | minify }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
-  {{ $style := resources.Get "css/build.css" | minify }} 
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
-
-{{ else }}
-
-  {{ $style := resources.Get "css/build.css" }} 
-  <link rel="stylesheet" href="{{ $style.Permalink }}">
+{{ else }} {{ $style := resources.Get "css/build.css" }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{ end }}

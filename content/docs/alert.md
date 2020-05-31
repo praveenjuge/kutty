@@ -9,7 +9,7 @@ weight: 2
 
 <div class="space-y-2">
   <div class="alert alert-primary" role="alert">I'm a alert that informs you of stuff.</div>
-  <div class="alert alert-primary" role="alert">
+  <div class="alert alert-primary alert-closable" role="alert">
     I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
@@ -99,7 +99,7 @@ weight: 2
   <div>
     I'm a alert that informs you of stuff.
     <span class="alert-description">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     </span>
   </div>
 </div>
@@ -110,32 +110,32 @@ weight: 2
 {{< code html >}}
 
 <div class="space-y-2">
-  <div class="alert alert-primary" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-primary alert-closable" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-primary alert-top" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-primary alert-closable alert-top" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-primary" role="alert"><i data-feather="info"></i>I'm a alert that informs you of stuff.
+  <div class="alert alert-primary alert-closable" role="alert"><i data-feather="info"></i>I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-outline-primary" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-outline-primary alert-closable" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-link btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-solid-primary" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-solid-primary alert-closable" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-primary alert-sm" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-primary alert-closable alert-sm" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-primary alert-lg" role="alert">I'm a alert that informs you of stuff.
+  <div class="alert alert-primary alert-closable alert-lg" role="alert">I'm a alert that informs you of stuff.
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>
   </div>
-  <div class="alert alert-primary" role="alert">
+  <div class="alert alert-primary alert-closable" role="alert">
     <div>
       I'm a alert that informs you of stuff.
       <span class="alert-description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
       </span>
     </div>
     <button class="btn btn-light-primary btn-sm alert-close"><i data-feather="x"></i></button>

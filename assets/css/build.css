@@ -1569,7 +1569,13 @@ video {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   padding-left: 1rem;
-  padding-right: 2rem;
+  padding-right: 1rem;
+}
+
+.alert-closable,
+.alert-closable.alert-lg,
+.alert-closable.alert-sm {
+  padding-right: 3rem !important;
 }
 
 .alert-close {
@@ -1588,7 +1594,7 @@ video {
   padding-top: 0.25rem !important;
   padding-bottom: 0.25rem !important;
   padding-left: 0.5rem !important;
-  padding-right: 2.5rem !important;
+  padding-right: 0.5rem !important;
   font-size: 0.875rem !important;
 }
 
@@ -1596,7 +1602,7 @@ video {
   padding-top: 1.25rem !important;
   padding-bottom: 1.25rem !important;
   padding-left: 1.25rem !important;
-  padding-right: 3rem !important;
+  padding-right: 1.25rem !important;
   font-size: 1.125rem !important;
 }
 
@@ -1604,7 +1610,6 @@ video {
   display: flex;
   font-size: 0.875rem;
   font-weight: 400;
-  padding-right: 2rem;
 }
 
 .alert svg {
