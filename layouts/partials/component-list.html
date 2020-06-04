@@ -1,14 +1,20 @@
 {{ $current := . }}
 <div class="py-5 sticky top-0">
   <h5 class="mb-3 lg:mb-2 text-gray-700 uppercase tracking-wide font-bold text-sm lg:text-xs">Components</h5>
-  <ul>
-    {{ range where .Site.Pages.ByWeight "Section" "docs" }}
-
-    <li class="mb-1">
-      <a class="-mx-2 btn btn-sm {{if eq .Permalink $current.Permalink }} btn-light {{ else }} btn-link {{ end }}" href="{{ .Permalink | absLangURL }}">
-        {{ .Title }}
-      </a>
-    </li>
-    {{ end }}
-  </ul>
+  <nav role="navigation">
+    <ul>
+      {{ range where .Site.Pages.ByWeight "Section" "docs" }}
+      <li class="mb-1">
+        {{if eq .Permalink $current.Permalink }}
+        <a class="-mx-2 btn btn-sm btn-light" href="#main" aria-describedby="current">
+          <span class="sr-only">(Current Page)</span>
+          {{ .Title }}
+        </a>
+        {{ else }}
+        <a class="-mx-2 btn btn-sm btn-link" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a>
+        {{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </nav>
 </div>

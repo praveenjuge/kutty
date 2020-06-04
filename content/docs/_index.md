@@ -38,7 +38,7 @@ For importing any single component:
 - [x] Alerts
 - [x] Avatars
 - [x] Buttons
-- [ ] Badge
+- [x] Badge
 - [ ] Breadcrumb
 - [ ] Card
 - [ ] Collapse

@@ -18,7 +18,7 @@
   @apply font-semibold;
 }
 
-.markdown a:not(.btn):not(.avatar-text) {
+.markdown a:not(.btn):not(.badge):not(.avatar-text) {
   @apply text-purple-800 font-semibold underline;
 }
 

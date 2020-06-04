@@ -1,4 +1,5 @@
-@import "./src/markup.css";
 @import "./src/button.css";
 @import "./src/alert.css";
 @import "./src/avatar.css";
+@import "./src/badge.css";
+@import "./src/markdown.css";
