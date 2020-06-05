@@ -1,5 +1,5 @@
 .badge {
-  @apply text-center no-underline font-medium relative overflow-hidden py-1 px-3 w-auto inline-flex items-center leading-none whitespace-no-wrap align-baseline text-sm rounded-full transition-colors duration-150 ease-in;
+  @apply text-center no-underline font-semibold relative overflow-hidden py-1 px-3 w-auto inline-flex items-center leading-none whitespace-no-wrap align-baseline text-xs rounded-full transition-colors duration-150 ease-in;
 }
 
 a.badge:focus,

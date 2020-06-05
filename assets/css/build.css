@@ -1846,7 +1846,7 @@ video {
 .badge {
   text-align: center;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   overflow: hidden;
   padding-top: 0.25rem;
@@ -1859,7 +1859,7 @@ video {
   line-height: 1;
   white-space: nowrap;
   vertical-align: baseline;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   border-radius: 9999px;
   transition-property: background-color, border-color, color, fill, stroke;
   transition-duration: 150ms;
