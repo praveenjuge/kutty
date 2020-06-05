@@ -32,6 +32,24 @@ For importing any single component:
 @import "tailwindcss/utilities";
 ```
 
+## Development
+
+Clone the repo, install dependencies, and start the server locally.
+
+```sh
+git clone https://github.com/praveenjuge/kutty.git
+cd kutty
+npm i
+npm start
+```
+
+Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
+
+| Scripts                               | Description                                     |
+| ------------------------------------- | ----------------------------------------------- |
+| `npm start`                           | Starts a local Hugo server and Tailwind Watcher |
+| `npm run production && hugo --minify` | For generating production docs files            |
+
 ## Components
 
 - [x] Alerts
