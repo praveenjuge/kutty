@@ -34,10 +34,17 @@
 {{ partial "css" . }}
 
 <!-- Image of the page -->
-<meta itemprop="image" content="{{ .Params.image | absURL }}" />
-<meta name="twitter:image:src" content="{{ .Params.image | absURL }}" />
-<meta property="og:image" content="{{ .Params.image | absURL }}" />
-<meta name="twitter:image" content="{{ .Params.image | absURL }}" />
+{{ with .Params.image }}
+  <meta itemprop="image" content="{{ .Params.image | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Params.image | absURL }}" />
+  <meta property="og:image" content="{{ .Params.image | absURL }}" />
+  <meta name="twitter:image" content="{{ .Params.image | absURL }}" />
+{{ else }}
+  <meta itemprop="image" content="{{ .Site.Params.image | absURL }}" />
+  <meta name="twitter:image:src" content="{{ .Site.Params.image | absURL }}" />
+  <meta property="og:image" content="{{ .Site.Params.image | absURL }}" />
+  <meta name="twitter:image" content="{{ .Site.Params.image | absURL }}" />
+{{ end }}
 
 <!-- Author Name -->
 {{ with .Params.authors }} 

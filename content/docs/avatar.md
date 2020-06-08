@@ -41,7 +41,6 @@ weight: 3
   <div class="avatar avatar-focused"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar avatar-offline"><span class="avatar-initial">PJ</span></div>
   <div class="avatar avatar-busy avatar-icon"><i data-feather="user"></i></div>
-
 </div>
 {{< /code >}}
 

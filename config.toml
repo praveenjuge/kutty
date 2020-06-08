@@ -12,7 +12,7 @@ canonifyURLs = true
 [params]
   author = "Praveen Juge"
   sitename = "Kutty"
-  ogimage = "/images/og.png"
+  image = "/brand/og.png"
   description = "Kutty is a set of accessible and reusable components for building web applications."
 
 [markup]

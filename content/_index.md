@@ -2,7 +2,7 @@
 title: "Prebuilt Tailwind Components"
 ---
 
-<div class="w-full lg:w-1/2 mx-auto p-4 py-40">
+<div class="w-full lg:w-1/2 mx-auto py-40">
   <h1 class="text-3xl md:text-4xl text-gray-900 leading-tight mb-4 font-semibold">Prebuilt Tailwind Components</h1>
   <p class="text-base md:text-lg text-gray-600 mb-5">
     Kutty is a set of accessible and reusable components for building web applications. It uses Tailwind classes, which is an utility based CSS framework, for styling the

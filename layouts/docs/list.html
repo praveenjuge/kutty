@@ -1,10 +1,8 @@
 {{ define "main" }}
 
-<div class="flex flex-wrap p-3">
-  <div class="w-full md:w-1/5">
-    {{ partial "component-list" . }}
-  </div>
-  <div class="w-full md:w-4/5 py-3">
+<div class="flex flex-wrap">
+  {{ partial "component-list" . }}
+  <div class="w-full md:w-4/5">
     <article class="markdown" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
       <h1 itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
       <p itemprop="description">{{ .Description }}</p>

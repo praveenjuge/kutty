@@ -56,8 +56,8 @@ Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Avatars
 - [x] Buttons
 - [x] Badge
-- [ ] Breadcrumb
-- [ ] Card
+- [x] Breadcrumb
+- [x] Card
 - [ ] Collapse
 - [ ] Dropdowns
 - [ ] Forms
