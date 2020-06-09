@@ -2119,6 +2119,11 @@ a.badge-light-warning:focus {
   color: rgba(107, 70, 193, var(--text-opacity));
 }
 
+.markdown .breadcrumb-item a {
+  font-weight: 400 !important;
+  text-decoration: none !important;
+}
+
 .breadcrumb-item,
 .breadcrumb-item a {
   font-size: 1rem;
@@ -2446,10 +2451,10 @@ a.card:focus {
   font-weight: 600;
 }
 
-.markdown a:not(.btn):not(.badge):not(.avatar-text):not(.breadcrumb li a) {
+.markdown a:not(.btn):not(.badge):not(.card):not(.avatar-text) {
   --text-opacity: 1;
-  color: #553c9a;
-  color: rgba(85, 60, 154, var(--text-opacity));
+  color: #6b46c1;
+  color: rgba(107, 70, 193, var(--text-opacity));
   font-weight: 600;
   text-decoration: underline;
 }
