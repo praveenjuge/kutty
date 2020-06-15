@@ -10,10 +10,6 @@
   @apply text-purple-700;
 }
 
-.markdown .breadcrumb-item a {
-  @apply font-normal no-underline !important;
-}
-
 .breadcrumb-item,
 .breadcrumb-item a {
   @apply text-base flex items-center;

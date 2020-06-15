@@ -58,10 +58,10 @@ Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Badge
 - [x] Breadcrumb
 - [x] Card
+- [x] Forms
+- [x] Lists
 - [ ] Collapse
 - [ ] Dropdowns
-- [ ] Forms
-- [ ] List Group
 - [ ] Modal
 - [ ] Pagination
 - [ ] Loading
