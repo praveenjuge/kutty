@@ -2712,7 +2712,11 @@ a.card:focus {
 }
 
 .tag-checkbox:checked,
-.tag-radio:checked {
+.tag-radio:checked,
+.tag-success .tag-checkbox:checked,
+.tag-success .tag-radio:checked,
+.tag-danger .tag-checkbox:checked,
+.tag-danger .tag-radio:checked {
   border-color: transparent;
   background-color: currentColor;
   background-position: center;

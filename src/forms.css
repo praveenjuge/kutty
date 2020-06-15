@@ -155,7 +155,11 @@
 }
 
 .tag-checkbox:checked,
-.tag-radio:checked {
+.tag-radio:checked,
+.tag-success .tag-checkbox:checked,
+.tag-success .tag-radio:checked,
+.tag-danger .tag-checkbox:checked,
+.tag-danger .tag-radio:checked {
   @apply border-transparent bg-current bg-center bg-no-repeat;
   background-size: 100% 100%;
 }
