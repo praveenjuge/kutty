@@ -25,8 +25,8 @@
     "kutty.css"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"postcss main.css -o assets/css/build.css --watch\" \"hugo server --disableFastRender\"",
-    "production": "cross-env NODE_ENV=production postcss main.css -o assets/css/build.css"
+    "start": "cross-env NODE_ENV=development concurrently \"postcss main.css -o static/build.css --watch\" \"hugo server --disableFastRender\"",
+    "production": "cross-env NODE_ENV=production postcss main.css -o static/build.css"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
