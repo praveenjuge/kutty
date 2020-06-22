@@ -1,5 +1,5 @@
 ---
-title: Badges
+title: Badge
 weight: 5
 ---
 

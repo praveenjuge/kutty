@@ -18,7 +18,7 @@
   @apply font-semibold;
 }
 
-.markdown a:not(.btn):not(.badge):not(.card):not(.avatar-text):not(.list-item) {
+.markdown a:not(.btn):not(.badge):not(.card):not(.avatar-text):not(.list-item):not(.pagination-link):not(.pagination-disabled, .tab-link) {
   @apply text-purple-700 font-semibold underline;
 }
 
@@ -88,7 +88,7 @@
   @apply block bg-transparent p-0 overflow-visible rounded-none;
 }
 
-.markdown ul:not(.breadcrumb):not(.list) {
+.markdown ul:not(.breadcrumb):not(.list):not(.pagination) {
   @apply text-base pl-8 list-disc;
 }
 

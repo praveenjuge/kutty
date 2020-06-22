@@ -99,3 +99,5 @@ resources/*
 
 # Local Netlify folder
 .netlify
+
+static/build.css

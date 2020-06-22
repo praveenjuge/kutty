@@ -5,5 +5,7 @@
 @import "./src/breadcrumb.css";
 @import "./src/card.css";
 @import "./src/forms.css";
-@import "./src/lists.css";
+@import "./src/list.css";
+@import "./src/pagination.css";
+@import "./src/tabs.css";
 @import "./src/markdown.css";

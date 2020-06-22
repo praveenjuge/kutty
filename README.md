@@ -52,19 +52,19 @@ Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
 
 ## Components
 
-- [x] Alerts
-- [x] Avatars
-- [x] Buttons
+- [x] Alert
+- [x] Avatar
+- [x] Button
 - [x] Badge
 - [x] Breadcrumb
 - [x] Card
 - [x] Forms
-- [x] Lists
+- [x] List
+- [x] Pagination
+- [x] Tabs
 - [ ] Collapse
 - [ ] Dropdowns
 - [ ] Modal
-- [ ] Pagination
 - [ ] Loading
-- [ ] Tabs
 - [ ] Toasts
 - [ ] Tooltips

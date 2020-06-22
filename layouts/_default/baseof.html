@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#">
+<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#" class="bg-white">
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }}
   </head>
   <body class="bg-white">
     {{ partial "header" . }}
-    <main class="container mx-auto my-12 px-3" id="main">
+    <main class="container mx-auto my-6 md:my-12 px-3 md:px-1" id="main">
       {{ block "main" . }}{{ end }}
     </main>
     {{ partial "js" . }}

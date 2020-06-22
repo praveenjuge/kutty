@@ -255,21 +255,21 @@ weight: 8
 {{< code html >}}
 
 <div class="bg-gray-100">
-  <div class="w-full md:w-5/12 mx-auto space-y-4 px-5 py-10">
+  <form class="w-full md:w-5/12 mx-auto space-y-4 px-5 py-10">
     <label class="tag-label">
       <span>Your Email</span>
-      <input class="tag-input" type="email" placeholder="Ex. james@bond.com" />
+      <input class="tag-input" type="email" placeholder="Ex. james@bond.com" required />
     </label>
     <label class="tag-label">
       <span>Your Password</span>
-      <input class="tag-input" type="password" placeholder="••••••••" />
+      <input class="tag-input" type="password" placeholder="••••••••" required />
     </label>
     <label class="tag-label">
       <input type="checkbox" class="tag-checkbox" />
       <span class="ml-1">Remember me</span>
     </label>
     <input type="submit" class="btn btn-primary" value="Login" />
-  </div>
+  </form>
 </div>
 
 {{< /code >}}
