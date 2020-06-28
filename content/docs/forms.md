@@ -1,6 +1,5 @@
 ---
 title: Forms
-weight: 8
 ---
 
 ## Input Tag

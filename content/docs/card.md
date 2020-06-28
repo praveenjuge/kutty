@@ -1,6 +1,5 @@
 ---
 title: Card
-weight: 7
 ---
 
 ## Basic

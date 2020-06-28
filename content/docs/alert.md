@@ -1,6 +1,5 @@
 ---
 title: Alert
-weight: 2
 ---
 
 ## Basic

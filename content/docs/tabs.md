@@ -1,6 +1,5 @@
 ---
 title: Tabs
-weight: 11
 ---
 
 ## Basic

@@ -1,5 +1,5 @@
 [build]
-  command = "npm run production && hugo --minify"
+  command = "npm run production"
   publish = "public"
 
 [build.environment]

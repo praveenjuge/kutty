@@ -1,6 +1,5 @@
 ---
 title: Avatar
-weight: 3
 ---
 
 ## Basic

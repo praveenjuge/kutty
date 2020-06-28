@@ -1,6 +1,5 @@
 ---
 title: Breadcrumb
-weight: 6
 ---
 
 ## Basic

@@ -1,6 +1,5 @@
 ---
 title: List
-weight: 9
 ---
 
 ## Basic

@@ -1,6 +1,5 @@
 ---
 title: Badge
-weight: 5
 ---
 
 ## Basic

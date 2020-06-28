@@ -12,6 +12,8 @@ Tailwind CSS is not available in this package. Learn how to [install tailwind he
 
 ## Usage
 
+### For CSS
+
 For importing the whole package:
 
 ```css
@@ -22,7 +24,7 @@ For importing the whole package:
 @import "tailwindcss/utilities";
 ```
 
-For importing any single component:
+Or for importing any single component:
 
 ```css
 @import "tailwindcss/base";
@@ -30,6 +32,14 @@ For importing any single component:
 /* Add Kutty here */
 @import "kutty/src/button.css";
 @import "tailwindcss/utilities";
+```
+
+### For JS
+
+Place the following script tag before the closing body tag:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/kutty/dist/kutty.js"></script>
 ```
 
 ## Development
@@ -45,25 +55,25 @@ npm start
 
 Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
 
-| Scripts                               | Description                                     |
-| ------------------------------------- | ----------------------------------------------- |
-| `npm start`                           | Starts a local Hugo server and Tailwind Watcher |
-| `npm run production && hugo --minify` | For generating production docs files            |
+| Scripts              | Description                                     |
+| -------------------- | ----------------------------------------------- |
+| `npm start`          | Starts a local Hugo server and Tailwind Watcher |
+| `npm run production` | For generating production docs files            |
 
 ## Components
 
 - [x] Alert
 - [x] Avatar
-- [x] Button
 - [x] Badge
 - [x] Breadcrumb
+- [x] Button
 - [x] Card
+- [x] Dropdown
 - [x] Forms
 - [x] List
 - [x] Pagination
 - [x] Tabs
 - [ ] Collapse
-- [ ] Dropdowns
 - [ ] Modal
 - [ ] Loading
 - [ ] Toasts

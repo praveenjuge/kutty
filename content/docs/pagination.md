@@ -1,6 +1,5 @@
 ---
 title: Pagination
-weight: 10
 ---
 
 ## Basic

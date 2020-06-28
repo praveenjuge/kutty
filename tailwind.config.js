@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    content: ["./layouts/**/*.html", "./content/**/*.md"],
+    content: ["./layouts/**/*.html", "./content/**/*.md", "./src/js/**/*.js"],
   },
   theme: {
     extend: {},

@@ -1,6 +1,5 @@
 ---
 title: Button
-weight: 4
 ---
 
 ## Basic

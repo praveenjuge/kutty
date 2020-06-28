@@ -9,6 +9,8 @@ enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
 
+staticDir = ["static", "dist"]
+
 [params]
   author = "Praveen Juge"
   sitename = "Kutty"

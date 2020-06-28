@@ -1,6 +1,6 @@
 {
   "name": "kutty",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Kutty is a set of accessible and reusable components for building web applications.",
   "main": "kutty.css",
   "author": "praveenjuge",
@@ -22,11 +22,12 @@
   },
   "files": [
     "src",
+    "dist",
     "kutty.css"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"postcss main.css -o static/build.css --watch\" \"hugo server --disableFastRender\"",
-    "production": "cross-env NODE_ENV=production postcss main.css -o static/build.css"
+    "start": "cross-env NODE_ENV=development concurrently \"postcss main.css -o static/build.css --watch\" \"hugo server --disableFastRender\" \"rollup -c -w\"",
+    "production": "cross-env NODE_ENV=production postcss main.css -o static/build.css && rollup -c rollup -c --compact && hugo --minify"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
@@ -34,6 +35,7 @@
     "cross-env": "^7.0.2",
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
+    "rollup": "^2.18.1",
     "tailwindcss": "^1.4.6"
   }
 }
