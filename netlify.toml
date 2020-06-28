@@ -1,5 +1,5 @@
 [build]
-  command = "npm run production"
+  command = "npm run production && rollup -c --compact && hugo --minify"
   publish = "public"
 
 [build.environment]
