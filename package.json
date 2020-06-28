@@ -27,7 +27,7 @@
   ],
   "scripts": {
     "start": "cross-env NODE_ENV=development concurrently \"postcss main.css -o static/build.css --watch\" \"hugo server --disableFastRender\" \"rollup -c -w\"",
-    "production": "cross-env NODE_ENV=production postcss main.css -o static/build.css"
+    "production": "NODE_ENV=production postcss main.css -o static/build.css && rollup -c --compact && hugo --minify"
   },
   "devDependencies": {
     "autoprefixer": "^9.8.0",
