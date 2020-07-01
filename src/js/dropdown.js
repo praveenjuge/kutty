@@ -1,7 +1,7 @@
 // TODO
 // - On pressing A-Z, a-z the focus moves to the corresponding list item
 
-//DONE
+// DONE
 // - Click, press enter or press space on the dropdown button to open/close dropdown menu
 // - Press escape or click outside to close the dropdown menu when opened
 // - Up arrow, down arrow focuses on each dropdown item
@@ -17,6 +17,13 @@
 // - Restore focus to the dropdown button once the dropdown menu is closed
 
 const Dropdown = (() => {
+  const dropdownClass = ".dropdown";
+  const triggerClass = ".dropdown-trigger";
+  const listClass = ".dropdown-list";
+  const dropdownItemClass = ".dropdown-item";
+  const dropdownLinkClass = "a.dropdown-item";
+  const animationClass = "dropdown-animation";
+
   const keyboardKey = {
     escape: 27,
     end: 35,
@@ -30,8 +37,8 @@ const Dropdown = (() => {
     constructor(options) {
       this.trigger = options.trigger;
       this.dropdown = options.dropdownList;
-      this.items = this.dropdown.querySelectorAll(".dropdown-item");
-      this.links = this.dropdown.querySelectorAll("a.dropdown-item");
+      this.items = this.dropdown.querySelectorAll(dropdownItemClass);
+      this.links = this.dropdown.querySelectorAll(dropdownLinkClass);
       [this.firstLink] = this.links;
       this.lastLink = this.links[this.links.length - 1];
 
@@ -48,7 +55,7 @@ const Dropdown = (() => {
 
     onClick(event) {
       // Close the dropdown menu when clicked outside and on other dropdown trigger
-      if (event.target.closest(".dropdown-trigger") !== this.trigger.closest(".dropdown-trigger")) {
+      if (event.target.closest(triggerClass) !== this.trigger.closest(triggerClass)) {
         this.close();
       }
       if (event) event.target.focus();
@@ -118,7 +125,6 @@ const Dropdown = (() => {
 
       this.state.forEach((section) => {
         if (section.item) section.item.setAttribute("role", "none");
-
         section.link.setAttribute("role", "menuitem");
         section.link.setAttribute("tabindex", -1);
       });
@@ -136,7 +142,6 @@ const Dropdown = (() => {
 
       this.state.forEach((section) => {
         if (section.item) section.item.removeAttribute("role");
-
         section.link.removeAttribute("role");
         section.link.removeAttribute("tabindex");
       });
@@ -169,6 +174,13 @@ const Dropdown = (() => {
       this.trigger.setAttribute("aria-expanded", true);
       this.dropdown.setAttribute("aria-hidden", false);
 
+      setTimeout(
+        function () {
+          this.dropdown.classList.add(animationClass);
+        }.bind(this),
+        1
+      );
+
       // Add event listeners
       this.addEventListeners();
     }
@@ -176,14 +188,21 @@ const Dropdown = (() => {
     close(event) {
       // Close dropdown
       this.isOpen = false;
-      this.trigger.setAttribute("aria-expanded", false);
-      this.dropdown.setAttribute("aria-hidden", true);
+      this.dropdown.classList.remove(animationClass);
+
+      setTimeout(
+        function () {
+          this.trigger.setAttribute("aria-expanded", false);
+          this.dropdown.setAttribute("aria-hidden", true);
+        }.bind(this),
+        100
+      );
 
       // Remove event listeners
       this.removeEventListeners();
 
       // Restoring focus
-      if (event) this.trigger.focus();
+      this.trigger.focus();
     }
 
     toggle(event) {
@@ -225,13 +244,13 @@ const Dropdown = (() => {
 
   const init = () => {
     // Select all dropdown in the page
-    const triggers = document.querySelectorAll(".dropdown");
+    const triggers = document.querySelectorAll(dropdownClass);
     const options = {};
 
     triggers.forEach((trigger) => {
       // Select dropdown trigger and list
-      options.trigger = trigger.querySelector(".dropdown-trigger");
-      options.dropdownList = trigger.querySelector(".dropdown-list");
+      options.trigger = trigger.querySelector(triggerClass);
+      options.dropdownList = trigger.querySelector(listClass);
 
       const singleDropdown = new Dropdown(options);
       singleDropdown.render();

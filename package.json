@@ -1,6 +1,6 @@
 {
   "name": "kutty",
-  "version": "0.0.8",
+  "version": "0.0.81",
   "description": "Kutty is a set of accessible and reusable components for building web applications.",
   "main": "kutty.css",
   "author": "praveenjuge",
