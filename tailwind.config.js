@@ -5,6 +5,8 @@ module.exports = {
   theme: {
     extend: {},
   },
-  variants: {},
+  variants: {
+    visibility: ["group-hover"],
+  },
   plugins: [],
 };

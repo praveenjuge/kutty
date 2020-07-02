@@ -42,12 +42,20 @@ Or for importing any single component:
 Place the following script tag before the closing body tag:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/kutty/dist/kutty.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.js"></script>
 ```
 
 ## Development
 
-Clone the repo, install dependencies, and start the server locally.
+You need [Hugo](https://gohugo.io/) to run the dev server. If you have [Homebrew](https://brew.sh/) you can do the following:
+
+```sh
+brew install hugo
+```
+
+Check this [Hugo installation page](https://gohugo.io/getting-started/installing/) for installing on other systems.
+
+Then clone the repo, install dependencies, and start the server locally.
 
 ```sh
 git clone https://github.com/praveenjuge/kutty.git
@@ -56,12 +64,12 @@ npm i
 npm start
 ```
 
-Then open [`http://localhost:1313`](http://localhost:1313) in your browser.
+Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 
-| Scripts              | Description                                     |
-| -------------------- | ----------------------------------------------- |
-| `npm start`          | Starts a local Hugo server and Tailwind Watcher |
-| `npm run production` | For generating production docs files            |
+| Scripts                                   | Description                                     |
+| ----------------------------------------- | ----------------------------------------------- |
+| `npm start`                               | Starts a local Hugo server and Tailwind Watcher |
+| `npm run production && rollup -c && hugo` | For generating production docs files            |
 
 ## Components
 
