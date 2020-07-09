@@ -1,6 +1,6 @@
 {
   "name": "kutty",
-  "version": "0.0.81",
+  "version": "0.0.9",
   "description": "Kutty is a set of accessible and reusable components for building web applications.",
   "main": "kutty.css",
   "author": "praveenjuge",
@@ -36,6 +36,7 @@
     "postcss-cli": "^7.1.1",
     "postcss-import": "^12.0.1",
     "rollup": "^2.18.1",
+    "rollup-plugin-terser": "^6.1.0",
     "tailwindcss": "^1.4.6"
   }
 }

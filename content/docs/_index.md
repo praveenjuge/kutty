@@ -42,7 +42,7 @@ Or for importing any single component:
 Place the following script tag before the closing body tag:
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
 ```
 
 ## Development
@@ -79,13 +79,13 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Breadcrumb
 - [x] Button
 - [x] Card
+- [x] Dialog
 - [x] Dropdown
 - [x] Forms
 - [x] List
 - [x] Pagination
 - [x] Tabs
 - [ ] Collapse
-- [ ] Modal
 - [ ] Loading
 - [ ] Toasts
 - [ ] Tooltips

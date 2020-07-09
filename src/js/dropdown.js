@@ -173,13 +173,7 @@ const Dropdown = (() => {
       this.isOpen = true;
       this.trigger.setAttribute("aria-expanded", true);
       this.dropdown.setAttribute("aria-hidden", false);
-
-      setTimeout(
-        function () {
-          this.dropdown.classList.add(animationClass);
-        }.bind(this),
-        1
-      );
+      setTimeout(() => this.dropdown.classList.add(animationClass), 1);
 
       // Add event listeners
       this.addEventListeners();
@@ -189,14 +183,8 @@ const Dropdown = (() => {
       // Close dropdown
       this.isOpen = false;
       this.dropdown.classList.remove(animationClass);
-
-      setTimeout(
-        function () {
-          this.trigger.setAttribute("aria-expanded", false);
-          this.dropdown.setAttribute("aria-hidden", true);
-        }.bind(this),
-        100
-      );
+      this.trigger.setAttribute("aria-expanded", false);
+      setTimeout(() => this.dropdown.setAttribute("aria-hidden", true), 100);
 
       // Remove event listeners
       this.removeEventListeners();
