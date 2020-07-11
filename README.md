@@ -1,6 +1,8 @@
 # Kutty
 
-Kutty is a set of accessible and reusable components for building web applications. It uses Tailwind classes, which is an utility based CSS framework, for styling the components.
+Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications built in.
+
+This plugin requires Tailwind CSS 1.4 or later.
 
 ## Installation
 
@@ -8,30 +10,17 @@ Kutty is a set of accessible and reusable components for building web applicatio
 npm i kutty --save
 ```
 
-Tailwind CSS is not available in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
+Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
 ## Usage
 
 ### For CSS
 
-For importing the whole package:
+Require the installed plugin directly to your Tailwind config:
 
-```css
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-/* Add Kutty here */
-@import "kutty";
-@import "tailwindcss/utilities";
-```
-
-Or for importing any single component:
-
-```css
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-/* Add Kutty here */
-@import "kutty/src/button.css";
-@import "tailwindcss/utilities";
+```js
+// tailwind.config.js
+plugins: [require("kutty")],
 ```
 
 ### For JS

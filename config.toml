@@ -15,7 +15,7 @@ staticDir = ["static", "dist"]
   author = "Praveen Juge"
   sitename = "Kutty"
   image = "/brand/og.png"
-  description = "Kutty is a set of accessible and reusable components for building web applications."
+  description = "Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications built in."
 
 [markup]
   defaultMarkdownHandler = "goldmark"

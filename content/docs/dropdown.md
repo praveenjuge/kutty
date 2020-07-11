@@ -8,7 +8,7 @@ title: Dropdown
 
 <div class="dropdown">
   <button class="btn btn-primary dropdown-trigger" id="open-color-menu">
-    Open Dropdown <i data-feather="chevron-down"></i>
+    Open Dropdown
   </button>
   <div id="color-menu" class="dropdown-list">
     <a href="#" class="dropdown-item">Red</a>
@@ -25,7 +25,7 @@ title: Dropdown
 <div class="flex space-x-2">
   <div class="dropdown dropdown-sm">
     <button class="btn btn-primary btn-sm dropdown-trigger" id="open-color-menu">
-      Open Dropdown <i data-feather="chevron-down"></i>
+      Open Dropdown
     </button>
     <div id="color-menu" class="dropdown-list">
       <a href="#" class="dropdown-item">Red</a>
@@ -35,7 +35,7 @@ title: Dropdown
   </div>
   <div class="dropdown dropdown-lg">
     <button class="btn btn-primary btn-lg dropdown-trigger" id="open-color-menu">
-      Open Dropdown <i data-feather="chevron-down"></i>
+      Open Dropdown
     </button>
     <div id="color-menu" class="dropdown-list">
       <a href="#" class="dropdown-item">Red</a>
@@ -52,7 +52,7 @@ title: Dropdown
 
 <div class="dropdown">
   <button class="btn btn-primary dropdown-trigger" id="open-color-menu">
-    Open Dropdown <i data-feather="chevron-down"></i>
+    Open Dropdown
   </button>
   <div id="color-menu" class="dropdown-list">
     <a href="#" class="dropdown-item">Red</a>
@@ -72,7 +72,7 @@ title: Dropdown
 
 <div class="dropdown">
   <button class="btn btn-primary dropdown-trigger" id="open-color-menu">
-    Open Dropdown <i data-feather="chevron-down"></i>
+    Open Dropdown
   </button>
   <div id="color-menu" class="dropdown-list">
     <a href="#" class="dropdown-item justify-between">Red<i data-feather="bell"></i></a>

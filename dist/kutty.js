@@ -248,7 +248,6 @@
   })();
 
   // Todo
-  // - Animations
   // - Focus on the first focusable element when dialog is opened
 
   const Dialog = (() => {
