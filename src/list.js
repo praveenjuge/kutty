@@ -1,13 +1,19 @@
 module.exports = List = () => ({
-  ".list": {
-    "@apply flex flex-col pl-0 mb-0": {},
+  ".list, .prose .list": {
+    "@apply flex flex-col pl-0 mb-0 mt-0": {},
   },
-  ".list-item": {
-    "@apply relative flex px-3 py-3 border border-solid border-gray-200 items-center text-gray-800  font-normal": {},
+  ".list-item, .prose .list-item": {
+    "@apply relative flex px-3 py-3 border border-solid border-gray-200 items-start text-gray-800  font-normal mt-0 flex-col": {},
     marginBottom: "-1px",
   },
   ".list-item.list-active": {
     "@apply bg-purple-700 text-white": {},
+  },
+  ".prose .list-item::before": {
+    content: "none",
+  },
+  ".prose a.list-item": {
+    "@apply no-underline": {},
   },
   "a.list-item.list-active:hover": {
     "@apply bg-purple-900": {},
@@ -46,7 +52,7 @@ module.exports = List = () => ({
     "@apply border-b-0": {},
   },
   ".list-options .list-item": {
-    "@apply justify-between": {},
+    "@apply justify-between flex-row": {},
   },
   ".list-item.list-primary": {
     "@apply bg-purple-200 text-purple-700": {},

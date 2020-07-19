@@ -9,6 +9,9 @@ module.exports = Pagination = () => ({
   ".pagination-link svg, .pagination-disabled svg": {
     "@apply h-4 w-4 -mx-1": {},
   },
+  ".prose a.pagination-link, .prose .pagination-disabled": {
+    "@apply no-underline": {},
+  },
   // Sizes
   ".pagination-sm": {
     "@apply text-xs": {},
@@ -46,7 +49,7 @@ module.exports = Pagination = () => ({
   ".pagination-link:last-child, .pagination-disabled:last-child": {
     "@apply rounded-r": {},
   },
-  ".pagination-active": {
+  ".pagination-active, .prose a.pagination-active": {
     "@apply bg-purple-700 text-white border-purple-700": {},
     "&:hover, &:focus": {
       "@apply bg-purple-900 border-purple-900": {},

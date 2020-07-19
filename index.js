@@ -12,7 +12,6 @@ const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
 const Pagination = require("./src/pagination.js");
 const Tabs = require("./src/tabs.js");
-const Markdown = require("./src/markdown.js");
 
 module.exports = plugin(function ({ addComponents }) {
   addComponents(Alert());
@@ -27,5 +26,4 @@ module.exports = plugin(function ({ addComponents }) {
   addComponents(List());
   addComponents(Pagination());
   addComponents(Tabs());
-  addComponents(Markdown());
 });

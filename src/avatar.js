@@ -10,7 +10,10 @@ module.exports = Avatar = () => ({
     "@apply absolute rounded-full inset-0 font-bold text-base uppercase flex items-center justify-center h-full w-full bg-purple-200 text-purple-700 no-underline": {},
   },
   ".avatar img": {
-    "@apply h-full w-full object-cover rounded-full": {},
+    "@apply h-full w-full object-cover rounded-full bg-gray-200": {},
+  },
+  ".prose .avatar img": {
+    "@apply mt-0 mb-0": {},
   },
   ".avatar-icon": {
     "@apply bg-purple-200 text-purple-700 flex items-center justify-center": {},
@@ -23,6 +26,9 @@ module.exports = Avatar = () => ({
   },
   ".avatar-text .avatar": {
     "@apply mr-2": {},
+  },
+  ".prose .avatar-text p": {
+    "@apply mt-0 mb-0": {},
   },
   ".avatar-offline::after, .avatar-online::after, .avatar-busy::after, .avatar-focused::after": {
     content: "''",

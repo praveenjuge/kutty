@@ -8,133 +8,136 @@ module.exports = Button = () => ({
       "@apply scale-95 shadow-none outline-none": {},
     },
   },
-  ".btn-primary": {
+  ".prose a.btn": {
+    "@apply no-underline": {},
+  },
+  ".btn-primary, .prose a.btn-primary": {
     "@apply bg-purple-700 border-purple-700 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-purple-900 border-purple-900": {},
     },
   },
-  ".btn-secondary": {
+  ".btn-secondary, .prose a.btn-secondary": {
     "@apply bg-gray-600 border-gray-600 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-gray-800 border-gray-800": {},
     },
   },
-  ".btn-success": {
+  ".btn-success, .prose a.btn-success": {
     "@apply bg-green-700 border-green-700 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-green-900 border-green-900": {},
     },
   },
-  ".btn-danger": {
+  ".btn-danger, .prose a.btn-danger": {
     "@apply bg-red-700 border-red-700 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-red-900 border-red-900": {},
     },
   },
-  ".btn-warning": {
+  ".btn-warning, .prose a.btn-warning": {
     "@apply bg-yellow-600 border-yellow-600 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-yellow-800 border-yellow-800": {},
     },
   },
-  ".btn-light": {
+  ".btn-light, .prose a.btn-light": {
     "@apply bg-gray-200 border-gray-200 text-gray-900": {},
     "&:hover, &:focus": {
       "@apply bg-gray-400 border-gray-400": {},
     },
   },
-  ".btn-dark": {
+  ".btn-dark, .prose a.btn-dark": {
     "@apply bg-gray-900 border-gray-900 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-gray-700 border-gray-700": {},
     },
   },
-  ".btn-link": {
+  ".btn-link, .prose a.btn-link": {
     "@apply bg-transparent border-transparent text-purple-800": {},
     "&:hover, &:focus": {
       "@apply bg-gray-300 border-gray-300": {},
     },
   },
-  ".btn-light-primary": {
+  ".btn-light-primary, .prose a.btn-light-primary": {
     "@apply bg-purple-200 border-purple-200 text-purple-700": {},
     "&:hover, &:focus": {
       "@apply bg-purple-300 border-purple-300 text-purple-900": {},
     },
   },
-  ".btn-light-secondary": {
+  ".btn-light-secondary, .prose a.btn-light-secondary": {
     "@apply bg-gray-200 border-gray-200 text-gray-700": {},
     "&:hover, &:focus": {
       "@apply bg-gray-300 border-gray-300 text-gray-900": {},
     },
   },
-  ".btn-light-success": {
+  ".btn-light-success, .prose a.btn-light-success": {
     "@apply bg-green-200 border-green-200 text-green-800": {},
     "&:hover, &:focus": {
       "@apply bg-green-300 border-green-300 text-green-900": {},
     },
   },
-  ".btn-light-danger": {
+  ".btn-light-danger, .prose a.btn-light-danger": {
     "@apply bg-red-200 border-red-200 text-red-700": {},
     "&:hover, &:focus": {
       "@apply bg-red-300 border-red-300 text-red-900": {},
     },
   },
-  ".btn-light-warning": {
+  ".btn-light-warning, .prose a.btn-light-warning": {
     "@apply bg-yellow-200 border-yellow-200 text-yellow-800": {},
     "&:hover, &:focus": {
       "@apply bg-yellow-300 border-yellow-300 text-yellow-900": {},
     },
   },
-  ".btn-light-link": {
+  ".btn-light-link, .prose a.btn-light-link": {
     "@apply bg-transparent border-transparent text-purple-200": {},
     "&:hover, &:focus": {
       "@apply bg-gray-200 border-gray-200 text-purple-700": {},
     },
   },
-  ".btn-outline-primary": {
+  ".btn-outline-primary, .prose a.btn-outline-primary": {
     "@apply text-purple-700 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply bg-purple-900 border-purple-900 text-white": {},
     },
   },
-  ".btn-outline-secondary": {
+  ".btn-outline-secondary, .prose a.btn-outline-secondary": {
     "@apply text-gray-600 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply bg-gray-800 border-gray-800 text-white": {},
     },
   },
-  ".btn-outline-success": {
+  ".btn-outline-success, .prose a.btn-outline-success": {
     "@apply text-green-700 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply bg-green-900 border-green-900 text-white": {},
     },
   },
-  ".btn-outline-danger": {
+  ".btn-outline-danger, .prose a.btn-outline-danger": {
     "@apply text-red-700 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-red-900 text-white bg-red-900": {},
     },
   },
-  ".btn-outline-warning": {
+  ".btn-outline-warning, .prose a.btn-outline-warning": {
     "@apply text-yellow-600 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-yellow-800 text-white bg-yellow-800": {},
     },
   },
-  ".btn-outline-light": {
+  ".btn-outline-light, .prose a.btn-outline-light": {
     "@apply text-gray-200 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-gray-400 text-gray-900 bg-gray-400": {},
     },
   },
-  ".btn-outline-dark": {
+  ".btn-outline-dark, .prose a.btn-outline-dark": {
     "@apply text-gray-900 border-current bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-gray-900 text-white bg-gray-900": {},
     },
   },
-  ".btn-outline-link": {
+  ".btn-outline-link, .prose a.btn-outline-link": {
     "@apply border-transparent text-purple-800 bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-gray-300": {},
@@ -185,7 +188,7 @@ module.exports = Button = () => ({
   ".btn-list > .btn:not(:last-child)": {
     "@apply mr-1": {},
   },
-  ".btn-twitter": {
+  ".btn-twitter, .prose a.btn-twitter": {
     "@apply text-white": {},
     backgroundColor: "#1da1f2",
     borderColor: "#1da1f2",
@@ -194,7 +197,7 @@ module.exports = Button = () => ({
       borderColor: "#0c80c7",
     },
   },
-  ".btn-google": {
+  ".btn-google, .prose a.btn-google": {
     "@apply text-white": {},
     backgroundColor: "#4285f4",
     borderColor: "#4285f4",
@@ -203,7 +206,7 @@ module.exports = Button = () => ({
       borderColor: "#1d61d2",
     },
   },
-  ".btn-youtube": {
+  ".btn-youtube, .prose a.btn-youtube": {
     "@apply text-white": {},
     backgroundColor: "#ff0000",
     borderColor: "#ff0000",
@@ -212,7 +215,7 @@ module.exports = Button = () => ({
       borderColor: "#b10505",
     },
   },
-  ".btn-instagram": {
+  ".btn-instagram, .prose a.btn-instagram": {
     "@apply text-white": {},
     backgroundColor: "#e1306c",
     borderColor: "#e1306c",
@@ -221,7 +224,7 @@ module.exports = Button = () => ({
       borderColor: "#bf134d",
     },
   },
-  ".btn-github": {
+  ".btn-github, .prose a.btn-github": {
     "@apply text-white": {},
     backgroundColor: "#333",
     borderColor: "#333",
@@ -230,7 +233,7 @@ module.exports = Button = () => ({
       borderColor: "#000",
     },
   },
-  ".btn-twitch": {
+  ".btn-twitch, .prose a.btn-twitch": {
     "@apply text-white": {},
     backgroundColor: "#6441a5",
     borderColor: "#6441a5",
@@ -239,7 +242,7 @@ module.exports = Button = () => ({
       borderColor: "#3c1f71",
     },
   },
-  ".btn-slack": {
+  ".btn-slack, .prose a.btn-slack": {
     "@apply text-white": {},
     backgroundColor: "#611f69",
     borderColor: "#611f69",
@@ -248,7 +251,7 @@ module.exports = Button = () => ({
       borderColor: "#3e0d44",
     },
   },
-  ".btn-linkedin": {
+  ".btn-linkedin, .prose a.btn-linkedin": {
     "@apply text-white": {},
     backgroundColor: "#0077b5",
     borderColor: "#0077b5",
@@ -257,7 +260,7 @@ module.exports = Button = () => ({
       borderColor: "#044d73",
     },
   },
-  ".btn-facebook": {
+  ".btn-facebook, .prose a.btn-facebook": {
     "@apply text-white": {},
     backgroundColor: "#3b5998",
     borderColor: "#3b5998",

@@ -1,8 +1,9 @@
 [build]
-  publish = "public"
+  command = "npm run production"
+  publish = "docs/public"
 
 [build.environment]
-  HUGO_VERSION = "0.72.0"
+  HUGO_VERSION = "0.74.2"
 
 [context.production.environment]
   HUGO_ENV = "production"

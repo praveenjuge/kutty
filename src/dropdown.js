@@ -14,6 +14,9 @@ module.exports = Dropdown = () => ({
   ".dropdown-item svg": {
     "@apply h-5 w-5 text-gray-600": {},
   },
+  "a.dropdown-item, .prose a.dropdown-item": {
+    "@apply no-underline": {},
+  },
   "a.dropdown-item:hover": {
     "@apply bg-gray-200": {},
   },
@@ -39,6 +42,9 @@ module.exports = Dropdown = () => ({
   },
   ".dropdown-header": {
     "@apply px-2 py-1 text-gray-600 text-xs w-full uppercase tracking-wider font-bold leading-none": {},
+  },
+  ".prose .dropdown-header": {
+    "@apply my-0": {},
   },
   ".dropdown-sm .dropdown-item": {
     "@apply text-xs": {},

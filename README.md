@@ -1,6 +1,6 @@
 # Kutty
 
-Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications built in.
+Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
 This plugin requires Tailwind CSS 1.4 or later.
 
@@ -52,10 +52,10 @@ npm start
 
 Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 
-| Scripts                                   | Description                                     |
-| ----------------------------------------- | ----------------------------------------------- |
-| `npm start`                               | Starts a local Hugo server and Tailwind Watcher |
-| `npm run production && rollup -c && hugo` | For generating production docs files            |
+| Scripts              | Description                                     |
+| -------------------- | ----------------------------------------------- |
+| `npm start`          | Starts a local Hugo server and Tailwind Watcher |
+| `npm run production` | For generating production docs files            |
 
 ## Components
 

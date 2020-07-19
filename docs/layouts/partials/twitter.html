@@ -1,0 +1,29 @@
+<div class="fixed bg-blue-700 w-full bottom-0 left-0 right-0 text-white flex justify-between items-center" id="twitter_banner">
+  <a href="https://twitter.com/praveenjuge" target="_blank" class="flex justify-between items-center w-full px-3 md:px-5">
+    <p class="items-center hidden md:flex">Follow me on twitter <i data-feather="arrow-right"></i></p>
+    <div class="avatar-text">
+      <div class="avatar avatar-sm"><img src="/placeholder.jpg" alt="Photo of Praveen Juge" /></div>
+      <p class="text-white font-normal">@praveenjuge</p>
+    </div>
+    <div></div>
+  </a>
+  <button class="btn btn-twitter btn-lg btn-square" id="twitter_banner_close">
+    <i data-feather="x"></i>
+    <span class="sr-only">Close</span>
+  </button>
+</div>
+
+<script>
+  const twitter_banner = document.querySelector("#twitter_banner");
+  const twitter_banner_close = document.querySelector("#twitter_banner_close");
+
+  if (window.localStorage.getItem("twitter_banner") === "off") {
+    console.log(window.localStorage.getItem("twitter_banner"));
+    twitter_banner.setAttribute("class", "hidden");
+  }
+
+  twitter_banner_close.onclick = () => {
+    twitter_banner.setAttribute("class", "hidden");
+    window.localStorage.setItem("twitter_banner", "off");
+  };
+</script>

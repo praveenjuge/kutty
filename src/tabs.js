@@ -2,8 +2,8 @@ module.exports = Tabs = () => ({
   ".tab": {
     "@apply flex items-end border-b-2 border-gray-200": {},
   },
-  ".tab-link": {
-    "@apply py-3 px-4 text-gray-600 border-gray-200 border-b-2 transition-colors duration-150 ease-in font-medium text-center text-base": {},
+  ".tab-link, .prose .tab-link": {
+    "@apply py-3 px-4 text-gray-600 border-gray-200 border-b-2 transition-colors duration-150 ease-in font-medium text-center text-base no-underline": {},
     marginBottom: "-2px",
     "&:hover": {
       "@apply border-gray-400 text-gray-900": {},

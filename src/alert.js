@@ -91,4 +91,10 @@ module.exports = Alert = () => ({
   ".alert-bottom": {
     "@apply border border-solid border-b-4 border-l-0 border-r-0 border-t-0 border-current rounded-none !important": {},
   },
+  ".prose .alert p": {
+    "@apply mt-0 mb-0": {},
+  },
+  ".prose .alert a": {
+    color: "inherit",
+  },
 });

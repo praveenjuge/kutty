@@ -47,6 +47,9 @@ module.exports = Dialog = () => ({
   ".dialog-body": {
     "@apply p-4 relative flex-auto overflow-y-auto": {},
   },
+  ".prose .dialog-content img": {
+    "@apply my-0": {},
+  },
   ".dialog-footer": {
     "@apply p-3 flex justify-end items-center bg-gray-200 rounded-b": {},
   },
