@@ -11,6 +11,7 @@ const Dropdown = require("./src/dropdown.js");
 const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
 const Pagination = require("./src/pagination.js");
+const Spinner = require("./src/spinner.js");
 const Tabs = require("./src/tabs.js");
 
 module.exports = plugin(function ({ addComponents }) {
@@ -25,5 +26,6 @@ module.exports = plugin(function ({ addComponents }) {
   addComponents(Forms());
   addComponents(List());
   addComponents(Pagination());
+  addComponents(Spinner());
   addComponents(Tabs());
 });

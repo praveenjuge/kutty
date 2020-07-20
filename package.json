@@ -37,9 +37,7 @@
     "cross-env": "^7.0.2",
     "postcss-cli": "^7.1.1",
     "rollup": "^2.21.0",
-    "rollup-plugin-terser": "^6.1.0"
-  },
-  "dependencies": {
+    "rollup-plugin-terser": "^6.1.0",
     "tailwindcss": "^1.5.1",
     "@tailwindcss/typography": "^0.2.0"
   }

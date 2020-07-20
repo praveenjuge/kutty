@@ -10,6 +10,9 @@ module.exports = {
       default: {
         css: {
           lineHeight: "inherit",
+          h1: {
+            fontWeight: "700",
+          },
           h2: {
             marginBottom: defaultTheme.spacing[3],
           },

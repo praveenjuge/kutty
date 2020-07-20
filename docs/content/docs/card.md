@@ -200,7 +200,11 @@ title: Card
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
   <div class="card">
     <div class="card-header">Card Title</div>
-    <div class="card-body card-loading h-32">Loading...</div>
+    <div class="card-body card-loading h-32">
+      <div class="spinner" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
   </div>
 </div>
 

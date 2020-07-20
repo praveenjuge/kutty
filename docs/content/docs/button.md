@@ -181,8 +181,20 @@ title: Button
 ## Loading
 
 {{< code html >}}
-<button class="btn btn-primary btn-loading">Loading...</button>
-<button class="btn btn-outline-dark btn-loading">Loading...</button>
-<button class="btn btn-success btn-sm btn-loading">Loading...</button>
-<button class="btn btn-light btn-lg btn-loading">Loading...</button>
+<button class="btn btn-primary btn-loading">
+  <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
+  <span class="sr-only">Loading...</span>
+</button>
+<button class="btn btn-outline-dark btn-loading">
+  <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
+  Loading...
+</button>
+<button class="btn btn-success btn-sm btn-loading">
+  <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
+  <span class="sr-only">Loading...</span>
+</button>
+<button class="btn btn-light btn-lg btn-loading">
+  <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
+  <span class="sr-only">Loading...</span>
+</button>
 {{< /code >}}

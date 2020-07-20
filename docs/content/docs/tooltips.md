@@ -1,5 +1,5 @@
 ---
-title: Toolips
+title: Tooltips
 draft: true
 ---
 

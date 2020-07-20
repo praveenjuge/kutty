@@ -70,7 +70,9 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Forms
 - [x] List
 - [x] Pagination
+- [x] Spinner
 - [x] Tabs
+- [x] Typography
 - [ ] Collapse
 - [ ] Loading
 - [ ] Toasts
