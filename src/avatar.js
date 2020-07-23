@@ -10,7 +10,7 @@ module.exports = Avatar = () => ({
     "@apply absolute rounded-full inset-0 font-bold text-base uppercase flex items-center justify-center h-full w-full bg-purple-200 text-purple-700 no-underline": {},
   },
   ".avatar img": {
-    "@apply h-full w-full object-cover rounded-full bg-gray-200": {},
+    "@apply h-full w-full object-cover rounded-full bg-purple-200": {},
   },
   ".prose .avatar img": {
     "@apply mt-0 mb-0": {},

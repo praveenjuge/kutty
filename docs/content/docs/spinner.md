@@ -15,26 +15,28 @@ title: Spinner
 
 {{< code html >}}
 
-<div class="spinner text-purple-700" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-gray-700" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-red-700" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-green-700" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-yellow-700" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-gray-200" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner text-gray-900" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="space-x-2">
+  <div class="spinner text-purple-700" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-gray-700" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-red-700" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-green-700" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-yellow-700" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-gray-200" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner text-gray-900" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
 </div>
 {{< /code >}}
 
@@ -42,11 +44,13 @@ title: Spinner
 
 {{< code html >}}
 
-<div class="spinner spinner-sm" role="status">
-  <span class="sr-only">Loading...</span>
-</div>
-<div class="spinner spinner-lg" role="status">
-  <span class="sr-only">Loading...</span>
+<div class="space-x-2">
+  <div class="spinner spinner-sm" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+  <div class="spinner spinner-lg" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
 </div>
 {{< /code >}}
 
@@ -60,6 +64,6 @@ title: Spinner
 </button>
 <button class="btn btn-outline-dark btn-loading">
   <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  <span class="pl-2">Loading...</span>
 </button>
 {{< /code >}}

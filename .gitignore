@@ -100,4 +100,5 @@ resources/*
 # Local Netlify folder
 .netlify
 
-static/build.css
+docs/static/build.css
+docs/static/kutty.js

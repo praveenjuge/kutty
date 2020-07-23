@@ -1,5 +1,5 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const kutty = require("./index.js");
+const kutty = require("../index.js");
 
 module.exports = {
   purge: {

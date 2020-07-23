@@ -963,8 +963,8 @@ video {
      object-fit: cover;
   border-radius: 9999px;
   --bg-opacity: 1;
-  background-color: #edf2f7;
-  background-color: rgba(237, 242, 247, var(--bg-opacity));
+  background-color: #e9d8fd;
+  background-color: rgba(233, 216, 253, var(--bg-opacity));
 }
 
 .prose .avatar img {

@@ -187,7 +187,7 @@ title: Button
 </button>
 <button class="btn btn-outline-dark btn-loading">
   <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
-  Loading...
+  <span class="pl-2">Loading...</span>
 </button>
 <button class="btn btn-success btn-sm btn-loading">
   <span class="spinner spinner-sm" role="status" aria-hidden="true"></span>
