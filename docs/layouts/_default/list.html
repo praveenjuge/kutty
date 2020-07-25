@@ -1,12 +1,9 @@
-{{ define "main" }}
+{{ define "main" }} {{ partial "component-list" . }}
 
-<section class="flex flex-wrap items-start">
-  {{ partial "component-list" . }}
-  <article class="prose max-w-full w-full md:w-4/5" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
-    <h1 itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
-    <p itemprop="description">{{ .Description }}</p>
-    {{ .Content }}
-  </article>
-</section>
+<article class="prose max-w-full pt-12 ml-0 md:ml-56" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
+  <p itemprop="description">{{ .Description }}</p>
+  {{ .Content }}
+</article>
 
 {{end}}

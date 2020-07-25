@@ -30,5 +30,5 @@ module.exports = {
   variants: {
     visibility: ["group-hover"],
   },
-  plugins: [kutty, require("@tailwindcss/typography")],
+  plugins: [kutty],
 };

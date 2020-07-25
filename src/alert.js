@@ -2,6 +2,9 @@ module.exports = Alert = () => ({
   ".alert": {
     "@apply font-medium relative overflow-hidden border-2 border-solid text-base rounded-md align-middle duration-150 ease-in flex items-start py-2 pl-4 pr-4": {},
   },
+  ".alert a": {
+    "@apply underline": {},
+  },
   ".alert-close": {
     "@apply absolute top-0 bottom-0 right-0 !important": {},
   },

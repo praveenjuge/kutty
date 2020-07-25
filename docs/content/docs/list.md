@@ -46,19 +46,19 @@ title: List
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
   <ul class="list list-options">
     <li class="list-item">Reddit
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </li>
     <li class="list-item">Twitter
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </li>
     <li class="list-item">GitHub
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </li>
     <li class="list-item">Dribbble
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </li>
     <li class="list-item">Todoist
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </li>
   </ul>
 </div>

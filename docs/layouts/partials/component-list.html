@@ -1,11 +1,12 @@
 {{ $current := . }}
-<nav role="navigation" class="w-full md:w-1/5 pt-0 md:pt-1 pb-5 relative md:sticky top-0 flex flex-col items-start">
-  {{ range where .Site.Pages.ByWeight "Section" "docs" }} {{if eq .Permalink $current.Permalink }}
-  <a class="mx-0 md:-mx-1 btn btn-sm btn-light" href="#main" aria-describedby="current">
+
+<nav role="navigation" class="sidebar border-transparent md:border-gray-200 border-r" style="top: 58px;" id="navDrawer">
+  {{ range where .Site.Pages.ByWeight "Section" "docs" }} {{ if eq .Permalink $current.Permalink }}
+  <a class="sidebar-item active" href="#main" aria-describedby="current">
     <span class="sr-only">(Current Page)</span>
     {{ .Title }}
   </a>
   {{ else }}
-  <a class="mx-0 md:-mx-1 btn btn-sm btn-link" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a>
+  <a class="sidebar-item" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a>
   {{ end }} {{ end }}
 </nav>

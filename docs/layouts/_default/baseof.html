@@ -5,9 +5,9 @@
   </head>
   <body class="bg-white">
     {{ partial "header" . }}
-    <main class="container mx-auto my-6 md:my-12 px-3 md:px-1" id="main">
+    <main class="container mx-auto my-12 px-3 md:px-1" id="main">
       {{ block "main" . }}{{ end }}
     </main>
-    {{ partial "js" . }}
+    <script src="/kutty.js"></script>
   </body>
 </html>

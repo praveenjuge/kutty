@@ -1,4 +1,4 @@
-<header class="border-gray-200 border-b">
+<header class="border-gray-200 border-b z-30 fixed top-0 w-full bg-white">
   <div class="container mx-auto flex justify-between items-center px-3 md:px-1 py-3">
     <a href="/" title="Go to Kutty Home Page">
       <svg class="h-6 w-auto" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">
@@ -19,7 +19,10 @@
     </a>
     <div>
       <a href="/docs/" rel="prefetch" class="btn btn-primary btn-sm">Documentation</a>
-      <a href="https://github.com/praveenjuge/kutty" class="btn btn-light btn-sm" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/praveenjuge/kutty" class="btn btn-light btn-sm hidden md:inline-flex" target="_blank" rel="noopener noreferrer">GitHub</a>
+      {{ if eq .Section "docs" }}
+      <button class="btn btn-light btn-sm inline-flex md:hidden sidebar-open" data-sidebar="#navDrawer">Menu</button>
+      {{ end }}
     </div>
   </div>
 </header>

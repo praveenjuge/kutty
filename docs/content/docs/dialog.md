@@ -11,7 +11,7 @@ title: Dialog
 <div class="dialog" id="demoDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header">Dialog Title
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="dialog-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae?</div>
     <div class="dialog-footer">
@@ -36,7 +36,7 @@ title: Dialog
 <div class="dialog dialog-sm" id="smallDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header">Small Dialog
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="dialog-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae?</div>
     <div class="dialog-footer">
@@ -49,7 +49,7 @@ title: Dialog
 <div class="dialog dialog-lg" id="largeDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header">Large Dialog
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="dialog-body">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae?</div>
     <div class="dialog-footer">
@@ -62,7 +62,7 @@ title: Dialog
 <div class="dialog dialog-full" id="fullDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header">Full Screen Dialog
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="dialog-body"><img class="w-5/6 mx-auto rounded" src="/og.png" /></div>
     <div class="dialog-footer">
@@ -83,7 +83,7 @@ title: Dialog
 <div class="dialog" id="scrollableDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header">Scrollable Dialog
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="dialog-body">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae commodi inventore magnam unde vero cupiditate molestiae? Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam eius fugiat illum repudiandae
@@ -106,7 +106,7 @@ title: Dialog
 <div class="dialog" id="imageDialog" aria-hidden="true">
   <div class="dialog-content">
     <div class="dialog-header"> kutty-og.png
-      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><i data-feather="x"></i></button>
+      <button type="button" class="btn btn-light dialog-close" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <img class="w-full rounded-b" src="/og.png" />
   </div>

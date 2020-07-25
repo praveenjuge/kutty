@@ -32,13 +32,15 @@
     "production": "cross-env NODE_ENV=production postcss docs/main.css -o docs/static/build.css --verbose --config docs/postcss.config.js && rollup --compact -c && cd docs && hugo --minify"
   },
   "devDependencies": {
-    "tailwindcss": "^1.5.2",
-    "@tailwindcss/typography": "^0.2.0",
     "autoprefixer": "^9.8.5",
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
     "postcss-cli": "^7.1.1",
-    "rollup": "^2.22.2",
-    "rollup-plugin-terser": "^6.1.0"
+    "rollup": "^2.23.0",
+    "rollup-plugin-terser": "^6.1.0",
+    "tailwindcss": "^1.5.2"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.2.0"
   }
 }

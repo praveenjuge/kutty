@@ -49,21 +49,21 @@ title: Card
   <div class="card">
     <div class="card-header">
       <div class="card-title">Card Title</div>
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="more-horizontal"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-title">Card Title</div>
-      <button class="btn btn-icon btn-sm btn-outline-link"><i data-feather="search"></i></button>
+      <button class="btn btn-icon btn-sm btn-outline-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
       <div class="card-title">Card Title</div>
-      <button class="btn btn-icon btn-sm btn-light"><i data-feather="x"></i></button>
+      <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
