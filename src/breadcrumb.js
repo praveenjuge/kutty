@@ -1,12 +1,12 @@
 module.exports = Button = () => ({
   ".breadcrumb, .prose ul.breadcrumb": {
-    "@apply flex flex-wrap py-2 px-3 list-none rounded bg-purple-100 relative whitespace-no-wrap mt-0 mb-0": {},
+    "@apply flex flex-wrap py-1 px-3 list-none rounded relative whitespace-no-wrap mt-0 mb-0": {},
   },
   ".breadcrumb-item": {
     "@apply text-gray-600": {},
   },
   ".breadcrumb-item a, .prose .breadcrumb-item a": {
-    "@apply text-purple-700 no-underline": {},
+    "@apply text-gray-900 no-underline": {},
   },
   ".breadcrumb-item, .breadcrumb-item a, .prose ul > li.breadcrumb-item": {
     "@apply text-base flex items-center mt-0 mb-0": {},
@@ -50,9 +50,6 @@ module.exports = Button = () => ({
   },
   ".breadcrumb-bullet .breadcrumb-item + .breadcrumb-item::before": {
     content: "'·' !important",
-  },
-  ".breadcrumb.breadcrumb-light, .prose ul.breadcrumb.breadcrumb-light": {
-    "@apply bg-gray-100": {},
   },
   ".breadcrumb.breadcrumb-dark, .prose ul.breadcrumb.breadcrumb-dark": {
     "@apply bg-gray-900 border-gray-900 text-white": {},

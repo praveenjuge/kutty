@@ -69,15 +69,7 @@ title: Breadcrumb
 
 <div class="space-y-2">
   <nav aria-label="breadcrumb">
-    <ul class="breadcrumb">
-      <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-      <li class="breadcrumb-item"><a href="#">Reports</a></li>
-      <li class="breadcrumb-item" aria-current="page">Export</li>
-    </ul>
-  </nav>
-
-  <nav aria-label="breadcrumb">
-    <ul class="breadcrumb breadcrumb-light">
+    <ul class="breadcrumb bg-gray-100">
       <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
       <li class="breadcrumb-item"><a href="#">Reports</a></li>
       <li class="breadcrumb-item" aria-current="page">Export</li>

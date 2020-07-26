@@ -66,10 +66,12 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Button
 - [x] Card
 - [x] Dialog
+- [x] Drawer
 - [x] Dropdown
 - [x] Forms
 - [x] List
 - [x] Pagination
+- [x] Sidebar
 - [x] Spinner
 - [x] Tabs
 - [x] Typography
