@@ -48,7 +48,7 @@ module.exports = Forms = () => ({
     "@apply text-xl": {},
   },
   ".tag-input:hover, .tag-select:hover, .tag-checkbox:hover, .tag-radio:hover, .tag-range:hover": {
-    "@apply border-gray-400": {},
+    "@apply border-gray-600": {},
   },
   ".tag-input:focus, .tag-select:focus, .tag-checkbox:focus, .tag-radio:focus, .tag-range:focus": {
     "@apply outline-none border-purple-700": {},
@@ -94,7 +94,7 @@ module.exports = Forms = () => ({
     },
   },
   ".tag-checkbox, .tag-radio": {
-    "@apply bg-white text-purple-800 border-2 border-solid border-gray-200 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
+    "@apply bg-white text-purple-800 border-2 border-solid border-gray-400 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
     backgroundOrigin: "border-box",

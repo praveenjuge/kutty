@@ -12,7 +12,7 @@ title: Card
     <div class="card-body">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
     </div>
-    <div class="card-footer">
+    <div class="card-footer justify-end">
       <a href="#" class="btn btn-link btn-sm">Cancel</a>
       <a href="#" class="btn btn-light-primary btn-sm">Sure</a>
     </div>

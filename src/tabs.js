@@ -9,7 +9,7 @@ module.exports = Tabs = () => ({
       "@apply border-gray-400 text-gray-900": {},
     },
     "&:focus": {
-      "@apply border-gray-400 text-gray-900 shadow-outline outline-none": {},
+      "@apply shadow-outline outline-none z-10": {},
     },
   },
   ".tab-vertical .tab-link:hover": {
@@ -17,6 +17,9 @@ module.exports = Tabs = () => ({
   },
   ".tab-vertical .tab-link.active, .tab-link.active": {
     "@apply text-purple-700 border-purple-700": {},
+    "&:hover": {
+      "@apply text-purple-900 border-purple-900": {},
+    },
   },
   ".tab-link.disabled": {
     "@apply opacity-25 pointer-events-none cursor-default": {},

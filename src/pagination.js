@@ -38,7 +38,7 @@ module.exports = Pagination = () => ({
     "@apply bg-gray-100 text-gray-700 pointer-events-none cursor-default !important": {},
   },
   ".pagination-link:focus, .pagination-link:active": {
-    "@apply shadow-outline outline-none": {},
+    "@apply shadow-outline outline-none z-10": {},
   },
   ".pagination-disabled:focus, .pagination-disabled:active": {
     "@apply outline-none": {},

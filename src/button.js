@@ -1,5 +1,5 @@
-module.exports = Button = () => ({
-  ".btn": {
+module.exports = Button = (styles) => ({
+  ".btn, .prose a.btn": {
     "@apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-4 text-base rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100": {},
     "&:focus": {
       "@apply shadow-outline outline-none": {},
@@ -7,9 +7,6 @@ module.exports = Button = () => ({
     "&:active": {
       "@apply scale-95 shadow-none outline-none": {},
     },
-  },
-  ".prose a.btn": {
-    "@apply no-underline": {},
   },
   ".btn-primary, .prose a.btn-primary": {
     "@apply bg-purple-700 border-purple-700 text-white": {},
@@ -51,6 +48,12 @@ module.exports = Button = () => ({
     "@apply bg-gray-900 border-gray-900 text-white": {},
     "&:hover, &:focus": {
       "@apply bg-gray-700 border-gray-700": {},
+    },
+  },
+  ".btn-white, .prose a.btn-white": {
+    "@apply bg-white border-white text-gray-900": {},
+    "&:hover, &:focus": {
+      "@apply bg-gray-200 border-gray-200": {},
     },
   },
   ".btn-link, .prose a.btn-link": {
@@ -143,42 +146,48 @@ module.exports = Button = () => ({
       "@apply border-gray-300": {},
     },
   },
-  ".btn-pill": {
-    "@apply rounded-full !important": {},
-  },
-  ".btn-square": {
-    "@apply rounded-none !important": {},
-  },
-  ".btn-block": {
-    "@apply w-full !important": {},
-  },
-  ".btn-sm": {
-    "@apply py-1 px-2 text-sm !important": {},
-  },
-  ".btn-lg": {
-    "@apply py-2 px-5 text-lg !important": {},
-  },
-  ".btn-icon": {
-    "@apply px-2 inline-flex justify-center items-center !important": {},
-  },
-  ".btn-icon.btn-lg": {
-    "@apply px-5 !important": {},
-  },
-  ".btn-icon svg": {
-    "@apply h-5 w-5 !important": {},
-  },
-  ".btn-icon.btn-sm svg": {
-    "@apply h-4 w-4 !important": {},
-  },
-  ".btn-icon.btn-lg svg": {
-    "@apply h-6 w-6 !important": {},
-  },
   ".btn:disabled": {
     "@apply opacity-25 pointer-events-none cursor-default !important": {},
   },
   ".btn-loading": {
     "@apply opacity-75 pointer-events-none cursor-default !important": {},
   },
+  // Sizes
+  ".btn.btn-xs": {
+    "@apply py-0 px-1 text-xs": {},
+  },
+  ".btn.btn-sm": {
+    "@apply py-1 px-2 text-sm": {},
+  },
+  ".btn.btn-lg": {
+    "@apply py-2 px-5 text-lg": {},
+  },
+  ".btn.btn-xl": {
+    "@apply py-3 px-6 text-xl": {},
+  },
+  // Icons
+  ".btn.btn-icon": {
+    "@apply inline-flex justify-center items-center": {},
+  },
+  ".btn-icon.btn-xs": {
+    "@apply px-0": {},
+  },
+  ".btn-icon.btn-xs svg": {
+    "@apply h-4 w-4": {},
+  },
+  ".btn-icon.btn-sm svg": {
+    "@apply h-4 w-4": {},
+  },
+  ".btn-icon svg": {
+    "@apply h-5 w-5": {},
+  },
+  ".btn-icon.btn-lg svg": {
+    "@apply h-6 w-6": {},
+  },
+  ".btn-icon.btn-xl svg": {
+    "@apply h-8 w-8": {},
+  },
+  // Button List
   ".btn-list": {
     "@apply -mb-2": {},
   },
@@ -188,6 +197,23 @@ module.exports = Button = () => ({
   ".btn-list > .btn:not(:last-child)": {
     "@apply mr-1": {},
   },
+  // Button Group
+  ".btn-group": {
+    "@apply relative inline-flex align-middle": {},
+  },
+  ".btn-group .btn": {
+    "@apply rounded-none": {},
+    "&:active, &:focus": {
+      "@apply z-10": {},
+    },
+  },
+  ".btn-group .btn:first-child": {
+    "@apply rounded-l": {},
+  },
+  ".btn-group .btn:last-child": {
+    "@apply rounded-r": {},
+  },
+  // Brand Colors
   ".btn-twitter, .prose a.btn-twitter": {
     "@apply text-white": {},
     backgroundColor: "#1da1f2",

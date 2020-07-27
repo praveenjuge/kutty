@@ -1,18 +1,12 @@
 module.exports = Badge = () => ({
-  ".badge": {
-    "@apply text-center no-underline font-semibold relative overflow-hidden py-1 px-3 w-auto inline-flex items-center leading-none whitespace-no-wrap align-baseline text-xs rounded-full transition-colors duration-150 ease-in": {},
-  },
-  ".prose a.badge": {
-    "@apply no-underline": {},
+  ".badge, .prose a.badge": {
+    "@apply text-center no-underline font-semibold relative overflow-hidden py-1 px-3 w-auto inline-flex items-center leading-none whitespace-no-wrap align-baseline text-xs rounded-full transition-colors duration-150 ease-in no-underline": {},
   },
   "a.badge:focus, a.badge:active": {
     "@apply shadow-outline outline-none": {},
   },
   ".badge .btn": {
-    "@apply p-0 border-0 ml-1 -mr-1 !important": {},
-  },
-  ".badge svg": {
-    "@apply h-4 w-4": {},
+    "@apply border-0 ml-1 -mr-1 !important": {},
   },
   ".badge-primary, .prose a.badge-primary": {
     "@apply bg-purple-700 text-white": {},

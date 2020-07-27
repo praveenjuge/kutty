@@ -33,7 +33,7 @@ module.exports = List = () => ({
       "@apply bg-gray-200": {},
     },
     "&:focus": {
-      "@apply shadow-outline outline-none": {},
+      "@apply shadow-outline outline-none z-10": {},
     },
   },
   ".list-item:first-child": {
