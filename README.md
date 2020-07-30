@@ -2,7 +2,7 @@
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
-This plugin requires Tailwind CSS 1.4 or later.
+This plugin requires Tailwind CSS 1.6 or later.
 
 ## Installation
 
@@ -72,6 +72,7 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] List
 - [x] Pagination
 - [x] Sidebar
+- [x] Skeleton
 - [x] Spinner
 - [x] Tabs
 - [x] Typography

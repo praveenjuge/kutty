@@ -28,17 +28,16 @@
     "index.js"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"postcss docs/main.css -o docs/static/build.css --watch --verbose --no-map --config docs/postcss.config.js\" \"cd docs && hugo server --disableFastRender\" \"rollup -w --config docs/rollup.config.js\"",
-    "production": "cross-env NODE_ENV=production postcss docs/main.css -o docs/static/build.css --verbose --config docs/postcss.config.js && rollup --compact -c && cd docs && hugo --minify"
+    "start": "cross-env NODE_ENV=development concurrently \"postcss ./node_modules/tailwindcss/tailwind.css -o docs/static/build.css --watch --verbose --no-map --config docs/postcss.config.js\" \"cd docs && hugo server --disableFastRender\" \"rollup -w --config docs/rollup.config.js\"",
+    "production": "cross-env NODE_ENV=production npx tailwindcss build -o docs/static/build.css  --config docs/tailwind.config.js && rollup --compact -c && cd docs && hugo --minify"
   },
   "devDependencies": {
-    "autoprefixer": "^9.8.5",
     "concurrently": "^5.2.0",
     "cross-env": "^7.0.2",
     "postcss-cli": "^7.1.1",
     "rollup": "^2.23.0",
     "rollup-plugin-terser": "^6.1.0",
-    "tailwindcss": "^1.5.2"
+    "tailwindcss": "^1.6.0"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.2.0"
