@@ -16,263 +16,262 @@
 // - Add tabindex="-1" to dropdown menu items
 // - Restore focus to the dropdown button once the dropdown menu is closed
 
-const Dropdown = (() => {
-  const dropdownClass = ".dropdown";
-  const triggerClass = ".dropdown-trigger";
-  const listClass = ".dropdown-list";
-  const dropdownItemClass = ".dropdown-item";
-  const dropdownLinkClass = "a.dropdown-item";
-  const animationClass = "dropdown-animation";
+// const Dropdown = (() => {
+//   const dropdownClass = ".dropdown";
+//   const triggerClass = ".dropdown-trigger";
+//   const listClass = ".dropdown-list";
+//   const dropdownItemClass = ".dropdown-item";
+//   const dropdownLinkClass = "a.dropdown-item";
+//   const animationClass = "dropdown-animation";
 
-  const keyboardKey = {
-    escape: 27,
-    end: 35,
-    home: 36,
-    up: 38,
-    down: 40,
-  };
+//   const keyboardKey = {
+//     escape: 27,
+//     end: 35,
+//     home: 36,
+//     up: 38,
+//     down: 40,
+//   };
 
-  class Dropdown {
-    // Initialize objects for the dropdown class
-    constructor(options) {
-      this.trigger = options.trigger;
-      this.dropdown = options.dropdownList;
-      this.items = this.dropdown.querySelectorAll(dropdownItemClass);
-      this.links = this.dropdown.querySelectorAll(dropdownLinkClass);
-      [this.firstLink] = this.links;
-      this.lastLink = this.links[this.links.length - 1];
+//   class Dropdown {
+//     // Initialize objects for the dropdown class
+//     constructor(options) {
+//       this.trigger = options.trigger;
+//       this.dropdown = options.dropdownList;
+//       this.items = this.dropdown.querySelectorAll(dropdownItemClass);
+//       this.links = this.dropdown.querySelectorAll(dropdownLinkClass);
+//       [this.firstLink] = this.links;
+//       this.lastLink = this.links[this.links.length - 1];
 
-      this.state = [];
-      this.currentFocusedIndex = 0;
-      this.isOpen = false;
+//       this.state = [];
+//       this.currentFocusedIndex = 0;
+//       this.isOpen = false;
 
-      this.open = this.open.bind(this);
-      this.toggle = this.toggle.bind(this);
-      this.onClick = this.onClick.bind(this);
-      this.onFocus = this.onFocus.bind(this);
-      this.onKeydown = this.onKeydown.bind(this);
-    }
+//       this.open = this.open.bind(this);
+//       this.toggle = this.toggle.bind(this);
+//       this.onClick = this.onClick.bind(this);
+//       this.onFocus = this.onFocus.bind(this);
+//       this.onKeydown = this.onKeydown.bind(this);
+//     }
 
-    onClick(event) {
-      // Close the dropdown menu when clicked outside and on other dropdown trigger
-      if (event.target.closest(triggerClass) !== this.trigger.closest(triggerClass)) {
-        this.close();
-      }
-      if (event) event.target.focus();
-    }
+//     onClick(event) {
+//       // Close the dropdown menu when clicked outside and on other dropdown trigger
+//       if (event.target.closest(triggerClass) !== this.trigger.closest(triggerClass)) {
+//         this.close();
+//       }
+//       if (event) event.target.focus();
+//     }
 
-    onFocus(event) {
-      // Managing dropdown menu focus state
-      this.state.forEach((section, index) => {
-        if (event.target === section.link) {
-          this.currentFocusedIndex = index;
-        }
-      });
-    }
+//     onFocus(event) {
+//       // Managing dropdown menu focus state
+//       this.state.forEach((section, index) => {
+//         if (event.target === section.link) {
+//           this.currentFocusedIndex = index;
+//         }
+//       });
+//     }
 
-    setFocus(event) {
-      // Managing dropdown menu focus state
-      event.preventDefault();
-      if (event.target === this.trigger) this.currentFocusedIndex = 0;
+//     setFocus(event) {
+//       // Managing dropdown menu focus state
+//       event.preventDefault();
+//       if (event.target === this.trigger) this.currentFocusedIndex = 0;
 
-      switch (event.which) {
-        case keyboardKey.up:
-          this.state[this.currentFocusedIndex].prevLink.focus();
-          break;
-        case keyboardKey.home:
-          this.firstLink.focus();
-          break;
-        case keyboardKey.end:
-          this.lastLink.focus();
-          break;
-        case keyboardKey.down:
-          if (event.target !== this.trigger) {
-            this.state[this.currentFocusedIndex].nextLink.focus();
-          } else {
-            this.firstLink.focus();
-          }
-          break;
-        default:
-          break;
-      }
-    }
+//       switch (event.which) {
+//         case keyboardKey.up:
+//           this.state[this.currentFocusedIndex].prevLink.focus();
+//           break;
+//         case keyboardKey.home:
+//           this.firstLink.focus();
+//           break;
+//         case keyboardKey.end:
+//           this.lastLink.focus();
+//           break;
+//         case keyboardKey.down:
+//           if (event.target !== this.trigger) {
+//             this.state[this.currentFocusedIndex].nextLink.focus();
+//           } else {
+//             this.firstLink.focus();
+//           }
+//           break;
+//         default:
+//           break;
+//       }
+//     }
 
-    onKeydown(event) {
-      // Capturing all keyboard events needed
-      switch (event.which) {
-        case keyboardKey.escape:
-          this.close(event);
-          break;
-        case keyboardKey.up:
-        case keyboardKey.down:
-        case keyboardKey.home:
-        case keyboardKey.end:
-          this.setFocus(event);
-          break;
-        default:
-          break;
-      }
-    }
+//     onKeydown(event) {
+//       // Capturing all keyboard events needed
+//       switch (event.which) {
+//         case keyboardKey.escape:
+//           this.close(event);
+//           break;
+//         case keyboardKey.up:
+//         case keyboardKey.down:
+//         case keyboardKey.home:
+//         case keyboardKey.end:
+//           this.setFocus(event);
+//           break;
+//         default:
+//           break;
+//       }
+//     }
 
-    addAttributes() {
-      // Add all the attributes needed to the dropdown
-      this.trigger.setAttribute("aria-haspopup", true);
-      this.trigger.setAttribute("aria-controls", this.dropdown.id);
-      this.dropdown.setAttribute("role", "menu");
-      this.dropdown.setAttribute("aria-labelledby", this.trigger.id);
-      this.dropdown.setAttribute("tabindex", -1);
-      this.dropdown.setAttribute("aria-hidden", !this.isOpen);
+//     addAttributes() {
+//       // Add all the attributes needed to the dropdown
+//       this.trigger.setAttribute("aria-haspopup", true);
+//       this.trigger.setAttribute("aria-controls", this.dropdown.id);
+//       this.dropdown.setAttribute("role", "menu");
+//       this.dropdown.setAttribute("aria-labelledby", this.trigger.id);
+//       this.dropdown.setAttribute("tabindex", -1);
+//       this.dropdown.setAttribute("aria-hidden", !this.isOpen);
 
-      this.state.forEach((section) => {
-        if (section.item) section.item.setAttribute("role", "none");
-        section.link.setAttribute("role", "menuitem");
-        section.link.setAttribute("tabindex", -1);
-      });
-    }
+//       this.state.forEach((section) => {
+//         if (section.item) section.item.setAttribute("role", "none");
+//         section.link.setAttribute("role", "menuitem");
+//         section.link.setAttribute("tabindex", -1);
+//       });
+//     }
 
-    removeAttributes() {
-      // Remove all the attributes attached to the dropdown
-      this.trigger.removeAttribute("aria-haspopup");
-      this.trigger.removeAttribute("aria-controls");
-      this.trigger.removeAttribute("aria-expanded");
-      this.dropdown.removeAttribute("role");
-      this.dropdown.removeAttribute("aria-labelledby");
-      this.dropdown.removeAttribute("tabindex");
-      this.dropdown.removeAttribute("aria-hidden");
+//     removeAttributes() {
+//       // Remove all the attributes attached to the dropdown
+//       this.trigger.removeAttribute("aria-haspopup");
+//       this.trigger.removeAttribute("aria-controls");
+//       this.trigger.removeAttribute("aria-expanded");
+//       this.dropdown.removeAttribute("role");
+//       this.dropdown.removeAttribute("aria-labelledby");
+//       this.dropdown.removeAttribute("tabindex");
+//       this.dropdown.removeAttribute("aria-hidden");
 
-      this.state.forEach((section) => {
-        if (section.item) section.item.removeAttribute("role");
-        section.link.removeAttribute("role");
-        section.link.removeAttribute("tabindex");
-      });
-    }
+//       this.state.forEach((section) => {
+//         if (section.item) section.item.removeAttribute("role");
+//         section.link.removeAttribute("role");
+//         section.link.removeAttribute("tabindex");
+//       });
+//     }
 
-    addEventListeners() {
-      // Add all the listeners to the dropdown
-      if (event) this.trigger.focus();
-      document.addEventListener("click", this.onClick);
-      this.trigger.addEventListener("keydown", this.onKeydown);
-      this.dropdown.addEventListener("keydown", this.onKeydown);
-      this.links.forEach((link) => {
-        link.addEventListener("focus", this.onFocus);
-      });
-    }
+//     addEventListeners() {
+//       // Add all the listeners to the dropdown
+//       if (event) this.trigger.focus();
+//       document.addEventListener("click", this.onClick);
+//       this.trigger.addEventListener("keydown", this.onKeydown);
+//       this.dropdown.addEventListener("keydown", this.onKeydown);
+//       this.links.forEach((link) => {
+//         link.addEventListener("focus", this.onFocus);
+//       });
+//     }
 
-    removeEventListeners() {
-      // Remove all the listeners attached to the dropdown
-      document.removeEventListener("click", this.onClick);
-      this.trigger.removeEventListener("keydown", this.onKeydown);
-      this.dropdown.removeEventListener("keydown", this.onKeydown);
-      this.links.forEach((link) => {
-        link.removeEventListener("focus", this.onFocus);
-      });
-    }
+//     removeEventListeners() {
+//       // Remove all the listeners attached to the dropdown
+//       document.removeEventListener("click", this.onClick);
+//       this.trigger.removeEventListener("keydown", this.onKeydown);
+//       this.dropdown.removeEventListener("keydown", this.onKeydown);
+//       this.links.forEach((link) => {
+//         link.removeEventListener("focus", this.onFocus);
+//       });
+//     }
 
-    open() {
-      // Open dropdown
-      this.isOpen = true;
-      this.trigger.setAttribute("aria-expanded", true);
-      this.dropdown.setAttribute("aria-hidden", false);
-      setTimeout(() => this.dropdown.classList.add(animationClass), 1);
+//     open() {
+//       // Open dropdown
+//       this.isOpen = true;
+//       this.trigger.setAttribute("aria-expanded", true);
+//       this.dropdown.setAttribute("aria-hidden", false);
+//       setTimeout(() => this.dropdown.classList.add(animationClass), 1);
 
-      // Add event listeners
-      this.addEventListeners();
-    }
+//       // Add event listeners
+//       this.addEventListeners();
+//     }
 
-    close(event) {
-      // Close dropdown
-      this.isOpen = false;
-      this.dropdown.classList.remove(animationClass);
-      this.trigger.setAttribute("aria-expanded", false);
-      setTimeout(() => this.dropdown.setAttribute("aria-hidden", true), 100);
+//     close(event) {
+//       // Close dropdown
+//       this.isOpen = false;
+//       this.dropdown.classList.remove(animationClass);
+//       this.trigger.setAttribute("aria-expanded", false);
+//       setTimeout(() => this.dropdown.setAttribute("aria-hidden", true), 100);
 
-      // Remove event listeners
-      this.removeEventListeners();
+//       // Remove event listeners
+//       this.removeEventListeners();
 
-      // Restoring focus
-      this.trigger.focus();
-    }
+//       // Restoring focus
+//       this.trigger.focus();
+//     }
 
-    toggle(event) {
-      // Toggle open and close state of the dropdown
-      event.preventDefault();
-      this.isOpen = !this.isOpen;
-      this.isOpen ? this.open() : this.close();
-    }
+//     toggle(event) {
+//       // Toggle open and close state of the dropdown
+//       event.preventDefault();
+//       this.isOpen = !this.isOpen;
+//       this.isOpen ? this.open() : this.close();
+//     }
 
-    destroy() {
-      // Remove attributes
-      this.removeAttributes();
+//     destroy() {
+//       // Remove attributes
+//       this.removeAttributes();
 
-      // Remove event listeners
-      this.removeEventListeners();
+//       // Remove event listeners
+//       this.removeEventListeners();
 
-      // Remove event listener on the trigger button
-      this.trigger.removeEventListener("click", this.toggle);
-    }
+//       // Remove event listener on the trigger button
+//       this.trigger.removeEventListener("click", this.toggle);
+//     }
 
-    render() {
-      // Get list of menu items
-      this.links.forEach((link, index) => {
-        this.state.push({
-          item: this.items[index],
-          link,
-          prevLink: this.links[index - 1] || this.lastLink,
-          nextLink: this.links[index + 1] || this.firstLink,
-        });
-      });
+//     render() {
+//       // Get list of menu items
+//       this.links.forEach((link, index) => {
+//         this.state.push({
+//           item: this.items[index],
+//           link,
+//           prevLink: this.links[index - 1] || this.lastLink,
+//           nextLink: this.links[index + 1] || this.firstLink,
+//         });
+//       });
 
-      // Add Attributes
-      this.addAttributes();
+//       // Add Attributes
+//       this.addAttributes();
 
-      // Add click to toggle dropdown
-      this.trigger.addEventListener("click", this.toggle);
-    }
-  }
+//       // Add click to toggle dropdown
+//       this.trigger.addEventListener("click", this.toggle);
+//     }
+//   }
 
-  const init = () => {
-    // Select all dropdown in the page
-    const triggers = document.querySelectorAll(dropdownClass);
-    const options = {};
+//   const init = () => {
+//     // Select all dropdown in the page
+//     const triggers = document.querySelectorAll(dropdownClass);
+//     const options = {};
 
-    triggers.forEach((trigger) => {
-      // Select dropdown trigger and list
-      options.trigger = trigger.querySelector(triggerClass);
-      options.dropdownList = trigger.querySelector(listClass);
+//     triggers.forEach((trigger) => {
+//       // Select dropdown trigger and list
+//       options.trigger = trigger.querySelector(triggerClass);
+//       options.dropdownList = trigger.querySelector(listClass);
 
-      const singleDropdown = new Dropdown(options);
-      singleDropdown.render();
-    });
-  };
+//       const singleDropdown = new Dropdown(options);
+//       singleDropdown.render();
+//     });
+//   };
 
-  return { init };
-})();
+//   return { init };
+// })();
 
-export default Dropdown;
+// export default Dropdown;
 
 // Alpine Variant
-
-// window.dropdown = function () {
-//   return {
-//     open: false,
-//     trigger: {
-//       ["@keydown.escape"]() {
-//         this.open = false;
-//       },
-//       ["@click"]() {
-//         this.open = true;
-//       },
-//     },
-//     dropdown: {
-//       ["@keydown.escape"]() {
-//         this.open = false;
-//       },
-//       ["x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90"]() {
-//         return this.open;
-//       },
-//       ["@click.away"]() {
-//         this.open = false;
-//       },
-//     },
-//   };
-// };
+window.dropdown = function () {
+  return {
+    open: false,
+    trigger: {
+      ["@keydown.escape"]() {
+        this.open = false;
+      },
+      ["@click"]() {
+        this.open = true;
+      },
+    },
+    dropdown: {
+      ["@keydown.escape"]() {
+        this.open = false;
+      },
+      ["x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90"]() {
+        return this.open;
+      },
+      ["@click.away"]() {
+        this.open = false;
+      },
+    },
+  };
+};

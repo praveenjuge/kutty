@@ -6,11 +6,11 @@ title: Dropdown
 
 {{< code html >}}
 
-<div class="dropdown">
-  <button class="btn btn-primary dropdown-trigger" id="open-color-menu">
+<div class="dropdown" x-data="dropdown()">
+  <button class="btn btn-primary dropdown-trigger" id="open-color-menu" x-spread="trigger">
     Open Dropdown
   </button>
-  <div id="color-menu" class="dropdown-list">
+  <div id="color-menu" class="dropdown-list" x-spread="dropdown" x-cloak>
     <a href="#" class="dropdown-item">Red</a>
     <a href="#" class="dropdown-item">Blue</a>
     <a href="#" class="dropdown-item">Green</a>
