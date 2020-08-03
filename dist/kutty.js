@@ -743,10 +743,10 @@ const Drawer = (() => {
   };
 
   return { init };
-})();// DONE
+})();// TODO
 // - On pressing A-Z, a-z the focus moves to the corresponding list item
 
-// TODO
+// DONE
 // - Click, press enter or press space on the dropdown button to open/close dropdown menu
 // - Press escape or click outside to close the dropdown menu when opened
 // - Up arrow, down arrow focuses on each dropdown item
@@ -1006,7 +1006,7 @@ const Dropdown = (() => {
 //       ["@keydown.escape"]() {
 //         this.open = false;
 //       },
-//       ["x-show.transition.in.origin.top.left.opacity.scale.90.out.opacity.scale.90"]() {
+//       ["x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90"]() {
 //         return this.open;
 //       },
 //       ["@click.away"]() {
