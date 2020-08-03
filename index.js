@@ -20,8 +20,10 @@ const Typography = require("@tailwindcss/typography");
 
 module.exports = plugin.withOptions(function () {
   return function (options) {
-    const { addComponents } = options;
+    const { addComponents, addUtilities } = options;
+    const newUtilities = { "[x-cloak]": { display: "none" } };
 
+    addUtilities(newUtilities);
     addComponents(Alert());
     addComponents(Avatar());
     addComponents(Badge());

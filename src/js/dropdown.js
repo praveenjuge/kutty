@@ -249,3 +249,30 @@ const Dropdown = (() => {
 })();
 
 export default Dropdown;
+
+// Alpine Variant
+
+// window.dropdown = function () {
+//   return {
+//     open: false,
+//     trigger: {
+//       ["@keydown.escape"]() {
+//         this.open = false;
+//       },
+//       ["@click"]() {
+//         this.open = true;
+//       },
+//     },
+//     dropdown: {
+//       ["@keydown.escape"]() {
+//         this.open = false;
+//       },
+//       ["x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90"]() {
+//         return this.open;
+//       },
+//       ["@click.away"]() {
+//         this.open = false;
+//       },
+//     },
+//   };
+// };

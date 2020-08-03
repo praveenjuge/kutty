@@ -65,6 +65,7 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Breadcrumb
 - [x] Button
 - [x] Card
+- [x] Collapse
 - [x] Dialog
 - [x] Drawer
 - [x] Dropdown
@@ -76,7 +77,5 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 - [x] Spinner
 - [x] Tabs
 - [x] Typography
-- [ ] Collapse
-- [ ] Loading
 - [ ] Toasts
 - [ ] Tooltips

@@ -6,8 +6,9 @@ draft: true
 ## Basic
 
 {{< code html >}}
-<button class="btn btn-light" data-tooltip="up" title="Tooltip on top">Tooltip on top</button>
-<button class="btn btn-light" data-tooltip="right" title="Tooltip on right">Tooltip on right</button>
-<button class="btn btn-light" data-tooltip="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-<button class="btn btn-light" data-tooltip="left" title="Tooltip on left">Tooltip on left</button>
+
+<div x-data="tooltip()" class="relative">
+  <button class="btn btn-light" x-spread="trigger">44 Messages</button>
+  <span class="tooltip" x-spread="message">20 read, 24 unread</span>
+</div>
 {{< /code >}}

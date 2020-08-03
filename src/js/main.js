@@ -1,3 +1,6 @@
+import "./alpinejs.js";
+import "./collapse.js";
+
 import Dialog from "./dialog.js";
 import Drawer from "./drawer.js";
 import Dropdown from "./dropdown.js";

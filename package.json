@@ -28,8 +28,8 @@
     "index.js"
   ],
   "scripts": {
-    "start": "cross-env NODE_ENV=development concurrently \"postcss ./node_modules/tailwindcss/tailwind.css -o docs/static/build.css --watch --verbose --no-map --config docs/postcss.config.js\" \"cd docs && hugo server --disableFastRender\" \"rollup -w --config docs/rollup.config.js\"",
-    "production": "cross-env NODE_ENV=production npx tailwindcss build -o docs/static/build.css  --config docs/tailwind.config.js && rollup --compact -c && cd docs && hugo --minify"
+    "start": "cross-env NODE_ENV=development concurrently \"postcss ./node_modules/tailwindcss/tailwind.css -o docs/static/build.css --watch --verbose --no-map --config docs/postcss.config.js\" \"cd docs && hugo server --disableFastRender\" \"rollup -w --config docs/rollup.config.js --context window\"",
+    "production": "cross-env NODE_ENV=production npx tailwindcss build -o docs/static/build.css  --config docs/tailwind.config.js && rollup --compact -c --context window && cd docs && hugo --minify"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",
