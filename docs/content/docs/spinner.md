@@ -16,7 +16,7 @@ title: Spinner
 {{< code html >}}
 
 <div class="space-x-2">
-  <div class="spinner text-purple-700" role="status">
+  <div class="spinner text-primary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
   <div class="spinner text-gray-700" role="status">

@@ -7,7 +7,7 @@ module.exports = List = () => ({
     marginBottom: "-1px",
   },
   ".list-item.list-active": {
-    "@apply bg-purple-700 text-white": {},
+    "@apply bg-primary text-white": {},
   },
   ".prose .list-item::before": {
     content: "none",
@@ -16,7 +16,7 @@ module.exports = List = () => ({
     "@apply no-underline": {},
   },
   "a.list-item.list-active:hover": {
-    "@apply bg-purple-900": {},
+    "@apply bg-primary-dark": {},
   },
   "a.list-item": {
     "@apply text-gray-800 no-underline font-normal": {},
@@ -55,7 +55,7 @@ module.exports = List = () => ({
     "@apply justify-between flex-row": {},
   },
   ".list-item.list-primary": {
-    "@apply bg-purple-200 text-purple-700": {},
+    "@apply bg-primary-light text-primary": {},
   },
   ".list-item.list-success": {
     "@apply bg-green-200 text-green-700": {},

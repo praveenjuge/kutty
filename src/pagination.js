@@ -50,9 +50,9 @@ module.exports = Pagination = () => ({
     "@apply rounded-r": {},
   },
   ".pagination-active, .prose a.pagination-active": {
-    "@apply bg-purple-700 text-white border-purple-700": {},
+    "@apply bg-primary border-primary text-white": {},
     "&:hover, &:focus": {
-      "@apply bg-purple-900 border-purple-900": {},
+      "@apply bg-primary-dark border-primary-dark": {},
     },
   },
 });

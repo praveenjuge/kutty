@@ -5,11 +5,11 @@ module.exports = Sidebar = () => ({
   ".sidebar-item, .prose .sidebar-item": {
     "@apply relative flex px-3 py-2 items-start text-sm text-left mt-0 flex-col rounded leading-relaxed font-medium text-gray-700 no-underline": {},
     "&:hover": {
-      "@apply text-purple-700": {},
+      "@apply text-primary": {},
     },
   },
   ".sidebar-item.active": {
-    "@apply text-purple-700 bg-purple-100": {},
+    "@apply text-primary bg-primary-light": {},
   },
   "@screen md": {
     ".sidebar": {

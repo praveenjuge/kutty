@@ -51,7 +51,7 @@ module.exports = Forms = () => ({
     "@apply border-gray-600": {},
   },
   ".tag-input:focus, .tag-select:focus, .tag-checkbox:focus, .tag-radio:focus, .tag-range:focus": {
-    "@apply outline-none border-purple-700": {},
+    "@apply outline-none border-primary": {},
   },
   ".tag-input::-webkit-input-placeholder": {
     "@apply text-gray-500": {},
@@ -94,7 +94,7 @@ module.exports = Forms = () => ({
     },
   },
   ".tag-checkbox, .tag-radio": {
-    "@apply bg-white text-purple-800 border-2 border-solid border-gray-400 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
+    "@apply bg-white text-primary border-2 border-solid border-gray-400 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
     backgroundOrigin: "border-box",
@@ -133,31 +133,31 @@ module.exports = Forms = () => ({
     "@apply w-full h-2 text-transparent cursor-pointer bg-gray-200 border-transparent rounded": {},
   },
   ".tag-range::-webkit-slider-thumb": {
-    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-purple-700 -mt-2 h-6 w-4": {},
+    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-primary -mt-2 h-6 w-4": {},
   },
   ".tag-range::-moz-range-thumb": {
-    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-purple-700 -mt-2 h-6 w-4": {},
+    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-primary -mt-2 h-6 w-4": {},
   },
   ".tag-range::-ms-thumb": {
-    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-purple-700 -mt-2 h-6 w-4": {},
+    "@apply appearance-none transition-colors duration-150 ease-in rounded border-none bg-primary -mt-2 h-6 w-4": {},
   },
   ".tag-range::-webkit-slider-thumb:active": {
-    "@apply bg-purple-900": {},
+    "@apply bg-primary-dark": {},
   },
   ".tag-range::-moz-range-thumb:active": {
-    "@apply bg-purple-900": {},
+    "@apply bg-primary-dark": {},
   },
   ".tag-range::-ms-thumb:active": {
-    "@apply bg-purple-900": {},
+    "@apply bg-primary-dark": {},
   },
   ".tag-range:disabled::-webkit-slider-thumb": {
-    "@apply bg-purple-200 cursor-not-allowed": {},
+    "@apply bg-primary-light cursor-not-allowed": {},
   },
   ".tag-range:disabled::-moz-range-thumb": {
-    "@apply bg-purple-200 cursor-not-allowed": {},
+    "@apply bg-primary-light cursor-not-allowed": {},
   },
   ".tag-range:disabled::-ms-thumb": {
-    "@apply bg-purple-200 cursor-not-allowed": {},
+    "@apply bg-primary-light cursor-not-allowed": {},
   },
   ".tag-range:disabled::-webkit-slider-runnable-track": {
     "@apply cursor-not-allowed": {},

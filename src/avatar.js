@@ -7,16 +7,16 @@ module.exports = Avatar = () => ({
     minHeight: "3rem",
   },
   ".avatar-initial": {
-    "@apply absolute rounded-full inset-0 font-bold text-base uppercase flex items-center justify-center h-full w-full bg-purple-200 text-purple-700 no-underline": {},
+    "@apply absolute rounded-full inset-0 font-bold text-base uppercase flex items-center justify-center h-full w-full bg-primary-light text-primary no-underline": {},
   },
   ".avatar img": {
-    "@apply h-full w-full object-cover rounded-full bg-purple-200": {},
+    "@apply h-full w-full object-cover rounded-full bg-primary-light": {},
   },
   ".prose .avatar img": {
     "@apply mt-0 mb-0": {},
   },
   ".avatar-icon": {
-    "@apply bg-purple-200 text-purple-700 flex items-center justify-center": {},
+    "@apply bg-primary-light text-primary flex items-center justify-center": {},
   },
   ".avatar-icon svg": {
     "@apply h-6 w-6": {},

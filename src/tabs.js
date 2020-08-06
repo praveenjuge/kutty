@@ -16,9 +16,9 @@ module.exports = Tabs = () => ({
     "@apply border-gray-400 text-gray-900": {},
   },
   ".tab-vertical .tab-link.active, .tab-link.active": {
-    "@apply text-purple-700 border-purple-700": {},
+    "@apply text-primary border-primary": {},
     "&:hover": {
-      "@apply text-purple-900 border-purple-900": {},
+      "@apply text-primary-dark border-primary-dark": {},
     },
   },
   ".tab-link.disabled": {

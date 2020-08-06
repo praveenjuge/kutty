@@ -9,10 +9,10 @@ module.exports = Badge = () => ({
     "@apply border-0 ml-1 -mr-1 !important": {},
   },
   ".badge-primary, .prose a.badge-primary": {
-    "@apply bg-purple-700 text-white": {},
+    "@apply bg-primary text-white": {},
   },
   "a.badge-primary:hover, a.badge-primary:focus": {
-    "@apply bg-purple-900": {},
+    "@apply bg-primary-dark": {},
   },
   ".badge-secondary, .prose a.badge-secondary": {
     "@apply bg-gray-600 text-white": {},
@@ -51,10 +51,10 @@ module.exports = Badge = () => ({
     "@apply bg-gray-700": {},
   },
   ".badge-light-primary, .prose a.badge-light-primary": {
-    "@apply bg-purple-200 text-purple-700": {},
+    "@apply bg-primary-light text-primary": {},
   },
   "a.badge-light-primary:hover, a.badge-light-primary:focus": {
-    "@apply bg-purple-300 text-purple-900": {},
+    "@apply bg-primary text-primary-light": {},
   },
   ".badge-light-secondary, .prose a.badge-light-secondary": {
     "@apply bg-gray-200 text-gray-700": {},

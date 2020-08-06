@@ -9,9 +9,9 @@ module.exports = Button = (styles) => ({
     },
   },
   ".btn-primary, .prose a.btn-primary": {
-    "@apply bg-purple-700 border-purple-700 text-white": {},
+    "@apply bg-primary border-primary text-white": {},
     "&:hover, &:focus": {
-      "@apply bg-purple-900 border-purple-900": {},
+      "@apply bg-primary-dark border-primary-dark": {},
     },
   },
   ".btn-secondary, .prose a.btn-secondary": {
@@ -57,15 +57,15 @@ module.exports = Button = (styles) => ({
     },
   },
   ".btn-link, .prose a.btn-link": {
-    "@apply bg-transparent border-transparent text-purple-800": {},
+    "@apply bg-transparent border-transparent text-primary-dark": {},
     "&:hover, &:focus": {
       "@apply bg-gray-300 border-gray-300": {},
     },
   },
   ".btn-light-primary, .prose a.btn-light-primary": {
-    "@apply bg-purple-200 border-purple-200 text-purple-700": {},
+    "@apply bg-primary-light border-primary-light text-primary": {},
     "&:hover, &:focus": {
-      "@apply bg-purple-300 border-purple-300 text-purple-900": {},
+      "@apply bg-primary border-primary text-primary-light": {},
     },
   },
   ".btn-light-secondary, .prose a.btn-light-secondary": {
@@ -93,15 +93,15 @@ module.exports = Button = (styles) => ({
     },
   },
   ".btn-light-link, .prose a.btn-light-link": {
-    "@apply bg-transparent border-transparent text-purple-200": {},
+    "@apply bg-transparent border-transparent text-primary-light": {},
     "&:hover, &:focus": {
-      "@apply bg-gray-200 border-gray-200 text-purple-700": {},
+      "@apply bg-gray-200 border-gray-200 text-primary": {},
     },
   },
   ".btn-outline-primary, .prose a.btn-outline-primary": {
-    "@apply text-purple-700 border-current bg-transparent": {},
+    "@apply text-primary border-current bg-transparent": {},
     "&:hover, &:focus": {
-      "@apply bg-purple-900 border-purple-900 text-white": {},
+      "@apply bg-primary-dark border-primary-dark text-white": {},
     },
   },
   ".btn-outline-secondary, .prose a.btn-outline-secondary": {
@@ -141,7 +141,7 @@ module.exports = Button = (styles) => ({
     },
   },
   ".btn-outline-link, .prose a.btn-outline-link": {
-    "@apply border-transparent text-purple-800 bg-transparent": {},
+    "@apply border-transparent text-primary-dark bg-transparent": {},
     "&:hover, &:focus": {
       "@apply border-gray-300": {},
     },

@@ -58,7 +58,7 @@ module.exports = Button = () => ({
     "@apply text-white": {},
   },
   ".breadcrumb.breadcrumb-dark .breadcrumb-item a, .prose ul.breadcrumb.breadcrumb-dark .breadcrumb-item a": {
-    "@apply text-purple-400": {},
+    "@apply text-primary-light": {},
   },
   ".breadcrumb.breadcrumb-dark .breadcrumb-item::before, .prose ul.breadcrumb.breadcrumb-dark .breadcrumb-item::before": {
     "@apply text-white": {},
