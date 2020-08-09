@@ -153,16 +153,16 @@ module.exports = Button = (styles) => ({
     "@apply opacity-75 pointer-events-none cursor-default !important": {},
   },
   // Sizes
-  ".btn.btn-xs": {
+  ".btn.btn-xs, .prose .btn.btn-xs": {
     "@apply py-0 px-1 text-xs": {},
   },
-  ".btn.btn-sm": {
+  ".btn.btn-sm, .prose .btn.btn-sm": {
     "@apply py-1 px-2 text-sm": {},
   },
-  ".btn.btn-lg": {
+  ".btn.btn-lg, .prose .btn.btn-lg": {
     "@apply py-2 px-5 text-lg": {},
   },
-  ".btn.btn-xl": {
+  ".btn.btn-xl, .prose .btn.btn-xl": {
     "@apply py-3 px-6 text-xl": {},
   },
   // Icons

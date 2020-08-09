@@ -5,9 +5,15 @@
   </head>
   <body class="bg-white">
     {{ partial "header" . }}
-    <main class="container mx-auto my-12 px-3 md:px-1" id="main">
-      {{ block "main" . }}{{ end }}
-    </main>
+    {{ if eq .Section "components" }} 
+      <main class="min-h-screen" style="background: #fafafa;" id="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    {{ else }}
+      <main class="container mx-auto my-12 px-3 md:px-1" id="main">
+        {{ block "main" . }}{{ end }}
+      </main>
+    {{ end }}
     <script src="/kutty.js"></script>
   </body>
 </html>

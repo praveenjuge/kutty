@@ -7,7 +7,7 @@ title: Dropdown
 {{< code html >}}
 
 <div x-data="dropdown()">
-  <button class="btn btn-primary dropdown-trigger" id="open-color-menu" x-spread="trigger">Open Dropdown</button>
+  <button class="btn btn-primary" id="open-color-menu" x-spread="trigger">Open Dropdown</button>
   <div class="dropdown-list" id="color-menu" x-spread="dropdown" x-cloak>
     <a href="#" class="dropdown-item">Red</a>
     <a href="#" class="dropdown-item">Blue</a>
@@ -21,9 +21,9 @@ title: Dropdown
 {{< code html >}}
 
 <div x-data="dropdown()">
-  <button class="btn btn-primary dropdown-trigger" id="open-color-menu-arrow" x-spread="trigger">
+  <button class="btn btn-primary" id="open-color-menu-arrow" x-spread="trigger">
     Open Dropdown
-    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
   </button>
   <div class="dropdown-list" id="color-menu-arrow" x-spread="dropdown" x-cloak>
     <a href="#" class="dropdown-item">Red</a>
@@ -39,9 +39,9 @@ title: Dropdown
 
 <div class="flex space-x-2">
   <div class="dropdown-sm" x-data="dropdown()">
-    <button class="btn btn-primary btn-sm dropdown-trigger" id="open-color-menu-small" x-spread="trigger">
+    <button class="btn btn-primary btn-sm" id="open-color-menu-small" x-spread="trigger">
       Open Dropdown
-      <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
     <div class="dropdown-list" id="color-menu-small" x-spread="dropdown" x-cloak>
       <a href="#" class="dropdown-item">Red</a>
@@ -50,9 +50,9 @@ title: Dropdown
     </div>
   </div>
   <div class="dropdown-lg" x-data="dropdown()">
-    <button class="btn btn-primary btn-lg dropdown-trigger" id="open-color-menu-large" x-spread="trigger">
+    <button class="btn btn-primary btn-lg" id="open-color-menu-large" x-spread="trigger">
       Open Dropdown
-      <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
     </button>
     <div class="dropdown-list" id="color-menu-large" x-spread="dropdown" x-cloak>
       <a href="#" class="dropdown-item">Red</a>
@@ -68,9 +68,9 @@ title: Dropdown
 {{< code html >}}
 
 <div x-data="dropdown()">
-  <button class="btn btn-primary dropdown-trigger" id="open-color-menu-divider" x-spread="trigger">
+  <button class="btn btn-primary" id="open-color-menu-divider" x-spread="trigger">
     Open Dropdown
-    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
   </button>
   <div class="dropdown-list" id="color-menu-divider" x-spread="dropdown" x-cloak>
     <a href="#" class="dropdown-item">Red</a>
@@ -89,9 +89,9 @@ title: Dropdown
 {{< code html >}}
 
 <div x-data="dropdown()">
-  <button class="btn btn-primary dropdown-trigger" id="open-color-menu-icons" x-spread="trigger">
+  <button class="btn btn-primary" id="open-color-menu-icons" x-spread="trigger">
     Open Dropdown
-    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    <svg class="dropdown-arrow" :class="{ 'rotate-180': open }" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
   </button>
   <div class="dropdown-list" id="color-menu-icons" x-spread="dropdown" x-cloak>
     <a href="#" class="dropdown-item justify-between">Red <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg></a>

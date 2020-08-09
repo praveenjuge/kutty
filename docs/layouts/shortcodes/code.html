@@ -1,14 +1,10 @@
 <div x-data>
-
   <!-- To display the component -->
   <div class="p-3 border-gray-200 border-solid border-t border-r border-l rounded-t mb-0 overflow-visible" x-ref="code">{{ .Inner }}</div>
 
   <!-- To display the code -->
-  <div class="bg-gray-200 rounded-b mb-2 outline-none relative overflow-y-auto" style="max-height: 350px;">
-    <!-- <div class="absolute" style="top: 2px; right: 3px;">
-      <button class="btn btn-light btn-xs" x-on:click="navigator.clipboard.writeText($refs.code.innerHTML)">Copy</button>
-    </div> -->
-    {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+  <div class="bg-gray-200 rounded-b mb-2 outline-none relative overflow-y-auto" style="max-height: 350px;">{{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+    <button class="btn btn-link btn-xs absolute" style="top: 5px; right: 3px;" x-ref="copyCodeButton" @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy'}, 1000);">Copy</button>
   </div>
-
+  <textarea class="sr-only whitespace-pre-wrap" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
 </div>

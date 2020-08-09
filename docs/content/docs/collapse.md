@@ -16,7 +16,7 @@ title: Collapse
 
 {{< code html >}}
 
-<div class="border border-gray-200 divide-y divide-gray-200 rounded">
+<div class="divide-y divide-gray-200">
 
   <div x-data="collapse()">
     <div x-spread="trigger" class="p-3 flex justify-between items-center" role="button" aria-controls="basicAccordion1" aria-expanded="false">
