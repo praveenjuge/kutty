@@ -41,7 +41,7 @@ function normalizeNegativeCounter(elements, focussedIndex) {
 // Refocus dropdown trigger element
 // This usually happens when the user closes the dropdown
 function refocus(element) {
-  var dropdownTrigger = element.querySelector(".dropdown-trigger");
+  var dropdownTrigger = element.querySelector('[x-spread="trigger"]');
   if (dropdownTrigger) {
     dropdownTrigger.focus();
   }
@@ -49,19 +49,19 @@ function refocus(element) {
 
 // Toggle aria atrributes based on the dropdown state
 function toggleAriaAtrributes(dropdown, open) {
-  var trigger = dropdown.getElementsByClassName("dropdown-trigger");
+  var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
     if (open) {
       trigger.setAttribute("aria-expanded", true);
-      var dropdownList = dropdown.getElementsByClassName("dropdown-list");
+      var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
         dropdownList.setAttribute("aria-hidden", false);
       }
     } else {
       trigger.setAttribute("aria-expanded", false);
-      var dropdownList = dropdown.getElementsByClassName("dropdown-list");
+      var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
         dropdownList.setAttribute("aria-hidden", true);
@@ -72,19 +72,19 @@ function toggleAriaAtrributes(dropdown, open) {
 
 // Set attributes when the component is initialized
 function init(dropdown) {
-  var trigger = dropdown.getElementsByClassName("dropdown-trigger");
+  var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
     trigger.setAttribute("aria-haspopup", true);
     trigger.setAttribute("aria-expanded", false);
-    var dropdown = dropdown.getElementsByClassName("dropdown-list");
+    var dropdown = dropdown.querySelectorAll('[x-spread="dropdown"]');
     if (dropdown.length) {
       dropdown = dropdown[0];
       trigger.setAttribute("aria-controls", dropdown.id);
       dropdown.setAttribute("role", "menu");
       dropdown.setAttribute("aria-labelledby", trigger.id);
       dropdown.setAttribute("aria-hidden", true);
-      var dropdownItems = dropdown.getElementsByClassName("dropdown-item");
+      var dropdownItems = dropdown.querySelectorAll(".dropdown-item");
       if (dropdownItems.length) {
         [...dropdownItems].forEach(function (dropdownItem) {
           dropdownItem.setAttribute("role", "menuitem");
