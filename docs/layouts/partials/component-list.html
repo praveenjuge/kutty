@@ -1,6 +1,6 @@
 {{ $current := . }}
 
-<nav role="navigation" class="sidebar border-transparent md:border-gray-200 border-r" style="top: 58px;" id="navDrawer">
+<nav role="navigation" class="sidebar border-transparent md:border-gray-200" style="top: 58px;" id="navDrawer">
   {{ range where .Site.Pages.ByWeight "Section" "docs" }} {{ if eq .Permalink $current.Permalink }}
   <a class="sidebar-item active" href="#main" aria-describedby="current">
     <span class="sr-only">(Current Page)</span>

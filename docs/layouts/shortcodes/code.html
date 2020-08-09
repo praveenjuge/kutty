@@ -1,12 +1,14 @@
-<!-- To display the component -->
-<div class="p-3 border-gray-200 border-solid border-t border-r border-l rounded-t mb-0 overflow-visible">
-  {{ .Inner }}
-</div>
+<div x-data>
 
-<!-- To display the code -->
-<div class="bg-gray-200 rounded-b mb-2 outline-none relative overflow-y-auto" style="max-height: 350px;">
-  <!-- <div class="absolute" style="top: 2px; right: 5px;">
-    <button class="btn btn-link btn-sm">Copy</button>
-  </div> -->
-  {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+  <!-- To display the component -->
+  <div class="p-3 border-gray-200 border-solid border-t border-r border-l rounded-t mb-0 overflow-visible" x-ref="code">{{ .Inner }}</div>
+
+  <!-- To display the code -->
+  <div class="bg-gray-200 rounded-b mb-2 outline-none relative overflow-y-auto" style="max-height: 350px;">
+    <!-- <div class="absolute" style="top: 2px; right: 3px;">
+      <button class="btn btn-light btn-xs" x-on:click="navigator.clipboard.writeText($refs.code.innerHTML)">Copy</button>
+    </div> -->
+    {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+  </div>
+
 </div>
