@@ -1,12 +1,6 @@
 module.exports = Dropdown = () => ({
-  ".dropdown-list[aria-hidden='true']": {
-    "@apply hidden": {},
-  },
-  ".dropdown-list.dropdown-animation": {
-    "@apply opacity-100 scale-100 !important": {},
-  },
   ".dropdown-list": {
-    "@apply absolute z-10 shadow-md w-56 flex flex-col pl-0 mb-0 border border-solid border-gray-200 bg-white p-2 rounded transition ease-out duration-100 transform opacity-0 scale-90 origin-top-left": {},
+    "@apply absolute z-10 shadow-md w-56 flex flex-col pl-0 mb-0 border border-solid border-gray-200 bg-white p-2 rounded transition ease-out duration-100 origin-top-left": {},
   },
   ".dropdown-item": {
     "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-base rounded whitespace-no-wrap no-underline w-full": {},
