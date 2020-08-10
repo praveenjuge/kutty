@@ -16,6 +16,8 @@
 // - Add tabindex="-1" to dropdown menu items
 // - Restore focus to the dropdown button once the dropdown menu is closed
 
+var lastOpenedElement = null;
+
 // Focus an element
 // elements - array of dropdown elements
 function focus(elements, focussedIndex) {
@@ -115,7 +117,9 @@ window.dropdown = function () {
       ["@click"]() {
         this.open = !this.open;
         focussedIndex = -1;
-        if (!this.open) {
+        if (this.open) {
+          lastOpenedElement = this.$el;
+        } else {
           refocus(this.$el);
         }
         toggleAriaAtrributes(this.$el, this.open);
@@ -167,7 +171,7 @@ window.dropdown = function () {
       ["@click.away"]() {
         this.open = false;
         focussedIndex = -1;
-        refocus(this.$el);
+        refocus(lastOpenedElement);
         toggleAriaAtrributes(this.$el, this.open);
       },
       ["@keydown.arrow-down"](e) {
