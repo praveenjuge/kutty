@@ -12,8 +12,7 @@
 // - Add tabindex="-1" to dialog modal
 // - Restore focus to the dialog trigger button once the dialog modal is closed
 // - Make sure it's closable with a button inside the dialog modal
-
-// When the dialog modal is opened
+// When the dialog modal is opened, do the following:
 // - Focus on the first focusable element when dialog modal is opened
 // - Make sure tab focuses are restricted to modal itself
 // - Add overflow: hidden; style to html
