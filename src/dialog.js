@@ -1,9 +1,6 @@
 module.exports = Dialog = () => ({
   ".dialog": {
-    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition ease-out duration-100 transform opacity-0 scale-105 origin-center": {},
-  },
-  ".dialog.dialog-animation": {
-    "@apply opacity-100 scale-100 !important": {},
+    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition ease-out duration-100 transform scale-105 origin-center": {},
   },
   ".dialog-content": {
     "@apply relative z-50 bg-white mx-auto rounded-none my-0 h-screen cursor-auto flex flex-col": {},
@@ -32,9 +29,6 @@ module.exports = Dialog = () => ({
   },
   ".dialog.dialog-full .dialog-content": {
     "@apply w-full rounded-none my-0 h-screen max-h-screen": {},
-  },
-  ".dialog[aria-hidden='true']": {
-    "@apply hidden": {},
   },
   ".dialog-header .dialog-close": {
     "@apply absolute p-0": {},
