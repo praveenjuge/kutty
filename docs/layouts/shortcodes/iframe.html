@@ -19,9 +19,7 @@
       <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
       <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
       <link rel='stylesheet' href='/build.css' />
-      {{ if .Get 1 }}
       <script src='/kutty.js'></script>
-      {{ end }}
       {{ .Inner | safeHTMLAttr }}">
     </iframe>
   </div>
