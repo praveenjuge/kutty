@@ -1,7 +1,7 @@
-// TODO
+// Todo
 // - On pressing A-Z, a-z the focus moves to the corresponding list item
 
-// DONE
+// Completed Features
 // - Click, press enter or press space on the dropdown button to open/close dropdown menu
 // - Press escape or click outside to close the dropdown menu when opened
 // - Up arrow, down arrow focuses on each dropdown item

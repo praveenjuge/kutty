@@ -3,7 +3,7 @@ const kutty = require("../index.js");
 
 module.exports = {
   purge: {
-    content: ["./docs/layouts/**/*.html", "./docs/content/**/*.md", "./src/js/**/*.js"],
+    content: ["./docs/layouts/**/*.html", "./docs/content/**/*.md", "./docs/content/**/*.html", "./src/js/**/*.js"],
   },
   theme: {
     typography: {

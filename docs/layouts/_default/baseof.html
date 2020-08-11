@@ -6,7 +6,7 @@
   <body class="bg-white">
     {{ partial "header" . }}
     {{ if eq .Section "components" }} 
-      <main class="min-h-screen" style="background: #fafafa;" id="main">
+      <main class="min-h-screen bg-gray-100" id="main">
         {{ block "main" . }}{{ end }}
       </main>
     {{ else }}
