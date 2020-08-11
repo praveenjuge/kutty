@@ -8,18 +8,19 @@
   </nav>
 
   <!-- To display the component -->
-  <div class="mb-2 overflow-visible bg-white" x-show="tab === 'design'">
+  <div class="mb-2 overflow-visible bg-white border-b-2 border-gray-200" x-show="tab === 'design'">
     <iframe
     style='height: 300px;'
     onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
     class="w-full" 
-     srcdoc="<!DOCTYPE html>
+    loading="lazy"
+    srcdoc="<!DOCTYPE html>
       <meta charset='utf-8' />
       <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
       <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
       <link rel='stylesheet' href='/build.css' />
       <script src='/kutty.js'></script>
-      <body>{{ .Inner | safeHTMLAttr }}</body>">
+      {{ .Inner | safeHTMLAttr }}">
     </iframe>
   </div>
 

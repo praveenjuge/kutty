@@ -14,10 +14,10 @@ window.collapse = function () {
       },
     },
   };
-};// TODO
+};// Todo
 // - On pressing A-Z, a-z the focus moves to the corresponding list item
 
-// DONE
+// Completed Features
 // - Click, press enter or press space on the dropdown button to open/close dropdown menu
 // - Press escape or click outside to close the dropdown menu when opened
 // - Up arrow, down arrow focuses on each dropdown item
@@ -31,6 +31,8 @@ window.collapse = function () {
 // - Toggle aria-hidden attribute to dropdown menu based on it's open state
 // - Add tabindex="-1" to dropdown menu items
 // - Restore focus to the dropdown button once the dropdown menu is closed
+
+var lastOpenedElement = null;
 
 // Focus an element
 // elements - array of dropdown elements
@@ -131,7 +133,9 @@ window.dropdown = function () {
       ["@click"]() {
         this.open = !this.open;
         focussedIndex = -1;
-        if (!this.open) {
+        if (this.open) {
+          lastOpenedElement = this.$el;
+        } else {
           refocus(this.$el);
         }
         toggleAriaAtrributes(this.$el, this.open);
@@ -183,7 +187,7 @@ window.dropdown = function () {
       ["@click.away"]() {
         this.open = false;
         focussedIndex = -1;
-        refocus(this.$el);
+        refocus(lastOpenedElement);
         toggleAriaAtrributes(this.$el, this.open);
       },
       ["@keydown.arrow-down"](e) {
@@ -225,7 +229,25 @@ window.dropdown = function () {
     },
   };
 };// Todo
-// - Focus on the first focusable element when dialog is opened
+// - Set aria-labelledby attribute to dialog modal
+// - Set aria-describedby attribute to dialog modal
+
+// Completed Features
+// - Click, press enter or press space on the dialog trigger to open/close dialog modal
+// - Press escape or click outside the dialog modal to close the dialog modal
+// - Set aria-haspopup="dialog" attribute to dialog trigger
+// - Toggle aria-hidden attribute to dialog modal based on it's open state
+// - Add role="dialog" attribute to dialog modal
+// - Add aria-modal="true" attribute to dialog modal
+// - Add tabindex="-1" to dialog modal
+// - Restore focus to the dialog trigger button once the dialog modal is closed
+// - Make sure it's closable with a button inside the dialog modal
+
+// When the dialog modal is opened
+// - Focus on the first focusable element when dialog modal is opened
+// - Make sure tab focuses are restricted to modal itself
+// - Add overflow: hidden; style to html
+// - Add padding-right style to the body, where the value is the scroll bar width
 
 const Dialog = (() => {
   const dialogSelector = ".dialog";
