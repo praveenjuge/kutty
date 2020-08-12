@@ -1,8 +1,8 @@
-<header class="border-gray-200 border-b z-30 fixed top-0 w-full bg-white">
+<header class="z-30 fixed top-0 w-full bg-white bg-opacity-75" style="-webkit-backdrop-filter: saturate(180%) blur(5px); backdrop-filter: saturate(180%) blur(5px);">
   <div class="container mx-auto flex justify-between items-center px-3 md:px-1 py-3">
     <div class="flex items-center">
       {{ if eq .Section "docs" }}
-        <button class="btn btn-light btn-sm inline-flex md:hidden sidebar-open mr-3" data-sidebar="#navDrawer">Menu</button>
+      <button class="btn btn-light btn-sm inline-flex md:hidden sidebar-open mr-3" data-sidebar="#navDrawer">Menu</button>
       {{ end }}
       <a href="/" title="Go to Kutty Home Page">
         <svg class="h-6 w-auto" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">
@@ -24,14 +24,16 @@
       </a>
     </div>
     <div>
-      <a href="/docs/" rel="prefetch" class='btn btn-sm {{ if eq .Section "docs" }}btn-primary{{ else }}btn-link{{ end }}'>
+      <a href="/docs/" rel="prefetch" class='btn btn-sm {{ if eq .Section "docs" }}btn-light{{ else }}btn-link{{ end }}'>
         <span class="hidden md:inline">Documentation</span>
         <span class="inline md:hidden">Docs</span>
       </a>
-      <a href="/components/" rel="prefetch" class='btn btn-sm {{ if eq .Section "components" }}btn-primary{{ else }}btn-link{{ end }}'>Components</a>
+      <a href="/components/" rel="prefetch" class='btn btn-sm {{ if eq .Section "components" }}btn-light{{ else }}btn-link{{ end }}'>Components</a>
       <a href="https://github.com/praveenjuge/kutty" class="btn btn-link btn-sm hidden md:inline-flex items-center" target="_blank" rel="noopener noreferrer">
         GitHub
-        <svg class="ml-1 h-4 w-4 hidden md:inline" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+        <svg class="ml-1 h-4 w-4 hidden md:inline" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+        </svg>
       </a>
     </div>
   </div>
