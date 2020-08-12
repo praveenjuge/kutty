@@ -17,11 +17,11 @@
   <div class="mb-2 overflow-visible bg-white border-b-2 border-gray-200" x-show="tab === 'design'">
     <label class="tag-label">
       <span class="sr-only">Get in my range</span>
-      <input type="range" class="tag-range" value="100" />
+      <input type="range" class="tag-range resize-handle" value="100" />
     </label>
 
     <iframe
-      style="height: 300px;"
+      style="height: 300px; min-width: 320px;"
       onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
       class="w-full"
       loading="lazy"
@@ -43,3 +43,20 @@
 
   <textarea class="sr-only whitespace-pre-wrap" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
 </div>
+
+<script>
+  window.addEventListener('DOMContentLoaded', function(event) {
+    const sliders = document.querySelectorAll('.resize-handle');
+
+    sliders.forEach(function(slider, index) {
+      slider.addEventListener('input', function(event) {
+        let iframe = event.target.parentElement.parentElement.querySelector('iframe');
+        iframe.classList.remove('w-full');
+        iframe.width = event.target.value + '%';
+        iframe.style.height = '0px';
+        let scrollHeight = iframe.contentWindow.document.body.scrollHeight;
+        iframe.style.height = scrollHeight + 'px';
+      })
+    })
+  });
+</script>
