@@ -1,6 +1,5 @@
 ---
 title: Tooltips
-draft: true
 ---
 
 ## Basic
