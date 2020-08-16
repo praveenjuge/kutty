@@ -38,14 +38,14 @@ function init(dialog) {
   var trigger = dialog.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
-    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute("aria-haspopup", "dialog");
     var dialog = dialog.querySelectorAll('[x-spread="dialog"]');
     if (dialog.length) {
       dialog = dialog[0];
-      dialog.setAttribute('role', 'dialog');
-      dialog.setAttribute('aria-hidden', true);
-      dialog.setAttribute('aria-modal', true);
-      dialog.setAttribute('tabindex', -1);
+      dialog.setAttribute("role", "dialog");
+      dialog.setAttribute("aria-hidden", true);
+      dialog.setAttribute("aria-modal", true);
+      dialog.setAttribute("tabindex", -1);
     }
   }
 }
@@ -56,9 +56,9 @@ function toggleAriaAtrributes(dialog, isOpen) {
   if (dialog.length) {
     dialog = dialog[0];
     if (isOpen) {
-      dialog.setAttribute('aria-hidden', false);
+      dialog.setAttribute("aria-hidden", false);
     } else {
-      dialog.setAttribute('aria-hidden', true);
+      dialog.setAttribute("aria-hidden", true);
     }
   }
 }
@@ -86,66 +86,68 @@ function refocus(element) {
 function focusDialog(dialog) {
   dialog = dialog.querySelector('[x-spread="dialog"]');
   if (dialog) {
-    dialog.focus()
+    dialog.focus();
   }
 }
 
 // From bootstrap
 function getScrollbarWidth() {
-  const scrollDiv = document.createElement('div');
-  scrollDiv.className = 'scrollbar-measure';
+  const scrollDiv = document.createElement("div");
+  scrollDiv.className = "scrollbar-measure";
   document.body.appendChild(scrollDiv);
   const scrollbarWidth =
-      scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+    scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
   document.body.removeChild(scrollDiv);
   return scrollbarWidth;
 }
 
 function adjustScrollBar(isOpen) {
   if (isOpen) {
-    var htmlDocument = document.querySelector('html');
-    htmlDocument.style.overflow = 'hidden';
-    var body = document.querySelector('body');
-    body.style.paddingRight = getScrollbarWidth() + 'px';
+    var htmlDocument = document.querySelector("html");
+    htmlDocument.style.overflow = "hidden";
+    var body = document.querySelector("body");
+    body.style.paddingRight = getScrollbarWidth() + "px";
   } else {
-    var htmlDocument = document.querySelector('html');
+    var htmlDocument = document.querySelector("html");
     htmlDocument.style.overflow = null;
-    var body = document.querySelector('body');
+    var body = document.querySelector("body");
     body.style.paddingRight = null;
   }
 }
 
-
 // Initialize attribute for all dialog elements
 var dialogs = document.querySelectorAll('[x-data="dialog()"]');
-dialogs.forEach(function(dialog) {
+dialogs.forEach(function (dialog) {
   init(dialog);
 });
 
-window.dialog = function() {
+window.dialog = function () {
   var focussedIndex = -1;
   return {
     open: false,
     trigger: {
-      ['@click']() {
+      ["@click"]() {
         this.open = !this.open;
         if (this.open) {
           lastOpenedElement = this.$el;
-          focusDialog(this.$el);
+          var dialog = document.querySelector('[x-spread="dialog"]');
+          var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
+          focussedIndex++;
+          focus(dialogElements, focussedIndex);
         } else {
           focussedIndex = -1;
         }
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocus(lastOpenedElement);
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.tab'](e) {
+      ["@keydown.tab"](e) {
         if (this.open) {
           e.preventDefault();
           var dialog = document.querySelector('[x-spread="dialog"]');
@@ -153,26 +155,42 @@ window.dialog = function() {
           focussedIndex++;
           focus(dialogElements, focussedIndex);
         }
-      }
+      },
+      ["@click.away"]() {
+        if (this.open) {
+          this.open = false;
+          focussedIndex = -1;
+          refocus(lastOpenedElement);
+          adjustScrollBar(this.open);
+          toggleAriaAtrributes(this.$el, this.open);
+        }
+      },
     },
     dialog: {
-      ['x-show.transition.opacity.duration.200ms']() {
+      ["x-show.transition.opacity.duration.200ms"]() {
         return this.open;
       },
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocus(lastOpenedElement);
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.tab'](e) {
+      ["@keydown.tab"](e) {
         e.preventDefault();
         var dialog = document.querySelector('[x-spread="dialog"]');
         var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
         focussedIndex++;
         focus(dialogElements, focussedIndex);
       },
+    },
+    close() {
+      this.open = false;
+      focussedIndex = -1;
+      refocus(lastOpenedElement);
+      adjustScrollBar(this.open);
+      toggleAriaAtrributes(this.$el, this.open);
     },
   };
 };
