@@ -11,9 +11,9 @@
     "tailwind",
     "tailwindcss",
     "tailwindcss-plugin",
-    "UI",
     "css",
-    "components"
+    "components",
+    "alpineJS"
   ],
   "repository": {
     "type": "git",

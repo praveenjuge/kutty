@@ -25,11 +25,25 @@ plugins: [require("kutty")],
 
 ### For JS
 
-Place the following script tag before the closing body tag:
+We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine).
+
+Place the following script tag before the closing body tag.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
 ```
+
+## Documentation
+
+View full documentation at [https://kutty.netlify.app](https://kutty.netlify.app).
+
+## Feature/Components Requests
+
+Need something new? [Suggest on Hellonext](https://kutty.hellonext.co).
+
+## Bugs
+
+Found a bug? [Please open a new issue](https://github.com/praveenjuge/kutty/issues/new).
 
 ## Development
 
@@ -57,25 +71,6 @@ Open [`http://localhost:1313`](http://localhost:1313) in your browser.
 | `npm start`          | Starts a local Hugo server and Tailwind Watcher |
 | `npm run production` | For generating production docs files            |
 
-## Components
+## License
 
-- [x] Alert
-- [x] Avatar
-- [x] Badge
-- [x] Breadcrumb
-- [x] Button
-- [x] Card
-- [x] Collapse
-- [x] Dialog
-- [x] Drawer
-- [x] Dropdown
-- [x] Forms
-- [x] List
-- [x] Pagination
-- [x] Sidebar
-- [x] Skeleton
-- [x] Spinner
-- [x] Tabs
-- [x] Typography
-- [ ] Toasts
-- [ ] Tooltips
+See the [LICENSE](https://github.com/praveenjuge/kutty/blob/master/LICENSE) file.
