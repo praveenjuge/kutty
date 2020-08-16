@@ -4,21 +4,21 @@ const getTooltipPlacement = function(element, tooltip) {
   switch(placement) {
     case 'top': {
       transform = { 
-        x: Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)), 
-        y: Math.round(element.offsetTop - element.offsetHeight - 10)
+        x: tooltip.offsetWidth > element.offsetWidth ? Math.round(element.offsetLeft - (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)) : Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)), 
+        y: Math.round(element.offsetTop - tooltip.offsetHeight - 10)
       };
       break;
     }
     case 'left': {
       transform = { 
         x: Math.round(element.offsetLeft - tooltip.offsetWidth - 10), 
-        y: Math.round(element.offsetTop)
+        y: Math.round(element.offsetTop + (element.offsetHeight / 2) - (tooltip.offsetHeight / 2))
       };
       break;
     }
     case 'bottom': {
       transform = { 
-        x: Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)), 
+        x: tooltip.offsetWidth > element.offsetWidth ? Math.round(element.offsetLeft - (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)) : Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)),
         y: Math.round(element.offsetTop + element.offsetHeight + 10)
       };
       break;
@@ -26,14 +26,14 @@ const getTooltipPlacement = function(element, tooltip) {
     case 'right': {
       transform = { 
         x: Math.round(element.offsetLeft + element.offsetWidth + 10), 
-        y: Math.round(element.offsetTop)
+        y: Math.round(element.offsetTop + (element.offsetHeight / 2) - (tooltip.offsetHeight / 2))
       };
       break;
     }
     default: {
       transform = { 
-        x: Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)), 
-        y: Math.round(element.offsetTop - element.offsetHeight - 10)
+        x: tooltip.offsetWidth > element.offsetWidth ? Math.round(element.offsetLeft - (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)) : Math.round(element.offsetLeft + (Math.abs(element.offsetWidth - tooltip.offsetWidth)/2)),
+        y: Math.round(element.offsetTop - tooltip.offsetHeight - 10)
       };
       break;
     }
