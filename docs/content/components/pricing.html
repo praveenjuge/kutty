@@ -7,10 +7,10 @@ title: Pricing
 {{< iframe html >}}
 <section x-data="{ selected: 'monthly' }">
   <div class="bg-purple-100 pb-64">
-    <div class="container mx-auto pt-20 px-4">
+    <div class="container text-center sm:text-left mx-auto pt-20 px-4">
       <h1 class="text-4xl md:text-5xl text-gray-900 leading-tight mb-3 font-bold md:font-extrabold">Plans & Pricing</h1>
       <p class="text-lg md:text-xl text-gray-600 mb-10">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
-      <div class="w-64 -mb-2">
+      <div class="w-64 mx-auto sm:mx-0 -mb-2">
         <div class="flex justify-between text-center p-2 border border-purple-200 rounded-full">
           <button class="btn btn-primary rounded-full" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">
             Bill Monthly
