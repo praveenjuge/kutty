@@ -1,0 +1,622 @@
+---
+title: Pricing
+---
+
+<!-- Pricing 1 -->
+
+{{< iframe html >}}
+<section x-data="{ selected: 'monthly' }">
+  <div class="bg-purple-100 pb-64">
+    <div class="container mx-auto pt-20 px-4">
+      <h1 class="text-4xl md:text-5xl text-gray-900 leading-tight mb-3 font-bold md:font-extrabold">Plans & Pricing</h1>
+      <p class="text-lg md:text-xl text-gray-600 mb-10">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
+      <div class="w-64 -mb-2">
+        <div class="flex justify-between text-center p-2 border border-purple-200 rounded-full">
+          <button class="btn btn-primary rounded-full" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">
+            Bill Monthly
+          </button>
+          <button class="btn btn-link rounded-full" @click="selected = 'yearly'" :class="{ 'btn-link': selected === 'monthly', 'btn-primary': selected === 'yearly' }">
+            Bill Yearly
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container mx-auto -mt-48 mb-20">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 sm:gap-8">
+      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
+        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
+          <div>
+            <p class="text-gray-800 font-semibold text-lg mb-1">Free</p>
+            <p class="text-gray-900 font-extrabold text-4xl font-mono">$0</p>
+          </div>
+          <a href="#" class="btn btn-primary btn-lg w-full mt-16">Get Started</a>
+        </div>
+        <div class="flex flex-col flex-grow p-6 space-y-3">
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Suppression Management</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email Tracking and Analytics</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
+          </div>
+        </div>
+      </div>
+      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
+        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
+          <div>
+            <p class="text-gray-800 font-semibold text-lg mb-1">Team</p>
+            <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
+            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+          </div>
+          <a href="#" class="btn btn-light btn-lg w-full mt-8">Try for free</a>
+        </div>
+        <div class="flex flex-col flex-grow p-6 space-y-3">
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Suppression Management</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email Tracking and Analytics</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">5 Days of Log Retention</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Limited 24/7 Ticket Support</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">1 Dedicated IP (Foundation 100k and up)</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">1,000 Email Address Validations</p>
+          </div>
+        </div>
+      </div>
+      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
+        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
+          <div>
+            <p class="text-gray-800 font-semibold text-lg mb-1">Company</p>
+            <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
+            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+          </div>
+          <a href="#" class="btn btn-light btn-lg w-full mt-8">Try for free</a>
+        </div>
+        <div class="flex flex-col flex-grow p-6 space-y-3">
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Suppression Management</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Email Tracking and Analytics</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">5 Days of Log Retention</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Limited 24/7 Ticket Support</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">1 Dedicated IP (Foundation 100k and up)</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">1,000 Email Address Validations</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Instant Chat Support</p>
+          </div>
+          <div class="flex items-start">
+            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
+              <path
+                fill-rule="evenodd"
+                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Custom Features</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{< /iframe >}}
+
+<!-- Pricing 1 -->
+
+{{< iframe html >}}
+<section class="py-24">
+  <div class="container mx-auto text-center mb-20 px-4">
+    <h1 class="text-4xl text-gray-900 leading-tight mb-3 font-bold md:font-extrabold">Set up your organization, pick a plan later</h1>
+    <p class="text-lg md:text-xl text-gray-600 mb-6">Our plans scale for any organization—from startups to Fortune 500s.</p>
+  </div>
+  <div class="container mx-auto px-0 md:px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24 sm:gap-10">
+      <div class="p-4 sm:p-0">
+        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Free</p>
+        <div class="flex items-center justify-center space-x-2 mb-6">
+          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$0</p>
+          <div>
+            <p class="text-gray-600 text-sm">per user</p>
+            <p class="text-gray-600 text-sm">per month</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+          Get Started
+          <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <div class="space-y-4">
+          <p class="text-gray-800 font-semibold text-lg mb-3">Features:</p>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Create unlimited projects. Upload unlimited designs.">
+              Unlimited projects
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p
+              class="text-gray-800 underline hover:text-primary cursor-pointer"
+              x-data="tooltip()"
+              x-spread="tooltip"
+              title="Organize files in folders and set device platform for each one of them."
+            >
+              Unlimited folders
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Public design links</p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Invite-only private projects</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 sm:p-0">
+        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Startup</p>
+        <div class="flex items-center justify-center space-x-2 mb-6">
+          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$10</p>
+          <div>
+            <p class="text-gray-600 text-sm">per user</p>
+            <p class="text-gray-600 text-sm">per month</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+          Try for free
+          <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <div class="space-y-4">
+          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Free plus...</p>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p
+              class="text-gray-800 underline hover:text-primary cursor-pointer"
+              x-data="tooltip()"
+              x-spread="tooltip"
+              title="Guest users can view & comment on designs in projects they’ve been invited to. For security reasons, they cannot update designs, download files, or invite other people."
+            >
+              Unlimited free Guest users
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p
+              class="text-gray-800 underline hover:text-primary cursor-pointer"
+              x-data="tooltip()"
+              x-spread="tooltip"
+              title="Backup, open, and download any design file version. Collaborate on design files with other designers without overwriting each other's files."
+            >
+              Unlimited file version history
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p
+              class="text-gray-800 underline hover:text-primary cursor-pointer"
+              x-data="tooltip()"
+              x-spread="tooltip"
+              title="Connect our product projects with Slack channels to get notifications about new designs or comments."
+            >
+              Slack integration
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p
+              class="text-gray-800 underline hover:text-primary cursor-pointer"
+              x-data="tooltip()"
+              x-spread="tooltip"
+              title="Log in to our app via SSO authentication. We support SAML - an industry-standard way for identity providers."
+            >
+              Single Sign-On (SSO)
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 sm:p-0">
+        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Pro</p>
+        <div class="flex items-center justify-center space-x-2 mb-6">
+          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$50</p>
+          <div>
+            <p class="text-gray-600 text-sm">per user</p>
+            <p class="text-gray-600 text-sm">per month</p>
+          </div>
+        </div>
+        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+          Try for free
+          <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <div class="space-y-4">
+          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Startup plus...</p>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Granular access controls...">
+              Granular access controls
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Audit logs...">
+              Audit logs
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Salesforce, Oracle, & SQL Server integrations</p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Custom components</p>
+          </div>
+        </div>
+      </div>
+      <div class="p-4 sm:p-0">
+        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Enterprise</p>
+        <div class="flex items-center justify-center space-x-2 mb-6">
+          <p class="text-gray-800 font-medium text-xl text-center mt-3 mb-1">Custom pricing for your organization</p>
+        </div>
+        <a href="#" class="btn btn-dark btn-icon btn-lg w-full mb-8">
+          Book a demo
+          <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
+            <path
+              fill-rule="evenodd"
+              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <div class="space-y-4">
+          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Pro plus...</p>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Deploy on-premises...">
+              Deploy on-premises
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Identity management...">
+              Identity management
+            </p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Version control with Git</p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Custom connectors</p>
+          </div>
+          <div class="flex items-start">
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
+              ></path>
+            </svg>
+            <p class="text-gray-800">Priority support</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{< /iframe >}}
