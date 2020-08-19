@@ -1,48 +1,50 @@
 const getTooltipPlacement = function (element, tooltip) {
   let placement = element.getAttribute("x-position") || "top";
+  let triggerElement = element.getBoundingClientRect();
+  let tooltipElement = tooltip.getBoundingClientRect();
   let transform = {};
   switch (placement) {
     case "top": {
       transform = {
         x:
-          tooltip.offsetWidth > element.offsetWidth
-            ? Math.round(element.offsetLeft - Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2)
-            : Math.round(element.offsetLeft + Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2),
-        y: Math.round(element.offsetTop - tooltip.offsetHeight - 10),
+          tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.top - tooltipElement.height - 10),
       };
       break;
     }
     case "left": {
       transform = {
-        x: Math.round(element.offsetLeft - tooltip.offsetWidth - 10),
-        y: Math.round(element.offsetTop + element.offsetHeight / 2 - tooltip.offsetHeight / 2),
+        x: Math.round(triggerElement.left - tooltipElement.width - 10),
+        y: Math.round(triggerElement.top + triggerElement.height / 2 - tooltipElement.height / 2),
       };
       break;
     }
     case "bottom": {
       transform = {
         x:
-          tooltip.offsetWidth > element.offsetWidth
-            ? Math.round(element.offsetLeft - Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2)
-            : Math.round(element.offsetLeft + Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2),
-        y: Math.round(element.offsetTop + element.offsetHeight + 10),
+          tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.top + triggerElement.height + 10),
       };
       break;
     }
     case "right": {
       transform = {
-        x: Math.round(element.offsetLeft + element.offsetWidth + 10),
-        y: Math.round(element.offsetTop + element.offsetHeight / 2 - tooltip.offsetHeight / 2),
+        x: Math.round(triggerElement.left + triggerElement.width + 10),
+        y: Math.round(triggerElement.top + triggerElement.height / 2 - tooltipElement.height / 2),
       };
       break;
     }
     default: {
       transform = {
         x:
-          tooltip.offsetWidth > element.offsetWidth
-            ? Math.round(element.offsetLeft - Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2)
-            : Math.round(element.offsetLeft + Math.abs(element.offsetWidth - tooltip.offsetWidth) / 2),
-        y: Math.round(element.offsetTop - tooltip.offsetHeight - 10),
+          tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.top - tooltipElement.height - 10),
       };
       break;
     }
