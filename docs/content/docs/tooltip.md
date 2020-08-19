@@ -5,16 +5,6 @@ title: Tooltip
 ## Basic
 
 {{< code html >}}
-
-<div class="card">
-  <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Connect to any database or REST API">
-    Connect to any database or REST API
-  </p>
-  <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Editor mode only">
-    Editor mode only
-  </p>
-</div>
-
 <button class="btn btn-light" x-data="tooltip()" x-spread="tooltip" title="Regular Tooltip">Tooltip</button>
 {{< /code >}}
 
