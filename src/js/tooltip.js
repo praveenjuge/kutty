@@ -6,49 +6,47 @@ const getTooltipPlacement = function (element, tooltip) {
   switch (placement) {
     case "top": {
       transform = {
-        x:
-          tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
-        y: Math.round(triggerElement.top - tooltipElement.height - 10),
+        x: tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.y- tooltipElement.height - 10),
       };
       break;
     }
     case "left": {
       transform = {
-        x: Math.round(triggerElement.left - tooltipElement.width - 10),
-        y: Math.round(triggerElement.top + triggerElement.height / 2 - tooltipElement.height / 2),
+        x: Math.round(triggerElement.x - tooltipElement.width - 10),
+        y: Math.round(triggerElement.y + triggerElement.height / 2 - tooltipElement.height / 2),
       };
       break;
     }
     case "bottom": {
       transform = {
-        x:
-          tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
-        y: Math.round(triggerElement.top + triggerElement.height + 10),
+        x: tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.y + triggerElement.height + 10),
       };
       break;
     }
     case "right": {
       transform = {
-        x: Math.round(triggerElement.left + triggerElement.width + 10),
-        y: Math.round(triggerElement.top + triggerElement.height / 2 - tooltipElement.height / 2),
+        x: Math.round(triggerElement.x + triggerElement.width + 10),
+        y: Math.round(triggerElement.y + triggerElement.height / 2 - tooltipElement.height / 2),
       };
       break;
     }
     default: {
       transform = {
-        x:
-          tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.left - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.left + Math.abs(triggerElement.width - tooltipElement.width) / 2),
-        y: Math.round(triggerElement.top - tooltipElement.height - 10),
+        x: tooltipElement.width > triggerElement.width
+            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
+            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.y - tooltipElement.height - 10),
       };
       break;
     }
   }
+  transform.y += window.scrollY;
   return `translate3d(${transform.x}px, ${transform.y}px, 0px)`;
 };
 
