@@ -13,9 +13,9 @@
     </div>
   </nav>
 
-  <label class="bg-gray-200 w-full hidden md:block" x-show="tab === 'design'">
+  <label class="bg-gray-200 w-full hidden lg:block" x-show="tab === 'design'">
     <span class="sr-only">Update Component Width</span>
-    <input x-model="width" type="range" class="tag-range border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="22" min="100" />
+    <input x-model="width" type="range" class="tag-range border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="23" min="100" />
     <style>
       .tag-range::-webkit-slider-thumb {
         margin-top: -2px;
@@ -40,7 +40,7 @@
 
   <!-- To display the component -->
   <div x-show="tab === 'design'">
-    <div class="mb-2 overflow-visible bg-gray-500">
+    <div class="mb-2 overflow-visible bg-gray-400">
       <iframe
         width="100%"
         height="350"
@@ -51,6 +51,7 @@
         :width="width + '%'"
         x-model="height"
         :height="height = $refs.resizableFrame.contentWindow.document.body.scrollHeight"
+        style="-webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d;"
         srcdoc="<!DOCTYPE html>
         <meta charset='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
