@@ -130,7 +130,7 @@ window.dialog = function () {
         this.open = !this.open;
         if (this.open) {
           lastOpenedElement = this.$el;
-          var dialog = document.querySelector('[x-spread="dialog"]');
+          var dialog = this.$el.querySelector('[x-spread="dialog"]');
           var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
           focussedIndex++;
           focus(dialogElements, focussedIndex);
@@ -147,24 +147,6 @@ window.dialog = function () {
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["@keydown.tab"](e) {
-        if (this.open) {
-          e.preventDefault();
-          var dialog = document.querySelector('[x-spread="dialog"]');
-          var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
-          focussedIndex++;
-          focus(dialogElements, focussedIndex);
-        }
-      },
-      ["@click.away"]() {
-        if (this.open) {
-          this.open = false;
-          focussedIndex = -1;
-          refocus(lastOpenedElement);
-          adjustScrollBar(this.open);
-          toggleAriaAtrributes(this.$el, this.open);
-        }
-      },
     },
     dialog: {
       ["x-show.transition.opacity.duration.200ms"]() {
@@ -179,10 +161,19 @@ window.dialog = function () {
       },
       ["@keydown.tab"](e) {
         e.preventDefault();
-        var dialog = document.querySelector('[x-spread="dialog"]');
+        var dialog = this.$el.querySelector('[x-spread="dialog"]');
         var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
         focussedIndex++;
         focus(dialogElements, focussedIndex);
+      },
+      ["@click"](e) {
+        if (this.open && e.target.hasAttribute("x-spread")) {
+          this.open = false;
+          focussedIndex = -1;
+          refocus(lastOpenedElement);
+          adjustScrollBar(this.open);
+          toggleAriaAtrributes(this.$el, this.open);
+        }
       },
     },
     close() {
