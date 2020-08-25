@@ -95,8 +95,7 @@ function getScrollbarWidth() {
   const scrollDiv = document.createElement("div");
   scrollDiv.className = "scrollbar-measure";
   document.body.appendChild(scrollDiv);
-  const scrollbarWidth =
-    scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
+  const scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
   document.body.removeChild(scrollDiv);
   return scrollbarWidth;
 }
@@ -149,7 +148,7 @@ window.dialog = function () {
       },
     },
     dialog: {
-      ["x-show.transition.opacity.duration.200ms"]() {
+      ["x-show.transition.opacity.duration.100ms.origin.center.center.scale.105"]() {
         return this.open;
       },
       ["@keydown.escape"]() {
@@ -162,6 +161,40 @@ window.dialog = function () {
       ["@keydown.tab"](e) {
         e.preventDefault();
         var dialog = this.$el.querySelector('[x-spread="dialog"]');
+        var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
+        focussedIndex++;
+        focus(dialogElements, focussedIndex);
+      },
+      ["@click"](e) {
+        if (this.open && e.target.hasAttribute("x-spread")) {
+          this.open = false;
+          focussedIndex = -1;
+          refocus(lastOpenedElement);
+          adjustScrollBar(this.open);
+          toggleAriaAtrributes(this.$el, this.open);
+        }
+      },
+    },
+    drawer: {
+      ["x-show.transition.opacity.duration.100ms"]() {
+        const drawerContent = this.$el.querySelector('[x-spread="drawer"]');
+        if (this.open) {
+          setTimeout(() => drawerContent.classList.add("active"), 100);
+        } else {
+          drawerContent.classList.remove("active");
+        }
+        return this.open;
+      },
+      ["@keydown.escape"]() {
+        this.open = false;
+        focussedIndex = -1;
+        refocus(lastOpenedElement);
+        adjustScrollBar(this.open);
+        toggleAriaAtrributes(this.$el, this.open);
+      },
+      ["@keydown.tab"](e) {
+        e.preventDefault();
+        var dialog = this.$el.querySelector('[x-spread="drawer"]');
         var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
         focussedIndex++;
         focus(dialogElements, focussedIndex);
