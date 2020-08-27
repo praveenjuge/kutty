@@ -1,7 +1,13 @@
 <div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
     <div class="container mx-auto flex w-100 px-1">
-      <button class="tab-link active" :class="{ 'active': tab === 'design' }" @click="tab = 'design'">Design</button>
+      <button
+        class="tab-link active"
+        :class="{ 'active': tab === 'design' }"
+        @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);"
+      >
+        Design
+      </button>
       <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code'; $refs.code.style.height = height + 'px';">Code</button>
       <button
         class="tab-link ml-auto"
@@ -51,7 +57,7 @@
         :width="width + '%'"
         x-model="height"
         :height="height = $refs.resizableFrame.contentWindow.document.body.scrollHeight"
-        style="-webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d;"
+        style="-webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d"
         srcdoc="<!DOCTYPE html>
         <meta charset='utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
@@ -65,7 +71,7 @@
   </div>
 
   <!-- To display the code -->
-  <div class="bg-gray-200 mb-2 outline-none relative overflow-y-auto" x-ref="code" x-show="tab === 'code'" style="height: 350px;" x-cloak>
+  <div class="bg-gray-200 mb-2 outline-none relative overflow-y-auto" x-ref="code" x-show="tab === 'code'" style="height: 350px" x-cloak>
     {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
   </div>
 

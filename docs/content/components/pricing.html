@@ -25,12 +25,10 @@ title: Pricing
   <div class="container mx-auto -mt-48 pb-20">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 sm:gap-8">
       <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
-          <div>
-            <p class="text-gray-800 font-semibold text-lg mb-1">Free</p>
-            <p class="text-gray-900 font-extrabold text-4xl font-mono">$0</p>
-          </div>
-          <a href="#" class="btn btn-primary btn-lg w-full mt-16">Get Started</a>
+        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
+          <p class="text-gray-800 font-semibold text-lg mb-1">Free</p>
+          <p class="text-gray-900 font-extrabold text-4xl font-mono pb-0 md:pb-2">$0</p>
+          <a href="#" class="btn btn-primary btn-lg w-full mt-6 md:mt-16">Get Started</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
@@ -76,14 +74,14 @@ title: Pricing
         </div>
       </div>
       <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
+        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
           <div>
             <p class="text-gray-800 font-semibold text-lg mb-1">Team</p>
             <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
             <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
             <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
           </div>
-          <a href="#" class="btn btn-light btn-lg w-full mt-8">Try for free</a>
+          <a href="#" class="btn btn-light btn-lg w-full mt-6">Try for free</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
@@ -169,14 +167,14 @@ title: Pricing
         </div>
       </div>
       <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex-1 flex flex-col p-6 justify-between border-b border-gray-200">
+        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
           <div>
             <p class="text-gray-800 font-semibold text-lg mb-1">Company</p>
             <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
             <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
             <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
           </div>
-          <a href="#" class="btn btn-light btn-lg w-full mt-8">Try for free</a>
+          <a href="#" class="btn btn-light btn-lg w-full mt-6">Try for free</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
@@ -510,9 +508,7 @@ title: Pricing
                 d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
               ></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Audit logs...">
-              Audit logs
-            </p>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Audit logs...">Audit logs</p>
           </div>
           <div class="flex items-start">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
@@ -564,9 +560,7 @@ title: Pricing
                 d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
               ></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Deploy on-premises...">
-              Deploy on-premises
-            </p>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Deploy on-premises...">Deploy on-premises</p>
           </div>
           <div class="flex items-start">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
@@ -577,9 +571,7 @@ title: Pricing
                 d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
               ></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Identity management...">
-              Identity management
-            </p>
+            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Identity management...">Identity management</p>
           </div>
           <div class="flex items-start">
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
