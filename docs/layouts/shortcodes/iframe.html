@@ -1,6 +1,6 @@
 <div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
-    <div class="container mx-auto flex w-100 px-1">
+    <div class="container mx-auto flex w-100">
       <button
         class="tab-link active"
         :class="{ 'active': tab === 'design' }"
@@ -10,7 +10,7 @@
       </button>
       <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code'; $refs.code.style.height = height + 'px';">Code</button>
       <button
-        class="tab-link ml-auto"
+        class="tab-link"
         x-ref="copyCodeButton"
         @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);"
       >
@@ -46,7 +46,7 @@
 
   <!-- To display the component -->
   <div x-show="tab === 'design'">
-    <div class="mb-2 overflow-visible bg-gray-400">
+    <div class="mb-2 overflow-visible bg-gray-500">
       <iframe
         width="100%"
         height="350"

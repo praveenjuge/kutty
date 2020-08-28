@@ -1,4 +1,7 @@
-<header class="z-30 fixed top-0 w-full bg-white bg-opacity-75" style="-webkit-backdrop-filter: saturate(180%) blur(5px); backdrop-filter: saturate(180%) blur(5px);">
+<header
+  class='z-30 top-0 w-full bg-white bg-opacity-75 {{ if ne .Section "components" }}fixed{{ end }}'
+  style="-webkit-backdrop-filter: saturate(180%) blur(5px); backdrop-filter: saturate(180%) blur(5px)"
+>
   <div class="container mx-auto flex justify-between items-center px-3 md:px-1 py-3">
     <div class="flex items-center">
       {{ if eq .Section "docs" }}
