@@ -1,6 +1,6 @@
 {{ define "main" }} {{ $current := . }}
 
-<article class="container mx-auto py-12 px-3 md:px-1 w-full" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="container mx-auto py-8 px-3 md:px-1 w-full" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
   <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
   <nav role="navigation" class="grid grid-cols-1 md:grid-cols-3 gap-3">
     {{ range where .Site.Pages "Section" "components" }} {{ if ne .Permalink $current.Permalink }}
