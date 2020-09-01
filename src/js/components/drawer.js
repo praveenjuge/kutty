@@ -9,7 +9,7 @@ function init(drawer) {
   var trigger = drawer.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
-    trigger.setAttribute("aria-haspopup", "drawer");
+    trigger.setAttribute("aria-haspopup", "dialog");
     var drawer = drawer.querySelectorAll('[x-spread="drawer"]');
     if (drawer.length) {
       drawer = drawer[0];
