@@ -8,7 +8,6 @@ const Breadcrumb = require("./src/breadcrumb.js");
 const Button = require("./src/button.js");
 const Card = require("./src/card.js");
 const Dialog = require("./src/dialog.js");
-const Drawer = require("./src/drawer.js");
 const Dropdown = require("./src/dropdown.js");
 const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
@@ -33,7 +32,6 @@ module.exports = plugin.withOptions(
       addComponents(Button());
       addComponents(Card());
       addComponents(Dialog());
-      addComponents(Drawer());
       addComponents(Dropdown());
       addComponents(Forms());
       addComponents(List());

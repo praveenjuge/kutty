@@ -2,7 +2,8 @@
 // - On pressing A-Z, a-z the focus moves to the corresponding list item
 
 // Completed Features
-// - Click, press enter or press space on the dropdown button to open/close dropdown menu
+// - Click, press enter or press space on the dropdown button to open/close
+// dropdown menu
 // - Press escape or click outside to close the dropdown menu when opened
 // - Up arrow, down arrow focuses on each dropdown item
 // - Home, end button moves the focus to top and bottom of the dropdown menu
@@ -16,17 +17,9 @@
 // - Add tabindex="-1" to dropdown menu items
 // - Restore focus to the dropdown button once the dropdown menu is closed
 
-var lastOpenedElement = null;
+import {focus, refocusTrigger} from '../utils';
 
-// Focus an element
-// elements - array of dropdown elements
-function focus(elements, focussedIndex) {
-  // Use of % for infinite iterations
-  var index = Math.abs(focussedIndex) % elements.length;
-  if (index >= 0) {
-    elements[index].focus();
-  }
-}
+var lastOpenedElement = null;
 
 // Normalize itertion counter - Arrow Up
 // Check if the focussedIndex reached a negative number
@@ -40,33 +33,24 @@ function normalizeNegativeCounter(elements, focussedIndex) {
   }
 }
 
-// Refocus dropdown trigger element
-// This usually happens when the user closes the dropdown
-function refocus(element) {
-  var dropdownTrigger = element.querySelector('[x-spread="trigger"]');
-  if (dropdownTrigger) {
-    dropdownTrigger.focus();
-  }
-}
-
 // Toggle aria atrributes based on the dropdown state
 function toggleAriaAtrributes(dropdown, open) {
   var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
     if (open) {
-      trigger.setAttribute("aria-expanded", true);
+      trigger.setAttribute('aria-expanded', true);
       var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
-        dropdownList.setAttribute("aria-hidden", false);
+        dropdownList.setAttribute('aria-hidden', false);
       }
     } else {
-      trigger.setAttribute("aria-expanded", false);
+      trigger.setAttribute('aria-expanded', false);
       var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
-        dropdownList.setAttribute("aria-hidden", true);
+        dropdownList.setAttribute('aria-hidden', true);
       }
     }
   }
@@ -77,20 +61,20 @@ function init(dropdown) {
   var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
-    trigger.setAttribute("aria-haspopup", true);
-    trigger.setAttribute("aria-expanded", false);
+    trigger.setAttribute('aria-haspopup', true);
+    trigger.setAttribute('aria-expanded', false);
     var dropdown = dropdown.querySelectorAll('[x-spread="dropdown"]');
     if (dropdown.length) {
       dropdown = dropdown[0];
-      trigger.setAttribute("aria-controls", dropdown.id);
-      dropdown.setAttribute("role", "menu");
-      dropdown.setAttribute("aria-labelledby", trigger.id);
-      dropdown.setAttribute("aria-hidden", true);
-      var dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+      trigger.setAttribute('aria-controls', dropdown.id);
+      dropdown.setAttribute('role', 'menu');
+      dropdown.setAttribute('aria-labelledby', trigger.id);
+      dropdown.setAttribute('aria-hidden', true);
+      var dropdownItems = dropdown.querySelectorAll('.dropdown-item');
       if (dropdownItems.length) {
-        [...dropdownItems].forEach(function (dropdownItem) {
-          dropdownItem.setAttribute("role", "menuitem");
-          dropdownItem.setAttribute("tabindex", -1);
+        [...dropdownItems].forEach(function(dropdownItem) {
+          dropdownItem.setAttribute('role', 'menuitem');
+          dropdownItem.setAttribute('tabindex', -1);
         });
       }
     }
@@ -99,114 +83,104 @@ function init(dropdown) {
 
 // Initialize attribute for all dropdown elements
 var dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
-dropdowns.forEach(function (dropdown) {
+dropdowns.forEach(function(dropdown) {
   init(dropdown);
 });
 
-window.dropdown = function () {
-  const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
+window.dropdown = function() {
+  const DROPDOWN_ITEM_SELECTOR = '.dropdown-item';
   var focussedIndex = -1;
   return {
     open: false,
     trigger: {
-      ["@keydown.escape"]() {
+      ['@keydown.escape']() {
         this.open = false;
-        refocus(this.$el);
+        refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["@click"]() {
+      ['@click']() {
         this.open = !this.open;
         focussedIndex = -1;
         if (this.open) {
           lastOpenedElement = this.$el;
         } else {
-          refocus(this.$el);
+          refocusTrigger(this.$el);
         }
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["@keydown.arrow-down"](e) {
+      ['@keydown.arrow-down'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.arrow-up"](e) {
+      ['@keydown.arrow-up'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.home"](e) {
+      ['@keydown.home'](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.end"](e) {
+      ['@keydown.end'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
     },
     dropdown: {
-      ["@keydown.escape"]() {
+      ['@keydown.escape']() {
         this.open = false;
         focussedIndex = -1;
-        refocus(this.$el);
+        refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90"]() {
+      ['x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90']() {
         return this.open;
       },
-      ["@click.away"]() {
+      ['@click.away']() {
         this.open = false;
         focussedIndex = -1;
-        refocus(lastOpenedElement);
+        refocusTrigger(lastOpenedElement);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["@keydown.arrow-down"](e) {
+      ['@keydown.arrow-down'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.arrow-up"](e) {
+      ['@keydown.arrow-up'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
-        focussedIndex = normalizeNegativeCounter(
-          dropdownElements,
-          focussedIndex
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        focussedIndex =
+            normalizeNegativeCounter(dropdownElements, focussedIndex);
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.home"](e) {
+      ['@keydown.home'](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ["@keydown.end"](e) {
+      ['@keydown.end'](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(
-          DROPDOWN_ITEM_SELECTOR
-        );
+        var dropdownElements =
+            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
