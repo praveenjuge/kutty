@@ -6,7 +6,7 @@ title: Drawer
 
 {{< code html >}}
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary" x-spread="trigger">Open Drawer</button>
   <div class="dialog" x-spread="drawer" x-cloak>
     <div class="drawer-content">
@@ -27,7 +27,7 @@ title: Drawer
 
 {{< code html >}}
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary mb-1" x-spread="trigger">Small Drawer</button>
   <div class="dialog dialog-sm" x-spread="drawer" x-cloak>
     <div class="drawer-content">
@@ -43,7 +43,7 @@ title: Drawer
   </div>
 </div>
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary mb-1" x-spread="trigger">Large Drawer</button>
   <div class="dialog dialog-lg" x-spread="drawer" x-cloak>
     <div class="drawer-content">
@@ -59,7 +59,7 @@ title: Drawer
   </div>
 </div>
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary" x-spread="trigger">Full Screen Drawer</button>
   <div class="dialog dialog-full" x-spread="drawer" x-cloak>
     <div class="drawer-content">
@@ -80,7 +80,7 @@ title: Drawer
 
 {{< code html >}}
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary mb-1" x-spread="trigger">Left Drawer</button>
   <div class="dialog" x-spread="drawer" x-cloak>
     <div class="drawer-content">
@@ -96,7 +96,7 @@ title: Drawer
   </div>
 </div>
 
-<div x-data="dialog()">
+<div x-data="drawer()">
   <button class="btn btn-primary" x-spread="trigger">Right Drawer</button>
   <div class="dialog dialog-right" x-spread="drawer" x-cloak>
     <div class="drawer-content">
