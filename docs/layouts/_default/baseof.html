@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#" class="bg-white">
   <head itemscope itemtype="{{ .Site.BaseURL }}">
-    {{ partial "meta" . }}
+    {{ partial "meta" . }} {{ partial "js" . }}
   </head>
   <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
