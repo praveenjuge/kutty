@@ -3,17 +3,11 @@
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }}
   </head>
-  <body class="bg-white">
+  <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
-    {{ if eq .Section "components" }} 
-      <main class="min-h-screen bg-gray-200 bg-opacity-50" id="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-    {{ else }}
-      <main class="container mx-auto my-12 px-3 md:px-1" id="main">
-        {{ block "main" . }}{{ end }}
-      </main>
-    {{ end }}
+    <main class='{{ if eq .Section "components" }}min-h-screen bg-gray-200 bg-opacity-50{{ else }}container mx-auto my-12 px-3 md:px-1{{ end }}' id="main">
+      {{ block "main" . }}{{ end }}
+    </main>
     <script src="/kutty.js"></script>
   </body>
 </html>

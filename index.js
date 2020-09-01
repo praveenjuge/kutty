@@ -13,7 +13,6 @@ const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
 const Pagination = require("./src/pagination.js");
 const Skeleton = require("./src/skeleton.js");
-const Sidebar = require("./src/sidebar.js");
 const Spinner = require("./src/spinner.js");
 const Tabs = require("./src/tabs.js");
 const Tooltip = require("./src/tooltip.js");
@@ -37,7 +36,6 @@ module.exports = plugin.withOptions(
       addComponents(Forms());
       addComponents(List());
       addComponents(Pagination());
-      addComponents(Sidebar());
       addComponents(Skeleton());
       addComponents(Spinner());
       addComponents(Tabs());
@@ -50,6 +48,9 @@ module.exports = plugin.withOptions(
       theme: {
         extend: {
           colors,
+          inset: {
+            "1/2": "50%",
+          },
         },
       },
     };

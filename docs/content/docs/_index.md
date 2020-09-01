@@ -28,7 +28,9 @@ plugins: [require("kutty")],
 
 ### For JS
 
-Place the following script tag before the closing body tag:
+We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine).
+
+Place the following script tag before the closing body tag.
 
 ```html
 <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>

@@ -152,6 +152,9 @@ module.exports = Button = (styles) => ({
   ".btn-loading": {
     "@apply opacity-75 pointer-events-none cursor-default !important": {},
   },
+  ".btn-loading .spinner": {
+    marginTop: "-3px",
+  },
   // Sizes
   ".btn.btn-xs, .prose .btn.btn-xs": {
     "@apply py-0 px-1 text-xs": {},
