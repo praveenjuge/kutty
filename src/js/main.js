@@ -1,4 +1,4 @@
-import "./alpinejs.js";
-import "./collapse.js";
-import "./dropdown.js";
-import "./dialog.js";
+import './alpinejs.js';
+import './components/collapse.js';
+import './components/dropdown.js';
+import './components/dialog.js';
