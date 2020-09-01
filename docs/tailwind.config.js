@@ -1,5 +1,4 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const kutty = require("../index.js");
 
 module.exports = {
   purge: {
@@ -30,5 +29,5 @@ module.exports = {
   variants: {
     visibility: ["group-hover"],
   },
-  plugins: [kutty],
+  plugins: [require("../index.js")],
 };

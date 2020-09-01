@@ -5,8 +5,9 @@
   </head>
   <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
-    <main class='{{ if eq .Section "components" }} min-h-screen bg-gray-200 bg-opacity-50 {{ else }} container mx-auto my-12 px-3 md:px-1 {{ end }}' id="main">
+    <main class='{{ if eq .Section "components" }}min-h-screen bg-gray-200 bg-opacity-50{{ else }}container mx-auto my-12 px-3 md:px-1{{ end }}' id="main">
       {{ block "main" . }}{{ end }}
     </main>
+    <script src="/kutty.js"></script>
   </body>
 </html>

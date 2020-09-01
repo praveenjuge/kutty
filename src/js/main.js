@@ -1,12 +1,6 @@
 import "./alpinejs.js";
-import "./collapse.js";
-import "./dropdown.js";
-import "./tooltip.js";
-
-import Dialog from "./dialog.js";
-import Drawer from "./drawer.js";
-
-document.addEventListener("DOMContentLoaded", () => {
-  Dialog.init();
-  Drawer.init();
-});
+import "./components/collapse.js";
+import "./components/dropdown.js";
+import "./components/drawer.js";
+import "./components/dialog.js";
+import "./components/tooltip.js";
