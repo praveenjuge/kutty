@@ -1,31 +1,79 @@
-<div x-data="{ tab: 'design' }" class="pb-20">
+<div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
-    <div class="container mx-auto flex w-100 px-1">
-      <button class="tab-link active" :class="{ 'active': tab === 'design' }" @click="tab = 'design'">Design</button>
-      <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code'">Code</button>
-      <button class="tab-link ml-auto" x-ref="copyCodeButton" @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);">Copy Code</button>
+    <div class="container mx-auto flex w-100">
+      <button
+        class="tab-link active"
+        :class="{ 'active': tab === 'design' }"
+        @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);"
+      >
+        Design
+      </button>
+      <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code'; $refs.code.style.height = height + 'px';">Code</button>
+      <button
+        class="tab-link"
+        x-ref="copyCodeButton"
+        @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);"
+      >
+        Copy Code
+      </button>
     </div>
   </nav>
 
+  <label class="bg-gray-200 w-full hidden lg:block" x-show="tab === 'design'">
+    <span class="sr-only">Update Component Width</span>
+    <input x-model="width" type="range" class="tag-range border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="23" min="100" />
+    <style>
+      .tag-range::-webkit-slider-thumb {
+        margin-top: -2px;
+        height: 0.65rem;
+        border-radius: 0px;
+        width: 50px;
+      }
+      .tag-range::-moz-range-thumb {
+        margin-top: -2px;
+        height: 0.65rem;
+        border-radius: 0px;
+        width: 50px;
+      }
+      .tag-range::-ms-thumb {
+        margin-top: -2px;
+        height: 0.65rem;
+        border-radius: 0px;
+        width: 50px;
+      }
+    </style>
+  </label>
+
   <!-- To display the component -->
-  <div class="mb-2 overflow-visible bg-white border-b-2 border-gray-200" x-show="tab === 'design'">
-    <iframe
-    style='height: 300px;'
-    onload='javascript:(function(o){o.style.height=o.contentWindow.document.body.scrollHeight+"px";}(this));'
-    class="w-full" 
-    loading="lazy"
-    srcdoc="<!DOCTYPE html>
-      <meta charset='utf-8' />
-      <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
-      <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
-      <link rel='stylesheet' href='/build.css' />
-      <script src='/kutty.js'></script>
-      {{ .Inner | safeHTMLAttr }}">
-    </iframe>
+  <div x-show="tab === 'design'">
+    <div class="mb-2 overflow-visible bg-gray-500">
+      <iframe
+        width="100%"
+        height="350"
+        loading="lazy"
+        class="bg-white border-0 p-0 m-0"
+        onload="javascript:(function(o){o.height=o.contentWindow.document.body.scrollHeight;}(this));"
+        x-ref="resizableFrame"
+        :width="width + '%'"
+        x-model="height"
+        :height="height = $refs.resizableFrame.contentWindow.document.body.scrollHeight"
+        style="-webkit-backface-visibility: hidden; -webkit-transform-style: preserve-3d"
+        srcdoc="<!DOCTYPE html>
+        <meta charset='utf-8' />
+        <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no' />
+        <meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1' />
+        <link rel='stylesheet' href='/build.css' />
+        <script src='/kutty.js'></script>
+        {{ .Inner | safeHTMLAttr }}"
+      >
+      </iframe>
+    </div>
   </div>
 
   <!-- To display the code -->
-  <div class="bg-gray-200 mb-2 outline-none relative overflow-y-auto" x-show="tab === 'code'" style="max-height: 300px;" x-cloak>{{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}</div>
+  <div class="bg-gray-200 mb-2 outline-none relative overflow-y-auto" x-ref="code" x-show="tab === 'code'" style="height: 350px" x-cloak>
+    {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
+  </div>
 
   <textarea class="sr-only whitespace-pre-wrap" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
 </div>

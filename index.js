@@ -8,13 +8,11 @@ const Breadcrumb = require("./src/breadcrumb.js");
 const Button = require("./src/button.js");
 const Card = require("./src/card.js");
 const Dialog = require("./src/dialog.js");
-const Drawer = require("./src/drawer.js");
 const Dropdown = require("./src/dropdown.js");
 const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
 const Pagination = require("./src/pagination.js");
 const Skeleton = require("./src/skeleton.js");
-const Sidebar = require("./src/sidebar.js");
 const Spinner = require("./src/spinner.js");
 const Tabs = require("./src/tabs.js");
 const Tooltip = require("./src/tooltip.js");
@@ -34,12 +32,10 @@ module.exports = plugin.withOptions(
       addComponents(Button());
       addComponents(Card());
       addComponents(Dialog());
-      addComponents(Drawer());
       addComponents(Dropdown());
       addComponents(Forms());
       addComponents(List());
       addComponents(Pagination());
-      addComponents(Sidebar());
       addComponents(Skeleton());
       addComponents(Spinner());
       addComponents(Tabs());
@@ -52,6 +48,9 @@ module.exports = plugin.withOptions(
       theme: {
         extend: {
           colors,
+          inset: {
+            "1/2": "50%",
+          },
         },
       },
     };
