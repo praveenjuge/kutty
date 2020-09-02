@@ -5,12 +5,7 @@
   <div class="container mx-auto flex justify-between items-center px-3 md:px-1 py-3">
     <div class="flex items-center">
       {{ if eq .Section "docs" }}
-      <button
-        class="btn btn-light btn-sm inline-flex md:hidden mr-3"
-        @click="sideBar === true ? ((sideBar = false), document.querySelector('html').classList.add('overflow-hidden')) : ((sideBar = true), document.querySelector('html').classList.remove('overflow-hidden'));"
-      >
-        Menu
-      </button>
+      <button class="btn btn-light btn-sm inline-flex md:hidden mr-3" @click="sideBar === false ? (sideBar = true) : (sideBar = false)">Menu</button>
       {{ end }}
       <a href="/" title="Go to Kutty Home Page">
         <svg class="h-6 w-auto" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">

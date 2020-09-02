@@ -2,15 +2,13 @@
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
-This plugin requires Tailwind CSS 1.6 or later.
-
 ## Installation
 
 ```sh
-npm i kutty --save
+npm install kutty --save
 ```
 
-Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
+This plugin requires Tailwind CSS 1.7 or later. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
 ## Usage
 
@@ -25,12 +23,19 @@ plugins: [require("kutty")],
 
 ### For JS
 
-We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine).
-
-Place the following script tag before the closing body tag.
+We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine). Place the following script tag before the closing body tag.
 
 ```html
+<!-- All components in one -->
 <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+```
+
+```html
+<!-- Single component -->
+<!-- Include AlpineJS first -->
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
+<!-- And then the single component -->
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
 ```
 
 ## Documentation
@@ -60,7 +65,7 @@ Then clone the repo, install dependencies, and start the server locally.
 ```sh
 git clone https://github.com/praveenjuge/kutty.git
 cd kutty
-npm i
+npm install
 npm start
 ```
 
