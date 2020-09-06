@@ -61,7 +61,7 @@
 
 <!-- Language -->
 <meta property="og:locale" content="{{ .Language.Lang }}" />
-<meta name="language" content="{{ .Language.LanguageName }}" />
+<meta name="language" content="{{ .Language.Lang }}" />
 
 <!-- Date of the page -->
 <meta property="og:updated_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}"/> 
@@ -73,12 +73,9 @@
   <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
   <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
 {{ end }} 
-{{ range .AllTranslations }}
-  <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Language.LanguageName }}" />
-{{ end }}
 
 <!-- Static Meta -->
-<meta name="keywords" content="kutty, tailwind, tailwindcss, css framework, postcss" />
+<meta name="keywords" content="kutty, tailwind, tailwind plugin, tailwindcss, css framework, postcss" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:site" content="{{ .Site.Params.sitename }}" />
 <meta name="twitter:creator" content="@praveenjuge" />
@@ -88,68 +85,7 @@
 <meta name="imagemode" content="force" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-
-<!-- Article Specific Tags -->
-{{ if eq .Section "docs" }}
-
-<meta property="og:type" content="article" />
-<meta property="article:section" content="" />
-{{ with .Params.tags }}
-  <meta name="news_keywords" content="{{ delimit . ", " }}" /> 
-  <meta property="article:section" content="{{ delimit . ", " }}" /> 
-{{ end }}
-
-<script data-turbolinks-eval="false" type="application/ld+json">
-  { "@context": "http://schema.org",
-   "@type": "Article",
-   "mainEntityOfPage": {
-     "@type": "WebPage",
-     "@id": "{{ .Permalink }}"
-   },
-   "headline": "{{ .Title }}",
-   "image": "{{ .Params.image | absURL }}",
-   "keywords": "{{ .Params.tags }}",
-   "wordcount": "{{ .Content | countwords }}",
-   "url": "{{ .Permalink }}",
-   "datePublished": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-   "dateCreated": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-   "dateModified": "{{ .Date.Format "2006-01-02" | safeHTML }}",
-   "description": "{{ .Params.description }}",
-   "author": {
-    "@type": "Person",{{ with .Params.authors }}{{ with $.Site.GetPage "taxonomyTerm" (printf "authors/%s" (urlize .)) }}
-    "name": "{{ .Title }}",
-    "url": "{{ .Permalink }}"{{ end }}{{ end }}
-   },
-   "publisher": {
-      "@type": "Organization",
-      "name": "",
-      "logo": {
-        "@type": "ImageObject",
-        "url": ""
-      }
-    }
-   }
-</script>
-
-{{ else }}
-
 <meta property="og:type" content="website" />
-<script data-turbolinks-eval="false" type="application/ld+json">
-  {
-    "@context": "http://schema.org",
-    "@type": "WebSite",
-    "url": "{{ .Permalink }}",
-    "name": "{{ .Title }}",
-    "author": {
-      "@type": "Person",
-      "name": "{{ .Params.author }}"
-    },
-    "description": "{{ .Params.description }}",
-    "publisher": "{{ .Site.Params.sitename }}"
-  }
-</script>
-
-{{ end }}
 
 <!-- Favicons -->
 <link rel="shortcut icon" href="/favicon.ico" />

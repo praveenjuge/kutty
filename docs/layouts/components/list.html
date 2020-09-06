@@ -1,8 +1,11 @@
 {{ define "main" }} {{ $current := . }}
 
-<article class="container mx-auto py-8 px-3 md:px-1 w-full" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
-  <nav role="navigation" class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<article class="container mx-auto py-10 px-3 md:px-1" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="flex justify-between items-start">
+    <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
+    <a class="btn btn-sm btn-dark" href="https://www.figma.com/file/ek9g1AhSLRaNRedKPzLT6s/Kutty" target="_blank" rel="noopener noreferrer">Figma UI Kit</a>
+  </div>
+  <nav role="navigation" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
     {{ range where .Site.Pages "Section" "components" }} {{ if ne .Permalink $current.Permalink }}
     <a class="card p-6" href="{{ .Permalink | absLangURL }}">{{ .Title }}</a>
     {{ end }} {{ end }}
