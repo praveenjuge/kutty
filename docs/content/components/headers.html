@@ -30,8 +30,8 @@ title: Headers
         <a href="#" class="btn btn-sm btn-link">Pricing</a>
         <a href="#" class="btn btn-sm btn-link">Blog</a>
         <a href="#" class="btn btn-sm btn-link">Company</a>
+        <a href="#" class="btn btn-sm btn-link">Sign in</a>
       </div>
-      <a href="#" class="btn btn-sm btn-link">Sign in</a>
       <a href="#" class="btn btn-sm btn-primary">Get Started</a>
       <div class="inline-flex md:hidden" x-data="{ open: false }">
         <button class="btn btn-link btn-sm px-2 flex-none" @click="open = true">
@@ -76,6 +76,7 @@ title: Headers
           <a href="#" class="btn btn-link w-full">Pricing</a>
           <a href="#" class="btn btn-link w-full">Blog</a>
           <a href="#" class="btn btn-link w-full">Company</a>
+          <a href="#" class="btn btn-link w-full">Sign in</a>
         </div>
       </div>
     </div>
@@ -110,7 +111,7 @@ title: Headers
     </a>
     <div class="hidden md:inline-flex space-x-1 relative" x-data="{ one: false, two: false }">
       <div class="relative">
-        <a href="#" class="btn rounded-full flex items-center btn-white" @mouseenter="one = true" @mouseleave="one = false">
+        <button class="btn rounded-full flex items-center btn-white" @click="one = true">
           Features
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -128,12 +129,11 @@ title: Headers
           >
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-        </a>
+        </button>
         <div
-          class="text-sm text-gray-800 p-2 absolute mx-0 my-8 top-0 rounded bg-white z-50 shadow transform w-screen max-w-md lg:left-1/2 lg:-translate-x-1/2"
+          class="text-sm text-gray-800 p-2 absolute mx-0 my-12 top-0 rounded bg-white z-50 shadow transform w-screen max-w-md lg:left-1/2 lg:-translate-x-1/2"
           x-show.transition.in.opacity.out.opacity="one"
-          @mouseenter="one = true"
-          @mouseleave="one = false"
+          @click.away="one = false"
           x-cloak
         >
           <div class="grid grid-cols-2 gap-2 mb-2">
@@ -180,7 +180,7 @@ title: Headers
         </div>
       </div>
       <div class="relative">
-        <a href="#" class="btn rounded-full flex items-center btn-white" @mouseenter="two = true" @mouseleave="two = false">
+        <button class="btn rounded-full flex items-center btn-white" @click="two = true">
           Blog
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -198,12 +198,11 @@ title: Headers
           >
             <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
-        </a>
+        </button>
         <div
-          class="text-sm text-gray-800 p-2 absolute mx-0 my-8 top-0 rounded bg-white z-50 shadow transform w-screen max-w-md lg:left-1/2 lg:-translate-x-1/2"
+          class="text-sm text-gray-800 p-2 absolute mx-0 my-12 top-0 rounded bg-white z-50 shadow transform w-screen max-w-md lg:left-1/2 lg:-translate-x-1/2"
           x-show.transition.in.opacity.out.opacity="two"
-          @mouseenter="two = true"
-          @mouseleave="two = false"
+          @click.away="two = false"
           x-cloak
         >
           <p class="mb-1 pl-3 pt-2 text-gray-500 uppercase tracking-wide font-semibold text-xs">Our popular posts</p>
@@ -240,7 +239,7 @@ title: Headers
       <a href="#" class="btn rounded-full btn-white">Pricing</a>
     </div>
     <div class="flex items-center space-x-1">
-      <a href="#" class="btn rounded-full btn-white">Sign in</a>
+      <a href="#" class="btn rounded-full btn-white hidden md:inline-flex">Sign in</a>
       <a href="#" class="btn rounded-full btn-dark">Sign up</a>
       <div class="inline-flex md:hidden" x-data="{ open: false }">
         <button class="btn btn-white btn-sm px-2 flex-none" @click="open = true">
@@ -284,6 +283,7 @@ title: Headers
           <div class="grid grid-cols-2 gap-1">
             <a href="#" class="font-semibold rounded px-3 py-2 hover:bg-gray-200 hover:text-primary transition-colors duration-200 ease-in-out">Pricing</a>
             <a href="#" class="font-semibold rounded px-3 py-2 hover:bg-gray-200 hover:text-primary transition-colors duration-200 ease-in-out">Blog</a>
+            <a href="#" class="font-semibold rounded px-3 py-2 hover:bg-gray-200 hover:text-primary transition-colors duration-200 ease-in-out">Sign in</a>
           </div>
           <p class="pl-3 pt-2 text-gray-500 uppercase tracking-wide font-semibold text-xs">Features</p>
           <div class="grid grid-cols-2 gap-1">

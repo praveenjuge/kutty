@@ -5,22 +5,8 @@
   </head>
   <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
-    <main class='{{ if eq .Section "components" }}w-full max-w-full min-h-screen bg-gray-200 bg-opacity-50{{ else }}container mx-auto my-12 px-3 md:px-1{{ end }}' id="main">
+    <main class='{{ if eq .Section "components" }}w-full max-w-full min-h-screen bg-gray-200 bg-opacity-75{{ else }}container mx-auto mt-10 mb-20 px-3 md:px-1{{ end }}' id="main">
       {{ block "main" . }}{{ end }}
     </main>
-    <style>
-      .prose {
-        line-height: inherit;
-      }
-      .prose h1 {
-        font-weight: 700;
-      }
-      .prose pre {
-        color: #1a202c;
-        background-color: #edf2f7 !important;
-        line-height: inherit;
-        margin: 0px;
-      }
-    </style>
   </body>
 </html>

@@ -4,6 +4,7 @@ module.exports = {
   },
   variants: {
     visibility: ["group-hover"],
+    backgroundColor: ["group-hover"],
   },
   plugins: [require("../index.js")],
 };
