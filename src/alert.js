@@ -1,6 +1,6 @@
 module.exports = Alert = () => ({
   ".alert": {
-    "@apply font-medium relative overflow-hidden border-2 border-solid text-base rounded-md align-middle duration-150 ease-in flex items-start py-2 pl-4 pr-4": {},
+    "@apply font-medium relative overflow-hidden border-2 border-solid text-sm rounded-md align-middle duration-150 ease-in flex items-start py-2 pl-4 pr-4": {},
   },
   ".alert a": {
     "@apply underline": {},
@@ -15,15 +15,16 @@ module.exports = Alert = () => ({
     "@apply pr-12 !important": {},
   },
   ".alert svg": {
-    "@apply h-5 w-5 mr-3": {},
-    marginTop: "3px",
-    maxWidth: "1.25rem",
-    minWidth: "1.25rem",
-    maxHeight: "1.25rem",
-    minHeight: "1.25rem",
+    "@apply h-5 w-5 mr-3 mt-px flex-none": {},
+  },
+  ".alert.alert-sm svg": {
+    "@apply h-4 w-4": {},
+  },
+  ".alert.alert-lg svg": {
+    "@apply h-6 w-6": {},
   },
   ".alert-sm": {
-    "@apply py-1 pl-2 pr-2 text-sm !important": {},
+    "@apply py-1 pl-2 pr-2 text-xs !important": {},
   },
   ".alert-lg": {
     "@apply py-5 pl-5 pr-5 text-lg !important": {},

@@ -12,6 +12,7 @@ const Dropdown = require("./src/dropdown.js");
 const Forms = require("./src/forms.js");
 const List = require("./src/list.js");
 const Pagination = require("./src/pagination.js");
+const Progress = require("./src/progress.js");
 const Skeleton = require("./src/skeleton.js");
 const Spinner = require("./src/spinner.js");
 const Tabs = require("./src/tabs.js");
@@ -36,6 +37,7 @@ module.exports = plugin.withOptions(
       addComponents(Forms());
       addComponents(List());
       addComponents(Pagination());
+      addComponents(Progress());
       addComponents(Skeleton());
       addComponents(Spinner());
       addComponents(Tabs());

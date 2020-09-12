@@ -6,5 +6,18 @@ module.exports = {
     visibility: ["group-hover"],
     backgroundColor: ["group-hover"],
   },
+  theme: {
+    typography: {
+      default: {
+        css: {
+          pre: {
+            code: {
+              "&:after": { content: "none !important" },
+            },
+          },
+        },
+      },
+    },
+  },
   plugins: [require("../index.js")],
 };

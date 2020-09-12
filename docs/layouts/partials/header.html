@@ -5,7 +5,16 @@
   <div class="container mx-auto flex justify-between items-center px-3 md:px-1 py-3">
     <div class="flex items-center">
       {{ if eq .Section "docs" }}
-      <button class="btn btn-light btn-sm inline-flex md:hidden mr-3" @click="sideBar === false ? (sideBar = true) : (sideBar = false)">Menu</button>
+      <button class="btn btn-light btn-sm inline-flex md:hidden mr-3" @click="sideBar === false ? (sideBar = true) : (sideBar = false)">
+        <span class="sr-only">Menu</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="h-5 w-5">
+          <path
+            fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
       {{ end }}
       <a href="/" title="Go to Kutty Home Page">
         <svg class="h-6 w-auto" width="86" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 335 93">
