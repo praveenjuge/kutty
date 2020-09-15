@@ -52,7 +52,11 @@
         height="350"
         loading="lazy"
         class="bg-white border-0 p-0 m-0"
-        onload="javascript:(function(o){o.height=o.contentWindow.document.body.scrollHeight;}(this));"
+        onload="javascript:(function(o){
+          o.height=o.contentWindow.document.body.scrollHeight; 
+          o.contentWindow.document.body.querySelectorAll('a').forEach(function(element){
+            element.setAttribute('href', 'javascript:;');
+          });}(this));"
         x-ref="resizableFrame"
         :width="width + '%'"
         x-model="height"
