@@ -1,7 +1,6 @@
 baseURL = "https://kutty.netlify.app"
 title = "Kutty"
 
-disableKinds = ["taxonomy", "taxonomyTerm"]
 languageCode = "en-us"
 DefaultContentLanguage = "en"
 enableEmoji = true
@@ -9,13 +8,14 @@ enableGitInfo = true
 enableRobotsTXT = true
 canonifyURLs = true
 
-staticDir = ["static", "dist"]
-
 [params]
   author = "Praveen Juge"
   sitename = "Kutty"
   image = "/brand/og.png"
   description = "Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications."
+
+[taxonomies]
+  category = "categories"
 
 [markup]
   defaultMarkdownHandler = "goldmark"

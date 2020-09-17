@@ -3,7 +3,7 @@ module.exports = List = () => ({
     "@apply flex flex-col pl-0 mb-0 mt-0": {},
   },
   ".list-item, .prose .list-item": {
-    "@apply relative flex px-3 py-3 border border-solid border-gray-200 items-start text-gray-800  font-normal mt-0 flex-col": {},
+    "@apply relative px-3 py-3 border border-solid border-gray-200 items-start text-sm font-normal mt-0 w-full": {},
     marginBottom: "-1px",
   },
   ".list-item.list-active": {
@@ -19,7 +19,7 @@ module.exports = List = () => ({
     "@apply bg-primary-dark": {},
   },
   "a.list-item": {
-    "@apply text-gray-800 no-underline font-normal": {},
+    "@apply no-underline font-normal": {},
   },
   ".list-disabled, a.list-item.list-disabled": {
     "@apply bg-gray-200 text-gray-500 cursor-default": {},
@@ -50,23 +50,5 @@ module.exports = List = () => ({
   },
   ".list-flush .list-item:last-child": {
     "@apply border-b-0": {},
-  },
-  ".list-options .list-item": {
-    "@apply justify-between flex-row": {},
-  },
-  ".list-item.list-primary": {
-    "@apply bg-primary-light text-primary": {},
-  },
-  ".list-item.list-success": {
-    "@apply bg-green-200 text-green-700": {},
-  },
-  ".list-item.list-danger": {
-    "@apply bg-red-200 text-red-700": {},
-  },
-  ".list-item.list-warning": {
-    "@apply bg-yellow-200 text-yellow-700": {},
-  },
-  ".list-item.list-dark": {
-    "@apply bg-gray-800 text-white": {},
   },
 });

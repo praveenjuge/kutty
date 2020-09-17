@@ -1,12 +1,14 @@
 {{ define "main" }} {{ $current := . }}
 
 <article class="container mx-auto py-10 px-3 md:px-1" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="flex justify-between items-start">
-    <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
+  <div class="flex justify-between items-start mb-10">
+    <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight font-bold">{{ .Title }}</h1>
     <a class="btn btn-sm btn-dark" href="https://www.figma.com/file/ek9g1AhSLRaNRedKPzLT6s/Kutty" target="_blank" rel="noopener noreferrer">Figma UI Kit</a>
   </div>
-  <nav role="navigation" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-    {{ range where .Site.Pages "Section" "components" }} {{ if ne .Permalink $current.Permalink }}
+  {{ range .Pages.GroupByParam "categories" }}
+  <!-- <h3 class="text-lg md:text-2xl text-gray-900 font-semibold leading-tight mb-4">{{ .Key | humanize }}</h3> -->
+  <nav role="navigation" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 mb-12">
+    {{ range .Pages }} {{ if ne .Permalink $current.Permalink }}
     <a class="card group" href="{{ .Permalink | absLangURL }}">
       <div class="card-header pb-0 border-0 -mb-3">{{ .Title }}</div>
       <div class="card-body py-0 h-40">
@@ -226,6 +228,7 @@
     </a>
     {{ end }} {{ end }}
   </nav>
+  {{ end }}
 </article>
 
 {{ end }}
