@@ -1,6 +1,7 @@
 module.exports = Button = (styles) => ({
   ".btn, .prose a.btn": {
-    "@apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-4 text-base rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100": {},
+    "@apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-3 rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100": {},
+    fontSize: "0.95rem",
     "&:focus": {
       "@apply shadow-outline outline-none": {},
     },

@@ -6,7 +6,7 @@
     <a class="btn btn-sm btn-dark" href="https://www.figma.com/file/ek9g1AhSLRaNRedKPzLT6s/Kutty" target="_blank" rel="noopener noreferrer">Figma UI Kit</a>
   </div>
   {{ range .Pages.GroupByParam "categories" }}
-  <!-- <h3 class="text-lg md:text-2xl text-gray-900 font-semibold leading-tight mb-4">{{ .Key | humanize }}</h3> -->
+  <h3 class="text-lg md:text-2xl text-gray-900 font-semibold leading-tight mb-4">{{ .Key | humanize }}</h3>
   <nav role="navigation" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 mb-12">
     {{ range .Pages }} {{ if ne .Permalink $current.Permalink }}
     <a class="card group" href="{{ .Permalink | absLangURL }}">
@@ -23,6 +23,23 @@
             <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
             <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-700 ease-in-out"></div>
             <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-1000 ease-in-out"></div>
+          </div>
+        </div>
+        {{ else if eq .RelPermalink "/components/login/" }}
+        <div class="w-2/6 mx-auto space-y-1 -mt-2 flex flex-col justify-center h-full">
+          <div class="text-gray-400 group-hover:text-purple-500 transition-colors duration-75 ease-in-out text-xs">Sign in</div>
+          <div class="h-4 border-2 border-gray-200 w-full rounded group-hover:border-purple-200 transition-colors duration-100 ease-in-out"></div>
+          <div class="h-4 border-2 border-gray-200 w-full rounded group-hover:border-purple-200 transition-colors duration-200 ease-in-out"></div>
+          <div class="h-4 w-full bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-300 ease-in-out"></div>
+        </div>
+        {{ else if eq .RelPermalink "/components/404-500/" }}
+        <div class="w-2/6 mx-auto mt-10">
+          <div class="text-gray-400 group-hover:text-purple-500 transition-colors duration-75 ease-in-out text-xs">404</div>
+          <div class="h-2 bg-gray-400 w-5/6 mt-1 mb-1 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
+          <div class="h-2 bg-gray-200 w-9/12 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
+          <div class="space-x-1 flex mt-1">
+            <div class="h-3 w-5 bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-500 ease-in-out"></div>
+            <div class="h-3 w-5 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-700 ease-in-out"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/call-to-action/" }}

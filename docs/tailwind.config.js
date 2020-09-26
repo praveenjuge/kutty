@@ -3,8 +3,10 @@ module.exports = {
     content: ["./docs/layouts/**/*.html", "./docs/content/**/*.md", "./docs/content/**/*.html", "./src/js/**/*.js"],
   },
   variants: {
-    visibility: ["group-hover"],
-    backgroundColor: ["group-hover"],
+    visibility: ({ after }) => after(["group-hover"]),
+    backgroundColor: ({ after }) => after(["group-hover"]),
+    textColor: ({ after }) => after(["group-hover"]),
+    borderColor: ({ after }) => after(["group-hover"]),
   },
   theme: {
     typography: {
