@@ -1,6 +1,6 @@
 {
   "name": "kutty",
-  "version": "0.2.7",
+  "version": "0.2.8",
   "description": "Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.",
   "main": "index.js",
   "author": "praveenjuge",
