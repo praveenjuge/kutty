@@ -36,10 +36,10 @@ module.exports = Forms = () => ({
     "@apply px-4 py-3 text-xl": {},
   },
   ".tag-select-sm": {
-    "@apply px-2 py-1 text-xs !important": {},
+    "@apply pl-2 pr-8 py-1 text-xs !important": {},
   },
   ".tag-select-lg": {
-    "@apply px-4 py-3 text-xl !important": {},
+    "@apply pl-4 pr-10 py-3 text-xl !important": {},
   },
   ".tag-label-sm": {
     "@apply text-xs": {},
