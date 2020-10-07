@@ -3,7 +3,7 @@ module.exports = Forms = () => ({
     "@apply block": {},
   },
   ".tag-input": {
-    "@apply mt-1 block w-full appearance-none bg-white border-2 border-solid border-gray-300 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
+    "@apply mt-1 block w-full appearance-none bg-white border border-solid border-gray-300 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
   },
   ".tag-icon": {
     "@apply relative": {},
@@ -69,7 +69,7 @@ module.exports = Forms = () => ({
     "@apply text-gray-500": {},
   },
   ".tag-select": {
-    "@apply mt-1 block w-full appearance-none bg-white border-2 border-solid border-gray-300 rounded pl-3 pr-10 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900 bg-no-repeat cursor-pointer": {},
+    "@apply mt-1 block w-full appearance-none bg-white border border-solid border-gray-300 rounded pl-3 pr-10 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900 bg-no-repeat cursor-pointer": {},
     backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3e%3cpath d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3e%3c/svg%3e")`,
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
@@ -94,7 +94,7 @@ module.exports = Forms = () => ({
     },
   },
   ".tag-checkbox, .tag-radio": {
-    "@apply bg-white text-primary border-2 border-solid border-gray-300 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
+    "@apply bg-white text-primary border border-solid border-gray-300 appearance-none inline-block align-middle select-none flex-shrink-0 h-5 w-5 rounded transition-colors duration-150 ease-in  cursor-pointer -mt-1": {},
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
     backgroundOrigin: "border-box",
@@ -121,7 +121,7 @@ module.exports = Forms = () => ({
     backgroundImage: `url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e")`,
   },
   ".tag-range": {
-    "@apply mt-1 block w-full appearance-none bg-white border-2 border-solid border-gray-300 rounded px-3 py-3 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
+    "@apply mt-1 block w-full appearance-none bg-white border border-solid border-gray-300 rounded px-3 py-3 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
   },
   ".tag-range::-webkit-slider-runnable-track": {
     "@apply w-full h-2 text-transparent cursor-pointer bg-gray-200 border-transparent rounded": {},
