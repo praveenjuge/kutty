@@ -1,10 +1,10 @@
 module.exports = Tabs = () => ({
   ".tab": {
-    "@apply flex items-end border-b-2 border-gray-200": {},
+    "@apply flex items-end border-b border-gray-200": {},
   },
   ".tab-link, .prose .tab-link": {
-    "@apply py-2 px-4 text-gray-600 border-gray-200 border-b-2 transition-colors duration-150 ease-in font-medium text-center text-sm no-underline": {},
-    marginBottom: "-2px",
+    "@apply py-2 px-4 text-gray-600 border-gray-200 border-b transition-colors duration-150 ease-in font-medium text-center text-sm no-underline": {},
+    marginBottom: "-1px",
     "&:hover": {
       "@apply border-gray-400 text-gray-900": {},
     },
@@ -42,6 +42,6 @@ module.exports = Tabs = () => ({
     "@apply flex-col items-start border-0": {},
   },
   ".tab-vertical .tab-link": {
-    "@apply border-b-0 border-l-2 border-transparent py-2": {},
+    "@apply border-b-0 border-l border-transparent py-2": {},
   },
 });

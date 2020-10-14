@@ -1,7 +1,11 @@
 module.exports = Button = (styles) => ({
   ".btn, .prose a.btn": {
-    "@apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border-2 border-solid inline-block py-1 px-3 rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100": {},
+    "@apply select-none text-center no-underline align-middle font-medium relative overflow-hidden transition-colors duration-150 ease-in border border-solid inline-block px-3 rounded-md w-auto opacity-100 pointer-events-auto cursor-pointer transform scale-100": {},
     fontSize: "0.95rem",
+    paddingTop: "0.37rem",
+    paddingBottom: "0.37rem",
+    willChange: 'transform',
+    backfaceVisibility: 'hidden',
     "&:focus": {
       "@apply shadow-outline outline-none": {},
     },
@@ -9,6 +13,26 @@ module.exports = Button = (styles) => ({
       "@apply scale-95 shadow-none outline-none": {},
     },
   },
+  // Sizes
+  ".btn.btn-xs, .prose .btn.btn-xs": {
+    "@apply px-1 text-xs": {},
+    paddingTop: "0.1rem",
+    paddingBottom: "0.1rem",
+  },
+  ".btn.btn-sm, .prose .btn.btn-sm": {
+    "@apply py-1 text-sm": {},
+    paddingLeft: "0.6rem",
+    paddingRight: "0.6rem",
+  },
+  ".btn.btn-lg, .prose .btn.btn-lg": {
+    "@apply py-2 text-lg": {},
+    paddingLeft: "1.35rem",
+    paddingRight: "1.35rem",
+  },
+  ".btn.btn-xl, .prose .btn.btn-xl": {
+    "@apply py-3 px-6 text-xl": {},
+  },
+  // Colors
   ".btn-primary, .prose a.btn-primary": {
     "@apply bg-primary border-primary text-white": {},
     "&:hover, &:focus": {
@@ -155,19 +179,6 @@ module.exports = Button = (styles) => ({
   },
   ".btn-loading .spinner": {
     marginTop: "-3px",
-  },
-  // Sizes
-  ".btn.btn-xs, .prose .btn.btn-xs": {
-    "@apply py-0 px-1 text-xs": {},
-  },
-  ".btn.btn-sm, .prose .btn.btn-sm": {
-    "@apply py-1 px-2 text-sm": {},
-  },
-  ".btn.btn-lg, .prose .btn.btn-lg": {
-    "@apply py-2 px-5 text-lg": {},
-  },
-  ".btn.btn-xl, .prose .btn.btn-xl": {
-    "@apply py-3 px-6 text-xl": {},
   },
   // Icons
   ".btn.btn-icon": {

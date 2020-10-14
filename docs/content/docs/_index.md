@@ -11,7 +11,7 @@ Kutty is a tailwind plugin for building web applications. It has a set of access
 npm install kutty --save
 ```
 
-This plugin requires Tailwind CSS 1.7 or later. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
+This plugin requires Tailwind CSS 1.9 or later. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
 ## Usage
 
