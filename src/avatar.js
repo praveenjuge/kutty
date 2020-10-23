@@ -46,9 +46,6 @@ module.exports = Avatar = () => ({
   ".avatar-busy::after": {
     "@apply bg-red-500": {},
   },
-  ".avatar-stacked": {
-    "@apply flex": {},
-  },
   ".avatar-xs": {
     "@apply h-6 w-6 !important": {},
     maxWidth: "1.5rem !important",

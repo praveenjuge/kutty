@@ -21,21 +21,21 @@
 
   <label class="bg-gray-200 w-full hidden lg:block" x-show="tab === 'design'">
     <span class="sr-only">Update Component Width</span>
-    <input x-model="width" type="range" class="tag-range border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="23" min="100" />
+    <input x-model="width" type="range" class="form-input thumb border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="23" min="100" style="min-height: 8px;" />
     <style>
-      .tag-range::-webkit-slider-thumb {
+      .thumb::-webkit-slider-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;
         width: 50px;
       }
-      .tag-range::-moz-range-thumb {
+      .thumb::-moz-range-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;
         width: 50px;
       }
-      .tag-range::-ms-thumb {
+      .thumb::-ms-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;

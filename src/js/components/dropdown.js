@@ -145,7 +145,7 @@ window.dropdown = function() {
         refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90']() {
+      ['x-show.transition.in.origin.top.opacity.scale.90.out.origin.top.opacity.scale.90']() {
         return this.open;
       },
       ['@click.away']() {

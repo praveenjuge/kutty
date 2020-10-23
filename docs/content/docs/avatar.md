@@ -47,7 +47,7 @@ title: Avatar
 
 {{< code html >}}
 
-<div class="avatar-stacked -space-x-5">
+<div class="flex -space-x-5">
   <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar"><img src="/placeholder.jpg" alt="Photo of Praveen Juge"></div>
   <div class="avatar"><span class="avatar-initial">PJ</span></div>

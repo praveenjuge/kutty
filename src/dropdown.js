@@ -1,6 +1,6 @@
 module.exports = Dropdown = () => ({
   ".dropdown-list": {
-    "@apply absolute z-10 shadow-md w-48 flex flex-col pl-0 mb-0 border border-solid border-gray-200 bg-white p-2 rounded transition ease-out duration-100 origin-top-left": {},
+    "@apply absolute z-10 shadow-md w-48 flex flex-col pl-0 mb-0 border border-solid border-gray-200 bg-white p-2 rounded transition ease-out duration-100 origin-top": {},
   },
   ".dropdown-item": {
     "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-sm rounded whitespace-no-wrap no-underline w-full": {},
