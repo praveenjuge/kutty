@@ -20,8 +20,8 @@
 // - Add padding-right style to the body, where the value is the scroll bar -
 // find the scroll bar width and set as padding right to html body width
 
-import {FOCUSABLE_ELEMENTS} from '../constants';
-import {adjustScrollBar, focus, refocusTrigger} from '../utils';
+import { FOCUSABLE_ELEMENTS } from "../constants";
+import { adjustScrollBar, focus, refocusTrigger } from "../utils";
 
 // Data
 var lastOpenedElement = null;
@@ -31,14 +31,14 @@ function init(dialog) {
   var trigger = dialog.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
-    trigger.setAttribute('aria-haspopup', 'dialog');
+    trigger.setAttribute("aria-haspopup", "dialog");
     var dialog = dialog.querySelectorAll('[x-spread="dialog"]');
     if (dialog.length) {
       dialog = dialog[0];
-      dialog.setAttribute('role', 'dialog');
-      dialog.setAttribute('aria-hidden', true);
-      dialog.setAttribute('aria-modal', true);
-      dialog.setAttribute('tabindex', -1);
+      dialog.setAttribute("role", "dialog");
+      dialog.setAttribute("aria-hidden", true);
+      dialog.setAttribute("aria-modal", true);
+      dialog.setAttribute("tabindex", -1);
     }
   }
 }
@@ -49,25 +49,25 @@ function toggleAriaAtrributes(dialog, isOpen) {
   if (dialog.length) {
     dialog = dialog[0];
     if (isOpen) {
-      dialog.setAttribute('aria-hidden', false);
+      dialog.setAttribute("aria-hidden", false);
     } else {
-      dialog.setAttribute('aria-hidden', true);
+      dialog.setAttribute("aria-hidden", true);
     }
   }
 }
 
 // Initialize attribute for all dialog elements
 var dialogs = document.querySelectorAll('[x-data="dialog()"]');
-dialogs.forEach(function(dialog) {
+dialogs.forEach(function (dialog) {
   init(dialog);
 });
 
-window.dialog = function() {
+window.dialog = function () {
   var focussedIndex = -1;
   return {
     open: false,
     trigger: {
-      ['@click']() {
+      ["@click"]() {
         this.open = !this.open;
         if (this.open) {
           lastOpenedElement = this.$el;
@@ -81,7 +81,7 @@ window.dialog = function() {
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(lastOpenedElement);
@@ -90,25 +90,25 @@ window.dialog = function() {
       },
     },
     dialog: {
-      ['x-show.transition.opacity.duration.100ms.origin.center.center.scale.105']() {
+      ["x-show.transition.opacity.duration.100ms.origin.center.center.scale.105"]() {
         return this.open;
       },
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(lastOpenedElement);
         adjustScrollBar(this.open);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.tab'](e) {
+      ["@keydown.tab"](e) {
         e.preventDefault();
         var dialog = this.$el.querySelector('[x-spread="dialog"]');
         var dialogElements = dialog.querySelectorAll(FOCUSABLE_ELEMENTS);
         focussedIndex++;
         focus(dialogElements, focussedIndex);
       },
-      ['@click'](e) {
-        if (this.open && e.target.hasAttribute('x-spread')) {
+      ["@click"](e) {
+        if (this.open && e.target.hasAttribute("x-spread")) {
           this.open = false;
           focussedIndex = -1;
           refocusTrigger(lastOpenedElement);

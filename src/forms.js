@@ -1,7 +1,7 @@
 module.exports = Forms = () => ({
   ".form-input": {
     "@apply block w-full appearance-none bg-white border border-solid border-gray-300 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
-    minHeight: '39px'
+    minHeight: "39px",
   },
   // Input Tag Hover and Focus
   ".form-input:hover, .form-select:hover, .form-checkbox:hover, .form-radio:hover": {
@@ -29,19 +29,19 @@ module.exports = Forms = () => ({
   // Sizes
   ".form-input-sm": {
     "@apply px-2 py-1 text-xs": {},
-    minHeight: '28px'
+    minHeight: "28px",
   },
   ".form-input-lg": {
     "@apply px-4 py-3 text-xl": {},
-    minHeight: '56px'
+    minHeight: "56px",
   },
   ".form-select-sm": {
     "@apply pl-2 pr-8 py-1 text-xs !important": {},
-    minHeight: '28px'
+    minHeight: "28px",
   },
   ".form-select-lg": {
     "@apply pl-4 pr-10 py-3 text-xl !important": {},
-    minHeight: '56px'
+    minHeight: "56px",
   },
   // Select, Checkbox, Radio
   ".form-select": {

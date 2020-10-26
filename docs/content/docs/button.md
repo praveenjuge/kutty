@@ -24,6 +24,7 @@ title: Button
 <button class="btn btn-dark">Dark</button>
 <button class="btn btn-white">White</button>
 <button class="btn btn-link">Link</button>
+<button class="btn bg-teal-700 hover:bg-teal-900 text-white">Tailwind Color</button>
 {{< /code >}}
 
 ## Light Colors
