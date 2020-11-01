@@ -3,7 +3,7 @@ module.exports = Pagination = () => ({
     "@apply flex items-center pl-0 list-none text-sm": {},
   },
   ".pagination-link, .pagination-disabled": {
-    "@apply px-4 rounded no-underline text-gray-800 font-medium text-sm transition-colors duration-150 ease-in flex items-center justify-center h-10 ml-1": {},
+    "@apply px-4 rounded no-underline text-gray-800 font-medium text-sm transition-colors duration-150 ease-in flex items-center justify-center h-10 ml-px": {},
   },
   ".prose a.pagination-link, .prose .pagination-disabled": {
     "@apply no-underline": {},

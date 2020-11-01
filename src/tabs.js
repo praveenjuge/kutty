@@ -12,18 +12,6 @@ module.exports = Tabs = () => ({
       "@apply border-gray-400 text-gray-900 outline-none": {},
     },
   },
-  ".tab-vertical .tab-link:hover": {
-    "@apply border-gray-400 text-gray-900": {},
-  },
-  ".tab-vertical .tab-link.active, .tab-link.active": {
-    "@apply text-primary border-primary": {},
-    "&:hover": {
-      "@apply text-primary-dark border-primary-dark": {},
-    },
-    "&:focus": {
-      "@apply text-primary-dark border-primary-dark": {},
-    },
-  },
   ".tab-link.disabled": {
     "@apply opacity-25 pointer-events-none cursor-default": {},
   },
@@ -43,5 +31,17 @@ module.exports = Tabs = () => ({
   },
   ".tab-vertical .tab-link": {
     "@apply border-b-0 border-l border-transparent py-2": {},
+  },
+  ".tab-vertical .tab-link:hover": {
+    "@apply border-gray-400 text-gray-900": {},
+  },
+  ".tab-vertical .tab-link.active, .tab-link.active": {
+    "@apply text-primary border-primary": {},
+    "&:hover": {
+      "@apply text-primary-dark border-primary-dark": {},
+    },
+    "&:focus": {
+      "@apply text-primary-dark border-primary-dark": {},
+    },
   },
 });
