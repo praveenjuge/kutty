@@ -6,343 +6,185 @@ categories: marketing
 <!-- Pricing 1 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-24 pb-12 px-4">
-  <div class="w-full md:w-11/12 xl:w-9/12 mx-auto text-left md:text-center">
-    <h1
-      class="text-4xl md:text-6xl leading-none mb-5 font-extrabold tracking-normal md:tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-teal-400 to-purple-600 block pb-2"
-    >
-      Simple, transparent pricing.
-    </h1>
-    <p class="text-lg md:text-xl text-gray-600 mb-8 px-0 lg:px-24">Pricing that works for companies of any size.</p>
+<section class="container px-4 pt-24 pb-12 mx-auto">
+  <div class="w-full mx-auto text-left md:w-11/12 xl:w-9/12 md:text-center">
+    <h1 class="block pb-2 mb-5 text-4xl font-extrabold leading-none tracking-normal text-transparent md:text-6xl md:tracking-tight bg-clip-text bg-gradient-to-r from-teal-400 to-purple-600">Simple, transparent pricing.</h1>
+    <p class="px-0 mb-8 text-lg text-gray-600 md:text-xl lg:px-24">Pricing that works for companies of any size.</p>
   </div>
-  <div class="w-full xl:w-4/5 mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 sm:gap-8">
-      <div class="card rounded-none shadow-none sm:rounded-lg border-0 md:border">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
-          <p class="text-yellow-600 font-semibold text-lg mb-1">Take Flight</p>
-          <p class="text-gray-900 font-extrabold text-4xl font-mono pb-0">$25</p>
-          <p class="text-gray-600 text-sm">Organization / month</p>
-          <a href="#" class="btn btn-warning btn-lg w-full mt-6">Get started for free &rarr;</a>
+  <div class="w-full mx-auto xl:w-4/5">
+    <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 sm:gap-8">
+      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
+          <p class="mb-1 text-lg font-semibold text-yellow-600">Take Flight</p>
+          <p class="pb-0 font-mono text-4xl font-extrabold text-gray-900">$25</p>
+          <p class="text-sm text-gray-600">Organization / month</p>
+          <a href="#" class="w-full mt-6 btn btn-warning btn-lg">Get started for free &rarr;</a>
         </div>
         <ul class="flex flex-col flex-grow p-6 space-y-3">
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <span class="text-gray-800"> Unlimited feedback </span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-              >One manager</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="The person who manages the feedback for the product.">One manager</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-              >1000 submitters</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="User is the person who submits the feedback. We are not counting the people who are upvoting features.">1000 submitters</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <span class="text-gray-800">Unlimited Private Boards</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-              >Custom domains support</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="User is the person who submits the feedback. We are not counting the people who are upvoting features.">Custom domains support</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Support for German, French, Polish and more."
-              >Multi-language Support</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="Support for German, French, Polish and more.">Multi-language Support</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Manage your customer feedback at the comfort of your phone. On iOS and Android."
-              >Free iOS and Android apps</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="Manage your customer feedback at the comfort of your phone. On iOS and Android.">Free iOS and Android apps</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <span class="text-gray-800">3 Integrations</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-yellow-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-yellow-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <span class="text-gray-800">New features every 14 days</span>
           </li>
         </ul>
       </div>
-      <div class="card rounded-none shadow-none sm:rounded-lg border-0 md:border">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
+      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
           <div>
-            <div class="flex justify-between items-center">
-              <p class="text-purple-700 font-semibold text-lg mb-1">Fly High</p>
+            <div class="flex items-center justify-between">
+              <p class="mb-1 text-lg font-semibold text-purple-700">Fly High</p>
               <span class="badge bg-primary-light text-primary">Most popular</span>
             </div>
-            <p class="text-gray-900 font-extrabold text-4xl font-mono">$50</p>
-            <p class="text-gray-600 text-sm">Organization / month</p>
+            <p class="font-mono text-4xl font-extrabold text-gray-900">$50</p>
+            <p class="text-sm text-gray-600">Organization / month</p>
           </div>
-          <a href="#" class="btn btn-primary btn-lg w-full mt-6">Get started for free &rarr;</a>
+          <a href="#" class="w-full mt-6 btn btn-primary btn-lg">Get started for free &rarr;</a>
         </div>
         <ul class="flex flex-col flex-grow p-6 space-y-3">
           <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
             </svg>
-            <span class="text-purple-700 font-medium">Everything in Take Flight</span>
+            <span class="font-medium text-purple-700">Everything in Take Flight</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             Unlimited feedback
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-              >10 manager</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="The person who manages the feedback for the product.">10 manager</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-              >7500 submitters</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="User is the person who submits the feedback. We are not counting the people who are upvoting features.">7500 submitters</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <span>Unlimited Integrations</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-purple-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-purple-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             Humane support
           </li>
         </ul>
       </div>
-      <div class="card rounded-none shadow-none sm:rounded-lg border-0 md:border">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
+      <div class="border-0 rounded-none shadow-none card sm:rounded-lg md:border">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
           <div>
-            <p class="text-pink-600 font-semibold text-lg mb-1">Enterprise</p>
-            <p class="text-gray-900 font-bold text-4xl">Custom</p>
-            <p class="text-gray-600 text-sm">Organization / month</p>
+            <p class="mb-1 text-lg font-semibold text-pink-600">Enterprise</p>
+            <p class="text-4xl font-bold text-gray-900">Custom</p>
+            <p class="text-sm text-gray-600">Organization / month</p>
           </div>
-          <a href="#" class="btn btn-light btn-lg w-full mt-6">Initiate a chat &rarr;</a>
+          <a href="#" class="w-full mt-6 btn btn-light btn-lg">Initiate a chat &rarr;</a>
         </div>
         <ul class="flex flex-col flex-grow p-6 space-y-3">
           <li class="flex items-start">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-600">
-              <path
-                fill-rule="evenodd"
-                d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z"
-                clip-rule="evenodd"
-              />
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-600">
+              <path fill-rule="evenodd" d="M7.707 14.707a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l2.293 2.293a1 1 0 010 1.414z" clip-rule="evenodd" />
             </svg>
-            <span class="text-pink-600 font-medium">Everything in Fly High</span>
+            <span class="font-medium text-pink-600">Everything in Fly High</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
             Unlimited feedback
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="The person who manages the feedback for the product."
-              >Unlimited manager</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="The person who manages the feedback for the product.">Unlimited manager</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="User is the person who submits the feedback. We are not counting the people who are upvoting features."
-              >Unlimited submitters</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="User is the person who submits the feedback. We are not counting the people who are upvoting features.">Unlimited submitters</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
             <span class="text-gray-800">Unlimited Integrations</span>
           </li>
           <li class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-pink-700">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-pink-700">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
 
-            <span
-              class="border-b-2 border-gray-500 cursor-pointer text-gray-800 border-dotted"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              x-position="top"
-              title="Access to developers to build custom features and changes for your enterprise."
-              >Feature on-request</span
-            >
+            <span class="text-gray-800 border-b-2 border-gray-500 border-dotted cursor-pointer" x-data="tooltip()" x-spread="tooltip" x-position="top" title="Access to developers to build custom features and changes for your enterprise.">Feature on-request</span>
           </li>
         </ul>
       </div>
@@ -355,274 +197,182 @@ categories: marketing
 
 {{< iframe html >}}
 <section x-data="{ selected: 'monthly' }">
-  <div class="bg-gray-100 pb-64">
-    <div class="container text-center sm:text-left mx-auto pt-20 px-4">
-      <h1 class="text-4xl md:text-5xl text-gray-900 leading-tight mb-3 font-bold md:font-extrabold">Plans & Pricing</h1>
-      <p class="text-lg md:text-xl text-gray-600 mb-10">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
-      <div class="w-64 mx-auto sm:mx-0 -mb-2">
-        <div class="flex justify-between text-center p-2 border border-purple-200 rounded-full">
-          <button class="btn btn-primary rounded-full w-full" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">
-            Bill Monthly
-          </button>
-          <button class="btn btn-link rounded-full w-full" @click="selected = 'yearly'" :class="{ 'btn-link': selected === 'monthly', 'btn-primary': selected === 'yearly' }">
-            Bill Yearly
-          </button>
+  <div class="pb-64 bg-gray-100">
+    <div class="container px-4 pt-20 mx-auto text-center sm:text-left">
+      <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 md:text-5xl md:font-extrabold">Plans & Pricing</h1>
+      <p class="mb-10 text-lg text-gray-600 md:text-xl">5 minute installation · Try Team plan features for 14 days · No credit card required</p>
+      <div class="w-64 mx-auto -mb-2 sm:mx-0">
+        <div class="flex justify-between p-2 text-center border border-purple-200 rounded-full">
+          <button class="w-full rounded-full btn btn-primary" @click="selected = 'monthly'" :class="{ 'btn-primary': selected === 'monthly', 'btn-link': selected === 'yearly' }">Bill Monthly</button>
+          <button class="w-full rounded-full btn btn-link" @click="selected = 'yearly'" :class="{ 'btn-link': selected === 'monthly', 'btn-primary': selected === 'yearly' }">Bill Yearly</button>
         </div>
       </div>
     </div>
   </div>
-  <div class="container mx-auto -mt-48 pb-20">
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 sm:gap-8">
-      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
-          <p class="text-gray-800 font-semibold text-lg mb-1">Free</p>
-          <p class="text-gray-900 font-extrabold text-4xl font-mono pb-0 md:pb-2">$0</p>
-          <a href="#" class="btn btn-primary btn-lg w-full mt-6 md:mt-16">Get Started</a>
+  <div class="container pb-20 mx-auto -mt-48">
+    <div class="grid grid-cols-1 gap-16 lg:grid-cols-3 sm:gap-8">
+      <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
+          <p class="mb-1 text-lg font-semibold text-gray-800">Free</p>
+          <p class="pb-0 font-mono text-4xl font-extrabold text-gray-900 md:pb-2">$0</p>
+          <a href="#" class="w-full mt-6 btn btn-primary btn-lg md:mt-16">Get Started</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Suppression Management</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email Tracking and Analytics</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
           </div>
         </div>
       </div>
-      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
+      <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
           <div>
-            <p class="text-gray-800 font-semibold text-lg mb-1">Team</p>
-            <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
-            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
-            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+            <p class="mb-1 text-lg font-semibold text-gray-800">Team</p>
+            <p class="font-mono text-4xl font-extrabold text-gray-900" x-text="selected === 'monthly' ? '$9' : '$89'">$9</p>
+            <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+            <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
           </div>
-          <a href="#" class="btn btn-light btn-lg w-full mt-6">Try for free</a>
+          <a href="#" class="w-full mt-6 btn btn-light btn-lg">Try for free</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Suppression Management</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email Tracking and Analytics</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">5 Days of Log Retention</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Limited 24/7 Ticket Support</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">1 Dedicated IP (Foundation 100k and up)</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">1,000 Email Address Validations</p>
           </div>
         </div>
       </div>
-      <div class="card rounded-none shadow-none sm:shadow-md sm:rounded-lg border-0">
-        <div class="flex flex-col p-6 justify-between border-b border-gray-200">
+      <div class="border-0 rounded-none shadow-none card sm:shadow-md sm:rounded-lg">
+        <div class="flex flex-col justify-between p-6 border-b border-gray-200">
           <div>
-            <p class="text-gray-800 font-semibold text-lg mb-1">Company</p>
-            <p class="text-gray-900 font-extrabold text-4xl font-mono" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
-            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
-            <p class="text-gray-600 text-base" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
+            <p class="mb-1 text-lg font-semibold text-gray-800">Company</p>
+            <p class="font-mono text-4xl font-extrabold text-gray-900" x-text="selected === 'monthly' ? '$21' : '$189'">$21</p>
+            <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'user / month' : 'user / year'">user / month</p>
+            <p class="text-base text-gray-600" x-text="selected === 'monthly' ? 'billed monthly' : 'billed yearly'">billed monthly</p>
           </div>
-          <a href="#" class="btn btn-light btn-lg w-full mt-6">Try for free</a>
+          <a href="#" class="w-full mt-6 btn btn-light btn-lg">Try for free</a>
         </div>
         <div class="flex flex-col flex-grow p-6 space-y-3">
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email APIs, SMTP Relay, and Webhooks</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Suppression Management</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Email Tracking and Analytics</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">99.99% Guaranteed Uptime SLA</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">5 Days of Log Retention</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Limited 24/7 Ticket Support</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">1 Dedicated IP (Foundation 100k and up)</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">1,000 Email Address Validations</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Instant Chat Support</p>
           </div>
           <div class="flex items-start">
-            <svg viewBox="0 0 20 20" fill="currentColor" class="w-4 h-4 mr-2 mt-1 flex-none text-green-600">
-              <path
-                fill-rule="evenodd"
-                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                clip-rule="evenodd"
-              ></path>
+            <svg viewBox="0 0 20 20" fill="currentColor" class="flex-none w-4 h-4 mt-1 mr-2 text-green-600">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
             </svg>
             <p class="text-gray-800">Custom Features</p>
           </div>
@@ -637,321 +387,181 @@ categories: marketing
 
 {{< iframe html >}}
 <section class="py-24">
-  <div class="container mx-auto text-center mb-20 px-4">
-    <h1 class="text-4xl text-gray-900 leading-tight mb-3 font-bold md:font-extrabold">Set up your organization, pick a plan later</h1>
-    <p class="text-lg md:text-xl text-gray-600 mb-6">Our plans scale for any organization—from startups to Fortune 500s.</p>
+  <div class="container px-4 mx-auto mb-20 text-center">
+    <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 md:font-extrabold">Set up your organization, pick a plan later</h1>
+    <p class="mb-6 text-lg text-gray-600 md:text-xl">Our plans scale for any organization—from startups to Fortune 500s.</p>
   </div>
-  <div class="container mx-auto px-0 md:px-4">
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-24 sm:gap-10">
+  <div class="container px-0 mx-auto md:px-4">
+    <div class="grid grid-cols-1 gap-24 md:grid-cols-2 lg:grid-cols-4 sm:gap-10">
       <div class="p-4 sm:p-0">
-        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Free</p>
-        <div class="flex items-center justify-center space-x-2 mb-6">
-          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$0</p>
+        <p class="mb-3 text-xl font-semibold text-center text-gray-800">Free</p>
+        <div class="flex items-center justify-center mb-6 space-x-2">
+          <p class="mt-1 font-mono text-5xl font-thin text-gray-800">$0</p>
           <div>
-            <p class="text-gray-600 text-sm">per user</p>
-            <p class="text-gray-600 text-sm">per month</p>
+            <p class="text-sm text-gray-600">per user</p>
+            <p class="text-sm text-gray-600">per month</p>
           </div>
         </div>
-        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+        <a href="#" class="w-full mb-8 btn btn-primary btn-icon btn-lg">
           Get Started
           <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
-            <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
         </a>
         <div class="space-y-4">
-          <p class="text-gray-800 font-semibold text-lg mb-3">Features:</p>
+          <p class="mb-3 text-lg font-semibold text-gray-800">Features:</p>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Create unlimited projects. Upload unlimited designs.">
-              Unlimited projects
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Create unlimited projects. Upload unlimited designs.">Unlimited projects</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p
-              class="text-gray-800 underline hover:text-primary cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              title="Organize files in folders and set device platform for each one of them."
-            >
-              Unlimited folders
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Organize files in folders and set device platform for each one of them.">Unlimited folders</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Public design links</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Invite-only private projects</p>
           </div>
         </div>
       </div>
       <div class="p-4 sm:p-0">
-        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Startup</p>
-        <div class="flex items-center justify-center space-x-2 mb-6">
-          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$10</p>
+        <p class="mb-3 text-xl font-semibold text-center text-gray-800">Startup</p>
+        <div class="flex items-center justify-center mb-6 space-x-2">
+          <p class="mt-1 font-mono text-5xl font-thin text-gray-800">$10</p>
           <div>
-            <p class="text-gray-600 text-sm">per user</p>
-            <p class="text-gray-600 text-sm">per month</p>
+            <p class="text-sm text-gray-600">per user</p>
+            <p class="text-sm text-gray-600">per month</p>
           </div>
         </div>
-        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+        <a href="#" class="w-full mb-8 btn btn-primary btn-icon btn-lg">
           Try for free
           <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
-            <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
         </a>
         <div class="space-y-4">
-          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Free plus...</p>
+          <p class="mb-3 text-lg font-semibold text-gray-800">Everything in Free plus...</p>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p
-              class="text-gray-800 underline hover:text-primary cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              title="Guest users can view & comment on designs in projects they’ve been invited to. For security reasons, they cannot update designs, download files, or invite other people."
-            >
-              Unlimited free Guest users
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Guest users can view & comment on designs in projects they’ve been invited to. For security reasons, they cannot update designs, download files, or invite other people.">Unlimited free Guest users</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p
-              class="text-gray-800 underline hover:text-primary cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              title="Backup, open, and download any design file version. Collaborate on design files with other designers without overwriting each other's files."
-            >
-              Unlimited file version history
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Backup, open, and download any design file version. Collaborate on design files with other designers without overwriting each other's files.">Unlimited file version history</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p
-              class="text-gray-800 underline hover:text-primary cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              title="Connect our product projects with Slack channels to get notifications about new designs or comments."
-            >
-              Slack integration
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Connect our product projects with Slack channels to get notifications about new designs or comments.">Slack integration</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p
-              class="text-gray-800 underline hover:text-primary cursor-pointer"
-              x-data="tooltip()"
-              x-spread="tooltip"
-              title="Log in to our app via SSO authentication. We support SAML - an industry-standard way for identity providers."
-            >
-              Single Sign-On (SSO)
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Log in to our app via SSO authentication. We support SAML - an industry-standard way for identity providers.">Single Sign-On (SSO)</p>
           </div>
         </div>
       </div>
       <div class="p-4 sm:p-0">
-        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Pro</p>
-        <div class="flex items-center justify-center space-x-2 mb-6">
-          <p class="text-gray-800 font-thin text-5xl font-mono mt-1">$50</p>
+        <p class="mb-3 text-xl font-semibold text-center text-gray-800">Pro</p>
+        <div class="flex items-center justify-center mb-6 space-x-2">
+          <p class="mt-1 font-mono text-5xl font-thin text-gray-800">$50</p>
           <div>
-            <p class="text-gray-600 text-sm">per user</p>
-            <p class="text-gray-600 text-sm">per month</p>
+            <p class="text-sm text-gray-600">per user</p>
+            <p class="text-sm text-gray-600">per month</p>
           </div>
         </div>
-        <a href="#" class="btn btn-primary btn-icon btn-lg w-full mb-8">
+        <a href="#" class="w-full mb-8 btn btn-primary btn-icon btn-lg">
           Try for free
           <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
-            <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
         </a>
         <div class="space-y-4">
-          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Startup plus...</p>
+          <p class="mb-3 text-lg font-semibold text-gray-800">Everything in Startup plus...</p>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Granular access controls...">
-              Granular access controls
-            </p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Granular access controls...">Granular access controls</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Audit logs...">Audit logs</p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Audit logs...">Audit logs</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Salesforce, Oracle, & SQL Server integrations</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Custom components</p>
           </div>
         </div>
       </div>
       <div class="p-4 sm:p-0">
-        <p class="text-gray-800 font-semibold text-xl mb-3 text-center">Enterprise</p>
-        <div class="flex items-center justify-center space-x-2 mb-6">
-          <p class="text-gray-800 font-medium text-xl text-center mt-3 mb-1">Custom pricing for your organization</p>
+        <p class="mb-3 text-xl font-semibold text-center text-gray-800">Enterprise</p>
+        <div class="flex items-center justify-center mb-6 space-x-2">
+          <p class="mt-3 mb-1 text-xl font-medium text-center text-gray-800">Custom pricing for your organization</p>
         </div>
-        <a href="#" class="btn btn-dark btn-icon btn-lg w-full mb-8">
+        <a href="#" class="w-full mb-8 btn btn-dark btn-icon btn-lg">
           Book a demo
           <svg viewBox="0 0 20 20" fill="currentColor" class="ml-2">
-            <path
-              fill-rule="evenodd"
-              d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
-              clip-rule="evenodd"
-            ></path>
+            <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
           </svg>
         </a>
         <div class="space-y-4">
-          <p class="text-gray-800 font-semibold text-lg mb-3">Everything in Pro plus...</p>
+          <p class="mb-3 text-lg font-semibold text-gray-800">Everything in Pro plus...</p>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Deploy on-premises...">Deploy on-premises</p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Deploy on-premises...">Deploy on-premises</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
-            <p class="text-gray-800 underline hover:text-primary cursor-pointer" x-data="tooltip()" x-spread="tooltip" title="Identity management...">Identity management</p>
+            <p class="text-gray-800 underline cursor-pointer hover:text-primary" x-data="tooltip()" x-spread="tooltip" title="Identity management...">Identity management</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Version control with Git</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Custom connectors</p>
           </div>
           <div class="flex items-start">
-            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6 mr-2 mt-px p-px flex-none text-primary">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"
-              ></path>
+            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 p-px mt-px mr-2 text-primary">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
             </svg>
             <p class="text-gray-800">Priority support</p>
           </div>
@@ -965,30 +575,24 @@ categories: marketing
 <!-- Pricing 4 -->
 
 {{< iframe html >}}
-<section class="container mx-auto text-left md:text-center px-4 bg-white-100 py-24">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<section class="container px-4 py-24 mx-auto text-left md:text-center bg-white-100">
+  <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
     <div>
-      <p class="mb-1 text-gray-500 uppercase tracking-wide font-semibold text-xs">For Developers</p>
-      <h1 class="text-5xl text-gray-900 leading-tight mb-2 font-bold md:font-extrabold">$9<span class="text-gray-600 text-2xl font-medium"> per month</span></h1>
-      <p class="text-lg text-gray-600 mb-6">
-        One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your
-        status.
-      </p>
-      <div class="block md:flex justify-center space-x-0 md:space-x-2 space-y-2 md:space-y-0">
-        <a href="#" class="btn btn-primary btn-lg w-full md:w-auto">Get Started</a>
-        <a href="#" class="btn btn-light btn-lg w-full md:w-auto">Contact Us</a>
+      <p class="mb-1 text-xs font-semibold tracking-wide text-gray-500 uppercase">For Developers</p>
+      <h1 class="mb-2 text-5xl font-bold leading-tight text-gray-900 md:font-extrabold">$9<span class="text-2xl font-medium text-gray-600"> per month</span></h1>
+      <p class="mb-6 text-lg text-gray-600">One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your status.</p>
+      <div class="justify-center block space-x-0 space-y-2 md:flex md:space-x-2 md:space-y-0">
+        <a href="#" class="w-full btn btn-primary btn-lg md:w-auto">Get Started</a>
+        <a href="#" class="w-full btn btn-light btn-lg md:w-auto">Contact Us</a>
       </div>
     </div>
     <div>
-      <p class="mb-1 text-gray-500 uppercase tracking-wide font-semibold text-xs">For Designers</p>
-      <h1 class="text-5xl text-gray-900 leading-tight mb-2 font-bold md:font-extrabold">$19<span class="text-gray-600 text-2xl font-medium"> per month</span></h1>
-      <p class="text-lg text-gray-600 mb-6">
-        One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your
-        status.
-      </p>
-      <div class="block md:flex justify-center space-x-0 md:space-x-2 space-y-2 md:space-y-0">
-        <a href="#" class="btn btn-primary btn-lg w-full md:w-auto">Get Started</a>
-        <a href="#" class="btn btn-light btn-lg w-full md:w-auto">Contact Us</a>
+      <p class="mb-1 text-xs font-semibold tracking-wide text-gray-500 uppercase">For Designers</p>
+      <h1 class="mb-2 text-5xl font-bold leading-tight text-gray-900 md:font-extrabold">$19<span class="text-2xl font-medium text-gray-600"> per month</span></h1>
+      <p class="mb-6 text-lg text-gray-600">One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your status.</p>
+      <div class="justify-center block space-x-0 space-y-2 md:flex md:space-x-2 md:space-y-0">
+        <a href="#" class="w-full btn btn-primary btn-lg md:w-auto">Get Started</a>
+        <a href="#" class="w-full btn btn-light btn-lg md:w-auto">Contact Us</a>
       </div>
     </div>
   </div>
@@ -998,18 +602,15 @@ categories: marketing
 <!-- Pricing 5 -->
 
 {{< iframe html >}}
-<section class="bg-gray-100 bg-opacity-25 md:bg-opacity-75 py-20">
-  <div class="container mx-auto text-left md:text-center px-4">
-    <div class="card card-body border-0 px-0 md:px-4 shadow-none md:shadow-xl py-20 bg-transparent md:bg-white">
-      <div class="w-full md:w-3/5 mx-auto">
-        <h1 class="text-5xl text-gray-900 leading-tight mb-2 font-bold md:font-extrabold">$9<span class="text-gray-600 text-2xl font-medium"> per month</span></h1>
-        <p class="text-lg md:text-xl text-gray-600 mb-6">
-          One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your
-          status. We’ll get back to you with a discount.
-        </p>
-        <div class="block md:flex justify-center space-x-0 md:space-x-2 space-y-2 md:space-y-0">
-          <a href="#" class="btn btn-dark btn-xl w-full md:w-auto">Get Started</a>
-          <a href="#" class="btn btn-light btn-xl w-full md:w-auto">Contact Us</a>
+<section class="py-20 bg-gray-100 bg-opacity-25 md:bg-opacity-75">
+  <div class="container px-4 mx-auto text-left md:text-center">
+    <div class="px-0 py-20 bg-transparent border-0 shadow-none card card-body md:px-4 md:shadow-xl md:bg-white">
+      <div class="w-full mx-auto md:w-3/5">
+        <h1 class="mb-2 text-5xl font-bold leading-tight text-gray-900 md:font-extrabold">$9<span class="text-2xl font-medium text-gray-600"> per month</span></h1>
+        <p class="mb-6 text-lg text-gray-600 md:text-xl">One plan for any organization—from startups to Fortune 500s. We offer 50% off of for all students and universities. Please get in touch with us and provide proof of your status. We’ll get back to you with a discount.</p>
+        <div class="justify-center block space-x-0 space-y-2 md:flex md:space-x-2 md:space-y-0">
+          <a href="#" class="w-full btn btn-dark btn-xl md:w-auto">Get Started</a>
+          <a href="#" class="w-full btn btn-light btn-xl md:w-auto">Contact Us</a>
         </div>
       </div>
     </div>

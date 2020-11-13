@@ -14,15 +14,15 @@ module.exports = Alert = () => ({
   ".alert-closable, .alert-closable.alert-lg, .alert-closable.alert-sm": {
     "@apply pr-12 !important": {},
   },
-  ".alert svg": {
-    "@apply h-5 w-5 mr-3 mt-px flex-none": {},
-  },
   // Sizes
   ".alert-sm": {
     "@apply py-1 pl-3 pr-3 text-xs !important": {},
   },
   ".alert-lg": {
     "@apply py-5 pl-5 pr-5 text-lg !important": {},
+  },
+  ".alert svg": {
+    "@apply h-5 w-5 mr-3 mt-px flex-none": {},
   },
   ".alert.alert-sm svg": {
     "@apply h-4 w-4": {},

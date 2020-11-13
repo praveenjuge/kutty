@@ -1,6 +1,6 @@
 module.exports = Button = (styles) => ({
   ".btn, .prose a.btn": {
-    "@apply inline-block text-center no-underline align-middle font-medium rounded-md border-current pointer-events-auto cursor-pointer select-none transform scale-100 transition-colors duration-150 ease-in": {},
+    "@apply inline-block text-center no-underline align-middle font-medium rounded-md border-current pointer-events-auto cursor-pointer select-none transform scale-100 transition-colors duration-150 ease-in focus:ring focus:outline-none": {},
     fontSize: "0.95rem",
     paddingTop: "0.45rem",
     paddingBottom: "0.45rem",
@@ -8,11 +8,8 @@ module.exports = Button = (styles) => ({
     paddingRight: "0.85rem",
     willChange: "transform",
     backfaceVisibility: "hidden",
-    "&:focus": {
-      "@apply shadow-outline outline-none": {},
-    },
     "&:active": {
-      "@apply scale-95": {},
+      "@apply scale-95 ring-0": {},
     },
   },
   // Sizes
@@ -46,142 +43,73 @@ module.exports = Button = (styles) => ({
   },
   // Colors
   ".btn-primary, .prose a.btn-primary": {
-    "@apply bg-primary text-white": {},
-    "&:hover": {
-      "@apply bg-primary-dark": {},
-    },
+    "@apply bg-primary text-white hover:bg-primary-dark": {},
   },
   ".btn-secondary, .prose a.btn-secondary": {
-    "@apply bg-gray-600 text-white": {},
-    "&:hover": {
-      "@apply bg-gray-800": {},
-    },
+    "@apply bg-gray-500 text-white hover:bg-gray-700": {},
   },
   ".btn-success, .prose a.btn-success": {
-    "@apply bg-green-700 text-white": {},
-    "&:hover": {
-      "@apply bg-green-900": {},
-    },
+    "@apply bg-green-700 text-white hover:bg-green-900": {},
   },
   ".btn-danger, .prose a.btn-danger": {
-    "@apply bg-red-700 text-white": {},
-    "&:hover": {
-      "@apply bg-red-900": {},
-    },
+    "@apply bg-red-700 text-white hover:bg-red-900": {},
   },
   ".btn-warning, .prose a.btn-warning": {
-    "@apply bg-yellow-600 text-white": {},
-    "&:hover": {
-      "@apply bg-yellow-800": {},
-    },
+    "@apply bg-yellow-600 text-white hover:bg-yellow-800": {},
   },
   ".btn-light, .prose a.btn-light": {
-    "@apply bg-gray-200 text-gray-900": {},
-    "&:hover": {
-      "@apply bg-gray-400": {},
-    },
+    "@apply bg-gray-100 text-gray-800 hover:bg-gray-300": {},
   },
   ".btn-dark, .prose a.btn-dark": {
-    "@apply bg-gray-900 text-white": {},
-    "&:hover": {
-      "@apply bg-gray-700": {},
-    },
+    "@apply bg-gray-900 text-white hover:bg-gray-700": {},
   },
   ".btn-white, .prose a.btn-white": {
-    "@apply bg-white text-gray-900": {},
-    "&:hover": {
-      "@apply bg-gray-200": {},
-    },
+    "@apply bg-white text-gray-900 hover:bg-gray-200": {},
   },
   ".btn-link, .prose a.btn-link": {
-    "@apply bg-transparent text-primary-dark": {},
-    "&:hover": {
-      "@apply bg-gray-300": {},
-    },
+    "@apply bg-transparent text-primary-dark hover:bg-gray-300": {},
   },
   ".btn-light-primary, .prose a.btn-light-primary": {
-    "@apply bg-primary-light text-primary": {},
-    "&:hover": {
-      "@apply bg-primary text-primary-light": {},
-    },
+    "@apply bg-primary-light text-primary hover:bg-primary hover:text-primary-light": {},
   },
   ".btn-light-secondary, .prose a.btn-light-secondary": {
-    "@apply bg-gray-200 text-gray-700": {},
-    "&:hover": {
-      "@apply bg-gray-300 text-gray-900": {},
-    },
+    "@apply bg-gray-200 text-gray-700 hover:bg-gray-300 hover:text-gray-900": {},
   },
   ".btn-light-success, .prose a.btn-light-success": {
-    "@apply bg-green-200 text-green-800": {},
-    "&:hover": {
-      "@apply bg-green-300 text-green-900": {},
-    },
+    "@apply bg-green-200 text-green-800 hover:bg-green-300 hover:text-green-900": {},
   },
   ".btn-light-danger, .prose a.btn-light-danger": {
-    "@apply bg-red-200 text-red-700": {},
-    "&:hover": {
-      "@apply bg-red-300 text-red-900": {},
-    },
+    "@apply bg-red-200 text-red-700 hover:bg-red-300 hover:text-red-900": {},
   },
   ".btn-light-warning, .prose a.btn-light-warning": {
-    "@apply bg-yellow-200 text-yellow-800": {},
-    "&:hover": {
-      "@apply bg-yellow-300 text-yellow-900": {},
-    },
+    "@apply bg-yellow-200 text-yellow-800 hover:bg-yellow-300 hover:text-yellow-900": {},
   },
   ".btn-light-link, .prose a.btn-light-link": {
-    "@apply bg-transparent text-primary-light": {},
-    "&:hover": {
-      "@apply bg-gray-200 text-primary": {},
-    },
+    "@apply bg-transparent text-primary-light hover:bg-gray-200 hover:text-primary": {},
   },
   ".btn-outline-primary, .prose a.btn-outline-primary": {
-    "@apply text-primary border": {},
-    "&:hover": {
-      "@apply bg-primary-dark border-primary-dark text-white": {},
-    },
+    "@apply text-primary border hover:bg-primary-dark hover:border-primary-dark hover:text-white": {},
   },
   ".btn-outline-secondary, .prose a.btn-outline-secondary": {
-    "@apply text-gray-600 border": {},
-    "&:hover": {
-      "@apply bg-gray-800 border-gray-800 text-white": {},
-    },
+    "@apply text-gray-600 border hover:bg-gray-800 hover:border-gray-800 hover:text-white": {},
   },
   ".btn-outline-success, .prose a.btn-outline-success": {
-    "@apply text-green-700 border": {},
-    "&:hover": {
-      "@apply bg-green-900 border-green-900 text-white": {},
-    },
+    "@apply text-green-700 border hover:bg-green-900 hover:border-green-900 hover:text-white": {},
   },
   ".btn-outline-danger, .prose a.btn-outline-danger": {
-    "@apply text-red-700 border": {},
-    "&:hover": {
-      "@apply border-red-900 text-white bg-red-900": {},
-    },
+    "@apply text-red-700 border hover:border-red-900 hover:text-white hover:bg-red-900": {},
   },
   ".btn-outline-warning, .prose a.btn-outline-warning": {
-    "@apply text-yellow-600 border": {},
-    "&:hover": {
-      "@apply border-yellow-800 text-white bg-yellow-800": {},
-    },
+    "@apply text-yellow-600 border hover:border-yellow-800 hover:text-white hover:bg-yellow-800": {},
   },
   ".btn-outline-light, .prose a.btn-outline-light": {
-    "@apply text-gray-200 border": {},
-    "&:hover": {
-      "@apply border-gray-400 text-gray-900 bg-gray-400": {},
-    },
+    "@apply text-gray-200 border hover:border-gray-400 hover:text-gray-900 hover:bg-gray-400": {},
   },
   ".btn-outline-dark, .prose a.btn-outline-dark": {
-    "@apply text-gray-900 border": {},
-    "&:hover": {
-      "@apply border-gray-900 text-white bg-gray-900": {},
-    },
+    "@apply text-gray-900 border hover:border-gray-900 hover:text-white hover:bg-gray-900": {},
   },
   ".btn-outline-link, .prose a.btn-outline-link": {
-    "@apply border-transparent text-primary-dark border": {},
-    "&:hover": {
-      "@apply border-gray-300": {},
-    },
+    "@apply border-transparent text-primary-dark border hover:border-gray-300": {},
   },
   // Disabled, Loading
   ".btn:disabled": {
@@ -230,10 +158,7 @@ module.exports = Button = (styles) => ({
     "@apply inline-flex align-middle": {},
   },
   ".btn-group .btn": {
-    "@apply rounded-none": {},
-    "&:active, &:focus": {
-      "@apply z-10": {},
-    },
+    "@apply rounded-none focus:z-10": {},
   },
   ".btn-group .btn:first-child": {
     "@apply rounded-l": {},

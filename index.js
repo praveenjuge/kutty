@@ -18,41 +18,35 @@ const Tabs = require("./src/tabs.js");
 const Tooltip = require("./src/tooltip.js");
 const Typography = require("@tailwindcss/typography");
 
-module.exports = plugin.withOptions(
-  function () {
-    return function (options) {
-      const { addComponents, addUtilities } = options;
-      const newUtilities = { "[x-cloak]": { display: "none !important" } };
-
-      addUtilities(newUtilities);
-      addComponents(Alert());
-      addComponents(Avatar());
-      addComponents(Badge());
-      addComponents(Breadcrumb());
-      addComponents(Button());
-      addComponents(Card());
-      addComponents(Dialog());
-      addComponents(Dropdown());
-      addComponents(Forms());
-      addComponents(List());
-      addComponents(Pagination());
-      addComponents(Progress());
-      addComponents(Spinner());
-      addComponents(Tabs());
-      addComponents(Tooltip());
-      Typography().handler(options);
-    };
+module.exports = plugin(
+  function (options) {
+    const { addComponents, addUtilities, addVariant, theme, e, prefix, variants } = options;
+    addUtilities({ "[x-cloak]": { display: "none !important" } });
+    addComponents(Alert());
+    addComponents(Avatar());
+    addComponents(Badge());
+    addComponents(Breadcrumb());
+    addComponents(Button());
+    addComponents(Card());
+    addComponents(Dialog());
+    addComponents(Dropdown());
+    addComponents(Forms());
+    addComponents(List());
+    addComponents(Pagination());
+    addComponents(Progress());
+    addComponents(Spinner());
+    addComponents(Tabs());
+    addComponents(Tooltip());
+    Typography().handler(options);
   },
-  function () {
-    return {
-      theme: {
-        extend: {
-          colors,
-          inset: {
-            "1/2": "50%",
-          },
+  {
+    theme: {
+      extend: {
+        colors,
+        inset: {
+          "1/2": "50%",
         },
       },
-    };
+    },
   }
 );

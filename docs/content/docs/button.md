@@ -24,7 +24,7 @@ title: Button
 <button class="btn btn-dark">Dark</button>
 <button class="btn btn-white">White</button>
 <button class="btn btn-link">Link</button>
-<button class="btn bg-teal-700 hover:bg-teal-900 text-white">Tailwind Color</button>
+<button class="text-white bg-pink-700 btn hover:bg-pink-900">Tailwind Color</button>
 {{< /code >}}
 
 ## Light Colors
@@ -64,33 +64,33 @@ title: Button
 ## Block
 
 {{< code html >}}
-<button class="btn btn-primary w-full">Button</button>
+<button class="w-full btn btn-primary">Button</button>
 {{< /code >}}
 
 ## Pill
 
 {{< code html >}}
-<button class="btn btn-primary rounded-full">Button</button>
-<button class="btn btn-secondary rounded-full">Button</button>
-<button class="btn btn-success rounded-full">Button</button>
-<button class="btn btn-danger rounded-full">Button</button>
-<button class="btn btn-warning rounded-full">Button</button>
-<button class="btn btn-light rounded-full">Button</button>
-<button class="btn btn-dark rounded-full">Button</button>
-<button class="btn btn-link rounded-full">Button</button>
+<button class="rounded-full btn btn-primary">Button</button>
+<button class="rounded-full btn btn-secondary">Button</button>
+<button class="rounded-full btn btn-success">Button</button>
+<button class="rounded-full btn btn-danger">Button</button>
+<button class="rounded-full btn btn-warning">Button</button>
+<button class="rounded-full btn btn-light">Button</button>
+<button class="rounded-full btn btn-dark">Button</button>
+<button class="rounded-full btn btn-link">Button</button>
 {{< /code >}}
 
 ## Square
 
 {{< code html >}}
-<button class="btn btn-primary rounded-none">Button</button>
-<button class="btn btn-secondary rounded-none">Button</button>
-<button class="btn btn-success rounded-none">Button</button>
-<button class="btn btn-danger rounded-none">Button</button>
-<button class="btn btn-warning rounded-none">Button</button>
-<button class="btn btn-light rounded-none">Button</button>
-<button class="btn btn-dark rounded-none">Button</button>
-<button class="btn btn-link rounded-none">Button</button>
+<button class="rounded-none btn btn-primary">Button</button>
+<button class="rounded-none btn btn-secondary">Button</button>
+<button class="rounded-none btn btn-success">Button</button>
+<button class="rounded-none btn btn-danger">Button</button>
+<button class="rounded-none btn btn-warning">Button</button>
+<button class="rounded-none btn btn-light">Button</button>
+<button class="rounded-none btn btn-dark">Button</button>
+<button class="rounded-none btn btn-link">Button</button>
 {{< /code >}}
 
 ## Button Group
@@ -128,19 +128,19 @@ title: Button
 
 {{< code html >}}
 <button class="btn btn-primary btn-loading">
-<span class="spinner w-4 h-4" role="status" aria-hidden="true"></span>
+<span class="w-4 h-4 spinner" role="status" aria-hidden="true"></span>
 <span class="sr-only">Loading...</span>
 </button>
 <button class="btn btn-outline-dark btn-loading">
-<span class="spinner w-4 h-4" role="status" aria-hidden="true"></span>
+<span class="w-4 h-4 spinner" role="status" aria-hidden="true"></span>
 <span class="pl-2">Loading...</span>
 </button>
 <button class="btn btn-success btn-sm btn-loading">
-<span class="spinner w-4 h-4" role="status" aria-hidden="true"></span>
+<span class="w-4 h-4 spinner" role="status" aria-hidden="true"></span>
 <span class="sr-only">Loading...</span>
 </button>
 <button class="btn btn-light btn-lg btn-loading">
-<span class="spinner w-4 h-4" role="status" aria-hidden="true"></span>
+<span class="w-4 h-4 spinner" role="status" aria-hidden="true"></span>
 <span class="sr-only">Loading...</span>
 </button>
 {{< /code >}}
@@ -155,8 +155,8 @@ title: Button
 <button class="btn btn-icon btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="sr-only">Button</span></button>
 <button class="btn btn-icon btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span class="sr-only">Button</span></button>
 <button class="btn btn-icon btn-lg btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg><span class="sr-only">Button</span></button>
-<button class="btn btn-icon rounded-full btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span class="sr-only">Button</span></button>
-<button class="btn btn-icon rounded-none btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg><span class="sr-only">Button</span></button>
+<button class="rounded-full btn btn-icon btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg><span class="sr-only">Button</span></button>
+<button class="rounded-none btn btn-icon btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg><span class="sr-only">Button</span></button>
 {{< /code >}}
 
 ## Button with Icon
@@ -166,8 +166,8 @@ title: Button
 <button class="btn btn-icon btn-outline-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>Button</button>
 <button class="btn btn-icon btn-sm btn-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>Button</button>
 <button class="btn btn-icon btn-lg btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path></svg>Button</button>
-<button class="btn btn-icon rounded-full btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>Button</button>
-<button class="btn btn-icon rounded-none btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>Button</button>
+<button class="rounded-full btn btn-icon btn-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>Button</button>
+<button class="rounded-none btn btn-icon btn-outline-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-1"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>Button</button>
 {{< /code >}}
 
 ## List

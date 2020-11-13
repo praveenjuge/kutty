@@ -1,9 +1,9 @@
 module.exports = Dropdown = () => ({
   ".dropdown-list": {
-    "@apply absolute z-10 shadow-md w-48 flex flex-col pl-0 mb-0 border border-solid border-gray-200 bg-white p-2 rounded transition ease-out duration-100 origin-top": {},
+    "@apply absolute z-10 shadow-md w-48 flex flex-col mb-0 border border-solid border-gray-100 bg-white p-2 rounded transition ease-out duration-100 origin-top": {},
   },
   ".dropdown-item": {
-    "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-sm rounded whitespace-no-wrap no-underline w-full": {},
+    "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-sm rounded whitespace-nowrap no-underline w-full": {},
   },
   ".dropdown-item svg": {
     "@apply h-4 w-4 text-gray-600": {},
@@ -12,10 +12,10 @@ module.exports = Dropdown = () => ({
     "@apply no-underline": {},
   },
   ".dropdown-item:hover": {
-    "@apply bg-gray-200": {},
+    "@apply bg-gray-100": {},
   },
   ".dropdown-item:focus": {
-    "@apply shadow-outline outline-none bg-gray-200": {},
+    "@apply ring outline-none bg-gray-100": {},
   },
   ".dropdown-arrow": {
     marginTop: "-3px",
@@ -28,7 +28,7 @@ module.exports = Dropdown = () => ({
     "@apply h-6 w-6 !important": {},
   },
   ".dropdown-divide": {
-    "@apply border-t border-gray-300 border-solid -ml-2 -mr-2 my-2": {},
+    "@apply border-t border-gray-200 border-solid -ml-2 -mr-2 my-2": {},
   },
   ".dropdown-header": {
     "@apply px-2 py-2 text-gray-600 text-xs w-full uppercase tracking-wider font-bold leading-none": {},

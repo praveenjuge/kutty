@@ -1,6 +1,6 @@
 module.exports = Button = () => ({
   ".breadcrumb, .prose ul.breadcrumb": {
-    "@apply flex flex-wrap list-none relative whitespace-no-wrap mt-0 mb-0": {},
+    "@apply flex flex-wrap list-none relative whitespace-nowrap mt-0 mb-0": {},
   },
   ".breadcrumb-item": {
     "@apply text-gray-600": {},

@@ -5,6 +5,6 @@
   </head>
   <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
-    <main class='{{ if eq .Section "components" }}w-full max-w-full bg-gray-300{{ else }}container mx-auto mt-10 mb-20 px-3 md:px-1{{ end }}' id="main">{{ block "main" . }}{{ end }}</main>
+    <main class='{{ if eq .Section "components" }}w-full max-w-full bg-gray-200{{ else }}container mx-auto mt-10 mb-20 px-3 md:px-1{{ end }}' id="main">{{ block "main" . }}{{ end }}</main>
   </body>
 </html>

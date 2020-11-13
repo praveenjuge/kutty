@@ -28,13 +28,7 @@ module.exports = List = () => ({
     "@apply shadow-none": {},
   },
   "a.list-item": {
-    "@apply transition-colors duration-150 ease-in text-gray-900": {},
-    "&:hover": {
-      "@apply bg-gray-200": {},
-    },
-    "&:focus": {
-      "@apply shadow-outline outline-none z-10": {},
-    },
+    "@apply transition-colors duration-150 ease-in text-gray-900 hover:bg-gray-200 focus:ring focus:outline-none focus:z-10": {},
   },
   ".list-item:first-child": {
     "@apply rounded-t": {},

@@ -19,7 +19,7 @@ title: Spinner
   <div class="spinner text-primary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
-  <div class="spinner text-gray-700" role="status">
+  <div class="spinner text-gray-500" role="status">
     <span class="sr-only">Loading...</span>
   </div>
   <div class="spinner text-red-700" role="status">
