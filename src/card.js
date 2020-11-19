@@ -2,8 +2,8 @@ module.exports = Card = () => ({
   ".card, .prose a.card": {
     "@apply relative border border-gray-200 no-underline rounded flex flex-col min-w-0 bg-white transition-shadow duration-150 ease-in": {},
   },
-  "a.card:hover, a.card:focus": {
-    "@apply shadow-sm": {},
+  "a.card": {
+    "@apply hover:shadow-sm focus:shadow-sm": {},
   },
   // Header
   ".card-header": {

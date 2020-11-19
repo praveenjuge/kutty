@@ -1,30 +1,11 @@
 module.exports = Forms = () => ({
   ".form-input": {
-    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900": {},
+    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900 placeholder-gray-400": {},
     minHeight: "39px",
   },
-  // Input Tag Hover and Focus
-  ".form-input:hover, .form-select:hover, .form-checkbox:hover, .form-radio:hover": {
-    "@apply border-gray-600": {},
-  },
-  ".form-input:focus, .form-select:focus, .form-checkbox:focus, .form-radio:focus": {
-    "@apply outline-none border-primary": {},
-  },
-  // Input Tag Placeholder Color
-  ".form-input::-webkit-input-placeholder": {
-    "@apply text-gray-500": {},
-  },
-  ".form-input::-moz-placeholder": {
-    "@apply text-gray-500": {},
-  },
-  ".form-input:-ms-input-placeholder": {
-    "@apply text-gray-500": {},
-  },
-  ".form-input::-ms-input-placeholder": {
-    "@apply text-gray-500": {},
-  },
-  ".form-input::placeholder": {
-    "@apply text-gray-500": {},
+  // Hover and Focus
+  ".form-input, .form-select, .form-checkbox, .form-radio": {
+    "@apply hover:border-gray-600 focus:outline-none focus:border-primary": {},
   },
   // Sizes
   ".form-input-sm": {

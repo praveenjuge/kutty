@@ -15,8 +15,8 @@ module.exports = List = () => ({
   ".prose a.list-item": {
     "@apply no-underline": {},
   },
-  "a.list-item.list-active:hover": {
-    "@apply bg-primary-dark": {},
+  "a.list-item.list-active": {
+    "@apply hover:bg-primary-dark": {},
   },
   "a.list-item": {
     "@apply no-underline font-normal": {},
@@ -24,8 +24,8 @@ module.exports = List = () => ({
   ".list-disabled, a.list-item.list-disabled": {
     "@apply bg-gray-200 text-gray-500 cursor-default": {},
   },
-  ".list-disabled:focus, a.list-item.list-disabled:focus": {
-    "@apply shadow-none": {},
+  ".list-disabled, a.list-item.list-disabled": {
+    "@apply focus:ring-0": {},
   },
   "a.list-item": {
     "@apply transition-colors duration-150 ease-in text-gray-900 hover:bg-gray-200 focus:ring focus:outline-none focus:z-10": {},

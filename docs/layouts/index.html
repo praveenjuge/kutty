@@ -1,11 +1,11 @@
 {{ define "main"}}
 
-<section class="w-full lg:w-8/12 xl:w-5/12 mx-auto py-20 md:py-32">
-  <p class="block md:hidden mb-3 text-gray-500 uppercase tracking-wide font-semibold text-xs">Welcome to Kutty</p>
-  <h1 class="text-3xl md:text-4xl text-gray-900 leading-tight mb-4 font-semibold">Prebuilt Tailwind Components</h1>
-  <p class="text-base md:text-lg text-gray-600 mb-5">{{ .Site.Params.description }}</p>
-  <a href="/docs/" rel="prefetch" class="btn btn-primary btn-lg w-full sm:w-auto mb-2 sm:mb-0">Documentation</a>
-  <a href="/components/" rel="prefetch" class="btn btn-light btn-lg w-full sm:w-auto mb-2 sm:mb-0">Components</a>
+<section class="w-full py-20 mx-auto lg:w-8/12 xl:w-5/12 md:py-32">
+  <p class="block mb-3 text-xs font-semibold tracking-wide text-gray-500 uppercase md:hidden">Welcome to Kutty</p>
+  <h1 class="mb-4 text-3xl font-semibold leading-tight text-gray-900 md:text-4xl">Prebuilt Tailwind Components</h1>
+  <p class="mb-5 text-base text-gray-500 md:text-lg">{{ .Site.Params.description }}</p>
+  <a href="/docs/" rel="prefetch" class="w-full mb-2 btn btn-primary btn-lg sm:w-auto sm:mb-0">Documentation</a>
+  <a href="/components/" rel="prefetch" class="w-full mb-2 btn btn-light btn-lg sm:w-auto sm:mb-0">Components</a>
 </section>
 
 {{ end }}

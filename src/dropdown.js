@@ -3,19 +3,13 @@ module.exports = Dropdown = () => ({
     "@apply absolute z-10 shadow-md w-48 flex flex-col mb-0 border border-solid border-gray-100 bg-white p-2 rounded transition ease-out duration-100 origin-top": {},
   },
   ".dropdown-item": {
-    "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-sm rounded whitespace-nowrap no-underline w-full": {},
+    "@apply relative flex px-2 py-1 items-center text-gray-800 font-medium text-sm rounded whitespace-nowrap no-underline w-full hover:bg-gray-100 focus:ring focus:outline-none focus:bg-gray-100": {},
   },
   ".dropdown-item svg": {
     "@apply h-4 w-4 text-gray-600": {},
   },
   "a.dropdown-item, .prose a.dropdown-item": {
     "@apply no-underline": {},
-  },
-  ".dropdown-item:hover": {
-    "@apply bg-gray-100": {},
-  },
-  ".dropdown-item:focus": {
-    "@apply ring outline-none bg-gray-100": {},
   },
   ".dropdown-arrow": {
     marginTop: "-3px",

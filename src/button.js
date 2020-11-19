@@ -181,13 +181,6 @@ module.exports = Button = (styles) => ({
       backgroundColor: "#1d61d2",
     },
   },
-  ".btn-youtube, .prose a.btn-youtube": {
-    "@apply text-white": {},
-    backgroundColor: "#ff0000",
-    "&:hover": {
-      backgroundColor: "#b10505",
-    },
-  },
   ".btn-instagram, .prose a.btn-instagram": {
     "@apply text-white": {},
     backgroundColor: "#e1306c",
@@ -200,27 +193,6 @@ module.exports = Button = (styles) => ({
     backgroundColor: "#333",
     "&:hover": {
       backgroundColor: "#000",
-    },
-  },
-  ".btn-twitch, .prose a.btn-twitch": {
-    "@apply text-white": {},
-    backgroundColor: "#6441a5",
-    "&:hover": {
-      backgroundColor: "#3c1f71",
-    },
-  },
-  ".btn-slack, .prose a.btn-slack": {
-    "@apply text-white": {},
-    backgroundColor: "#611f69",
-    "&:hover": {
-      backgroundColor: "#3e0d44",
-    },
-  },
-  ".btn-linkedin, .prose a.btn-linkedin": {
-    "@apply text-white": {},
-    backgroundColor: "#0077b5",
-    "&:hover": {
-      backgroundColor: "#044d73",
     },
   },
   ".btn-facebook, .prose a.btn-facebook": {

@@ -24,10 +24,7 @@ module.exports = Tabs = () => ({
     "@apply flex-col items-start border-0": {},
   },
   ".tab-vertical .tab-link": {
-    "@apply border-b-0 border-l border-transparent py-2": {},
-  },
-  ".tab-vertical .tab-link:hover": {
-    "@apply border-gray-400 text-gray-900": {},
+    "@apply border-b-0 border-l border-transparent py-2 hover:border-gray-400 hover:text-gray-900": {},
   },
   // Active
   ".tab-link.active": {

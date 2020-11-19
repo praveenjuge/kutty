@@ -1,8 +1,8 @@
 module.exports = Alert = () => ({
   ".alert": {
     "@apply font-medium relative overflow-hidden text-sm rounded-md align-middle duration-150 ease-in flex items-start pl-4 pr-4 border-current": {},
-    paddingTop: "0.65rem",
-    paddingBottom: "0.65rem",
+    paddingTop: "0.7rem",
+    paddingBottom: "0.7rem",
   },
   // Close
   ".alert-close": {
