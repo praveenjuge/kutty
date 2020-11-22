@@ -22,7 +22,7 @@ module.exports = Alert = () => ({
     "@apply py-5 pl-5 pr-5 text-lg !important": {},
   },
   ".alert svg": {
-    "@apply h-5 w-5 mr-3 mt-px flex-none": {},
+    "@apply h-5 w-5 mr-3 flex-none": {},
   },
   ".alert.alert-sm svg": {
     "@apply h-4 w-4": {},

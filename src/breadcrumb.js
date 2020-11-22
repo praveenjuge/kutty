@@ -3,10 +3,10 @@ module.exports = Button = () => ({
     "@apply flex flex-wrap list-none relative whitespace-nowrap mt-0 mb-0": {},
   },
   ".breadcrumb-item": {
-    "@apply text-gray-600": {},
+    "@apply text-gray-500 font-normal": {},
   },
   ".breadcrumb-item a, .prose .breadcrumb-item a": {
-    "@apply text-gray-900 no-underline": {},
+    "@apply text-gray-900 no-underline font-normal": {},
   },
   ".breadcrumb-item, .breadcrumb-item a, .prose ul > li.breadcrumb-item": {
     "@apply text-base flex items-center mt-0 mb-0": {},
@@ -36,7 +36,7 @@ module.exports = Button = () => ({
     "@apply relative bg-transparent h-full w-full top-0 left-0": {},
   },
   ".breadcrumb-item + .breadcrumb-item::before": {
-    "@apply inline-block pr-3 text-gray-600": {},
+    "@apply inline-block pr-3 text-gray-500": {},
     content: "'/'",
   },
   ".breadcrumb-arrow .breadcrumb-item + .breadcrumb-item::before": {

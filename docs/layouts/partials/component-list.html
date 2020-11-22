@@ -1,6 +1,11 @@
 {{ $current := . }}
 
-<nav role="navigation" class="fixed top-0 left-0 right-0 z-40 w-full h-full p-2 pb-20 overflow-hidden overflow-y-auto transition duration-100 ease-out origin-left transform -translate-x-full bg-white border-transparent outline-none md:border-gray-200 md:w-1/4 lg:w-1/6 md:translate-x-0" style="top: 58px" :class="{ '-translate-x-full' : sideBar }">
+<nav
+  role="navigation"
+  class="fixed top-0 left-0 right-0 z-40 w-full h-full p-2 pb-20 overflow-hidden overflow-y-auto transition origin-left transform -translate-x-full bg-white border-transparent outline-none md:border-gray-200 md:w-1/4 lg:w-1/6 md:translate-x-0"
+  style="top: 58px"
+  :class="{ '-translate-x-full' : sideBar }"
+>
   {{ range where .Site.Pages.ByWeight "Section" "docs" }} {{ if eq .Permalink $current.Permalink }}
   <a class="flex px-3 py-2 text-sm font-medium leading-relaxed text-left rounded md:py-1 text-primary bg-primary-light" href="#main" aria-describedby="current">
     <span class="sr-only">(Current Page)</span>

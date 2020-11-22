@@ -39,7 +39,7 @@
     "rollup": "^2.33.3",
     "rollup-plugin-terser": "^7.0.2",
     "autoprefixer": "^10.0.2",
-    "postcss": "^8.1.8",
+    "postcss": "^8.1.9",
     "tailwindcss": "^2.0.1",
     "@tailwindcss/typography": "^0.3.1"
   },

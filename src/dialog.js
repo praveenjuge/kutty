@@ -1,6 +1,6 @@
 module.exports = Dialog = () => ({
   ".dialog": {
-    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition ease-out duration-100": {},
+    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition": {},
   },
   ".dialog-content": {
     "@apply relative z-50 bg-white mx-auto rounded-none my-0 h-screen cursor-auto flex flex-col": {},
@@ -40,7 +40,7 @@ module.exports = Dialog = () => ({
     "@apply ml-auto origin-right translate-x-full": {},
   },
   ".drawer-content": {
-    "@apply relative z-50 bg-white my-0 h-screen cursor-auto flex flex-col w-5/6 h-full max-h-full max-h-screen min-h-screen min-h-full transition ease-out duration-100 transform": {},
+    "@apply relative z-50 bg-white my-0 h-screen cursor-auto flex flex-col w-5/6 h-full max-h-full max-h-screen min-h-screen min-h-full transition transform": {},
   },
   ".dialog.dialog-full .drawer-content": {
     "@apply w-full my-0 h-screen max-h-screen": {},

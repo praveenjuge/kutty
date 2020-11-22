@@ -175,16 +175,16 @@ title: Card
 
 <div class="grid grid-cols-1 gap-3 md:grid-cols-3">
 
-  <div class="text-green-900 bg-green-100 border-green-200 card">
-    <div class="text-green-900 border-green-200 card-header">Card Title</div>
+  <div class="text-green-900 border-green-100 bg-green-50 card">
+    <div class="text-green-900 border-green-100 card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="bg-green-200 card-footer"><a href="#" class="btn btn-success btn-sm">Success</a></div>
+    <div class="bg-green-100 card-footer"><a href="#" class="btn btn-success btn-sm">Success</a></div>
   </div>
 
-  <div class="text-red-900 bg-red-100 border-red-200 card">
-    <div class="text-red-900 border-red-200 card-header">Card Title</div>
+  <div class="text-red-900 border-red-100 bg-red-50 card">
+    <div class="text-red-900 border-red-100 card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="bg-red-200 card-footer"><a href="#" class="btn btn-danger btn-sm">Danger</a></div>
+    <div class="bg-red-100 card-footer"><a href="#" class="btn btn-danger btn-sm">Danger</a></div>
   </div>
 
   <div class="text-gray-100 bg-gray-900 border-gray-800 card">

@@ -1,6 +1,6 @@
 module.exports = Forms = () => ({
   ".form-input": {
-    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded px-3 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900 placeholder-gray-400": {},
+    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded px-3 py-2 text-sm leading-normal transition shadow-none text-gray-900 placeholder-gray-400": {},
     minHeight: "39px",
   },
   // Hover and Focus
@@ -26,7 +26,7 @@ module.exports = Forms = () => ({
   },
   // Select, Checkbox, Radio
   ".form-select": {
-    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded pl-3 pr-10 py-2 text-sm leading-normal transition-colors duration-150 ease-in shadow-none text-gray-900 bg-no-repeat cursor-pointer": {},
+    "@apply block w-full appearance-none bg-white border border-solid border-gray-200 rounded pl-3 pr-10 py-2 text-sm leading-normal transition shadow-none text-gray-900 bg-no-repeat cursor-pointer": {},
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
     backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23a0aec0'%3e%3cpath d='M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z'/%3e%3c/svg%3e")`,
@@ -34,7 +34,7 @@ module.exports = Forms = () => ({
     backgroundSize: "1.5em 1.5em",
   },
   ".form-checkbox, .form-radio": {
-    "@apply bg-white text-primary border border-solid border-gray-200 appearance-none inline-flex align-middle select-none flex-shrink-0 h-4 w-4 rounded transition-colors duration-150 ease-in cursor-pointer": {},
+    "@apply bg-white text-primary border border-solid border-gray-200 appearance-none inline-flex align-middle select-none flex-shrink-0 h-4 w-4 rounded transition cursor-pointer": {},
     "-webkit-print-color-adjust": "exact",
     "color-adjust": "exact",
     backgroundOrigin: "border-box",

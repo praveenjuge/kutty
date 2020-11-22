@@ -5,7 +5,14 @@
 <div class="relative overflow-y-auto bg-gray-100 rounded-b outline-none code-display" style="max-height: 350px">
   {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
   <div x-data>
-    <button class="absolute btn btn-link btn-xs" style="top: 5px; right: 3px" x-ref="copyCodeButton" @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy'}, 1000);">Copy</button>
+    <button
+      class="absolute btn btn-link btn-xs"
+      style="top: 5px; right: 3px"
+      x-ref="copyCodeButton"
+      @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy'}, 1000);"
+    >
+      Copy
+    </button>
     <textarea class="whitespace-pre-wrap sr-only" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
   </div>
 </div>

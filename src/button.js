@@ -1,6 +1,6 @@
 module.exports = Button = (styles) => ({
   ".btn, .prose a.btn": {
-    "@apply inline-block text-center no-underline align-middle font-medium rounded-md border-current pointer-events-auto cursor-pointer select-none transform scale-100 transition-colors duration-150 ease-in focus:ring focus:outline-none": {},
+    "@apply inline-block text-center no-underline align-middle font-medium rounded-md border-current pointer-events-auto cursor-pointer select-none transform scale-100 transition focus:ring focus:outline-none": {},
     fontSize: "0.95rem",
     paddingTop: "0.45rem",
     paddingBottom: "0.45rem",
@@ -36,10 +36,10 @@ module.exports = Button = (styles) => ({
   },
   ".btn.btn-xl, .prose .btn.btn-xl": {
     "@apply text-xl": {},
-    paddingTop: "0.85rem",
-    paddingBottom: "0.85rem",
-    paddingLeft: "1.6rem",
-    paddingRight: "1.6rem",
+    paddingTop: "0.9rem",
+    paddingBottom: "0.9rem",
+    paddingLeft: "1.65rem",
+    paddingRight: "1.65rem",
   },
   // Colors
   ".btn-primary, .prose a.btn-primary": {

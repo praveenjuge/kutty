@@ -15,7 +15,7 @@ module.exports = Avatar = () => ({
     "@apply absolute bottom-0 right-0 w-3 h-3 rounded-full": {},
   },
   ".avatar-offline::after": {
-    "@apply bg-gray-500": {},
+    "@apply bg-gray-400": {},
   },
   ".avatar-online::after": {
     "@apply bg-green-600": {},

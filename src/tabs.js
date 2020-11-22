@@ -3,7 +3,7 @@ module.exports = Tabs = () => ({
     "@apply flex items-end border-b border-gray-200": {},
   },
   ".tab-link, .prose .tab-link": {
-    "@apply py-2 px-4 text-gray-600 border-gray-200 border-b transition-colors duration-150 ease-in font-medium text-center text-sm no-underline hover:border-gray-400 hover:text-gray-900 focus:ring focus:outline-none focus:z-10": {},
+    "@apply py-2 px-4 text-gray-600 border-gray-200 border-b transition font-medium text-center text-sm no-underline hover:border-gray-400 hover:text-gray-900 focus:ring focus:outline-none focus:z-10": {},
     marginBottom: "-1px",
   },
   ".tab-link.disabled": {

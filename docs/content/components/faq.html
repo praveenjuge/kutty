@@ -6,13 +6,13 @@ categories: marketing
 <!-- FAQ 1 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-20 pb-24 px-4 md:px-2">
-  <h1 class="font-bold mb-6 text-xl md:text-3xl">Frequently Asked Questions</h1>
-  <div class="text-sm divide-y divide-gray-300 border-t border-b border-gray-300">
+<section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+  <h1 class="mb-6 text-xl font-bold md:text-3xl">Frequently Asked Questions</h1>
+  <div class="text-sm border-t border-b border-gray-200 divide-y divide-gray-200">
     <div x-data="collapse()">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq1"
         aria-expanded="false"
@@ -20,10 +20,8 @@ categories: marketing
         Why doesn't my CSS, which is valid, render correctly?
         <svg
           :class="{ 'rotate-45': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
+          class="flex-none w-4 h-4 ml-4 transition transform"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -36,15 +34,15 @@ categories: marketing
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq1">
-        Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a
-        correct and modern DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq1">
+        Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern DOCTYPE
+        declaration at the start of your HTML will improve browser standards compliance.
       </div>
     </div>
     <div x-data="collapse()">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq2"
         aria-expanded="false"
@@ -52,10 +50,8 @@ categories: marketing
         What is the difference between id and class?
         <svg
           :class="{ 'rotate-45': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
+          class="flex-none w-4 h-4 ml-4 transition transform"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -68,16 +64,15 @@ categories: marketing
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq2">
-        HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element
-        with that name. The class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to
-        particular id and/or class names.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq2">
+        HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The
+        class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular id and/or class names.
       </div>
     </div>
     <div x-data="collapse()">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq3"
         aria-expanded="false"
@@ -85,10 +80,8 @@ categories: marketing
         What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?
         <svg
           :class="{ 'rotate-45': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
+          class="flex-none w-4 h-4 ml-4 transition transform"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -101,11 +94,10 @@ categories: marketing
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq3">
-        The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the
-        -webkit- prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in
-        non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility,
-        as specified in the Compatibility Living Standard.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq3">
+        The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the -webkit- prefixed
+        version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely
+        needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility, as specified in the Compatibility Living Standard.
       </div>
     </div>
   </div>
@@ -115,41 +107,41 @@ categories: marketing
 <!-- FAQ 2 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-20 pb-24 px-4 md:px-2">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+  <div class="grid grid-cols-1 gap-24 md:grid-cols-2">
     <div>
-      <h1 class="font-light mb-6 text-2xl md:text-3xl text-gray-900">Basic Questions</h1>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">What is accessibility?</p>
-      <p class="text-gray-700">
-        This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people
-        use to interact with the web, and how we can make accessibility part of our web development workflow.
+      <h1 class="mb-6 text-2xl font-light text-gray-900 md:text-3xl">Basic Questions</h1>
+      <p class="mt-10 mb-3 font-semibold text-gray-900">What is accessibility?</p>
+      <p class="text-gray-600">
+        This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with
+        the web, and how we can make accessibility part of our web development workflow.
       </p>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">HTML: A good basis for accessibility?</p>
-      <p class="text-gray-700">A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose.</p>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">CSS and JavaScript accessibility best practices?</p>
-      <p class="text-gray-700">
-        CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This
-        article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
+      <p class="mt-10 mb-3 font-semibold text-gray-900">HTML: A good basis for accessibility?</p>
+      <p class="text-gray-600">A great deal of web content can be made accessible just by making sure the correct HTML elements are always used for the correct purpose.</p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900">CSS and JavaScript accessibility best practices?</p>
+      <p class="text-gray-600">
+        CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some
+        CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
       </p>
     </div>
     <div>
-      <h1 class="font-light mb-6 text-2xl md:text-3xl">Advanced Questions</h1>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?</p>
-      <p class="text-gray-700">
-        Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA
-        is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is
-        going on. Here we'll show how to use it at a basic level to improve accessibility.
+      <h1 class="mb-6 text-2xl font-light md:text-3xl">Advanced Questions</h1>
+      <p class="mt-10 mb-3 font-semibold text-gray-900">WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?</p>
+      <p class="text-gray-600">
+        Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that
+        can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a
+        basic level to improve accessibility.
       </p>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">Accessible multimedia?</p>
-      <p class="text-gray-700">
-        Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives, so they can
-        be understood by assistive technologies and their users. This article shows how.
+      <p class="mt-10 mb-3 font-semibold text-gray-900">Accessible multimedia?</p>
+      <p class="text-gray-600">
+        Another category of content that can create accessibility problems is multimedia — video, audio, and image content need to be given proper textual alternatives, so they can be understood by
+        assistive technologies and their users. This article shows how.
       </p>
-      <p class="font-semibold mt-10 mb-3 text-gray-900">Mobile accessibility?</p>
-      <p class="text-gray-700">With web access on mobile devices being so popular, and popular platforms such as iOS and Android.</p>
+      <p class="mt-10 mb-3 font-semibold text-gray-900">Mobile accessibility?</p>
+      <p class="text-gray-600">With web access on mobile devices being so popular, and popular platforms such as iOS and Android.</p>
     </div>
   </div>
-  <div class="text-center mt-16">
+  <div class="mt-16 text-center">
     <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Howto/CSS_FAQ" target="_blank" class="btn btn-link btn-lg btn-icon">
       <span>Learn more on the MDN docs</span>
       <svg viewBox="0 0 20 20" fill="currentColor" class="ml-3">
@@ -167,10 +159,10 @@ categories: marketing
 <!-- FAQ 3 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-20 pb-24 px-4 md:px-2">
-  <h1 class="font-bold text-xl md:text-3xl text-left md:text-center mb-12">Frequently Asked Questions</h1>
+<section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+  <h1 class="mb-12 text-xl font-bold text-left md:text-3xl md:text-center">Frequently Asked Questions</h1>
   <div class="flex items-start justify-start mb-12">
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mr-4 text-gray-700 w-6 h-6 flex-none" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 mr-4 text-gray-700" aria-hidden="true">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -179,15 +171,15 @@ categories: marketing
       ></path>
     </svg>
     <div>
-      <p class="font-semibold mt-0 mb-3 text-gray-900">What is accessibility?</p>
-      <p class="text-gray-700">
-        This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people
-        use to interact with the web, and how we can make accessibility part of our web development workflow.
+      <p class="mt-0 mb-3 font-semibold text-gray-900">What is accessibility?</p>
+      <p class="text-gray-600">
+        This article starts off the module with a good look at what accessibility is — this includes what groups of people we need to consider and why, what tools different people use to interact with
+        the web, and how we can make accessibility part of our web development workflow.
       </p>
     </div>
   </div>
   <div class="flex items-start justify-start mb-12">
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mr-4 text-gray-700 w-6 h-6 flex-none" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 mr-4 text-gray-700" aria-hidden="true">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -196,15 +188,15 @@ categories: marketing
       ></path>
     </svg>
     <div>
-      <p class="font-semibold mt-0 mb-3 text-gray-900">CSS and JavaScript accessibility best practices?</p>
-      <p class="text-gray-700">
-        CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This
-        article outlines some CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
+      <p class="mt-0 mb-3 font-semibold text-gray-900">CSS and JavaScript accessibility best practices?</p>
+      <p class="text-gray-600">
+        CSS and JavaScript, when used properly, also have the potential to allow for accessible web experiences, but if misused they can significantly harm accessibility. This article outlines some
+        CSS and JavaScript best practices that should be considered to ensure that even complex content is as accessible as possible.
       </p>
     </div>
   </div>
   <div class="flex items-start justify-start mb-12">
-    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="mr-4 text-gray-700 w-6 h-6 flex-none" aria-hidden="true">
+    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-none w-6 h-6 mr-4 text-gray-700" aria-hidden="true">
       <path
         stroke-linecap="round"
         stroke-linejoin="round"
@@ -213,11 +205,11 @@ categories: marketing
       ></path>
     </svg>
     <div>
-      <p class="font-semibold mt-0 mb-3 text-gray-900">WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?</p>
-      <p class="text-gray-700">
-        Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA
-        is a technology that can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is
-        going on. Here we'll show how to use it at a basic level to improve accessibility.
+      <p class="mt-0 mb-3 font-semibold text-gray-900">WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics, WAI-ARIA basics?</p>
+      <p class="text-gray-600">
+        Following on from the previous article, sometimes making complex UI controls that involve unsemantic HTML and dynamic JavaScript-updated content can be difficult. WAI-ARIA is a technology that
+        can help with such problems by adding in further semantics that browsers and assistive technologies can recognize and use to let users know what is going on. Here we'll show how to use it at a
+        basic level to improve accessibility.
       </p>
     </div>
   </div>
@@ -239,38 +231,31 @@ categories: marketing
 <!-- FAQ 4 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-20 pb-24 px-4 md:px-2">
-  <h1 class="font-bold mb-8 text-xl md:text-3xl">Frequently Asked Questions</h1>
+<section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+  <h1 class="mb-8 text-xl font-bold md:text-3xl">Frequently Asked Questions</h1>
   <div class="text-sm">
-    <div x-data="collapse()" class="bg-gray-200 rounded mb-3 px-4">
+    <div x-data="collapse()" class="px-4 mb-3 bg-gray-100 rounded">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq4"
         aria-expanded="false"
       >
         Why doesn't my CSS, which is valid, render correctly?
-        <svg
-          :class="{ 'rotate-180': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          aria-hidden="true"
-        >
+        <svg :class="{ 'rotate-180': open }" class="flex-none w-4 h-4 ml-4 transition transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq4">
-        Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a
-        correct and modern DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq4">
+        Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern DOCTYPE
+        declaration at the start of your HTML will improve browser standards compliance.
       </div>
     </div>
-    <div x-data="collapse()" class="bg-gray-200 rounded mb-3 px-4">
+    <div x-data="collapse()" class="px-4 mb-3 bg-gray-100 rounded">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq5"
         aria-expanded="false"
@@ -278,10 +263,8 @@ categories: marketing
         What is the difference between id and class?
         <svg
           :class="{ 'rotate-45': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
+          class="flex-none w-4 h-4 ml-4 transition transform"
           xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
@@ -294,37 +277,28 @@ categories: marketing
           <line x1="5" y1="12" x2="19" y2="12"></line>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq5">
-        HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element
-        with that name. The class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to
-        particular id and/or class names.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq5">
+        HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The
+        class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular id and/or class names.
       </div>
     </div>
-    <div x-data="collapse()" class="bg-gray-200 rounded mb-3 px-4">
+    <div x-data="collapse()" class="px-4 mb-3 bg-gray-100 rounded">
       <button
         x-spread="trigger"
-        class="text-left text-gray-800 w-full font-semibold py-4 pr-1 flex justify-between items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+        class="flex items-center justify-between w-full py-4 pr-1 font-semibold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
         role="button"
         aria-controls="faq6"
         aria-expanded="false"
       >
         What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?
-        <svg
-          :class="{ 'rotate-180': open }"
-          class="transition ease-out duration-200 transform h-5 w-5 flex-none ml-4"
-          aria-hidden="true"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-        >
+        <svg :class="{ 'rotate-180': open }" class="flex-none w-4 h-4 ml-4 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 17l-4 4m0 0l-4-4m4 4V3"></path>
         </svg>
       </button>
-      <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 pr-0 md:pr-40" id="faq6">
-        The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the
-        -webkit- prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in
-        non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility,
-        as specified in the Compatibility Living Standard.
+      <div x-spread="collapse" x-cloak class="pb-5 pr-0 text-gray-700 md:pr-40" id="faq6">
+        The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the -webkit- prefixed
+        version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely
+        needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility, as specified in the Compatibility Living Standard.
       </div>
     </div>
   </div>
@@ -334,166 +308,120 @@ categories: marketing
 <!-- FAQ 5 -->
 
 {{< iframe html >}}
-<section class="container mx-auto pt-20 pb-24 px-4 md:px-2">
-  <h1 class="font-bold mb-8 text-xl md:text-3xl">Frequently Asked Questions</h1>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-5 text-sm">
+<section class="container px-4 pt-20 pb-24 mx-auto md:px-2">
+  <h1 class="mb-8 text-xl font-bold md:text-3xl">Frequently Asked Questions</h1>
+  <div class="grid grid-cols-1 gap-0 text-sm md:grid-cols-2 md:gap-5">
     <div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq7"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           Why doesn't my CSS, which is valid, render correctly?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq7">
-          Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a
-          correct and modern DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq7">
+          Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern
+          DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
         </div>
       </div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq8"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           CSS and JavaScript accessibility best practices? CSS and JavaScript accessibility best practices?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq8">
-          HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element
-          with that name. The class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to
-          particular id and/or class names.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq8">
+          HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The
+          class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular id and/or class names.
         </div>
       </div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq9"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq9">
-          The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using
-          the -webkit- prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in
-          non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility,
-          as specified in the Compatibility Living Standard.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq9">
+          The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the -webkit- prefixed
+          version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely
+          needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility, as specified in the Compatibility Living Standard.
         </div>
       </div>
     </div>
     <div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq10"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           Why doesn't my CSS, which is valid, render correctly?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq10">
-          Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a
-          correct and modern DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq10">
+          Browsers use the DOCTYPE declaration to choose whether to show the document using a mode that is more compatible with Web standards or with old browser bugs. Using a correct and modern
+          DOCTYPE declaration at the start of your HTML will improve browser standards compliance.
         </div>
       </div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq11"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           What is the difference between id and class?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq11">
-          HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element
-          with that name. The class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to
-          particular id and/or class names.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq11">
+          HTML elements can have an id and/or class attribute. The id attribute assigns a name to the element it is applied to, and for valid markup, there can be only one element with that name. The
+          class attribute assigns a class name to the element, and that name can be used on many elements within the page. CSS allows you to apply styles to particular id and/or class names.
         </div>
       </div>
-      <div x-data="collapse()" class="bg-gray-200 rounded mb-4 px-4">
+      <div x-data="collapse()" class="px-4 mb-4 bg-gray-100 rounded">
         <button
           x-spread="trigger"
-          class="text-left text-gray-800 w-full font-bold py-4 pr-1 flex justify-start items-center outline-none hover:text-primary focus:text-primary focus:outline-none"
+          class="flex items-center justify-start w-full py-4 pr-1 font-bold text-left text-gray-800 outline-none hover:text-primary focus:text-primary focus:outline-none"
           role="button"
           aria-controls="faq12"
           aria-expanded="false"
         >
-          <svg
-            :class="{ 'rotate-90': open }"
-            class="transition ease-out duration-200 transform h-4 w-4 flex-none mr-2"
-            aria-hidden="true"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
+          <svg :class="{ 'rotate-90': open }" class="flex-none w-4 h-4 mr-2 transition transform" aria-hidden="true" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
           </svg>
           What do the -moz-*, -ms-*, -webkit-*, -o-* and -khtml-* properties do?
         </button>
-        <div x-spread="collapse" x-cloak class="pb-5 text-gray-700 ml-6" id="faq12">
-          The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using
-          the -webkit- prefixed version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in
-          non-webkit-based browsers, completely needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility,
-          as specified in the Compatibility Living Standard.
+        <div x-spread="collapse" x-cloak class="pb-5 ml-6 text-gray-700" id="faq12">
+          The use of such properties on production websites is not recommended — they have already created a huge web compatibility mess. For example, many developers only using the -webkit- prefixed
+          version of a property when the non-prefixed version is supported across all browsers meant that a feature relying on that property would break in non-webkit-based browsers, completely
+          needlessly. This problem got so bad that other browsers started to implement -webkit- prefixed aliases to improve web compatibility, as specified in the Compatibility Living Standard.
         </div>
       </div>
     </div>
@@ -504,43 +432,43 @@ categories: marketing
 <!-- FAQ 6 -->
 
 {{< iframe html >}}
-<section class="container mx-auto py-24 px-4">
-  <h2 class="font-bold mb-4 text-xl md:text-3xl">Frequently Asked Questions</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 text-gray-700">
+<section class="container px-4 py-24 mx-auto">
+  <h2 class="mb-4 text-xl font-bold md:text-3xl">Frequently Asked Questions</h2>
+  <div class="grid grid-cols-1 gap-0 text-gray-600 md:grid-cols-2 md:gap-16">
     <div>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">What is Hellonext?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">What is Hellonext?</h5>
       <p>
-        Hellonext is a powerful tool for product managers and SaaS product owners to gather, organize and respond to feedback and feature requests from their customers with ease.
-        Designed to enable your customers to provide feedback easily, so that you can build products better for them.
+        Hellonext is a powerful tool for product managers and SaaS product owners to gather, organize and respond to feedback and feature requests from their customers with ease. Designed to enable
+        your customers to provide feedback easily, so that you can build products better for them.
       </p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Can I try Hellonext for free?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Can I try Hellonext for free?</h5>
       <p>Yes. You can try Hellonext free for 7 (seven) days. No restrictions on the features or users.</p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Is there a discount for Startups and Colleges?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Is there a discount for Startups and Colleges?</h5>
       <p>
         Yes. We are a startup too, and we would love to be with you on this journey. There is a $10/month plan for startups and educational institutions. Check your eligibility
         <a href="https://help.hellonext.co/faq/startup-eligibility/" target="_blank">here</a>.
       </p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Do the subscriptions renew automatically?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Do the subscriptions renew automatically?</h5>
       <p>
         Yes. The billing happens every month automagically. You will receive a renewal notice three days before the actual renewal happens. We use the amazing tool called
         <a href="https://paddle.com" target="_blank">Paddle</a> for processing payments.
       </p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Is Hellonext free for open-source?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Is Hellonext free for open-source?</h5>
       <p>Yes. No strings attached. Free forever.</p>
     </div>
     <div>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Why Hellonext?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Why Hellonext?</h5>
       <p>
-        Hellonext was created at <a href="https://www.skcript.com/" target="_blank">Skcript</a>, to gather feedback on our products and services from our customers. Our horizon
-        slowly but steadily started expanding, and today, over 800 organizations rely on Hellonext to organize, their feedback. Our promise has always been the same; listen to
-        customers, build what they need, and grow with them.
+        Hellonext was created at <a href="https://www.skcript.com/" target="_blank">Skcript</a>, to gather feedback on our products and services from our customers. Our horizon slowly but steadily
+        started expanding, and today, over 800 organizations rely on Hellonext to organize, their feedback. Our promise has always been the same; listen to customers, build what they need, and grow
+        with them.
       </p>
       <p>With Hellonext, you will be supporting a team of bootstrapped engineers, who are building, improving and designing Hellonext, every single day.</p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Can I self-host Hellonext?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Can I self-host Hellonext?</h5>
       <p>Yes. Only for enterprise customers.</p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">Can I cancel the plan at any time?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">Can I cancel the plan at any time?</h5>
       <p>It will be a sad day for our team, and we would do whatever it takes to make you our happiest customer. But if you still insist, you can.</p>
-      <h5 class="font-semibold mt-10 mb-3 text-gray-900">How do I contact support for more information?</h5>
+      <h5 class="mt-10 mb-3 font-semibold text-gray-900">How do I contact support for more information?</h5>
       <p>
         There are multiple support channels for us. If you prefer email, please write to support@hellonext.co. If you prefer chat support, please
         <a href="#" class="underline">click here</a>.

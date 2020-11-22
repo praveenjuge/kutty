@@ -7,9 +7,9 @@ title: Skeleton
 {{< code html >}}
 
 <div class="space-y-2" aria-live="assertive" aria-atomic="true">
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-9/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-11/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-8/12"></div>
+  <div class="w-9/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-11/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-8/12 h-4 bg-gray-200 rounded animate-pulse"></div>
 </div>
 {{< /code >}}
 
@@ -18,11 +18,11 @@ title: Skeleton
 {{< code html >}}
 
 <div class="flex space-x-3" aria-live="assertive" aria-atomic="true">
-  <div class="bg-gray-300 h-12 w-12 rounded-full animate-pulse flex-none"></div>
-  <div class="space-y-2 w-full">
-    <div class="bg-gray-300 rounded animate-pulse h-4 w-9/12"></div>
-    <div class="bg-gray-300 rounded animate-pulse h-4 w-11/12"></div>
-    <div class="bg-gray-300 rounded animate-pulse h-4 w-8/12"></div>
+  <div class="flex-none w-12 h-12 bg-gray-200 rounded-full animate-pulse"></div>
+  <div class="w-full space-y-2">
+    <div class="w-9/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+    <div class="w-11/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+    <div class="w-8/12 h-4 bg-gray-200 rounded animate-pulse"></div>
   </div>
 </div>
 {{< /code >}}
@@ -32,14 +32,14 @@ title: Skeleton
 {{< code html >}}
 
 <div class="space-y-2" aria-live="assertive" aria-atomic="true">
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-9/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-11/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-8/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-7/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-10/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-9/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-11/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-8/12"></div>
-  <div class="bg-gray-300 rounded animate-pulse h-4 w-7/12"></div>
+  <div class="w-9/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-11/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-8/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-7/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-10/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-9/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-11/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-8/12 h-4 bg-gray-200 rounded animate-pulse"></div>
+  <div class="w-7/12 h-4 bg-gray-200 rounded animate-pulse"></div>
 </div>
 {{< /code >}}

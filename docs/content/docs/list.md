@@ -71,10 +71,10 @@ title: List
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
   <ul class="list">
     <li class="list-item bg-primary-light text-primary">Reddit</li>
-    <li class="list-item bg-green-200 text-green-700">Twitter</li>
-    <li class="list-item bg-red-200 text-red-700">GitHub</li>
-    <li class="list-item bg-yellow-200 text-yellow-700">Dribbble</li>
-    <li class="list-item bg-gray-800 text-white">Todoist</li>
+    <li class="list-item bg-green-100 text-green-700">Twitter</li>
+    <li class="list-item bg-red-100 text-red-700">GitHub</li>
+    <li class="list-item bg-yellow-100 text-yellow-700">Dribbble</li>
+    <li class="list-item bg-gray-900 text-white">Todoist</li>
   </ul>
 </div>
 {{< /code >}}

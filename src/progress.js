@@ -3,7 +3,7 @@ module.exports = Progress = () => ({
     "@apply block w-full appearance-none border-0 rounded-full h-3 overflow-hidden p-0": {},
   },
   ".progress::-webkit-progress-bar": {
-    "@apply bg-gray-200": {},
+    "@apply bg-gray-100": {},
   },
   ".progress::-webkit-progress-value": {
     "@apply bg-current": {},

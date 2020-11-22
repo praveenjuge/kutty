@@ -1,13 +1,16 @@
 module.exports = Card = () => ({
   ".card, .prose a.card": {
-    "@apply relative border border-gray-200 no-underline rounded flex flex-col min-w-0 bg-white transition-shadow duration-150 ease-in": {},
+    "@apply relative border border-gray-100 no-underline rounded flex flex-col min-w-0 bg-white transition": {},
   },
   "a.card": {
     "@apply hover:shadow-sm focus:shadow-sm": {},
   },
+  ".prose a.card": {
+    "@apply font-normal": {},
+  },
   // Header
   ".card-header": {
-    "@apply px-3 py-2 border-b border-gray-200 flex justify-between items-center": {},
+    "@apply px-3 py-2 border-b border-gray-100 flex justify-between items-center": {},
   },
   // Body
   ".card-body": {
@@ -18,7 +21,7 @@ module.exports = Card = () => ({
   },
   // Footer
   ".card-footer": {
-    "@apply px-3 py-2 bg-gray-200 border-gray-200 rounded-b flex items-center": {},
+    "@apply px-3 py-2 bg-gray-100 border-gray-100 rounded-b flex items-center": {},
   },
   ".card-footer .btn + .btn": {
     "@apply ml-1": {},

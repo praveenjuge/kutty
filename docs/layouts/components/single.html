@@ -7,6 +7,12 @@
       <li class="breadcrumb-item" aria-current="page">{{ .Title }}</li>
     </ul>
   </nav>
-  <h1 itemprop="headline" title="{{ .Title }}" class="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">{{ .Title }}</h1>
+  <h1
+    itemprop="headline"
+    title="{{ .Title }}"
+    class="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
+  >
+    {{ .Title }}
+  </h1>
 </div>
 {{ .Content }} {{ end }}
