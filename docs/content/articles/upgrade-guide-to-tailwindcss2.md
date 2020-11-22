@@ -8,7 +8,7 @@ description: "Use this as a guide to update from Kutty version 0.3.5 which suppo
 
 Go to [Tailwind Upgrade Guide](https://tailwindcss.com/docs/upgrading-to-v2) and make sure you upgrade to the latest version.
 
-TailwindCSS has changed the color palette which I used here with one change, I replaced `coolGray` with `blueGray` so that it looks better.
+TailwindCSS has changed the main color palette which is used in kutty with one change, I replaced `coolGray` with `blueGray` because it looks better.
 
 ## Upgrade Kutty Version
 
@@ -22,7 +22,7 @@ npm install kutty@latest
 
 Bundling [typography plugin](https://github.com/tailwindlabs/tailwindcss-typography) seems like a good idea at first, but it's a size increase for all the people who didn't need it. And people can't update it's version to their needs.
 
-Now you have to install it yourself if you are using it. Make sure you install the latest version that supports TailwindCSS 2.
+Now you can install it yourself if you are using it. Make sure you install the latest version that supports TailwindCSS 2.
 
 ```sh
 npm install @tailwindcss/typography
@@ -54,4 +54,4 @@ Removed YouTube, Twitch, LinkedIn, Slack button colors as no one was using it an
 
 ## That's it
 
-Hopefully the upgrade for easy for you :) Please [raise an issue](https://github.com/praveenjuge/kutty/issues) if you have any problems or doubts, I'll help you get through it.
+Hopefully the upgrade was easy for you :) Please [raise an issue](https://github.com/praveenjuge/kutty/issues) if you have any problems or doubts, I'll help you get through it.

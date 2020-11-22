@@ -5,7 +5,10 @@ weight: 1
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
-**Use version 0.4 for Tailwind 2, version 0.3.5 for Tailwind 1**
+<div class="flex flex-col alert bg-primary-light text-primary" role="alert">
+  <span>Version 0.4 works for Tailwind 2, use version 0.3.5 for Tailwind 1 support.</span>
+  <a href="http://kutty.netlify.app/articles/upgrade-guide-to-tailwindcss2/">Click here for an upgrade guide</a>
+</div>
 
 ## Installation
 
