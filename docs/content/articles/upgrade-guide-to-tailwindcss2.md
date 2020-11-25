@@ -44,6 +44,27 @@ This means we can update these components to have any number of colors which are
 <progress class="text-gray-900 progress" value="70" max="100">70%</progress>
 ```
 
+## Update `default` key to `DEFAULT`
+
+While updating the primary colors we used to have default key in lowercase, tailwind changed this to be in uppercase.
+
+```js {hl_lines=[8]}
+// tailwind.config.js
+...
+theme: {
+  extend: {
+    colors: {
+      primary: {
+        light: "#fefcbf", // For lighter primary color
+        DEFAULT: "#b7791f", // Normal primary color
+        dark: "#744210", // Used for hover, active, etc.
+      },
+    },
+  },
+},
+...
+```
+
 ## Removed some unused social buttons
 
 Removed YouTube, Twitch, LinkedIn, Slack button colors as no one was using it and it can be recreated with utility classes.
