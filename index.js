@@ -1,60 +1,23 @@
-const plugin = require("tailwindcss/plugin");
-const colors = require("./src/colors.js");
-
-const Alert = require("./src/alert.js");
-const Avatar = require("./src/avatar.js");
-const Badge = require("./src/badge.js");
-const Breadcrumb = require("./src/breadcrumb.js");
-const Button = require("./src/button.js");
-const Card = require("./src/card.js");
-const Dialog = require("./src/dialog.js");
-const Dropdown = require("./src/dropdown.js");
-const Forms = require("./src/forms.js");
-const List = require("./src/list.js");
-const Pagination = require("./src/pagination.js");
-const Progress = require("./src/progress.js");
-const Skeleton = require("./src/skeleton.js");
-const Spinner = require("./src/spinner.js");
-const Tabs = require("./src/tabs.js");
-const Tooltip = require("./src/tooltip.js");
-const Typography = require("@tailwindcss/typography");
-
-module.exports = plugin.withOptions(
-  function () {
-    return function (options) {
-      const { addComponents, addUtilities } = options;
-      const newUtilities = { "[x-cloak]": { display: "none !important" } };
-
-      addUtilities(newUtilities);
-      addComponents(Alert());
-      addComponents(Avatar());
-      addComponents(Badge());
-      addComponents(Breadcrumb());
-      addComponents(Button());
-      addComponents(Card());
-      addComponents(Dialog());
-      addComponents(Dropdown());
-      addComponents(Forms());
-      addComponents(List());
-      addComponents(Pagination());
-      addComponents(Progress());
-      addComponents(Skeleton());
-      addComponents(Spinner());
-      addComponents(Tabs());
-      addComponents(Tooltip());
-      Typography().handler(options);
-    };
+module.exports = require("tailwindcss/plugin")(
+  function ({ addComponents }) {
+    addComponents([
+      { "[x-cloak]": { display: "none !important" } },
+      require("./src/alert.js")(),
+      require("./src/avatar.js")(),
+      require("./src/badge.js")(),
+      require("./src/breadcrumb.js")(),
+      require("./src/button.js")(),
+      require("./src/card.js")(),
+      require("./src/dialog.js")(),
+      require("./src/dropdown.js")(),
+      require("./src/forms.js")(),
+      require("./src/list.js")(),
+      require("./src/pagination.js")(),
+      require("./src/progress.js")(),
+      require("./src/spinner.js")(),
+      require("./src/tabs.js")(),
+      require("./src/tooltip.js")(),
+    ]);
   },
-  function () {
-    return {
-      theme: {
-        extend: {
-          colors,
-          inset: {
-            "1/2": "50%",
-          },
-        },
-      },
-    };
-  }
+  { theme: { extend: { colors: require("./src/colors.js") } } }
 );

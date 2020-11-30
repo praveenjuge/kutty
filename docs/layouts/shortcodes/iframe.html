@@ -1,11 +1,7 @@
 <div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
-    <div class="container mx-auto flex w-100">
-      <button
-        class="tab-link active"
-        :class="{ 'active': tab === 'design' }"
-        @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);"
-      >
+    <div class="container flex mx-auto w-100">
+      <button class="tab-link active" :class="{ 'active': tab === 'design' }" @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);">
         Design
       </button>
       <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code';">Code</button>
@@ -19,23 +15,23 @@
     </div>
   </nav>
 
-  <label class="bg-gray-200 w-full hidden lg:block" x-show="tab === 'design'">
+  <label class="hidden w-full bg-gray-200 lg:block" x-show="tab === 'design'">
     <span class="sr-only">Update Component Width</span>
-    <input x-model="width" type="range" class="tag-range border-0 rounded-0 p-0 m-0 z-50 cursor-move" value="100" step="0.01" min="23" min="100" />
+    <input x-model="width" type="range" class="z-50 p-0 m-0 border-0 cursor-move form-input thumb rounded-0" value="100" step="0.01" min="23" min="100" style="min-height: 8px" />
     <style>
-      .tag-range::-webkit-slider-thumb {
+      .thumb::-webkit-slider-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;
         width: 50px;
       }
-      .tag-range::-moz-range-thumb {
+      .thumb::-moz-range-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;
         width: 50px;
       }
-      .tag-range::-ms-thumb {
+      .thumb::-ms-thumb {
         margin-top: -2px;
         height: 0.65rem;
         border-radius: 0px;
@@ -51,7 +47,7 @@
         width="100%"
         height="350"
         loading="lazy"
-        class="bg-white border-0 p-0 m-0"
+        class="p-0 m-0 bg-white border-0"
         onload="javascript:(function(o){
           o.height=o.contentWindow.document.body.scrollHeight; 
           o.contentWindow.document.body.querySelectorAll('a').forEach(function(element){
@@ -75,9 +71,9 @@
   </div>
 
   <!-- To display the code -->
-  <div class="code-display bg-gray-200 mb-2 outline-none relative overflow-y-auto prose max-w-full" x-ref="code" x-show="tab === 'code'" style="height: 350px" x-cloak>
+  <div class="relative max-w-full mb-2 overflow-y-auto prose bg-gray-200 outline-none code-display" x-ref="code" x-show="tab === 'code'" style="height: 350px" x-cloak>
     {{ if len .Params | eq 2 }} {{ highlight (trim .Inner "\n\r") (.Get 0) (.Get 1) }} {{ else }} {{ highlight (trim .Inner "\n\r") (.Get 0) "" }} {{ end }}
   </div>
 
-  <textarea class="sr-only whitespace-pre-wrap" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
+  <textarea class="whitespace-pre-wrap sr-only" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Inner | safeHTMLAttr }}</textarea>
 </div>

@@ -6,10 +6,8 @@ const getTooltipPlacement = function (element, tooltip) {
   switch (placement) {
     case "top": {
       transform = {
-        x: tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
-        y: Math.round(triggerElement.y- tooltipElement.height - 10),
+        x: tooltipElement.width > triggerElement.width ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2) : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        y: Math.round(triggerElement.y - tooltipElement.height - 10),
       };
       break;
     }
@@ -22,9 +20,7 @@ const getTooltipPlacement = function (element, tooltip) {
     }
     case "bottom": {
       transform = {
-        x: tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        x: tooltipElement.width > triggerElement.width ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2) : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
         y: Math.round(triggerElement.y + triggerElement.height + 10),
       };
       break;
@@ -38,9 +34,7 @@ const getTooltipPlacement = function (element, tooltip) {
     }
     default: {
       transform = {
-        x: tooltipElement.width > triggerElement.width
-            ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2)
-            : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
+        x: tooltipElement.width > triggerElement.width ? Math.round(triggerElement.x - Math.abs(triggerElement.width - tooltipElement.width) / 2) : Math.round(triggerElement.x + Math.abs(triggerElement.width - tooltipElement.width) / 2),
         y: Math.round(triggerElement.y - tooltipElement.height - 10),
       };
       break;

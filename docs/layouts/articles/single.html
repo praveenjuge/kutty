@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+<article class="container px-4 pt-24 pb-12 mx-auto" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="w-full mx-auto mt-8 mb-16 text-center md:w-4/5">
+    <h1 class="mb-3 text-4xl font-bold leading-tight text-gray-900 md:leading-tight md:text-5xl" itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
+    <p class="text-gray-600">
+      Written by
+      <span class="byline author vcard" itemprop="author" itemscope="itemscope" itemtype="http://schema.org/Person">
+        <a href="https://twitter.com/praveenjuge/" target="_blank" itemprop="url" rel="author noopener noreferrer" class="text-primary hover:text-primary-dark">
+          <span itemprop="name">Praveen Juge</span>
+        </a>
+      </span>
+      on <time itemprop="datePublished dateModified" pubdate>{{ dateFormat "Jan 2 2006" .Date }}</time>
+    </p>
+  </div>
+
+  <div class="mx-auto prose-sm prose lg:prose-lg">
+    <p class="font-medium text-black">{{ .Description }}</p>
+    {{ .Content }}
+  </div>
+
+  <span class="sr-only">
+    <span itemtype="https://schema.org/Organization" itemscope itemprop="publisher">
+      <span itemprop="name">Kutty</span>
+    </span>
+    <span itemprop="mainEntityOfPage">{{ .Permalink }}</span>
+    <span itemprop="image">{{ .Params.image | absURL }}</span>
+  </span>
+</article>
+
+<div class="px-4 pb-24 md:px-0">
+  <a href="/articles/" class="flex items-center p-4 mx-auto prose-sm prose no-underline border border-gray-200 rounded hover:border-gray-300 lg:prose-lg">
+    <svg class="flex-shrink-0 w-5 h-5 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+      <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
+    </svg>
+    See all articles
+  </a>
+</div>
+
+{{end}}

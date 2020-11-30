@@ -6,13 +6,13 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
   <div class="card">
     <div class="card-header">Normal Card</div>
     <div class="card-body">
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
     </div>
-    <div class="card-footer justify-end">
+    <div class="justify-end card-footer">
       <a href="#" class="btn btn-link btn-sm">Cancel</a>
       <a href="#" class="btn btn-light-primary btn-sm">Sure</a>
     </div>
@@ -30,39 +30,39 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
   <div class="card">
     <div class="card-header">
-      <div class="card-title">Card Title</div>
+      <div class="font-semibold text-gray-900">Card Title</div>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
       <div>
-        <div class="card-title">Card Title</div>
-        <div class="card-subtitle">Card Subtitle</div>
+        <div class="font-semibold text-gray-900">Card Title</div>
+        <span class="text-sm text-gray-600">Card Subtitle</span>
       </div>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
-      <div class="card-title">Card Title</div>
+      <div class="font-semibold text-gray-900">Card Title</div>
       <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
-      <div class="card-title">Card Title</div>
+      <div class="font-semibold text-gray-900">Card Title</div>
       <button class="btn btn-icon btn-sm btn-outline-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">
-      <div class="card-title">Card Title</div>
+      <div class="font-semibold text-gray-900">Card Title</div>
       <button class="btn btn-icon btn-sm btn-light"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
     </div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
@@ -75,7 +75,7 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
   <div class="card">
     <div class="card-header">Card header</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
@@ -87,7 +87,7 @@ title: Card
   <div class="card">
     <div class="card-header">Card header</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer justify-end">
+    <div class="justify-end card-footer">
       <a href="#" class="btn btn-link btn-sm">Cancel</a>
       <a href="#" class="btn btn-light-primary btn-sm">Sure</a>
     </div>
@@ -95,7 +95,7 @@ title: Card
   <div class="card">
     <div class="card-header">Card header</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer justify-between">
+    <div class="justify-between card-footer">
       <a href="#" class="btn btn-link btn-sm">Cancel</a>
       <a href="#" class="btn btn-light-primary btn-sm">Sure</a>
     </div>
@@ -103,7 +103,7 @@ title: Card
   <div class="card">
     <div class="card-header">Card header</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer card-footer-border">
+    <div class="bg-transparent border-t card-footer">
       <a href="#" class="btn btn-link btn-sm">Cancel</a>
       <a href="#" class="btn btn-light-primary btn-sm">Sure</a>
     </div>
@@ -120,16 +120,16 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
   <div class="card">
-    <img class="card-image rounded-t" src="/og.png" />
+    <img class="rounded-t card-image" src="/og.png" />
     <div class="card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
   </div>
   <div class="card">
     <div class="card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <img class="card-image rounded-b" src="/og.png" />
+    <img class="rounded-b card-image" src="/og.png" />
   </div>
   <div class="card">
     <div class="card-header">Card Title</div>
@@ -157,10 +157,10 @@ title: Card
     </div>
   </div>
   <div class="card">
-    <img class="card-image rounded" src="/og.png" />
-    <div class="card-image-overlay">
+    <img class="rounded card-image" src="/og.png" />
+    <div class="absolute inset-0 px-3 py-2">
       <div class="card-body">
-        <div class="card-title">Image Overlay</div>
+        <div class="font-semibold text-gray-900">Image Overlay</div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.
       </div>
     </div>
@@ -173,22 +173,26 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-  <div class="card card-success">
-    <div class="card-header">Card Title</div>
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
+
+  <div class="text-green-900 border-green-100 bg-green-50 card">
+    <div class="text-green-900 border-green-100 card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer"><a href="#" class="btn btn-success btn-sm">Success</a></div>
+    <div class="bg-green-100 card-footer"><a href="#" class="btn btn-success btn-sm">Success</a></div>
   </div>
-  <div class="card card-danger">
-    <div class="card-header">Card Title</div>
+
+  <div class="text-red-900 border-red-100 bg-red-50 card">
+    <div class="text-red-900 border-red-100 card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer"><a href="#" class="btn btn-danger btn-sm">Danger</a></div>
+    <div class="bg-red-100 card-footer"><a href="#" class="btn btn-danger btn-sm">Danger</a></div>
   </div>
-  <div class="card card-dark">
-    <div class="card-header">Card Title</div>
+
+  <div class="text-gray-100 bg-gray-900 border-gray-800 card">
+    <div class="text-gray-100 border-gray-800 card-header">Card Title</div>
     <div class="card-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</div>
-    <div class="card-footer"><a href="#" class="btn btn-light btn-sm">Light</a></div>
+    <div class="bg-gray-800 card-footer"><a href="#" class="btn btn-light btn-sm">Light</a></div>
   </div>
+  
 </div>
 
 {{< /code >}}
@@ -197,10 +201,10 @@ title: Card
 
 {{< code html >}}
 
-<div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+<div class="grid grid-cols-1 gap-3 md:grid-cols-3">
   <div class="card">
     <div class="card-header">Card Title</div>
-    <div class="card-body card-loading h-32">
+    <div class="flex items-center justify-center h-32 card-body">
       <div class="spinner" role="status">
         <span class="sr-only">Loading...</span>
       </div>

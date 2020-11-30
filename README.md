@@ -2,13 +2,15 @@
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
+**Version 0.4 works for Tailwind 2, use version 0.3.5 for Tailwind 1 support.** **[Click here for an upgrade guide](http://kutty.netlify.app/articles/upgrade-guide-to-tailwindcss2/)**
+
 ## Installation
 
 ```sh
 npm install kutty --save
 ```
 
-This plugin requires Tailwind CSS 1.7 or later. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
+This plugin requires Tailwind CSS 1.9 or later. Tailwind CSS is not included in this package. Learn how to [install tailwind here](https://tailwindcss.com/docs/installation/).
 
 ## Usage
 

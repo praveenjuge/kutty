@@ -1,223 +1,268 @@
 {{ define "main" }} {{ $current := . }}
 
-<article class="container mx-auto py-10 px-3 md:px-1" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <div class="flex justify-between items-start">
-    <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
+<article class="container px-3 py-10 mx-auto md:px-1" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <div class="flex items-start justify-between mb-10">
+    <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl font-bold leading-tight text-gray-900 md:text-4xl">{{ .Title }}</h1>
     <a class="btn btn-sm btn-dark" href="https://www.figma.com/file/ek9g1AhSLRaNRedKPzLT6s/Kutty" target="_blank" rel="noopener noreferrer">Figma UI Kit</a>
   </div>
-  <nav role="navigation" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-    {{ range where .Site.Pages "Section" "components" }} {{ if ne .Permalink $current.Permalink }}
+  {{ range .Pages.GroupByParam "categories" }}
+  <h3 class="mb-4 text-lg font-semibold leading-tight text-gray-900 md:text-2xl">{{ .Key | humanize }}</h3>
+  <nav role="navigation" class="grid grid-cols-1 gap-2 mb-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    {{ range .Pages }} {{ if ne .Permalink $current.Permalink }}
     <a class="card group" href="{{ .Permalink | absLangURL }}">
-      <div class="card-header pb-0 border-0 -mb-3">{{ .Title }}</div>
-      <div class="card-body py-0 h-40">
+      <div class="pb-0 -mb-3 border-0 card-header">{{ .Title }}</div>
+      <div class="h-40 py-0 card-body">
         {{ if eq .RelPermalink "/components/blog-post/" }}
         <div class="w-3/6 mx-auto mt-8">
-          <div class="h-2 bg-gray-400 w-11/12 mx-auto rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-          <div class="h-2 bg-gray-400 w-4/6 mx-auto mt-1 mb-2 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
+          <div class="w-11/12 h-2 mx-auto transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+          <div class="w-4/6 h-2 mx-auto mt-1 mb-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
           <div class="space-y-1">
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-700 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-1000 ease-in-out"></div>
+            <div class="w-11/12 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-500 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-700 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-1000 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          </div>
+        </div>
+        {{ else if eq .RelPermalink "/components/layouts/" }}
+        <div class="w-full pt-4"></div>
+        {{ else if eq .RelPermalink "/components/statistics/" }}
+        <div class="grid items-center h-full grid-cols-3 gap-6">
+          <div class="flex flex-col items-center space-y-1 text-center">
+            <div class="mb-0 text-xs font-semibold leading-none text-gray-400 transition duration-75 group-hover:text-purple-500">2</div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          </div>
+          <div class="flex flex-col items-center space-y-1 text-center">
+            <div class="mb-0 text-xs font-semibold leading-none text-gray-400 transition duration-75 group-hover:text-purple-500">418</div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          </div>
+          <div class="flex flex-col items-center space-y-1 text-center">
+            <div class="mb-0 text-xs font-semibold leading-none text-gray-400 transition duration-75 group-hover:text-purple-500">67</div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          </div>
+        </div>
+        {{ else if eq .RelPermalink "/components/login/" }}
+        <div class="flex flex-col justify-center w-2/6 h-full mx-auto space-y-1">
+          <div class="w-full h-4 transition duration-100 border-2 border-gray-200 rounded group-hover:border-purple-200"></div>
+          <div class="w-full h-4 transition duration-200 border-2 border-gray-200 rounded group-hover:border-purple-200"></div>
+          <div class="flex items-center justify-center w-full h-5 text-white transition duration-300 bg-gray-400 rounded group-hover:bg-purple-400" style="font-size: 10px">Sign in</div>
+        </div>
+        {{ else if eq .RelPermalink "/components/register/" }}
+        <div class="flex flex-col justify-center w-2/6 h-full mx-auto space-y-1">
+          <div class="w-full h-4 transition duration-100 border-2 border-gray-200 rounded group-hover:border-purple-200"></div>
+          <div class="w-full h-4 transition duration-200 border-2 border-gray-200 rounded group-hover:border-purple-200"></div>
+          <div class="w-full h-4 transition duration-300 border-2 border-gray-200 rounded group-hover:border-purple-200"></div>
+          <div class="flex items-center justify-center w-full h-5 text-white transition duration-500 bg-gray-400 rounded group-hover:bg-purple-400" style="font-size: 10px">Register</div>
+        </div>
+        {{ else if eq .RelPermalink "/components/404-500/" }}
+        <div class="w-2/6 mx-auto mt-10">
+          <div class="text-gray-400 transition duration-75 group-hover:text-purple-500" style="font-size: 10px">404</div>
+          <div class="w-5/6 h-2 mt-1 mb-1 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+          <div class="w-9/12 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          <div class="flex mt-1 space-x-1">
+            <div class="w-5 h-3 transition duration-500 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-5 h-3 transition duration-700 bg-gray-200 rounded group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/call-to-action/" }}
         <div class="flex items-center justify-between h-full">
           <div class="space-y-1">
-            <div class="h-3 w-24 bg-gray-400 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 w-16 bg-gray-200 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
+            <div class="w-24 h-3 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-16 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-x-1 flex">
-            <div class="h-4 w-10 bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-4 w-10 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
+          <div class="flex space-x-1">
+            <div class="w-10 h-4 transition duration-300 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-10 h-4 transition duration-500 bg-gray-200 rounded group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/features/" }}
-        <div class="grid grid-cols-3 items-center h-full gap-6">
+        <div class="grid items-center h-full grid-cols-3 gap-6">
           <div class="space-y-1">
-            <div class="h-3 w-3 bg-gray-400 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-full rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
+            <div class="w-3 h-3 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
           <div class="space-y-1">
-            <div class="h-3 w-3 bg-gray-400 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-full rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
+            <div class="w-3 h-3 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
           <div class="space-y-1">
-            <div class="h-3 w-3 bg-gray-400 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-full rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
+            <div class="w-3 h-3 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/faq/" }}
-        <div class="grid grid-cols-2 items-center h-full gap-6">
+        <div class="grid items-center h-full grid-cols-2 gap-6">
           <div class="space-y-1">
-            <div class="h-2 bg-gray-400 w-full rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-full h-2 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
           <div class="space-y-1">
-            <div class="h-2 bg-gray-400 w-full rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-full h-2 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/footers/" }}
-        <div class="grid grid-cols-5 items-center h-full gap-4 -mt-3">
+        <div class="grid items-center h-full grid-cols-5 gap-4 -mt-3">
           <div class="space-y-1">
-            <div class="h-2 w-5 bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-1 bg-gray-400 w-2/3 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
+            <div class="w-5 h-2 transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-2/3 h-1 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-1 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-y-1 mt-6">
-            <div class="h-1 bg-gray-400 w-1/2 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+          <div class="mt-6 space-y-1">
+            <div class="w-1/2 h-1 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-1 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-y-1 mt-6">
-            <div class="h-1 bg-gray-400 w-1/2 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+          <div class="mt-6 space-y-1">
+            <div class="w-1/2 h-1 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-1 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-y-1 mt-6">
-            <div class="h-1 bg-gray-400 w-1/2 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+          <div class="mt-6 space-y-1">
+            <div class="w-1/2 h-1 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-1 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-y-1 mt-6">
-            <div class="h-1 bg-gray-400 w-1/2 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-1 bg-gray-200 w-3/5 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+          <div class="mt-6 space-y-1">
+            <div class="w-1/2 h-1 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-1 transition duration-100 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-1 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-1 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/headers/" }}
         <div class="flex items-center justify-between h-full">
           <div class="flex">
-            <div class="h-4 w-8 bg-gray-400 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
+            <div class="w-8 h-4 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
           </div>
-          <div class="space-x-1 flex items-center">
-            <div class="h-2 w-6 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 w-6 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 w-6 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 w-6 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-4 w-8 bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-500 ease-in-out"></div>
+          <div class="flex items-center space-x-1">
+            <div class="w-6 h-2 transition duration-100 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-6 h-2 transition duration-150 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-6 h-2 transition duration-200 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-6 h-2 transition duration-300 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-8 h-4 transition duration-500 bg-gray-400 rounded group-hover:bg-purple-400"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/heroes/" }}
-        <div class="w-4/6 mx-auto mt-10 pt-1">
-          <div class="h-2 bg-gray-400 w-11/12 mx-auto rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-          <div class="h-2 bg-gray-400 w-4/6 mx-auto mt-1 mb-2 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
+        <div class="w-4/6 pt-1 mx-auto mt-10">
+          <div class="w-11/12 h-2 mx-auto transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+          <div class="w-4/6 h-2 mx-auto mt-1 mb-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
           <div class="space-y-1">
-            <div class="h-2 bg-gray-200 w-9/12 mx-auto rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-3/5 mx-auto rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-9/12 h-2 mx-auto transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
-          <div class="space-x-1 flex justify-center mt-2">
-            <div class="h-4 w-10 bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-500 ease-in-out"></div>
-            <div class="h-4 w-10 bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-700 ease-in-out"></div>
+          <div class="flex justify-center mt-2 space-x-1">
+            <div class="w-10 h-4 transition duration-500 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-10 h-4 transition duration-700 bg-gray-200 rounded group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/logos/" }}
-        <div class="grid grid-cols-5 items-center h-full gap-5">
-          <div class="h-6 w-full bg-gray-600 rounded group-hover:bg-purple-600 transition-colors duration-75 ease-in-out"></div>
-          <div class="h-6 w-full bg-gray-500 rounded group-hover:bg-purple-500 transition-colors duration-100 ease-in-out"></div>
-          <div class="h-6 w-full bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-150 ease-in-out"></div>
-          <div class="h-6 w-full bg-gray-300 rounded group-hover:bg-purple-300 transition-colors duration-200 ease-in-out"></div>
-          <div class="h-6 w-full bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+        <div class="grid items-center h-full grid-cols-5 gap-5">
+          <div class="w-full h-6 transition duration-75 bg-gray-600 rounded group-hover:bg-purple-600"></div>
+          <div class="w-full h-6 transition duration-100 bg-gray-500 rounded group-hover:bg-purple-500"></div>
+          <div class="w-full h-6 transition duration-150 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+          <div class="w-full h-6 transition duration-200 bg-gray-300 rounded group-hover:bg-purple-300"></div>
+          <div class="w-full h-6 transition duration-300 bg-gray-200 rounded group-hover:bg-purple-200"></div>
         </div>
         {{ else if eq .RelPermalink "/components/pricing/" }}
-        <div class="grid grid-cols-3 items-center h-full gap-1">
+        <div class="grid items-center h-full grid-cols-3 gap-1">
           <div class="space-y-1">
-            <div class="h-4 w-1/3 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-3 w-3/4 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
+            <div class="w-1/3 h-4 mx-auto transition duration-75 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-100 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-150 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-200 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-300 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/4 h-3 mx-auto transition duration-500 bg-gray-200 rounded group-hover:bg-purple-200"></div>
           </div>
           <div class="space-y-1">
-            <div class="h-4 w-1/3 mx-auto bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-3 w-3/4 mx-auto bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-500 ease-in-out"></div>
+            <div class="w-1/3 h-4 mx-auto transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-100 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-150 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-200 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-300 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/4 h-3 mx-auto transition duration-500 bg-gray-400 rounded group-hover:bg-purple-400"></div>
           </div>
           <div class="space-y-1">
-            <div class="h-4 w-1/3 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 w-3/5 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-3 w-3/4 mx-auto bg-gray-200 rounded group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
+            <div class="w-1/3 h-4 mx-auto transition duration-75 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-100 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-150 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-200 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/5 h-2 mx-auto transition duration-300 bg-gray-200 rounded group-hover:bg-purple-200"></div>
+            <div class="w-3/4 h-3 mx-auto transition duration-500 bg-gray-200 rounded group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/privacy-terms/" }}
         <div class="w-2/6 mx-auto mt-10">
-          <div class="h-2 bg-gray-400 w-4/6 mx-auto mt-1 mb-1 rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-          <div class="h-2 bg-gray-400 w-2/6 mx-auto mt-1 mb-2 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
+          <div class="w-4/6 h-2 mx-auto mt-1 mb-1 transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+          <div class="w-2/6 h-2 mx-auto mt-1 mb-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
           <div class="space-y-1">
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-4/5 rounded-full group-hover:bg-purple-200 transition-colors duration-500 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-11/12 rounded-full group-hover:bg-purple-200 transition-colors duration-700 ease-in-out"></div>
+            <div class="w-11/12 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-500 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-700 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/testimonials/" }}
-        <div class="w-4/6 mx-auto items-center justify-center h-full flex flex-col">
-          <div class="h-2 bg-gray-400 w-5/12 mx-auto rounded-full group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-          <div class="h-2 bg-gray-400 w-4/6 mx-auto mt-1 mb-2 rounded-full group-hover:bg-purple-400 transition-colors duration-150 ease-in-out"></div>
+        <div class="flex flex-col items-center justify-center w-4/6 h-full mx-auto">
+          <div class="w-5/12 h-2 mx-auto transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+          <div class="w-4/6 h-2 mx-auto mt-1 mb-2 transition duration-150 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
           <div class="space-y-1">
-            <div class="h-3 w-3 bg-gray-200 mx-auto rounded-full group-hover:bg-purple-200 transition-colors duration-200 ease-in-out"></div>
-            <div class="h-2 w-6 bg-gray-200 mx-auto rounded-full group-hover:bg-purple-200 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-3 h-3 mx-auto transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-6 h-2 mx-auto transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/blog-list/" }}
-        <div class="grid grid-cols-3 items-center h-full gap-6">
+        <div class="grid items-center h-full grid-cols-3 gap-6">
           <div class="space-y-1">
-            <div class="h-10 w-full bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-4/5 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-full rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="space-x-1 flex items-center">
-              <div class="h-3 w-3 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-200 ease-in-out"></div>
-              <div class="h-2 w-6 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-full h-10 transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="flex items-center space-x-1">
+              <div class="w-3 h-3 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
+              <div class="w-6 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
             </div>
           </div>
           <div class="space-y-1">
-            <div class="h-10 w-full bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-4/5 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-full rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="space-x-1 flex items-center">
-              <div class="h-3 w-3 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-200 ease-in-out"></div>
-              <div class="h-2 w-6 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-full h-10 transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="flex items-center space-x-1">
+              <div class="w-3 h-3 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
+              <div class="w-6 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
             </div>
           </div>
           <div class="space-y-1">
-            <div class="h-10 w-full bg-gray-400 rounded group-hover:bg-purple-400 transition-colors duration-75 ease-in-out"></div>
-            <div class="h-2 bg-gray-400 w-4/5 rounded-full group-hover:bg-purple-400 transition-colors duration-100 ease-in-out"></div>
-            <div class="h-2 bg-gray-200 w-full rounded-full group-hover:bg-purple-200 transition-colors duration-150 ease-in-out"></div>
-            <div class="space-x-1 flex items-center">
-              <div class="h-3 w-3 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-200 ease-in-out"></div>
-              <div class="h-2 w-6 bg-gray-200 rounded-full group-hover:bg-purple-400 transition-colors duration-300 ease-in-out"></div>
+            <div class="w-full h-10 transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
+            <div class="w-4/5 h-2 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
+            <div class="w-full h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="flex items-center space-x-1">
+              <div class="w-3 h-3 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
+              <div class="w-6 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-400"></div>
             </div>
           </div>
         </div>
@@ -226,6 +271,7 @@
     </a>
     {{ end }} {{ end }}
   </nav>
+  {{ end }}
 </article>
 
 {{ end }}

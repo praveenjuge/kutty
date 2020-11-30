@@ -17,7 +17,7 @@
 // - Add tabindex="-1" to dropdown menu items
 // - Restore focus to the dropdown button once the dropdown menu is closed
 
-import {focus, refocusTrigger} from '../utils';
+import { focus, refocusTrigger } from "../utils";
 
 var lastOpenedElement = null;
 
@@ -39,18 +39,18 @@ function toggleAriaAtrributes(dropdown, open) {
   if (trigger.length) {
     trigger = trigger[0];
     if (open) {
-      trigger.setAttribute('aria-expanded', true);
+      trigger.setAttribute("aria-expanded", true);
       var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
-        dropdownList.setAttribute('aria-hidden', false);
+        dropdownList.setAttribute("aria-hidden", false);
       }
     } else {
-      trigger.setAttribute('aria-expanded', false);
+      trigger.setAttribute("aria-expanded", false);
       var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
       if (dropdownList.length) {
         dropdownList = dropdownList[0];
-        dropdownList.setAttribute('aria-hidden', true);
+        dropdownList.setAttribute("aria-hidden", true);
       }
     }
   }
@@ -61,20 +61,20 @@ function init(dropdown) {
   var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
   if (trigger.length) {
     trigger = trigger[0];
-    trigger.setAttribute('aria-haspopup', true);
-    trigger.setAttribute('aria-expanded', false);
+    trigger.setAttribute("aria-haspopup", true);
+    trigger.setAttribute("aria-expanded", false);
     var dropdown = dropdown.querySelectorAll('[x-spread="dropdown"]');
     if (dropdown.length) {
       dropdown = dropdown[0];
-      trigger.setAttribute('aria-controls', dropdown.id);
-      dropdown.setAttribute('role', 'menu');
-      dropdown.setAttribute('aria-labelledby', trigger.id);
-      dropdown.setAttribute('aria-hidden', true);
-      var dropdownItems = dropdown.querySelectorAll('.dropdown-item');
+      trigger.setAttribute("aria-controls", dropdown.id);
+      dropdown.setAttribute("role", "menu");
+      dropdown.setAttribute("aria-labelledby", trigger.id);
+      dropdown.setAttribute("aria-hidden", true);
+      var dropdownItems = dropdown.querySelectorAll(".dropdown-item");
       if (dropdownItems.length) {
-        [...dropdownItems].forEach(function(dropdownItem) {
-          dropdownItem.setAttribute('role', 'menuitem');
-          dropdownItem.setAttribute('tabindex', -1);
+        [...dropdownItems].forEach(function (dropdownItem) {
+          dropdownItem.setAttribute("role", "menuitem");
+          dropdownItem.setAttribute("tabindex", -1);
         });
       }
     }
@@ -83,22 +83,22 @@ function init(dropdown) {
 
 // Initialize attribute for all dropdown elements
 var dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
-dropdowns.forEach(function(dropdown) {
+dropdowns.forEach(function (dropdown) {
   init(dropdown);
 });
 
-window.dropdown = function() {
-  const DROPDOWN_ITEM_SELECTOR = '.dropdown-item';
+window.dropdown = function () {
+  const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
   var focussedIndex = -1;
   return {
     open: false,
     trigger: {
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@click']() {
+      ["@click"]() {
         this.open = !this.open;
         focussedIndex = -1;
         if (this.open) {
@@ -108,79 +108,70 @@ window.dropdown = function() {
         }
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.arrow-down'](e) {
+      ["@keydown.arrow-down"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.arrow-up'](e) {
+      ["@keydown.arrow-up"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.home'](e) {
+      ["@keydown.home"](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.end'](e) {
+      ["@keydown.end"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
     },
     dropdown: {
-      ['@keydown.escape']() {
+      ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['x-show.transition.in.origin.top.left.opacity.scale.90.out.origin.top.left.opacity.scale.90']() {
+      ["x-show.transition.in.origin.top.opacity.scale.90.out.origin.top.opacity.scale.90"]() {
         return this.open;
       },
-      ['@click.away']() {
+      ["@click.away"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(lastOpenedElement);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ['@keydown.arrow-down'](e) {
+      ["@keydown.arrow-down"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.arrow-up'](e) {
+      ["@keydown.arrow-up"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
-        focussedIndex =
-            normalizeNegativeCounter(dropdownElements, focussedIndex);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        focussedIndex = normalizeNegativeCounter(dropdownElements, focussedIndex);
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.home'](e) {
+      ["@keydown.home"](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
-      ['@keydown.end'](e) {
+      ["@keydown.end"](e) {
         e.preventDefault();
-        var dropdownElements =
-            this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },

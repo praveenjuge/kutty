@@ -4,7 +4,8 @@ window.collapse = function () {
     trigger: {
       ["@click"]() {
         const triggerElement = this.$el.querySelector("[x-spread]", "trigger");
-        this.open === false ? ((this.open = true), triggerElement.setAttribute("aria-expanded", true)) : ((this.open = false), triggerElement.setAttribute("aria-expanded", false));
+        this.open = !this.open;
+        triggerElement.setAttribute("aria-expanded", this.open);
       },
     },
     collapse: {

@@ -1,12 +1,18 @@
 {{ define "main" }}
 
-<div class="container mx-auto pt-10 pb-4 px-3 md:px-1">
-  <nav aria-label="breadcrumb" class="mb-4 -ml-3">
+<div class="container px-3 pt-10 pb-4 mx-auto md:px-1">
+  <nav aria-label="breadcrumb" class="mb-4">
     <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="/components/">Components</a></li>
       <li class="breadcrumb-item" aria-current="page">{{ .Title }}</li>
     </ul>
   </nav>
-  <h1 itemprop="headline" title="{{ .Title }}" class="text-3xl md:text-4xl text-gray-900 leading-tight mb-6 font-bold">{{ .Title }}</h1>
+  <h1
+    itemprop="headline"
+    title="{{ .Title }}"
+    class="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
+  >
+    {{ .Title }}
+  </h1>
 </div>
 {{ .Content }} {{ end }}

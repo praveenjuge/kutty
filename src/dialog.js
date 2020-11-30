@@ -1,6 +1,6 @@
 module.exports = Dialog = () => ({
   ".dialog": {
-    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition ease-out duration-100": {},
+    "@apply fixed inset-0 z-40 h-full overflow-hidden outline-none w-full bg-black bg-opacity-50 cursor-pointer transition": {},
   },
   ".dialog-content": {
     "@apply relative z-50 bg-white mx-auto rounded-none my-0 h-screen cursor-auto flex flex-col": {},
@@ -9,7 +9,7 @@ module.exports = Dialog = () => ({
     "@apply w-full rounded-none my-0 h-screen max-h-screen": {},
   },
   ".dialog-header": {
-    "@apply px-4 py-3 border-b border-gray-200 flex items-center justify-between": {},
+    "@apply px-4 py-3 border-b border-gray-100 flex items-center justify-between": {},
   },
   ".dialog-body": {
     "@apply p-4 relative flex-auto overflow-y-auto": {},
@@ -18,7 +18,7 @@ module.exports = Dialog = () => ({
     "@apply my-0": {},
   },
   ".dialog-footer": {
-    "@apply p-3 flex justify-end items-center bg-gray-200 rounded-b": {},
+    "@apply p-3 flex justify-end items-center bg-gray-100 rounded-b": {},
   },
   ".dialog-footer .btn + .btn": {
     "@apply ml-1": {},
@@ -40,7 +40,7 @@ module.exports = Dialog = () => ({
     "@apply ml-auto origin-right translate-x-full": {},
   },
   ".drawer-content": {
-    "@apply relative z-50 bg-white my-0 h-screen cursor-auto flex flex-col w-5/6 h-full max-h-full max-h-screen min-h-screen min-h-full transition ease-out duration-100 transform": {},
+    "@apply relative z-50 bg-white my-0 h-screen cursor-auto flex flex-col w-5/6 h-full max-h-full max-h-screen min-h-screen min-h-full transition transform": {},
   },
   ".dialog.dialog-full .drawer-content": {
     "@apply w-full my-0 h-screen max-h-screen": {},

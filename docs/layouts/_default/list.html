@@ -1,9 +1,8 @@
 {{ define "main" }} {{ partial "component-list" . }}
 
-<article class="prose max-w-full pt-12 ml-0 md:ml-56" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
-  <h1 itemprop="headline" title="{{ .Title }}">{{ .Title }}</h1>
-  <p itemprop="description">{{ .Description }}</p>
-  {{ .Content }}
+<article class="pt-12 ml-0 lg:pt-10 md:ml-56" itemid="{{ .Permalink }}" itemscope itemtype="http://schema.org/BlogPosting">
+  <h1 itemprop="headline" title="{{ .Title }}" class="mb-8 text-3xl font-bold lg:text-4xl">{{ .Title }}</h1>
+  <div class="max-w-full prose">{{ .Content }}</div>
 </article>
 
 {{end}}

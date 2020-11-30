@@ -15,11 +15,11 @@ title: Spinner
 
 {{< code html >}}
 
-<div class="space-x-2">
+<div class="space-x-1">
   <div class="spinner text-primary" role="status">
     <span class="sr-only">Loading...</span>
   </div>
-  <div class="spinner text-gray-700" role="status">
+  <div class="spinner text-gray-500" role="status">
     <span class="sr-only">Loading...</span>
   </div>
   <div class="spinner text-red-700" role="status">
@@ -64,6 +64,6 @@ title: Spinner
 </button>
 <button class="btn btn-outline-dark btn-loading">
   <span class="spinner w-4 h-4" role="status" aria-hidden="true"></span>
-  <span class="pl-2">Loading...</span>
+  <span class="pl-1">Loading...</span>
 </button>
 {{< /code >}}
