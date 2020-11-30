@@ -20,7 +20,6 @@ title: Tooltip
 ## On Card
 
 {{< code html >}}
-
 <a href="#" class="card" x-data="tooltip()" x-spread="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.">
   <div class="card-header">Normal Card</div>
   <div class="card-body">
