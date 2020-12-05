@@ -16,6 +16,7 @@ module.exports = require("tailwindcss/plugin")(
       require("./src/progress.js")(),
       require("./src/spinner.js")(),
       require("./src/tabs.js")(),
+      require("./src/toast.js")(),
       require("./src/tooltip.js")(),
     ]);
   },

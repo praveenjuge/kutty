@@ -9,9 +9,9 @@
   <h3 class="mb-4 text-lg font-semibold leading-tight text-gray-900 md:text-2xl">{{ .Key | humanize }}</h3>
   <nav role="navigation" class="grid grid-cols-1 gap-2 mb-12 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
     {{ range .Pages }} {{ if ne .Permalink $current.Permalink }}
-    <a class="card group" href="{{ .Permalink | absLangURL }}">
-      <div class="pb-0 -mb-3 border-0 card-header">{{ .Title }}</div>
-      <div class="h-40 py-0 card-body">
+    <a class="border-0 card group" href="{{ .Permalink | absLangURL }}">
+      <div class="transition card-header group-hover:border-purple-100">{{ .Title }}</div>
+      <div class="h-40 py-0 overflow-hidden card-body">
         {{ if eq .RelPermalink "/components/blog-post/" }}
         <div class="w-3/6 mx-auto mt-8">
           <div class="w-11/12 h-2 mx-auto transition duration-75 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
@@ -25,8 +25,16 @@
             <div class="w-4/5 h-2 transition duration-1000 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
           </div>
         </div>
-        {{ else if eq .RelPermalink "/components/layouts/" }}
-        <div class="w-full pt-4"></div>
+        {{ else if eq .RelPermalink "/components/light-sidebar/" }}
+        <div class="flex w-full h-full">
+          <div class="w-16 h-full -ml-3 transition bg-gray-100 rounded-bl group-hover:bg-purple-100"></div>
+          <div class="w-full h-16 mt-3 ml-3 transition border-2 border-gray-200 border-dashed rounded group-hover:border-purple-200"></div>
+        </div>
+        {{ else if eq .RelPermalink "/components/dark-sidebar/" }}
+        <div class="flex w-full h-full">
+          <div class="w-16 h-full -ml-3 transition bg-gray-400 rounded-bl group-hover:bg-purple-400"></div>
+          <div class="w-full h-16 mt-3 ml-3 transition border-2 border-gray-200 border-dashed rounded group-hover:border-purple-200"></div>
+        </div>
         {{ else if eq .RelPermalink "/components/statistics/" }}
         <div class="grid items-center h-full grid-cols-3 gap-6">
           <div class="flex flex-col items-center space-y-1 text-center">
@@ -118,7 +126,7 @@
           </div>
         </div>
         {{ else if eq .RelPermalink "/components/footers/" }}
-        <div class="grid items-center h-full grid-cols-5 gap-4 -mt-3">
+        <div class="grid items-center h-full grid-cols-5 gap-4">
           <div class="space-y-1">
             <div class="w-5 h-2 transition duration-75 bg-gray-400 rounded group-hover:bg-purple-400"></div>
             <div class="w-2/3 h-1 transition duration-100 bg-gray-400 rounded-full group-hover:bg-purple-400"></div>
