@@ -5,11 +5,6 @@ weight: 1
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
-<div class="flex flex-col alert bg-primary-light text-primary" role="alert">
-  <span>Version 0.4 works for Tailwind 2, use version 0.3.5 for Tailwind 1 support.</span>
-  <a href="http://kutty.netlify.app/articles/upgrade-guide-to-tailwindcss2/">Click here for an upgrade guide</a>
-</div>
-
 ## Installation
 
 ```sh
@@ -31,7 +26,7 @@ plugins: [require("kutty")],
 
 ### For JS
 
-We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine). Place the following script tag before the closing body tag.
+We bundle AlpineJS v2.8.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine). Place the following script tag before the closing body tag.
 
 ```html
 <!-- All components in one -->

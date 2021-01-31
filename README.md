@@ -2,8 +2,6 @@
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
-**Version 0.4 works for Tailwind 2, use version 0.3.5 for Tailwind 1 support.** **[Click here for an upgrade guide](http://kutty.netlify.app/articles/upgrade-guide-to-tailwindcss2/)**
-
 ## Installation
 
 ```sh
@@ -25,7 +23,7 @@ plugins: [require("kutty")],
 
 ### For JS
 
-We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine). Place the following script tag before the closing body tag.
+We bundle AlpineJS v2.8.0 for reactivity in our components. Learn more about [AlpineJS here](https://github.com/alpinejs/alpine). Place the following script tag before the closing body tag.
 
 ```html
 <!-- All components in one -->
@@ -44,13 +42,9 @@ We bundle AlpineJS v2.6.0 for reactivity in our components. Learn more about [Al
 
 View full documentation at [https://kutty.netlify.app](https://kutty.netlify.app).
 
-## Feature/Components Requests
+## Bugs & Suggestions
 
-Need something new? [Suggest on Hellonext](https://kutty.hellonext.co).
-
-## Bugs
-
-Found a bug? [Please open a new issue](https://github.com/praveenjuge/kutty/issues/new).
+Found a bug? [Please open a new issue](https://github.com/praveenjuge/kutty/issues/new). Use [GitHub Discussions](https://github.com/praveenjuge/kutty/discussions) for new feature requests.
 
 ## Development
 
