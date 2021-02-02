@@ -1,6 +1,14 @@
 module.exports = Spinner = () => ({
   ".spinner": {
-    "@apply animate-spin inline-block w-6 h-6 border-current rounded-full align-middle border-2": {},
+    borderColor: "currentColor",
+    borderRadius: "9999px",
+    borderWidth: "2px",
+    display: "inline-block",
+    height: "1.5rem",
+    verticalAlign: "middle",
+    width: "1.5rem",
+    WebkitAnimation: "spin 1s linear infinite",
+    animation: "spin 1s linear infinite",
     borderRightColor: "transparent !important",
   },
 });
