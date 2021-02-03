@@ -41,6 +41,10 @@ We bundle AlpineJS v2.8.0 for reactivity in our components. Learn more about [Al
 <script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
 ```
 
+### For Vue
+
+By default, this project uses AlpineJS' `@click` shorthand for dynamic content such as dialogs or drawers. However, this clashes with Vue's `@click` shorthand, which takes precedence. Therefore, if you want to leverage these features, you'll have to change any `@click` bindings in the documentation/components to `x-on:click`.
+
 ## Development
 
 You need [Hugo](https://gohugo.io/) to run the dev server. If you have [Homebrew](https://brew.sh/) you can do the following:
