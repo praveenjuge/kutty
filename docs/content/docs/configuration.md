@@ -26,18 +26,12 @@ theme: {
 
 {{< code html >}}
 
-<div class="space-y-2">
-  <div class="flex space-x-2">
-    <div class="w-10 h-10 bg-primary-light"></div>
-    <div class="border border-primary-light text-primary-light">Hello</div>
-  </div>
-  <div class="flex space-x-2">
-    <div class="w-10 h-10 bg-primary"></div>
-    <div class="border border-primary text-primary">Hello</div>
-  </div>
-  <div class="flex space-x-2">
-    <div class="w-10 h-10 bg-primary-dark"></div>
-    <div class="border border-primary-dark text-primary-dark">Hello</div>
-  </div>
+<div class="grid max-w-xs grid-cols-2 gap-2">
+  <div class="w-full h-10 bg-primary-light"></div>
+  <div class="border border-primary-light text-primary-light">Hello</div>
+  <div class="w-full h-10 bg-primary"></div>
+  <div class="border border-primary text-primary">Hello</div>
+  <div class="w-full h-10 bg-primary-dark"></div>
+  <div class="border border-primary-dark text-primary-dark">Hello</div>
 </div>
 {{< /code >}}

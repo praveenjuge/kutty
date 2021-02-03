@@ -1,12 +1,16 @@
 <div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
     <div class="container flex mx-auto w-100">
-      <button class="tab-link active" :class="{ 'active': tab === 'design' }" @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);">
+      <button
+        class="rounded-none tab-link active"
+        :class="{ 'active': tab === 'design' }"
+        @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);"
+      >
         Design
       </button>
-      <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code';">Code</button>
+      <button class="rounded-none tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code';">Code</button>
       <button
-        class="tab-link"
+        class="rounded-none tab-link"
         x-ref="copyCodeButton"
         @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);"
       >
