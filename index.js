@@ -20,5 +20,17 @@ module.exports = require("tailwindcss/plugin")(
       require("./src/tooltip.js")(),
     ]);
   },
-  { theme: { extend: { colors: require("./src/colors.js") } } }
+  {
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            light: "#EDE9FE",
+            DEFAULT: "#6D28D9",
+            dark: "#4C1D95",
+          },
+        },
+      },
+    },
+  }
 );

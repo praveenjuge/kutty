@@ -1,42 +1,69 @@
 module.exports = Button = () => ({
   ".breadcrumb, .prose ul.breadcrumb": {
-    "@apply flex flex-wrap list-none relative whitespace-nowrap mt-0 mb-0": {},
+    display: "flex",
+    flexWrap: "wrap",
+    listStyleType: "none",
+    marginTop: "0px",
+    marginBottom: "0px",
+    position: "relative",
+    whiteSpace: "nowrap",
   },
   ".breadcrumb-item": {
-    "@apply text-gray-500 font-normal": {},
+    fontWeight: 400,
+    "--tw-text-opacity": "1",
+    color: "rgba(100, 116, 139, var(--tw-text-opacity))",
   },
   ".breadcrumb-item a, .prose .breadcrumb-item a": {
-    "@apply text-gray-900 no-underline font-normal": {},
+    fontWeight: 400,
+    "--tw-text-opacity": "1",
+    color: "rgba(15, 23, 42, var(--tw-text-opacity))",
+    textDecoration: "none",
   },
   ".breadcrumb-item, .breadcrumb-item a, .prose ul > li.breadcrumb-item": {
-    "@apply text-base flex items-center mt-0 mb-0": {},
+    display: "flex",
+    alignItems: "center",
+    fontSize: "1rem",
+    lineHeight: "1.5rem",
+    marginTop: "0px",
+    marginBottom: "0px",
   },
-  ".prose li.breadcrumb-item:first-child": {
-    "@apply pl-0": {},
-  },
+  ".prose li.breadcrumb-item:first-child": { paddingLeft: "0px" },
   ".breadcrumb-sm .breadcrumb-item, .breadcrumb-sm .breadcrumb-item a": {
-    "@apply text-xs !important": {},
+    fontSize: "0.75rem !important",
+    lineHeight: "1rem !important",
   },
   ".breadcrumb-lg .breadcrumb-item, .breadcrumb-lg .breadcrumb-item a": {
-    "@apply text-xl !important": {},
+    fontSize: "1.25rem !important",
+    lineHeight: "1.75rem !important",
   },
   ".breadcrumb-item svg": {
-    "@apply h-4 w-4 mr-1 flex-none": {},
+    flex: "none",
+    height: "1rem",
+    marginRight: "0.25rem",
+    width: "1rem",
   },
   ".breadcrumb-sm .breadcrumb-item svg": {
-    "@apply h-3 w-3 !important": {},
+    height: "0.75rem !important",
+    width: "0.75rem !important",
   },
   ".breadcrumb-lg .breadcrumb-item svg": {
-    "@apply h-5 w-5 !important": {},
+    height: "1.25rem !important",
+    width: "1.25rem !important",
   },
-  ".breadcrumb-item + .breadcrumb-item": {
-    "@apply pl-3": {},
-  },
+  ".breadcrumb-item + .breadcrumb-item": { paddingLeft: "0.75rem" },
   ".prose ul > li.breadcrumb-item::before": {
-    "@apply relative bg-transparent h-full w-full top-0 left-0": {},
+    backgroundColor: "transparent",
+    height: "100%",
+    position: "relative",
+    top: "0px",
+    left: "0px",
+    width: "100%",
   },
   ".breadcrumb-item + .breadcrumb-item::before": {
-    "@apply inline-block pr-3 text-gray-500": {},
+    display: "inline-block",
+    paddingRight: "0.75rem",
+    "--tw-text-opacity": "1",
+    color: "rgba(100, 116, 139, var(--tw-text-opacity))",
     content: "'/'",
   },
   ".breadcrumb-arrow .breadcrumb-item + .breadcrumb-item::before": {
@@ -49,6 +76,7 @@ module.exports = Button = () => ({
     content: "'·' !important",
   },
   ".breadcrumb.breadcrumb-dark .breadcrumb-item a, .prose ul.breadcrumb.breadcrumb-dark .breadcrumb-item a": {
-    "@apply text-white": {},
+    "--tw-text-opacity": "1",
+    color: "rgba(255, 255, 255, var(--tw-text-opacity))",
   },
 });
