@@ -1,7 +1,5 @@
 module.exports = Forms = () => ({
   ".form-input": {
-    WebkitAppearance: "none",
-    MozAppearance: "none",
     appearance: "none",
     "--tw-bg-opacity": "1",
     backgroundColor: "rgba(255, 255, 255, var(--tw-bg-opacity))",
@@ -39,16 +37,16 @@ module.exports = Forms = () => ({
     "--tw-placeholder-opacity": "1",
     color: "rgba(148, 163, 184, var(--tw-placeholder-opacity))",
   },
-  // Hover and Focus
-  ".form-input:hover, .form-select:hover, .form-checkbox:hover, .form-radio:hover": {
-    "--tw-border-opacity": "1",
-    borderColor: "rgba(71, 85, 105, var(--tw-border-opacity))",
-  },
+  // Focus
   ".form-input:focus, .form-select:focus, .form-checkbox:focus, .form-radio:focus": {
-    "--tw-border-opacity": "1",
-    borderColor: "rgba(109, 40, 217, var(--tw-border-opacity))",
+    "@apply focus:border-primary focus:ring-primary": {},
     outline: "2px solid transparent",
     outlineOffset: "2px",
+    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    boxShadow: "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+    "--tw-ring-offset-width": "0px",
+    "--tw-ring-opacity": ["1", "1"],
   },
   // Sizes
   ".form-input-sm": {
@@ -89,8 +87,6 @@ module.exports = Forms = () => ({
   },
   // Select, Checkbox, Radio
   ".form-select": {
-    WebkitAppearance: "none",
-    MozAppearance: "none",
     appearance: "none",
     "--tw-bg-opacity": "1",
     backgroundColor: "rgba(255, 255, 255, var(--tw-bg-opacity))",
@@ -124,8 +120,7 @@ module.exports = Forms = () => ({
     backgroundSize: "1.5em 1.5em",
   },
   ".form-checkbox, .form-radio": {
-    WebkitAppearance: "none",
-    MozAppearance: "none",
+    "@apply text-primary": {},
     appearance: "none",
     "--tw-bg-opacity": "1",
     backgroundColor: "rgba(255, 255, 255, var(--tw-bg-opacity))",
@@ -138,11 +133,6 @@ module.exports = Forms = () => ({
     display: "inline-flex",
     flexShrink: 0,
     height: "1rem",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
-    WebkitUserSelect: "none",
-    MozUserSelect: "none",
-    msUserSelect: "none",
     userSelect: "none",
     verticalAlign: "middle",
     width: "1rem",
@@ -223,10 +213,8 @@ module.exports = Forms = () => ({
     width: "100%",
   },
   ".form-input::-webkit-slider-thumb": {
-    WebkitAppearance: "none",
+    "@apply bg-primary": {},
     appearance: "none",
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
     borderRadius: "0.25rem",
     borderStyle: "none",
     height: "1.5rem",
@@ -234,10 +222,8 @@ module.exports = Forms = () => ({
     width: "1rem",
   },
   ".form-input::-moz-range-thumb": {
-    MozAppearance: "none",
+    "@apply bg-primary": {},
     appearance: "none",
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
     borderRadius: "0.25rem",
     borderStyle: "none",
     height: "1.5rem",
@@ -245,9 +231,8 @@ module.exports = Forms = () => ({
     width: "1rem",
   },
   ".form-input::-ms-thumb": {
+    "@apply bg-primary": {},
     appearance: "none",
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
     borderRadius: "0.25rem",
     borderStyle: "none",
     height: "1.5rem",

@@ -82,15 +82,6 @@ module.exports = Tabs = () => ({
   },
   // Active
   ".tab-link.active": {
-    "--tw-border-opacity": "1",
-    borderColor: "rgba(109, 40, 217, var(--tw-border-opacity))",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
-  },
-  ".tab-link.active:hover": {
-    "--tw-border-opacity": "1",
-    borderColor: "rgba(76, 29, 149, var(--tw-border-opacity))",
-    "--tw-text-opacity": "1",
-    color: "rgba(76, 29, 149, var(--tw-text-opacity))",
+    "@apply text-primary border-primary hover:text-primary-dark hover:border-primary-dark": {},
   },
 });

@@ -1,7 +1,6 @@
 module.exports = Avatar = () => ({
   ".avatar": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(237, 233, 254, var(--tw-bg-opacity))",
+    "@apply bg-primary-light text-primary": {},
     borderRadius: "9999px",
     display: "flex",
     alignItems: "center",
@@ -13,13 +12,8 @@ module.exports = Avatar = () => ({
     lineHeight: "1.5rem",
     position: "relative",
     textAlign: "center",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
     textTransform: "uppercase",
     textDecoration: ["none", "none"],
-    WebkitUserSelect: "none",
-    MozUserSelect: "none",
-    msUserSelect: "none",
     userSelect: "none",
     width: ["3rem", "100%"],
     maxWidth: "3rem",

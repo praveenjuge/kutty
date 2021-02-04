@@ -53,19 +53,11 @@ module.exports = Pagination = () => ({
     outline: "2px solid transparent !important",
     outlineOffset: "2px !important",
   },
+  // Active
   ".pagination-active, .prose a.pagination-active": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
+    "@apply bg-primary hover:bg-primary-dark focus:bg-primary-dark": {},
     "--tw-text-opacity": "1",
     color: "rgba(255, 255, 255, var(--tw-text-opacity))",
-  },
-  ".pagination-active:hover, .prose a.pagination-active:hover": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(76, 29, 149, var(--tw-bg-opacity))",
-  },
-  ".pagination-active:focus, .prose a.pagination-active:focus": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(76, 29, 149, var(--tw-bg-opacity))",
   },
   // Sizes
   ".pagination-sm .pagination-link, .pagination-sm .pagination-disabled, .prose .pagination-sm a.pagination-link, .prose .pagination-sm .pagination-disabled": {

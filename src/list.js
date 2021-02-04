@@ -56,14 +56,12 @@ module.exports = List = () => ({
   ".prose .list-item::before": { content: "none" },
   // Active
   ".list-item.list-active": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
+    "@apply bg-primary": {},
     "--tw-text-opacity": "1",
     color: "rgba(255, 255, 255, var(--tw-text-opacity))",
   },
-  "a.list-item.list-active:hover": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(76, 29, 149, var(--tw-bg-opacity))",
+  "a.list-item.list-active": {
+    "@apply hover:bg-primary-dark": {},
   },
   // Disabled
   ".list-disabled, a.list-item.list-disabled": {

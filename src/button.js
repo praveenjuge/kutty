@@ -8,9 +8,6 @@ module.exports = Button = (styles) => ({
     pointerEvents: "auto",
     textAlign: "center",
     textDecoration: "none",
-    WebkitUserSelect: "none",
-    MozUserSelect: "none",
-    msUserSelect: "none",
     userSelect: "none",
     verticalAlign: "middle",
     "--tw-translate-x": "0",
@@ -31,7 +28,6 @@ module.exports = Button = (styles) => ({
     paddingLeft: "0.85rem",
     paddingRight: "0.85rem",
     willChange: "transform",
-    WebkitBackfaceVisibility: "hidden",
     backfaceVisibility: "hidden",
   },
   ".btn:focus, .prose a.btn:focus": {
@@ -83,14 +79,9 @@ module.exports = Button = (styles) => ({
   },
   // Colors
   ".btn-primary, .prose a.btn-primary": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
+    "@apply bg-primary hover:bg-primary-dark": {},
     "--tw-text-opacity": "1",
     color: "rgba(255, 255, 255, var(--tw-text-opacity))",
-  },
-  ".btn-primary:hover, .prose a.btn-primary:hover": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(76, 29, 149, var(--tw-bg-opacity))",
   },
   ".btn-secondary, .prose a.btn-secondary": {
     "--tw-bg-opacity": "1",
@@ -163,25 +154,15 @@ module.exports = Button = (styles) => ({
     backgroundColor: "rgba(226, 232, 240, var(--tw-bg-opacity))",
   },
   ".btn-link, .prose a.btn-link": {
+    "@apply text-primary-dark": {},
     backgroundColor: "transparent",
-    "--tw-text-opacity": "1",
-    color: "rgba(76, 29, 149, var(--tw-text-opacity))",
   },
   ".btn-link:hover, .prose a.btn-link:hover": {
     "--tw-bg-opacity": "1",
     backgroundColor: "rgba(203, 213, 225, var(--tw-bg-opacity))",
   },
   ".btn-light-primary, .prose a.btn-light-primary": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(237, 233, 254, var(--tw-bg-opacity))",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
-  },
-  ".btn-light-primary:hover, .prose a.btn-light-primary:hover": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(109, 40, 217, var(--tw-bg-opacity))",
-    "--tw-text-opacity": "1",
-    color: "rgba(237, 233, 254, var(--tw-text-opacity))",
+    "@apply bg-primary-light text-primary hover:bg-primary hover:text-primary-light": {},
   },
   ".btn-light-secondary, .prose a.btn-light-secondary": {
     "--tw-bg-opacity": "1",
@@ -232,28 +213,20 @@ module.exports = Button = (styles) => ({
     color: "rgba(120, 53, 15, var(--tw-text-opacity))",
   },
   ".btn-light-link, .prose a.btn-light-link": {
+    "@apply text-primary-light hover:text-primary": {},
     backgroundColor: "transparent",
-    "--tw-text-opacity": "1",
-    color: "rgba(237, 233, 254, var(--tw-text-opacity))",
   },
   ".btn-light-link:hover, .prose a.btn-light-link:hover": {
     "--tw-bg-opacity": "1",
     backgroundColor: "rgba(226, 232, 240, var(--tw-bg-opacity))",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
   },
   ".btn-outline-primary:hover, .prose a.btn-outline-primary:hover": {
-    "--tw-bg-opacity": "1",
-    backgroundColor: "rgba(76, 29, 149, var(--tw-bg-opacity))",
-    "--tw-border-opacity": "1",
-    borderColor: "rgba(76, 29, 149, var(--tw-border-opacity))",
     "--tw-text-opacity": "1",
     color: "rgba(255, 255, 255, var(--tw-text-opacity))",
   },
   ".btn-outline-primary, .prose a.btn-outline-primary": {
+    "@apply text-primary hover:bg-primary-dark hover:border-primary-dark": {},
     borderWidth: "1px",
-    "--tw-text-opacity": "1",
-    color: "rgba(109, 40, 217, var(--tw-text-opacity))",
   },
   ".btn-outline-secondary:hover, .prose a.btn-outline-secondary:hover": {
     "--tw-bg-opacity": "1",
@@ -334,10 +307,9 @@ module.exports = Button = (styles) => ({
     color: "rgba(15, 23, 42, var(--tw-text-opacity))",
   },
   ".btn-outline-link, .prose a.btn-outline-link": {
+    "@apply text-primary-dark": {},
     borderColor: "transparent",
     borderWidth: "1px",
-    "--tw-text-opacity": "1",
-    color: "rgba(76, 29, 149, var(--tw-text-opacity))",
   },
   ".btn-outline-link:hover, .prose a.btn-outline-link:hover": {
     "--tw-border-opacity": "1",

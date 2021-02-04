@@ -1,7 +1,5 @@
 module.exports = Progress = () => ({
   ".progress": {
-    WebkitAppearance: "none",
-    MozAppearance: "none",
     appearance: "none",
     borderRadius: "9999px",
     borderWidth: "0px",
