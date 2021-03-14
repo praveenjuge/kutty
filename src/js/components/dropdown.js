@@ -35,61 +35,51 @@ function normalizeNegativeCounter(elements, focussedIndex) {
 
 // Toggle aria atrributes based on the dropdown state
 function toggleAriaAtrributes(dropdown, open) {
-  var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
-  if (trigger.length) {
-    trigger = trigger[0];
+  let trigger = dropdown.querySelector('[x-spread="trigger"]');
+  let dropdownList = dropdown.querySelector('[x-spread="dropdown"]');
+  if (trigger && dropdownList) {
     if (open) {
       trigger.setAttribute("aria-expanded", true);
-      var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
-      if (dropdownList.length) {
-        dropdownList = dropdownList[0];
-        dropdownList.setAttribute("aria-hidden", false);
-      }
+      dropdownList.setAttribute("aria-hidden", false);
     } else {
       trigger.setAttribute("aria-expanded", false);
-      var dropdownList = dropdown.querySelectorAll('[x-spread="dropdown"]');
-      if (dropdownList.length) {
-        dropdownList = dropdownList[0];
-        dropdownList.setAttribute("aria-hidden", true);
-      }
+      dropdownList.setAttribute("aria-hidden", true);
     }
   }
 }
 
 // Set attributes when the component is initialized
 function init(dropdown) {
-  var trigger = dropdown.querySelectorAll('[x-spread="trigger"]');
-  if (trigger.length) {
-    trigger = trigger[0];
+  let trigger = dropdown.querySelector('[x-spread="trigger"]');
+  let dropdownList = dropdown.querySelector('[x-spread="dropdown"]');
+  if (trigger && dropdownList) {
     trigger.setAttribute("aria-haspopup", true);
     trigger.setAttribute("aria-expanded", false);
-    var dropdown = dropdown.querySelectorAll('[x-spread="dropdown"]');
-    if (dropdown.length) {
-      dropdown = dropdown[0];
-      trigger.setAttribute("aria-controls", dropdown.id);
-      dropdown.setAttribute("role", "menu");
-      dropdown.setAttribute("aria-labelledby", trigger.id);
-      dropdown.setAttribute("aria-hidden", true);
-      var dropdownItems = dropdown.querySelectorAll(".dropdown-item");
-      if (dropdownItems.length) {
-        [...dropdownItems].forEach(function (dropdownItem) {
-          dropdownItem.setAttribute("role", "menuitem");
-          dropdownItem.setAttribute("tabindex", -1);
-        });
-      }
+    trigger.setAttribute("aria-controls", dropdown.id);
+    dropdownList.setAttribute("role", "menu");
+    dropdownList.setAttribute("aria-labelledby", trigger.id);
+    dropdownList.setAttribute("aria-hidden", true);
+    let dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+    if (dropdownItems.length) {
+      [...dropdownItems].forEach(function (dropdownItem) {
+        dropdownItem.setAttribute("role", "menuitem");
+        dropdownItem.setAttribute("tabindex", -1);
+      });
     }
+    return Popper.createPopper(trigger, dropdownList, {
+      placement: dropdownList.getAttribute('x-position') || 'right',
+    })
   }
 }
 
-// Initialize attribute for all dropdown elements
-var dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
-dropdowns.forEach(function (dropdown) {
-  init(dropdown);
-});
-
 window.dropdown = function () {
-  const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
+  // Initialize attribute for all dropdown elements
+  const dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
+  dropdowns.forEach(function (dropdown) {
+    init(dropdown);
+  });
   var focussedIndex = -1;
+  const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
   return {
     open: false,
     trigger: {
