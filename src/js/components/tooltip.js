@@ -18,6 +18,7 @@ const destroyTooltip = function (element) {
   return tooltipElement.parentNode.removeChild(tooltipElement);
 };
 
+
 window.tooltip = function () {
   return {
     tooltip: {
