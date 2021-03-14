@@ -282,6 +282,23 @@
             <div class="w-10 h-4 mx-auto transition duration-500 bg-gray-200 rounded group-hover:bg-purple-400"></div>
           </div>
         </div>
+        {{ else if eq .RelPermalink "/components/sticky-header/" }}
+        <div class="px-3 -ml-3 -mr-3 text-xs text-center transition duration-200 border-b border-gray-100 group-hover:border-purple-200">
+          <div class="flex items-center justify-between w-3/6 py-2 mx-auto">
+            <p class="w-2/12 h-1.5 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></p>
+          </div>
+        </div>
+        <div class="w-3/6 mx-auto mt-3">
+          <div class="space-y-1">
+            <div class="w-11/12 h-2 transition duration-150 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-200 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-300 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-500 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-11/12 h-2 transition duration-700 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-4/5 h-2 transition duration-1000 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+            <div class="w-10/12 h-2 transition duration-1000 bg-gray-200 rounded-full group-hover:bg-purple-200"></div>
+          </div>
+        </div>
         {{ end }}
       </div>
     </a>
