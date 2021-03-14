@@ -1,12 +1,16 @@
 <div x-data="{ tab: 'design', width: '100', height: '350' }" class="pb-20">
   <nav class="tab">
-    <div class="container flex mx-auto w-100">
-      <button class="tab-link active" :class="{ 'active': tab === 'design' }" @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);">
+    <div class="flex justify-start w-full mx-auto max-w-7xl">
+      <button
+        class="rounded-none tab-link active"
+        :class="{ 'active': tab === 'design' }"
+        @click="tab = 'design'; setTimeout(() => height = $refs.resizableFrame.contentWindow.document.body.scrollHeight, 10);"
+      >
         Design
       </button>
-      <button class="tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code';">Code</button>
+      <button class="rounded-none tab-link" :class="{ 'active': tab === 'code' }" @click="tab = 'code';">Code</button>
       <button
-        class="tab-link"
+        class="rounded-none tab-link"
         x-ref="copyCodeButton"
         @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);"
       >
@@ -17,7 +21,16 @@
 
   <label class="hidden w-full bg-gray-200 lg:block" x-show="tab === 'design'">
     <span class="sr-only">Update Component Width</span>
-    <input x-model="width" type="range" class="z-50 p-0 m-0 border-0 cursor-move form-input thumb rounded-0" value="100" step="0.01" min="23" min="100" style="min-height: 8px" />
+    <input
+      x-model="width"
+      type="range"
+      class="z-50 p-0 m-0 border-0 rounded-none cursor-move form-input thumb focus:border-transparent focus:ring-0"
+      value="100"
+      step="0.01"
+      min="23"
+      min="100"
+      style="min-height: 8px"
+    />
     <style>
       .thumb::-webkit-slider-thumb {
         margin-top: -2px;

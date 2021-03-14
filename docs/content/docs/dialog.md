@@ -28,7 +28,7 @@ title: Dialog
 {{< code html >}}
 
 <div x-data="dialog()">
-  <button class="btn btn-primary mb-1" x-spread="trigger">Small Dialog</button>
+  <button class="mb-1 btn btn-primary" x-spread="trigger">Small Dialog</button>
   <div class="dialog dialog-sm" x-spread="dialog" x-cloak>
     <div class="dialog-content">
       <div class="dialog-header">Small Dialog
@@ -44,7 +44,7 @@ title: Dialog
 </div>
 
 <div x-data="dialog()">
-  <button class="btn btn-primary mb-1" x-spread="trigger">Large Dialog</button>
+  <button class="mb-1 btn btn-primary" x-spread="trigger">Large Dialog</button>
   <div class="dialog dialog-lg" x-spread="dialog" x-cloak>
     <div class="dialog-content">
       <div class="dialog-header">Large Dialog

@@ -1,29 +1,69 @@
 module.exports = Card = () => ({
   ".card, .prose a.card": {
-    "@apply relative border border-gray-100 no-underline rounded flex flex-col min-w-0 bg-white transition": {},
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(255, 255, 255, var(--tw-bg-opacity))",
+    "--tw-border-opacity": "1",
+    borderColor: "rgba(241, 245, 249, var(--tw-border-opacity))",
+    borderRadius: "0.25rem",
+    borderWidth: "1px",
+    display: "flex",
+    flexDirection: "column",
+    minWidth: "0px",
+    position: "relative",
+    textDecoration: "none",
+    transitionProperty: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+    transitionDuration: "150ms",
   },
-  "a.card": {
-    "@apply hover:shadow-sm focus:shadow-sm": {},
+  "a.card:hover": {
+    "--tw-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    boxShadow: "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
   },
-  ".prose a.card": {
-    "@apply font-normal": {},
+  "a.card:focus": {
+    "--tw-shadow": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+    boxShadow: "var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)",
   },
+  ".prose a.card": { fontWeight: 400 },
   // Header
   ".card-header": {
-    "@apply px-3 py-2 border-b border-gray-100 flex justify-between items-center": {},
+    "--tw-border-opacity": "1",
+    borderColor: "rgba(241, 245, 249, var(--tw-border-opacity))",
+    borderBottomWidth: "1px",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    paddingTop: "0.5rem",
+    paddingBottom: "0.5rem",
+    paddingLeft: "0.75rem",
+    paddingRight: "0.75rem",
   },
   // Body
   ".card-body": {
-    "@apply px-3 py-2 flex-auto max-h-full": {},
+    flex: "1 1 auto",
+    maxHeight: "100%",
+    paddingTop: "0.5rem",
+    paddingBottom: "0.5rem",
+    paddingLeft: "0.75rem",
+    paddingRight: "0.75rem",
   },
   ".prose .card-body p, .prose .card-image": {
-    "@apply my-0": {},
+    marginTop: "0px",
+    marginBottom: "0px",
   },
   // Footer
   ".card-footer": {
-    "@apply px-3 py-2 bg-gray-100 border-gray-100 rounded-b flex items-center": {},
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(241, 245, 249, var(--tw-bg-opacity))",
+    "--tw-border-opacity": "1",
+    borderColor: "rgba(241, 245, 249, var(--tw-border-opacity))",
+    borderBottomRightRadius: "0.25rem",
+    borderBottomLeftRadius: "0.25rem",
+    display: "flex",
+    alignItems: "center",
+    paddingTop: "0.5rem",
+    paddingBottom: "0.5rem",
+    paddingLeft: "0.75rem",
+    paddingRight: "0.75rem",
   },
-  ".card-footer .btn + .btn": {
-    "@apply ml-1": {},
-  },
+  ".card-footer .btn + .btn": { marginLeft: "0.25rem" },
 });

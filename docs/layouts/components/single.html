@@ -1,18 +1,27 @@
-{{ define "main" }}
+{{ define "main" }} {{ if eq .Params.categories "layouts" }} {{ .Content }}
 
-<div class="container px-3 pt-10 pb-4 mx-auto md:px-1">
+<div class="fixed space-x-1 bottom-6 right-6" x-data>
+  <a href="/components/" class="rounded-full btn btn-lg btn-light-secondary">Go Back</a>
+  <button
+    class="rounded-full btn btn-lg btn-dark"
+    x-ref="copyCodeButton"
+    @click="$refs.copyCode.select(); document.execCommand('copy'); $refs.copyCodeButton.innerText = 'Copied!'; setTimeout(function() {$refs.copyCodeButton.innerText = 'Copy Code'}, 1000);"
+  >
+    Copy Code
+  </button>
+  <textarea class="sr-only" x-ref="copyCode" aria-hidden="true" readonly="true">{{ .Content | safeHTMLAttr }}</textarea>
+</div>
+
+{{ else }}
+
+<div class="px-3 pt-10 pb-4 mx-auto max-w-7xl md:px-1">
   <nav aria-label="breadcrumb" class="mb-4">
     <ul class="breadcrumb">
       <li class="breadcrumb-item"><a href="/components/">Components</a></li>
       <li class="breadcrumb-item" aria-current="page">{{ .Title }}</li>
     </ul>
   </nav>
-  <h1
-    itemprop="headline"
-    title="{{ .Title }}"
-    class="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl"
-  >
-    {{ .Title }}
-  </h1>
+  <h1 itemprop="headline" title="{{ .Title }}" class="mb-6 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">{{ .Title }}</h1>
 </div>
-{{ .Content }} {{ end }}
+
+{{ .Content }} {{ end }} {{ end }}

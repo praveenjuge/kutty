@@ -1,3 +1,5 @@
+const defaultTheme = require("tailwindcss/defaultTheme");
+
 module.exports = require("tailwindcss/plugin")(
   function ({ addComponents }) {
     addComponents([
@@ -16,8 +18,21 @@ module.exports = require("tailwindcss/plugin")(
       require("./src/progress.js")(),
       require("./src/spinner.js")(),
       require("./src/tabs.js")(),
+      require("./src/toast.js")(),
       require("./src/tooltip.js")(),
     ]);
   },
-  { theme: { extend: { colors: require("./src/colors.js") } } }
+  {
+    theme: {
+      extend: {
+        colors: {
+          primary: {
+            light: defaultTheme.colors.purple[100],
+            DEFAULT: defaultTheme.colors.purple[700],
+            dark: defaultTheme.colors.purple[900],
+          },
+        },
+      },
+    },
+  }
 );

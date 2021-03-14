@@ -5,13 +5,16 @@ const createTooltip = function (element) {
   tooltipElement.setAttribute("id", "tooltip-kutty");
   tooltipElement.innerText = element.getAttribute("title");
   document.body.append(tooltipElement);
+  element.setAttribute("title", "");
   return Popper.createPopper(element, tooltipElement, {
-    placement: element.getAttribute('x-position') || 'top',
+    placement: element.getAttribute("x-position") || "top",
   });
 };
 
 const destroyTooltip = function (element) {
   let tooltipElement = document.getElementById("tooltip-kutty");
+  let titleContent = tooltipElement.innerText;
+  element.setAttribute("title", titleContent);
   return tooltipElement.parentNode.removeChild(tooltipElement);
 };
 

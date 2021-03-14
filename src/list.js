@@ -1,45 +1,83 @@
 module.exports = List = () => ({
   ".list, .prose .list": {
-    "@apply flex flex-col pl-0 mb-0 mt-0": {},
+    display: "flex",
+    flexDirection: "column",
+    marginTop: "0px",
+    marginBottom: "0px",
+    paddingLeft: "0px",
   },
   ".list-item, .prose .list-item": {
-    "@apply relative px-3 py-3 border border-solid border-gray-100 items-start text-sm font-normal mt-0 w-full transition": {},
+    "--tw-border-opacity": "1",
+    borderColor: "rgba(241, 245, 249, var(--tw-border-opacity))",
+    borderStyle: "solid",
+    borderWidth: "1px",
+    alignItems: "flex-start",
+    fontWeight: 400,
+    fontSize: "0.875rem",
+    lineHeight: "1.25rem",
+    marginTop: "0px",
+    paddingTop: "0.75rem",
+    paddingBottom: "0.75rem",
+    paddingLeft: "0.75rem",
+    paddingRight: "0.75rem",
+    position: "relative",
+    width: "100%",
+    transitionProperty: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
+    transitionDuration: "150ms",
     marginBottom: "-1px",
   },
+  "a.list-item:hover": {
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(241, 245, 249, var(--tw-bg-opacity))",
+  },
+  "a.list-item:focus": {
+    outline: "2px solid transparent",
+    outlineOffset: "2px",
+    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    boxShadow: "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+    zIndex: 10,
+  },
   "a.list-item": {
-    "@apply text-gray-900 hover:bg-gray-100 focus:ring focus:outline-none focus:z-10": {},
+    "--tw-text-opacity": "1",
+    color: "rgba(15, 23, 42, var(--tw-text-opacity))",
   },
-  ".prose a.list-item": {
-    "@apply no-underline font-normal": {},
-  },
+  ".prose a.list-item": { fontWeight: 400, textDecoration: "none" },
   ".list-item:first-child": {
-    "@apply rounded-t": {},
+    borderTopLeftRadius: "0.25rem",
+    borderTopRightRadius: "0.25rem",
   },
   ".list-item:last-child": {
-    "@apply rounded-b mb-0": {},
+    borderBottomRightRadius: "0.25rem",
+    borderBottomLeftRadius: "0.25rem",
+    marginBottom: "0px",
   },
-  ".prose .list-item::before": {
-    content: "none",
-  },
+  ".prose .list-item::before": { content: "none" },
   // Active
   ".list-item.list-active": {
-    "@apply bg-primary text-white": {},
+    "@apply bg-primary": {},
+    "--tw-text-opacity": "1",
+    color: "rgba(255, 255, 255, var(--tw-text-opacity))",
   },
   "a.list-item.list-active": {
     "@apply hover:bg-primary-dark": {},
   },
   // Disabled
   ".list-disabled, a.list-item.list-disabled": {
-    "@apply bg-gray-100 text-gray-500 cursor-default focus:ring-0": {},
+    "--tw-bg-opacity": "1",
+    backgroundColor: "rgba(241, 245, 249, var(--tw-bg-opacity))",
+    cursor: "default",
+    "--tw-text-opacity": "1",
+    color: "rgba(100, 116, 139, var(--tw-text-opacity))",
+  },
+  ".list-disabled:focus, a.list-item.list-disabled:focus": {
+    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    boxShadow: "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
   },
   // Flush
-  ".list-flush .list-item": {
-    "@apply border-l-0 border-r-0": {},
-  },
-  ".list-flush .list-item:first-child": {
-    "@apply border-0": {},
-  },
-  ".list-flush .list-item:last-child": {
-    "@apply border-b-0": {},
-  },
+  ".list-flush .list-item": { borderRightWidth: "0px", borderLeftWidth: "0px" },
+  ".list-flush .list-item:first-child": { borderWidth: "0px" },
+  ".list-flush .list-item:last-child": { borderBottomWidth: "0px" },
 });

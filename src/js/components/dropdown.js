@@ -26,11 +26,8 @@ var lastOpenedElement = null;
 // If so, assign it to (elements.length - 1)
 // Else, decrement the counter
 function normalizeNegativeCounter(elements, focussedIndex) {
-  if (focussedIndex <= 0) {
-    return elements.length - 1;
-  } else {
-    return focussedIndex - 1;
-  }
+  if (focussedIndex <= 0) return elements.length - 1;
+  return focussedIndex - 1;
 }
 
 // Toggle aria atrributes based on the dropdown state
@@ -67,17 +64,20 @@ function init(dropdown) {
       });
     }
     return Popper.createPopper(trigger, dropdownList, {
-      placement: dropdownList.getAttribute('x-position') || 'right',
+      placement: dropdownList.getAttribute('x-position') || 'bottom',
     })
   }
 }
 
-window.dropdown = function () {
-  // Initialize attribute for all dropdown elements
+// Initialize attribute for all dropdown elements
+window.addEventListener('DOMContentLoaded', function() {
   const dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
   dropdowns.forEach(function (dropdown) {
     init(dropdown);
   });
+})
+
+window.dropdown = function () {
   var focussedIndex = -1;
   const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
   return {

@@ -17,21 +17,26 @@ const refocusTrigger = (element) => {
 };
 
 const adjustScrollBar = (isOpen) => {
+  const htmlDocument = document.querySelector("html");
+  const body = document.querySelector("body");
   if (isOpen) {
-    var htmlDocument = document.querySelector("html");
+    if (checkScrollBar()) {
+      body.style.paddingRight = getScrollbarWidth() + "px";
+    }
     htmlDocument.style.overflow = "hidden";
-    var body = document.querySelector("body");
-    body.style.paddingRight = getScrollbarWidth() + "px";
   } else {
-    var htmlDocument = document.querySelector("html");
-    htmlDocument.style.overflow = null;
-    var body = document.querySelector("body");
     body.style.paddingRight = null;
+    htmlDocument.style.overflow = null;
   }
 };
 
-// Private
-// From bootstrap
+// From Bootstrap
+const checkScrollBar = () => {
+  const rect = document.body.getBoundingClientRect();
+  const isBodyOverflowing = Math.round(rect.left + rect.right) < window.innerWidth;
+  return isBodyOverflowing;
+};
+
 const getScrollbarWidth = () => {
   const scrollDiv = document.createElement("div");
   scrollDiv.className = "scrollbar-measure";
