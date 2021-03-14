@@ -64,18 +64,18 @@ function init(dropdown) {
       });
     }
     return Popper.createPopper(trigger, dropdownList, {
-      placement: dropdownList.getAttribute('x-position') || 'bottom',
-    })
+      placement: dropdownList.getAttribute("x-position") || "bottom-start",
+    });
   }
 }
 
 // Initialize attribute for all dropdown elements
-window.addEventListener('DOMContentLoaded', function() {
+window.addEventListener("DOMContentLoaded", function () {
   const dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
   dropdowns.forEach(function (dropdown) {
     init(dropdown);
   });
-})
+});
 
 window.dropdown = function () {
   var focussedIndex = -1;
@@ -131,7 +131,7 @@ window.dropdown = function () {
         refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["x-show.transition.in.origin.top.opacity.scale.90.out.origin.top.opacity.scale.90"]() {
+      ["x-show.transition.in.duration.100ms.opacity.out.opacity.duration.100ms"]() {
         return this.open;
       },
       ["@click.away"]() {

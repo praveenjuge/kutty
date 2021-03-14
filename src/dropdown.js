@@ -108,7 +108,7 @@ module.exports = Dropdown = () => ({
     "--tw-text-opacity": "1",
     color: "rgba(148, 163, 184, var(--tw-text-opacity))",
     textTransform: "uppercase",
-    letterSpacing: "0.05em",
+    letterSpacing: "0.04em",
     width: "100%",
   },
   ".prose .dropdown-header": { marginTop: "0px", marginBottom: "0px" },
