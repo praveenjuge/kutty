@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}" prefix="og: http://ogp.me/ns#" class="bg-white">
+<html
+  lang="{{ .Site.LanguageCode }}"
+  prefix="og: http://ogp.me/ns#"
+  class="antialiased bg-white"
+>
   <head itemscope itemtype="{{ .Site.BaseURL }}">
     {{ partial "meta" . }} {{ partial "js" . }}
   </head>
@@ -10,7 +14,12 @@
   {{ else }}
   <body class="bg-white" x-data="{ sideBar: true }">
     {{ partial "header" . }}
-    <main class='{{ if eq .Section "components" }}w-full max-w-full bg-gray-100{{ else }}max-w-7xl mx-auto mt-10 mb-20 px-3 md:px-1{{ end }}' id="main">{{ block "main" . }}{{ end }}</main>
+    <main
+      class='{{ if eq .Section "components" }}w-full max-w-full bg-gray-100{{ else }}max-w-7xl mx-auto mt-10 mb-20 px-3 md:px-1{{ end }}'
+      id="main"
+    >
+      {{ block "main" . }}{{ end }}
+    </main>
   </body>
   {{ end }}
 </html>
