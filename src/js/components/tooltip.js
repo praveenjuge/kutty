@@ -8,6 +8,14 @@ const createTooltip = function (element) {
   element.setAttribute("title", "");
   return Popper.createPopper(element, tooltipElement, {
     placement: element.getAttribute("x-position") || "top",
+    modifiers: [
+      {
+        name: "offset",
+        options: {
+          offset: [0, 5],
+        },
+      },
+    ],
   });
 };
 
@@ -17,7 +25,6 @@ const destroyTooltip = function (element) {
   element.setAttribute("title", titleContent);
   return tooltipElement.parentNode.removeChild(tooltipElement);
 };
-
 
 window.tooltip = function () {
   return {
