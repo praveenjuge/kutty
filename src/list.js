@@ -11,6 +11,7 @@ module.exports = List = () => ({
     borderColor: "rgba(241, 245, 249, var(--tw-border-opacity))",
     borderStyle: "solid",
     borderWidth: "1px",
+    display: "flex",
     alignItems: "flex-start",
     fontWeight: 400,
     fontSize: "0.875rem",
@@ -22,7 +23,8 @@ module.exports = List = () => ({
     paddingRight: "0.75rem",
     position: "relative",
     width: "100%",
-    transitionProperty: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    transitionProperty:
+      "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
     transitionDuration: "150ms",
     marginBottom: "-1px",
@@ -34,9 +36,12 @@ module.exports = List = () => ({
   "a.list-item:focus": {
     outline: "2px solid transparent",
     outlineOffset: "2px",
-    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
-    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
-    boxShadow: "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+    "--tw-ring-offset-shadow":
+      "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow":
+      "var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    boxShadow:
+      "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
     zIndex: 10,
   },
   "a.list-item": {
@@ -72,9 +77,12 @@ module.exports = List = () => ({
     color: "rgba(100, 116, 139, var(--tw-text-opacity))",
   },
   ".list-disabled:focus, a.list-item.list-disabled:focus": {
-    "--tw-ring-offset-shadow": "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
-    "--tw-ring-shadow": "var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
-    boxShadow: "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
+    "--tw-ring-offset-shadow":
+      "var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)",
+    "--tw-ring-shadow":
+      "var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color)",
+    boxShadow:
+      "var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)",
   },
   // Flush
   ".list-flush .list-item": { borderRightWidth: "0px", borderLeftWidth: "0px" },
