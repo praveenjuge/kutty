@@ -1,21 +1,21 @@
-<!-- Thanks https://github.com/SimoTod/alpine-turbolinks-adapter -->
-<script defer>!function (e) { "function" == typeof define && define.amd ? define(e) : e() }(function () { "use strict"; class e { init() { this.setAlpine(window.Alpine), document.body.querySelectorAll("[x-cloak]").forEach(e => { e.setAttribute("data-alpine-was-cloaked", "") }), this.configureEventHandlers() } setAlpine(e) { if (!e.version || !function (e, t) { const n = e.split("."), i = t.split("."); for (let e = 0; e < n.length; e++)if (!i[e] || i[e] < n[e]) return !1; return !0 }("2.4.0", e.version)) throw new Error("Invalid Alpine version. Please use Alpine 2.4.0 or above"); this.alpine = e } configureEventHandlers() { document.addEventListener("turbolinks:load", () => { this.alpine.discoverUninitializedComponents(e => { this.alpine.initializeComponent(e) }), requestAnimationFrame(() => { this.alpine.pauseMutationObserver = !1 }) }), document.addEventListener("turbolinks:before-render", e => { e.data.newBody.querySelectorAll("[data-alpine-generated-me],[x-cloak]").forEach(e => { e.hasAttribute("x-cloak") && e.setAttribute("data-alpine-was-cloaked", ""), e.hasAttribute("data-alpine-generated-me") && (e.removeAttribute("data-alpine-generated-me"), void 0 === e.__x_for_key && void 0 === e.__x_inserted_me && e.remove()) }) }), document.addEventListener("turbolinks:before-cache", () => { this.alpine.pauseMutationObserver = !0, document.body.querySelectorAll("[x-for],[x-if],[data-alpine-was-cloaked]").forEach(e => { if (e.hasAttribute("data-alpine-was-cloaked") && (e.setAttribute("x-cloak", ""), e.removeAttribute("data-alpine-was-cloaked")), e.hasAttribute("x-for")) { let t = e.nextElementSibling; for (; t && void 0 !== t.__x_for_key;) { const e = t; t = t.nextElementSibling, e.setAttribute("data-alpine-generated-me", !0) } } else if (e.hasAttribute("x-if")) { const t = e.nextElementSibling; t && void 0 !== t.__x_inserted_me && t.setAttribute("data-alpine-generated-me", !0) } }) }) } } window.Alpine && console.error("Alpine-turbolinks-adapter must be included before AlpineJs"); const t = window.deferLoadingAlpine || (e => e()); window.deferLoadingAlpine = (n => { document.addEventListener("DOMContentLoaded", () => { (new e).init(), t(n) }) }) });</script>
+<!-- Thanks https://github.com/SimoTod/alpine-turbo-drive-adapter -->
+<script defer>!function(e){"function"==typeof define&&define.amd?define(e):e()}((function(){"use strict";function e(e,t){for(var n=0;n<t.length;n++){var r=t[n];r.enumerable=r.enumerable||!1,r.configurable=!0,"value"in r&&(r.writable=!0),Object.defineProperty(e,r.key,r)}}var t,n=function(){function t(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,t)}var n,r,i;return n=t,(r=[{key:"init",value:function(){document.body.querySelectorAll("[x-cloak]").forEach((function(e){var t;e.setAttribute("data-alpine-was-cloaked",null!==(t=e.getAttribute("x-cloak"))&&void 0!==t?t:"")})),this.configureEventHandlers()}},{key:"setMutationObserverState",value:function(e){if(!window.Alpine.version||!function(e,t){for(var n=e.split("."),r=t.split("."),i=0;i<n.length;i++)if(!r[i]||r[i]<n[i])return!1;return!0}("2.4.0",window.Alpine.version))throw new Error("Invalid Alpine version. Please use Alpine 2.4.0 or above");window.Alpine.pauseMutationObserver=!e}},{key:"configureEventHandlers",value:function(){var e=this,t=function(){document.documentElement.hasAttribute("data-turbo-preview")||(window.Alpine.discoverUninitializedComponents((function(e){window.Alpine.initializeComponent(e)})),requestAnimationFrame((function(){e.setMutationObserverState(!0)})))},n=function(e){(e.data?e.data.newBody:e.detail.newBody).querySelectorAll("[data-alpine-generated-me],[x-cloak]").forEach((function(e){var t;e.hasAttribute("x-cloak")&&e.setAttribute("data-alpine-was-cloaked",null!==(t=e.getAttribute("x-cloak"))&&void 0!==t?t:""),e.hasAttribute("data-alpine-generated-me")&&(e.removeAttribute("data-alpine-generated-me"),void 0===e.__x_for_key&&void 0===e.__x_inserted_me&&e.remove())}))},r=function(){e.setMutationObserverState(!1),document.body.querySelectorAll("[x-for],[x-if],[data-alpine-was-cloaked]").forEach((function(e){var t;if(e.hasAttribute("data-alpine-was-cloaked")&&(e.setAttribute("x-cloak",null!==(t=e.getAttribute("data-alpine-was-cloaked"))&&void 0!==t?t:""),e.removeAttribute("data-alpine-was-cloaked")),e.hasAttribute("x-for"))for(var n=e.nextElementSibling;n&&void 0!==n.__x_for_key;){var r=n;n=n.nextElementSibling,r.setAttribute("data-alpine-generated-me",!0)}else if(e.hasAttribute("x-if")){var i=e.nextElementSibling;i&&void 0!==i.__x_inserted_me&&i.setAttribute("data-alpine-generated-me",!0)}}))};document.addEventListener("turbo:render",t),document.addEventListener("turbolinks:load",t),document.addEventListener("turbo:before-render",n),document.addEventListener("turbolinks:before-render",n),document.addEventListener("turbo:before-cache",r),document.addEventListener("turbolinks:before-cache",r),document.addEventListener("turbo:before-stream-render",(function(){requestAnimationFrame((function(){requestAnimationFrame((function(){t()}))}))}))}}])&&e(n.prototype,r),i&&e(n,i),t}();window.Alpine&&console.error("Alpine-turbo-drive-adapter must be included before AlpineJs"),Object.getOwnPropertyDescriptor(NodeList.prototype,"forEach")||Object.defineProperty(NodeList.prototype,"forEach",Object.getOwnPropertyDescriptor(Array.prototype,"forEach")),t=function(){(new n).init()},"loading"===document.readyState?document.addEventListener("readystatechange",(function(){"interactive"===document.readyState&&t()})):t()}));</script>
 
 <script src="/kutty.js"></script>
 <script src="/turbolinks.js" defer></script>
 
 <style>
-.turbolinks-progress-bar {
-  background-color: #7e22ce !important;
-}
-.prose {
-  line-height: inherit !important;
-}
-.prose pre {
-  color: #1a202c !important;
-  background-color: #F1F5F9 !important;
-}
-.code-display pre {
-  margin: 0px !important;
-}
+  .turbolinks-progress-bar {
+    background-color: #7e22ce !important;
+  }
+  .prose {
+    line-height: inherit !important;
+  }
+  .prose pre {
+    color: #1a202c !important;
+    background-color: #F1F5F9 !important;
+  }
+  .code-display pre {
+    margin: 0px !important;
+  }
 </style>
