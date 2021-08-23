@@ -14,7 +14,8 @@ module.exports = Dialog = () => ({
     left: "0px",
     width: "100%",
     zIndex: 40,
-    transitionProperty: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    transitionProperty:
+      "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
     transitionDuration: "150ms",
   },
@@ -113,7 +114,8 @@ module.exports = Dialog = () => ({
     "--tw-scale-y": "1",
     transform:
       "translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))",
-    transitionProperty: "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
+    transitionProperty:
+      "background-color, border-color, color, fill, stroke, opacity, box-shadow, transform",
     transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
     transitionDuration: "150ms",
   },
@@ -145,5 +147,24 @@ module.exports = Dialog = () => ({
     ".drawer-content": { width: "25%" },
     ".dialog.dialog-sm .drawer-content": { width: "16.666667%" },
     ".dialog.dialog-lg .drawer-content": { width: "66.666667%" },
+  },
+  // iOS 100vh Fix
+  "@supports (-webkit-touch-callout:none)": {
+    ".drawer-content": {
+      height: "-webkit-fill-available",
+      maxHeight: "-webkit-fill-available",
+      minHeight: "-webkit-fill-available",
+    },
+    ".dialog-content": {
+      height: "-webkit-fill-available",
+    },
+    ".dialog.dialog-full .dialog-content": {
+      height: "-webkit-fill-available",
+      maxHeight: "-webkit-fill-available",
+    },
+    ".dialog.dialog-full .drawer-content": {
+      height: "-webkit-fill-available",
+      maxHeight: "-webkit-fill-available",
+    },
   },
 });
