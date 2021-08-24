@@ -1,17 +1,17 @@
-window.collapse = function () {
-  return {
+document.addEventListener("alpine:init", () => {
+  Alpine.data("collapse", () => ({
     open: false,
     trigger: {
       ["@click"]() {
-        const triggerElement = this.$el.querySelector("[x-spread]", "trigger");
         this.open = !this.open;
-        triggerElement.setAttribute("aria-expanded", this.open);
+        this.$el.setAttribute("aria-expanded", this.open);
       },
     },
     collapse: {
-      ["x-show.transition.opacity.duration.200ms"]() {
+      ["x-transition.opacity"]() {},
+      ["x-show"]() {
         return this.open;
       },
     },
-  };
-};
+  }));
+});

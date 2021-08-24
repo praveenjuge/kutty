@@ -30,15 +30,15 @@ We bundle AlpineJS v2.8.0 for reactivity in our components. Learn more about [Al
 
 ```html
 <!-- All components in one -->
-<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/kutty.min.js" defer></script>
 ```
 
 ```html
 <!-- Single component -->
 <!-- Include AlpineJS first -->
-<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/alpinejs.min.js" defer></script>
 <!-- And then the single component -->
-<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/kutty@latest/dist/dropdown.min.js" defer></script>
 ```
 
 ### For Vue

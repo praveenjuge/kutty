@@ -32,8 +32,8 @@ function normalizeNegativeCounter(elements, focussedIndex) {
 
 // Toggle aria atrributes based on the dropdown state
 function toggleAriaAtrributes(dropdown, open) {
-  let trigger = dropdown.querySelector('[x-spread="trigger"]');
-  let dropdownList = dropdown.querySelector('[x-spread="dropdown"]');
+  let trigger = dropdown.querySelector('[x-bind="trigger"]');
+  let dropdownList = dropdown.querySelector('[x-bind="dropdown"]');
   if (trigger && dropdownList) {
     if (open) {
       trigger.setAttribute("aria-expanded", true);
@@ -47,8 +47,8 @@ function toggleAriaAtrributes(dropdown, open) {
 
 // Set attributes when the component is initialized
 function init(dropdown) {
-  let trigger = dropdown.querySelector('[x-spread="trigger"]');
-  let dropdownList = dropdown.querySelector('[x-spread="dropdown"]');
+  let trigger = dropdown.querySelector('[x-bind="trigger"]');
+  let dropdownList = dropdown.querySelector('[x-bind="dropdown"]');
   if (trigger && dropdownList) {
     trigger.setAttribute("aria-haspopup", true);
     trigger.setAttribute("aria-expanded", false);
@@ -71,16 +71,16 @@ function init(dropdown) {
 
 // Initialize attribute for all dropdown elements
 window.addEventListener("DOMContentLoaded", function () {
-  const dropdowns = document.querySelectorAll('[x-data="dropdown()"]');
+  const dropdowns = document.querySelectorAll('[x-data="dropdown"]');
   dropdowns.forEach(function (dropdown) {
     init(dropdown);
   });
 });
 
-window.dropdown = function () {
+document.addEventListener("alpine:init", () => {
   var focussedIndex = -1;
   const DROPDOWN_ITEM_SELECTOR = ".dropdown-item";
-  return {
+  Alpine.data("dropdown", () => ({
     open: false,
     trigger: {
       ["@keydown.escape"]() {
@@ -100,41 +100,49 @@ window.dropdown = function () {
       },
       ["@keydown.arrow-down"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.arrow-up"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.home"](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.end"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
     },
     dropdown: {
+      ["x-show"]() {
+        return this.open;
+      },
       ["@keydown.escape"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(this.$el);
         toggleAriaAtrributes(this.$el, this.open);
       },
-      ["x-show.transition.in.duration.100ms.opacity.out.opacity.duration.100ms"]() {
-        return this.open;
-      },
-      ["@click.away"]() {
+      ["@click.outside"]() {
         this.open = false;
         focussedIndex = -1;
         refocusTrigger(lastOpenedElement);
@@ -142,29 +150,40 @@ window.dropdown = function () {
       },
       ["@keydown.arrow-down"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.arrow-up"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
-        focussedIndex = normalizeNegativeCounter(dropdownElements, focussedIndex);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
+        focussedIndex = normalizeNegativeCounter(
+          dropdownElements,
+          focussedIndex
+        );
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.home"](e) {
         e.preventDefault();
         focussedIndex = -1;
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex++;
         focus(dropdownElements, focussedIndex);
       },
       ["@keydown.end"](e) {
         e.preventDefault();
-        var dropdownElements = this.$el.querySelectorAll(DROPDOWN_ITEM_SELECTOR);
+        var dropdownElements = this.$el.querySelectorAll(
+          DROPDOWN_ITEM_SELECTOR
+        );
         focussedIndex = dropdownElements.length - 1;
         focus(dropdownElements, focussedIndex);
       },
     },
-  };
-};
+  }));
+});

@@ -8,7 +8,7 @@ title: Alert
 
 <div class="space-y-2">
   <div class="alert bg-primary-light text-primary" role="alert">I'm a alert that informs you of stuff</div>
-  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">
+  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>
     I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-light-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
@@ -99,28 +99,28 @@ title: Alert
 {{< code html >}}
 
 <div class="space-y-2">
-  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-light-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert border-t-4 rounded-none bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert border-t-4 rounded-none bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-none btn btn-light-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> I'm a alert that informs you of stuff
+  <div class="alert bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg> I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-light-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert border text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert border text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-link btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert text-white bg-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert text-white bg-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert bg-primary-light text-primary alert-closable alert-sm" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert bg-primary-light text-primary alert-closable alert-sm" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-light-primary btn-xs alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert bg-primary-light text-primary alert-closable alert-lg" role="alert" x-data="{ open: true }" x-show.transition="open">I'm a alert that informs you of stuff
+  <div class="alert bg-primary-light text-primary alert-closable alert-lg" role="alert" x-data="{ open: true }" x-show="open" x-transition>I'm a alert that informs you of stuff
     <button class="rounded-l-none btn btn-light-primary btn-sm alert-close" @click="open = false"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
   </div>
-  <div class="alert flex-col bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show.transition="open">
+  <div class="alert flex-col bg-primary-light text-primary alert-closable" role="alert" x-data="{ open: true }" x-show="open" x-transition>
     <span>I'm a alert that informs you of stuff</span>
     <span>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

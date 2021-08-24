@@ -26,8 +26,8 @@ const destroyTooltip = function (element) {
   return tooltipElement.parentNode.removeChild(tooltipElement);
 };
 
-window.tooltip = function () {
-  return {
+document.addEventListener("alpine:init", () => {
+  Alpine.data("tooltip", () => ({
     tooltip: {
       ["@mouseenter"]() {
         createTooltip(this.$el);
@@ -36,5 +36,5 @@ window.tooltip = function () {
         destroyTooltip(this.$el);
       },
     },
-  };
-};
+  }));
+});
