@@ -1,4 +1,4 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require('tailwindcss/colors')
 
 module.exports = require("tailwindcss/plugin")(
   function ({ addComponents }) {
@@ -27,9 +27,9 @@ module.exports = require("tailwindcss/plugin")(
       extend: {
         colors: {
           primary: {
-            light: defaultTheme.colors.purple[100],
-            DEFAULT: defaultTheme.colors.purple[700],
-            dark: defaultTheme.colors.purple[900],
+            light: colors.violet[100],
+            DEFAULT: colors.violet[700],
+            dark: colors.violet[900],
           },
         },
       },
