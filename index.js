@@ -1,8 +1,8 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
+const defaultThemeColors = defaultTheme.colors.purple || defaultTheme.colors.violet
 
 module.exports = require("tailwindcss/plugin")(
   function ({ addComponents }) {
-    const defaultThemeColors = defaultTheme.colors.purple || defaultTheme.colors.violet
     addComponents([
       { "[x-cloak]": { display: "none !important" } },
       require("./src/alert.js")(),
