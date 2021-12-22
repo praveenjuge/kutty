@@ -11,4 +11,9 @@ module.exports = Spinner = () => ({
     animation: "spin 1s linear infinite",
     borderRightColor: "transparent !important",
   },
+  "@keyframes spin": {
+    to: {
+      transform: "rotate(360deg)",
+    },
+  },
 });

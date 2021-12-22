@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = require("tailwindcss/plugin")(
   function ({ addComponents }) {
     addComponents([
@@ -27,9 +25,9 @@ module.exports = require("tailwindcss/plugin")(
       extend: {
         colors: {
           primary: {
-            light: colors.violet[100],
-            DEFAULT: colors.violet[700],
-            dark: colors.violet[900],
+            light: require("tailwindcss/colors").violet[100],
+            DEFAULT: require("tailwindcss/colors").violet[700],
+            dark: require("tailwindcss/colors").violet[900],
           },
         },
       },
