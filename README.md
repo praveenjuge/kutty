@@ -2,6 +2,15 @@
 
 Kutty is a tailwind plugin for building web applications. It has a set of accessible and reusable components that are commonly used in web applications.
 
+---
+
+### Also see [mynaui.com](https://mynaui.com)
+- [x] TailwindCSS UI Components and Templates made without any Plugin. 
+- [x] Open Source.
+- [x]  Fully Responsive and Accessible.
+
+---
+
 ## Installation
 
 ```sh
